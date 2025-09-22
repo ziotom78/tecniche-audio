@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Maurizio Tomasi (maurizio.tomasi@unimi.it)">
+  <title>Fisica – Lezione 3</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js-5.2.1/dist/reset.css">
+  <link rel="stylesheet" href="reveal.js-5.2.1/dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      /* overflow: visible; */
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="reveal.js-5.2.1/dist/theme/white.css" id="theme">
+  <link rel="stylesheet" href="css/custom-revealjs.css"/>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Fisica – Lezione 3</h1>
+  <p class="subtitle">Lavoro ed energia</p>
+  <p class="author">Maurizio Tomasi (<a
+href="mailto:maurizio.tomasi@unimi.it"><code>maurizio.tomasi@unimi.it</code></a>)</p>
+  <p class="date">Lunedì 20 ottobre 2025</p>
+</section>
+
+<section id="introduzione-allargomento-di-oggi" class="slide level1">
+<h1>Introduzione all’argomento di oggi</h1>
+<ul>
+<li>Perché un’altalena parte da sola dopo una spinta e poi torna
+indietro? Cosa la fa oscillare?</li>
+<li>Perché un metronomo o un orologo a pendolo, a differenza di
+un’altalena, continuano ad oscillare così a lungo?</li>
+</ul>
+</section>
+<section id="inquisitori-accademici-onorari" class="slide level1">
+<h1>Inquisitori accademici onorari</h1>
+</section>
+<section id="riassunto-della-lezione-precedente" class="slide level1">
+<h1>Riassunto della lezione precedente</h1>
+</section>
+<section id="le-leggi-di-newton" class="slide level1">
+<h1>Le leggi di Newton</h1>
+<ul>
+<li>Prima legge: inerzia</li>
+<li>Seconda legge: somma di forze ed accelerazione risultante</li>
+<li>Terza legge: azione e reazione</li>
+</ul>
+</section>
+<section id="dalle-forze-allenergia" class="slide level1">
+<h1>Dalle forze all’energia</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Introduciamo oggi due concetti molto importanti: il
+<strong>lavoro</strong> e l’<strong>energia</strong></p></li>
+<li><p>Il concetto di “lavoro” è diverso da quello del senso comune, ma
+è molto importante perché conduce al concetto di energia, che è
+<strong>fondamentale</strong>!</p></li>
+<li><p>L’energia è qualcosa di molto rilevante nel contesto quotidiano…
+e anche politico: ci sono state guerre esplose per questioni
+energetiche!</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/guerra-del-golfo.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="lavoro-in-fisica" class="slide level1">
+<h1>Lavoro in fisica</h1>
+<ul>
+<li><p>Abbiamo visto che una forza produce un’accelerazione, e può
+portare un corpo a muoversi</p></li>
+<li><p>Il lavoro <span class="math inline">L</span> è il
+<strong>prodotto della forza applicata <span
+class="math inline">F</span> e dello spostamento</strong> <span
+class="math inline">\Delta x</span>:</p>
+<p><span class="math display">
+L = F \times \Delta x
+</span></p></li>
+<li><p>Quindi, più forza applico, maggiore è il lavoro, e lo stesso vale
+se il corpo si sposta per un tragitto più lungo</p></li>
+</ul>
+</section>
+<section id="lavoro-in-fisica-e-nelluso-comune" class="slide level1">
+<h1>Lavoro in fisica e nell’uso comune</h1>
+<ul>
+<li><p>Si potrebbe pensare che il lavoro misuri la “fatica”: se sposto
+una cassa pesante per 10 metri, fatico più che a spostarla per 5
+metri</p></li>
+<li><p>Però bisogna fare attenzione: il lavoro tiene conto dello
+<strong>spostamento effettivo</strong> <span class="math inline">\Delta
+x</span> di un corpo!</p></li>
+<li><p>Se la cassa e pesantissima e, pure spingendola, non si muove, io
+fatico molto ma <strong>non compio alcun lavoro</strong>: <span
+class="math inline">L = F \times \Delta x = F \times 0 =
+0</span>.</p></li>
+</ul>
+</section>
+<section id="definizione-di-lavoro" class="slide level1">
+<h1>Definizione di lavoro</h1>
+<p><span class="math display">
+L = F \times \Delta x
+</span></p>
+<ul>
+<li>Il lavoro <span class="math inline">L</span> è il prodotto della
+forza <span class="math inline">F</span> per lo spostamento <span
+class="math inline">\Delta x</span></li>
+<li>Più una forza sposta un corpo, più lavoro ha compiuto</li>
+<li>Si può compiere un lavoro <span class="math inline">L</span>
+significativo in vari modi:
+<ol type="1">
+<li>Applico una forza <span class="math inline">F</span> grande</li>
+<li>Applico la forza <span class="math inline">F</span> a lungo, in modo
+che il corpo si sposti molto (grande <span class="math inline">\Delta
+x</span>)</li>
+<li>Metto insieme le due cose, in modo che siano grandi sia <span
+class="math inline">F</span> che <span class="math inline">\Delta
+x</span></li>
+</ol></li>
+</ul>
+</section>
+<section id="unità-di-misura" class="slide level1">
+<h1>Unità di misura</h1>
+<ul>
+<li><p>L’unità di misura SI del lavoro è il Joule:</p>
+<p><span class="math display">
+1\,\text{J} = 1\,\text{N} \times 1\,\text{m}.
+</span></p></li>
+<li><p>Sono però molto usate anche queste due unità:</p>
+<ol type="1">
+<li><p>La <em>caloria</em> (cal): 1 cal = 4,184 J</p></li>
+<li><p>Il chilowattora (kWh): 1 kWh = 3.600.000 J (più di tre milioni di
+Joule)</p></li>
+</ol></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<p><img data-src="media/etichetta-alimentare.jpg" /></p>
+</section>
+<section class="slide level1">
+
+<p><img data-src="media/bolletta-elettrica.jpg" /></p>
+</section>
+<section id="lavoro-di-un-piatto-di-riso" class="slide level1">
+<h1>Lavoro di un piatto di riso?!?</h1>
+<ul>
+<li>Abbiamo detto che il lavoro è il valore di una forza moltiplicato
+per il suo spostamento</li>
+<li>Ma cosa c’entrano le forze e gli spostamenti con un piatto a base di
+riso?</li>
+<li>O con la corrente che ci arriva in casa con cui teniamo accesa la
+luce?</li>
+</ul>
+</section>
+<section id="lavoro-ed-energia" class="slide level1">
+<h1>Lavoro ed energia</h1>
+<ul>
+<li><p>È possibile associare ai corpi una quantità chiamata
+<strong>energia</strong></p></li>
+<li><p>Essa descrive lo stato in cui si trova un corpo in un certo
+istante</p></li>
+<li><p>Si misura con la stessa unità del lavoro, perché se si calcola
+l’energia all’inizio e alla fine di uno spostamento, si scopre che
+<strong>il lavoro compiuto è uguale alla differenza
+dell’energia</strong></p></li>
+<li><p>[Attenzione: chi ha studiato fisica alle superiori si ricorderà
+che le cose sono un po’ più complicate di così. Per il momento ignoriamo
+queste complicazioni]</p></li>
+</ul>
+</section>
+<section id="lavoro-ed-energia-1" class="slide level1">
+<h1>Lavoro ed energia</h1>
+<ul>
+<li><p>L’energia può essere vista come <strong>la capacità di un corpo
+di compiere lavoro</strong></p></li>
+<li><p>Ci sono vari tipi di energia, e tutti sono associati a qualche
+tipo di forza</p></li>
+<li><p>Vediamone alcuni</p></li>
+</ul>
+</section>
+<section id="energia-cinetica" class="slide level1">
+<h1>Energia cinetica</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>È l’energia che ha un corpo per il fatto stesso di
+muoversi</p></li>
+<li><p>Se un corpo in movimento ne urta uno fermo, quest’ultimo si
+muove: è stato compiuto lavoro.</p></li>
+<li><p><strong>Attenzione</strong>: un corpo che si muove di moto
+rettilineo uniforme non compie però lavoro! (Se viaggia a velocità
+costante, la forza è nulla per il primo principio)</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/gioco-delle-bocce_O1.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="energia-potenziale-gravitazionale" class="slide level1">
+<h1>Energia potenziale gravitazionale</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>La forza di gravità sposta i corpi verso il basso</p></li>
+<li><p>Se un corpo sta in alto, ha quindi <strong>energia potenziale
+gravitazionale</strong>, perché può cadere</p></li>
+<li><p>Durante la caduta, la forza di gravità compie lavoro</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/captain-spacemaker-caribe-bay-jesolo.jpg"
+height="400" /></p>
+</div>
+</div>
+</section>
+<section id="energia-elastica" class="slide level1">
+<h1>Energia elastica</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Una molla compressa ha la capacità di espandersi</li>
+<li>La molla ha quindi la capacità di compiere lavoro</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/molle.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="calore" class="slide level1">
+<h1>Calore</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Tutti i corpi sono formati da atomi che vibrano
+continuamente</p></li>
+<li><p>Più un corpo è caldo, maggiormente gli atomi vibrano</p></li>
+<li><p>Le vibrazioni sono causate da forze atomiche, e producono quindi
+lavoro</p></li>
+<li><p>Ad un corpo è associata quindi una certa <strong>energia
+calorica</strong>: ecco perché l’energia si misura anche in
+<strong>calorie</strong>!</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/metl_heat.gif" /></p>
+</div>
+</div>
+</section>
+<section id="energia-chimica" class="slide level1">
+<h1>Energia chimica</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Le molecole che formano i corpi sono legate tra loro da forze
+elettromagnetiche</li>
+<li>Queste forze agiscono più o meno come molle: impediscono che le
+molecole si allontanino o si avvicinino troppo</li>
+<li>In una reazione chimica, i legami (le “molle”) si rompono, oppure se
+ne formano di nuovi</li>
+<li>Le molecole sono libere di muoversi, oppure vengono “catturate” da
+molle e si fermano</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/alberto-sordi-galateo-a-tavola.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="energia-elettrica" class="slide level1">
+<h1>Energia elettrica</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Le cariche elettriche si attraggono e si respingono tra loro</li>
+<li>Il loro moto fa compiere lavoro alle forze elettromagnetiche</li>
+<li>È una forma di energia molto conveniente!</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/lampadina.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="analogia" class="slide level1">
+<h1>Analogia</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Si può pensare all’energia come al denaro; però non si può creare
+né distruggere, e non si svaluta mai</p></li>
+<li><p>Come il denaro può essere convertito in varie forme (contanti,
+somma in banca, lingotti d’oro…), così anche l’energia si può
+convertire</p></li>
+<li><p>Il “bilancio” dell’energia <strong>è sempre perfetto</strong>: se
+scompaiono <span class="math inline">x</span> Joule di energia da una
+parte, devono sempre comparirne esattamente <span
+class="math inline">x</span> da un’altra.</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/soldi-oro.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="esempi" class="slide level1">
+<h1>Esempi</h1>
+</section>
+<section id="ciclista-in-collina" class="slide level1">
+<h1>Ciclista in collina</h1>
+<div class="side-by-side">
+<div class="content">
+<p>Consideriamo questi elementi:</p>
+<ul>
+<li>Muscoli</li>
+<li>Rotazione dei pedali</li>
+<li>Rotazione delle ruote</li>
+<li>Spostamento del ciclista</li>
+<li>Variazioni di quota</li>
+<li>Attrito con la strada</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/bicicletta-in-collina.jpg" height="400" /></p>
+</div>
+</div>
+</section>
+<section id="preparare-il-caffè" class="slide level1">
+<h1>Preparare il caffè</h1>
+<div class="side-by-side">
+<div class="content">
+<p>Consideriamo questi elementi:</p>
+<ul>
+<li>Energia del gas</li>
+<li>Calore nell’acqua</li>
+<li>Vapore che spinge l’acqua</li>
+<li>Calore del caffè</li>
+<li>Calore nello stomaco</li>
+<li>Energia chimica del caffè</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/moka.webp" height="450" /></p>
+</div>
+</div>
+</section>
+<section id="ascoltare-musica" class="slide level1">
+<h1>Ascoltare musica</h1>
+<div class="side-by-side">
+<div class="content">
+<p>Consideriamo questi elementi:</p>
+<ul>
+<li>Energia elettrica</li>
+<li>Vibrazione delle membrane degli altoparlanti</li>
+<li>Onde sonore nell’aria</li>
+<li>Vibrazione del timpano nell’orecchio</li>
+<li>Impulsi nervosi</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/casse-amplificatore.webp" /></p>
+</div>
+</div>
+</section>
+<section id="frenata-di-unauto" class="slide level1">
+<h1>Frenata di un’auto</h1>
+<div class="side-by-side">
+<div class="content">
+<p>Consideriamo questi elementi:</p>
+<ul>
+<li>Energia cinetica dell’auto</li>
+<li>Azione del piede sul pedale</li>
+<li>Ganasce dei freni</li>
+<li>Calore nei freni e nell’aria</li>
+<li>Presenza di una dinamo (freni rigenerativi)</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/automobili-autostrada.webp" height="450" /></p>
+</div>
+</div>
+</section>
+<section id="diga-idroelettrica" class="slide level1">
+<h1>Diga idroelettrica</h1>
+<div class="side-by-side">
+<div class="content">
+<p>Consideriamo questi elementi:</p>
+<ul>
+<li>Caduta dell’acqua</li>
+<li>Rotazione della turbina</li>
+<li>Produzione di energia elettrica</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/centrale-idroelettrica-orig.webp" /></p>
+</div>
+</div>
+</section>
+<section id="impianto-fotovoltaico" class="slide level1">
+<h1>Impianto fotovoltaico</h1>
+<div class="side-by-side">
+<div class="content">
+<p>Consideriamo questi elementi:</p>
+<ul>
+<li>Luce solare</li>
+<li>Elettricità</li>
+<li>Moto del cestello della lavatrice</li>
+<li>Calore nel forno</li>
+<li>Luce delle lampadine</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/impianto-fotovoltaico-con-accumulo.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="energia-e-potenza" class="slide level1">
+<h1>Energia e potenza</h1>
+</section>
+<section id="il-concetto-di-potenza" class="slide level1">
+<h1>Il concetto di “potenza”</h1>
+<ul>
+<li><p>L’energia è fondamentale per quasi tutti i processi fisici e
+biologici</p></li>
+<li><p>È però anche importante la <strong>velocità</strong> con cui
+l’energia viene consumata</p></li>
+<li><p>La <strong>potenza</strong> <span class="math inline">P</span> è
+il rapporto tra una quantità di energia <span
+class="math inline">E</span> e il tempo necessario a produrla (o
+consumarla):</p>
+<p><span class="math display">
+P = \frac{E}{\Delta t}
+</span></p></li>
+</ul>
+</section>
+<section id="unità-di-misura-1" class="slide level1">
+<h1>Unità di misura</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>La potenza è una energia sul tempo, quindi la sua unità naturale
+è il Joule sul secondo. Questo è il Watt, che si abbrevia con
+<strong>W</strong>:</p>
+<p><span class="math display">
+1\,\mathrm{W} = \frac{1\,\mathrm{J}}{1\,\mathrm{s}}.
+</span></p></li>
+<li><p>Il Watt è un’unità di misura molto comune!</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/lampadina.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="il-kilowattora" class="slide level1">
+<h1>Il Kilowattora</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Dal Watt deriva una curiosa unità di misura dell’energia: il
+<strong>Kilowattora</strong> (kWh)</p></li>
+<li><p>Esso è l’energia che si può estrarre da una potenza di 1 kW (un
+chilowatt) in un’ora di tempo:</p>
+<p>[ 1, = 1, ,600, = 3,600,000,</p></li>
+<li><p>I fornitori di energia come ENI, Enel, Sorgenia, etc., riportano
+l’energia consumata in bolletta usando i kWh.</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/bolletta-elettrica.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="conclusioni" class="slide level1">
+<h1>Conclusioni</h1>
+</section>
+<section id="materiale-per-lesame" class="slide level1">
+<h1>Materiale per l’esame</h1>
+<ul>
+<li>Lavoro ed energia</li>
+<li>Potenza</li>
+<li>Unità di misura del lavoro e dell’energia</li>
+<li>Tutti gli esempi visti in classe</li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js-5.2.1/dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="reveal.js-5.2.1/plugin/notes/notes.js"></script>
+  <script src="reveal.js-5.2.1/plugin/search/search.js"></script>
+  <script src="reveal.js-5.2.1/plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: true,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+       // Parallax background image
+       parallaxBackgroundImage: 'media/background.png', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1440,
+
+        height: 810,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
