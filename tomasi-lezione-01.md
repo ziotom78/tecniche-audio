@@ -4,6 +4,24 @@
 <script src="js/trajectories.js" charset="utf-8"></script>
 <script src="js/plotly-3.1.0.min.js" charset="utf-8"></script>
 
+# L’insegnamento “Fisica e statistica”
+
+-   Tre moduli:
+    #.   Fisica applicata (prof. Tomasi)
+    #.   Misure elettriche ed elettroniche (dott. Bianchi)
+    #.   Statistica medica
+-   Un esame di 60 minuti per ogni modulo, nella stessa giornata
+-   Obbligatoria la presenza al 70% di lezioni **per ogni modulo** (giustificazioni solo con certificato medico)
+
+# Fisica applicata
+
+-   Sistemi di misura
+-   Meccanica: cinematica e dinamica, l’energia
+-   Oscillazioni
+-   Smorzamento e filtraggio
+-   Sovrapposizioni e interferenza, effetto Doppler
+-   Suoni complessi e scomposizione in frequenze
+
 # Queste slides
 
 -   Il materiale delle lezioni di questo modulo dell’insegnamento sarà fornito in forma di slide come quelle che state vedendo ora.
@@ -23,11 +41,12 @@
 
 # Modalità d’esame
 
+-   Questo vale solo per il modulo di fisica applicata (questo); i dott. Bianchi e Turati vi daranno informazioni per i loro esami
 -   Esame scritto della durata di 60 minuti
 -   Articolato in:
-    -  5 domande a risposta multipla
-    -  2 domande a risposta aperta breve
-    -  Analisi di un caso pratico
+    -  Alcune domande a risposta multipla
+    -  Alcune domande a risposta aperta breve
+    -  Analisi di un caso pratico (già visto a lezione)
 
 # Fare domande a lezione
 
@@ -41,15 +60,10 @@
 
 -   Per abituare gli studenti a intervenire a lezione, ho inventato il prestigioso titolo di **Inquisitore accademico onorario** 🎓: all’inizio di ogni lezione conferirò questo titolo ad alcuni di voi, che dovranno fare **almeno una domanda** durante la lezione (è permesso farne più di una!) Questo non vieta agli altri di fare domande se non hanno capito qualcosa, ovviamente!
 
--   Non è come le interrogazioni delle superiori. Al contrario: qui **l’interrogato sono io**!
+-   Non è un’interrogazione. Al contrario: qui **l’interrogato sono io**!
 
 -   Vorrei che per la fine di questo ciclo di 10 lezioni tutti abbiano rivestito almeno una volta questo ruolo.
 
-# Introduzione all’argomento di oggi
-
-- Oggi parleremo di *misure*!
-
-- E iniziamo con una domanda: quando misuriamo? Perché è importante saper misurare?
 
 # Cosa significa misurare?
 
@@ -57,9 +71,13 @@
 
 Malattia di Kawasaki!
 
-# Uova sode
+# Ricette
 
 ![](media/giallozafferano-misurare-tempo.png){height=600px}
+
+::: notes
+Sottolinea che la misurazione di qualcosa è un’attività della vita quotidiana, e non è limitata solo ai fisici!
+:::
 
 # Come si misura
 
@@ -67,9 +85,9 @@ Malattia di Kawasaki!
 
 - In Italia si usa il Sistema Metrico Decimale, dove le misure sono espresse in metri, secondi, kilogrammi, etc.
 
-- Non è l’unico sistema! Avete mai sentito parlare di piedi, pollici, once, galloni, acri…? Questo è il cosiddetto “sistema imperiale britannico”, usato nel Regno Unito; gli USA ne impiegano uno molto simile.
+- Non è l’unico sistema! Avete mai sentito parlare di piedi, pollici, once, galloni, acri…? Questo è il cosiddetto **Sistema Imperiale Britannico**, usato nel Regno Unito
 
-- Avete in mente casi dove avete usato le unità di misura britanniche?
+- È ormai abbandonato quasi ovunque, tranne che negli USA, dov’è ancora abbastanza usato.
 
 ---
 
@@ -82,10 +100,10 @@ Malattia di Kawasaki!
 
 -   Ha suddivisioni apparentemente illogiche. Per esempio, queste sono le misure delle lunghezze:
 
-    #. 1 miglio = 8 furlong (“stadi”)
-    #. 1 furlong = 10 catene
-    #. 1 catena = 66 piedi
-    #. 1 piede = 30 pollici
+    -   1 miglio = 8 furlong (“stadi”)
+    -   1 furlong = 10 catene
+    -   1 catena = 66 piedi
+    -   1 piede = 30 pollici
 
 -   Secondo voi, perché si usano divisioni così strane?
 
@@ -131,9 +149,9 @@ Malattia di Kawasaki!
 
 -   Un miglio è lungo 5280 piedi. Il numero 5280 ha ben **quarantotto** divisori: 2, 3, 4, 5, 6, 8, 10, 11, 12, 15, 16, 20…
 
--   Al contrario, un numero “tondo” come 1000 ha appena sedici divisori: 2, 4, 5, 8, 10, 20… Questo significa che quando si divide 1000 per qualcosa, è più probabile dover gestire numeri con la virgola.
+-   Al contrario, un numero “tondo” come 5000 ha appena **venti** divisori: 1, 2, 4, 5, 8, 10, 20…… Questo significa che quando si divide 5000 per qualcosa, è più probabile dover gestire numeri con la virgola.
 
--   Ecco perché gli antichi romani preferivano multipli diversi dal 10: all’epoca i numeri con la virgola erano sconosciuti, e si contava solo con gli interi!
+-   Ecco perché gli antichi preferivano multipli diversi dal 10: nell’antichità i numeri con la virgola erano sconosciuti, e si contava solo con gli interi!
 
 # Misure di volume
 
@@ -159,9 +177,9 @@ Malattia di Kawasaki!
 
 # Altri esempi
 
--   Per misurare il peso (meglio: la massa! lo vedremo nella prossima lezione), si usa la libbra, che equivale a 16 once
+-   Per misurare il peso (meglio: la massa! lo vedremo nella prossima lezione), nel Sistema Imperiale si usa la libbra, che equivale a 16 once
 
--   Però l’uso di dividere una libbra in 16 once è stato introdotto nel 1300 per uniformarsi al sistema francese; prima una libbra era divisa in 12 once! (Questa era la divisione usata nell’Impero Romano)
+-   Però l’uso di dividere una libbra in 16 once è stato introdotto in Inghilterra nel 1300 per uniformarsi al sistema francese; prima una libbra era divisa in 12 once! (Questa era la divisione usata nell’Impero Romano)
 
 -   Anche nella suddivisione di sterline in penny il Regno Unito seguiva (fino al 1971) lo stesso principio: una sterlina (“£”) valeva 20 scellini (“s”), ed uno scellino valeva 12 pence (“d”, dal latino *denarius*).
 
@@ -179,16 +197,9 @@ Malattia di Kawasaki!
 
 # Perché proprio queste unità?
 
--   La “pertica” è definita come 5½ yarde. Questa strana conversione fu stabilita nel Medioevo: una pertica corrispondeva a 15 “piedi Sassoni”
-
--   I Sassoni dominarono l’Inghilterra tra il IV secolo e il 1066 (battaglia di Hastings); tutti i registri dei terreni di quel periodo erano misurati in piedi sassoni, così l’uso delle pertiche facilitava la conversione.
-
-# Perché proprio queste unità?
-
 -   Il “braccio” (*fathom*) corrisponde a 1,82 m, ossia a 2 yarde
 -   Corrisponde più o meno alla distanza tra le punte dei medi delle due braccia spalancate (nell'*old english*, il termine *fœðm* significava “braccia spalancate”)
 -   Era un’unità usata per misurare la profondità del mare mediante una corda attaccata a un peso
--   Sopravvive oggi nell’espressione inglese “to deep six”, che significa “distruggere senza lasciare traccia”: per seppellire un cadavere in mare, le leggi navali del passato richiedevano che la profondità fosse almeno di sei braccia.
 
 # Limiti del sistema imperiale
 
@@ -235,7 +246,6 @@ Malattia di Kawasaki!
 -   Tutte le unità usano gli stessi multipli e sottomultipli (“milli”, “kilo”, “giga”, etc.)
 -   Dalle unità fondamentali si derivano tutte quelle derivate: una velocità in m/s è il rapporto tra una lunghezza in metri e un tempo in secondi
 -   Conversioni semplici tra unità di misura: basta spostare la virgola! Ad es., 300 cm = 30 dm = 3 m = 0,3 dam. (Molto utile in medicina, dove un medico deve ad esempio adattare il dosaggio di un farmaco al peso di un paziente!)
--   Tutti i macchinari diagnostici in medicina usano le unità del SI
 
 # Svantaggi del SI
 
@@ -256,6 +266,13 @@ Malattia di Kawasaki!
 -   Può essere che il metodo di studio che usavate alle scuole superiori, pur efficace in quel contesto, vada rivisto
 -   Vediamo alcune indicazioni generali, che possono essere applicate non solo a quest’esame
 
+# Seguire le lezioni
+
+-   Se il docente scrive tutto alla lavagna, cercate di scrivere tutto sul vostro quaderno…
+-   …ma se mette a disposizione il materiale (**è il mio caso!**), cercate soprattutto di capire, limitandovi ad appuntare solo le cose più importanti della lezione
+-   A casa rivedete gli appunti e scriveteli in bella (o sul computer): in questo modo ripassate e vi rendete conto di cosa non avete capito
+-   **Non fate una trascrizione parola per parola**, ma cercate di scrivere in bella usando le vostre parole: è così che capite meglio
+
 # Fare collegamenti
 
 -   È molto più semplice ricordare una nozione o un’idea se si riesce a collegarla a qualcosa di già noto
@@ -270,11 +287,23 @@ Esempio: si può ricordare la collocazione dei paesi baltici sotto la Finlandia 
 
 # Note facili da trovare!
 
+-   Consiglio la lettura del testo [How to take smart notes](https://www.amazon.it/How-Take-Smart-Notes-Nonfiction/dp/1542866502) (S. Ahrens). I consigli di questa slide vengono da lì
 -   È bene annotare tutti i concetti importanti in modo da poterli trovare facilmente
 -   Potrebbero esserci connessioni utili tra argomenti di esami diversi
--   Preoccupatevi di annotare tutto quanto è importante per il vostro studio in una forma che sia facilmente **ricercabile**
--   [Obsidian](https://obsidian.md/) è uno strumento gratuito che consente di creare note con eventuali immagini, e stabilire collegamenti tra esse. (Io uso un sistema più antiquato, ma funzionalmente equivalente). Vedete l’articolo [Obsidian helped me get my master’s degree](https://www.reddit.com/r/ObsidianMD/comments/1n5d059/obsidian_helped_me_get_my_masters_degree/).
--   Consiglio la lettura del testo [How to take smart notes](https://www.amazon.it/How-Take-Smart-Notes-Nonfiction/dp/1542866502) (S. Ahrens)
+-   Preoccupatevi di annotare tutto quanto è importante per il vostro studio in una forma che sia facilmente **ricercabile** (le <u>sottolineature</u> ed <mark>evidenziazioni</mark> non sono efficaci…)
+-   A chi preferisce strumenti informatici consiglio [Obsidian](https://obsidian.md/): consente di creare note con eventuali immagini, e stabilire collegamenti tra esse. Vedete l’articolo [Obsidian helped me get my master’s degree](https://www.reddit.com/r/ObsidianMD/comments/1n5d059/obsidian_helped_me_get_my_masters_degree/) per alcuni spunti.
+
+---
+
+![](media/obsidian-example.png)
+
+<small>
+[How I Obsidian](https://xavd.id/blog/post/how-i-obsidian/)
+</small>
+
+---
+
+![](media/obsidian-graph.jpg)
 
 # Studio a memoria
 
@@ -282,6 +311,14 @@ Esempio: si può ricordare la collocazione dei paesi baltici sotto la Finlandia 
 -   Ad esempio, in che anno è stato proclamato il Regno d’Italia? (1861)
 -   In questo caso è utile la tecnica delle *ripetizioni intervallate* ([“spaced repetitions”](https://en.wikipedia.org/wiki/Spaced_repetition))
 -   Un ottimo strumento (e gratuito!) è [Anki](https://apps.ankiweb.net/)
+
+---
+
+![](media/spaced-repetitions.png){height=480px}
+
+<small>
+[What is Spaced Repetition? A Step-by-Step Guide for Effective Language Learning](https://www.heylama.com/blog/spaced-repetition)
+</small>
 
 ---
 
@@ -294,6 +331,10 @@ Esempio: si può ricordare la collocazione dei paesi baltici sotto la Finlandia 
 ---
 
 ![](media/anki-00.png)
+
+---
+
+![](media/anki-03.png){height=640px}
 
 
 # I Large Language Model (LLM)
@@ -320,15 +361,15 @@ Esempio: si può ricordare la collocazione dei paesi baltici sotto la Finlandia 
 
 # Come funziona un LLM?
 
--   Prima di usare un LLM, si deve addestrare (questo compito è svolto da chi mette a disposizione il LLM: OpenAI, Google, Microsoft…)
--   Le si fa leggere milioni di pagine internet (Wikipedia, forum, siti di informazione, ebook…)
+-   Prima di usare un LLM lo si deve addestrare, facendogli leggere milioni di pagine internet (Wikipedia, forum, siti di informazione, ebook…). Questo compito è svolto da chi mette a disposizione il LLM: OpenAI, Google, Microsoft…
 -   Attraverso un algoritmo matematico, si cercano i numeri “giusti” per i neuroni e per le dimensioni dei tubi
 -   Un nodo rappresenta un concetto (“zenzero”, “Sergio Mattarella”, “Alpi Apuane”…), mentre i tubi rappresentano connessioni tra concetti. Ad esempio, il tubo che collega “zenzero” e “marzapane” è probabilmente molto largo…
 
 # Come funziona un LLM?
 
 -   Non è possibile stabilire con certezza quale concetto sia codificato da ciascun neurone
--   I LLM funzionano come “scatole nere”: quello che succede al loro interno è molto difficile da comprendere! (Ma non impossibile, anche se richiede un mare di lavoro)
+-   I LLM funzionano come “scatole nere”: è impossibile sapere *esattamente* quello che succede al loro interno!
+-   Questo non è tanto un problema di conoscenza della matematica (gli LLM usano le quattro operazioni e poco più), quanto il fatto che i parametri in gioco sono migliaia di miliardi!
 
 # Come funziona un LLM?
 
@@ -365,11 +406,9 @@ Esempio: si può ricordare la collocazione dei paesi baltici sotto la Finlandia 
 
 ---
 
-![](media/another-llm-rant.png){height=600px}
+![](media/2025-08-10-ChatGPT5-nomi-note-sbagliate.png){height=540px}
 
-<small>
-[Another LLM rant](https://overengineer.dev/txt/2025-08-09-another-llm-rant/)
-</small>
+(Immagine generata da ChatGPT-5 per spiegare a mio figlio i nomi delle note)
 
 ---
 
@@ -393,25 +432,46 @@ A seconda della domanda, ChatGPT difende le ragioni dell’uno o dell’altro do
 -   **Interno**: Il panettone ha un “carattere festoso, complesso e ricco” / Il pandoro ha una pasta soffice che richiede una lunga lavorazione
 -   **Forma**: Il panettone ha una cupola dorata, a volte glassata / La stella ad 8 punte del pandoro è molto elegante
 
+# ChatGPT ha una coscienza?
+
+-   Un bell’articolo di un gruppo dell’Università di Santa Cruz (California) ha evidenziato che ChatGPT non sa spiegare come produce le proprie risposte
+-   Anzi, fornisce spiegazioni… che però sono completamente sbagliate!
+
+---
+
+![](media/huang-figure.svg){height=440px}
+
+<small>
+[Can Large Language Models Explain Themselves? A Study of LLM-Generated Self-Explanations (Huang et al., 2023)](https://arxiv.org/abs/2310.11207)
+</small>
+
 # Ma come si usa allora ChatGPT?!?
 
-# Metodo di lavoro
+# Quando usare ChatGPT e quando no
+
+-   Preferite contattare direttamente il docente per domande su un esame
+-   Potete affidarvi a ChatGPT per certi tipi di domande, ma state attenti a formularle bene (vedi slide seguenti)
+-   Una volta ottenute le risposte, il lavoro non è finito: dovete **verificarle**!
+-   Con un po’ di esperienza capirete quando ha senso chiedere qualcosa a ChatGPT e quando non ne vale la pena.
+-   Non aspettatevi che ChatGPT sia “più veloce” da consultare di un professore: scrivere bene una domanda e verificarne la risposta richiede tempo e lavoro!
+
+# 1: Come fare domande
+
+# Come fare domande
 
 #.  Chiarire il contesto
 #.  Stabilire il ruolo di ChatGPT
 #.  Fornire istruzioni
 #.  Mettere dei paletti
 #.  Instillargli dubbi
-#.  Stabilire come si valuterà la risposta
 
 # Chiarire il contesto
 
-Bisogna spiegare perché state facendo la domanda:
+Bisogna che ChatGPT sappia quali competenze dell’utente può dare per scontate e quali no:
 
--   “Sono uno studente universitario al primo anno alla facoltà di Medicina, e sto preparando un esame…”
--   “Sono una ragazza ventenne che è appena andata a vivere da sola, e ho necessità di…”
--   “Ho posseduto per anni cellulari Huawei, usandoli soprattutto per telefonate e messaggi, ma ora…”
--   “Devo scrivere una email ad un professore della mia università per chiedergli…”
+-   “Sono uno studente universitario al primo anno alla facoltà di Medicina, e ho già dato questi esami…”
+-   “Sono una ragazza ventenne che è appena andata a vivere da sola…”
+-   “Ho posseduto per anni cellulari Huawei, usandoli soprattutto per telefonate e messaggi WhatsApp…”
 
 # Stabilire il proprio ruolo
 
@@ -419,20 +479,21 @@ Bisogna dire a ChatGPT in che veste deve fornire le risposte:
 
 -   “Tu sei un esperto professore di fisica…”
 -   “Sei un rivenditore professionista di cellulari Samsung…”
--   “Hai una vasta esperienza nel campo dei motori di automobili…”
+-   “Hai una vasta esperienza come meccanico specializzato nel campo dei motori di automobili a benzina…”
 
 # Fornire istruzioni
 
 Cercate di non fare domande generiche, ma che vadano direttamente al punto:
 
--   “Ti fornisco una versione dell’email che voglio inviare al mio professore. Rivedi il tono in modo che sia appropriato, togliendo le ripetizioni”
--   “Traduci questo testo dall’italiano all’inglese, usando la forma della lingua tipica degli USA”
--   “Forniscimi un elenco di almeno cinque fattori importanti nella scelta del modello di telefono più adatto alle mie esigenze”
+-   “Forniscimi un elenco, in forma di lista a punti, degli scambi energetici che avvengono in questo fenomeno fisico”
+-   “Ti fornisco una versione dell’email che voglio inviare al mio professore. Rivedi il tono in modo che sia appropriato, togliendo le ripetizioni e correggendo gli errori di grammatica e di sintassi. Motiva ogni cambiamento che fai”
+-   “Forniscimi un elenco di almeno cinque fattori importanti nella scelta del modello di telefono più adatto alle mie esigenze. Per ogni voce dell’elenco, fornisci una breve spiegazione”
 
 # Mettere dei paletti
 
 ChatGPT spesso tende ad andare oltre quanto gli si chiede, quindi è bene limitarlo:
 
+-   “Non includere nella spiegazione l’eventualità che ci sia attrito, perché sto considerando un caso fisico ideale”
 -   “Nel sistemare il testo dell'email, limitati a fornire il testo, senza aggiungere alcun commento né prima né dopo”
 -   “Non considerare nella tua risposta la possibilità che il mio amico abbia già provveduto a…”
 
@@ -443,29 +504,40 @@ Vedi l’articolo [Sprinkling self-doubt on ChatGPT](https://justin.searls.co/po
 -   “Cerca di essere il più scettico possibile sulle tue assunzioni”
 -   “Analizza criticamente il tuo suggerimento, valutando eventuali svantaggi dell’approccio che mi fornirai”
 
-# Stabilire come si valuterà la risposta
+# Non limitarsi alla domanda
+
+-   Una volta che ChatGPT ha fornito la propria risposta, si può continuare nella conversazione
+-   Raramente la risposta di ChatGPT è soddisfacente al primo colpo, soprattutto per domande complesse
+-   Incalzate ChatGPT con domande di chiarimento, correzioni e richieste di approfondimenti
+-   Nella mia esperienza, ci vogliono spesso almeno quattro o cinque iterazioni prima di avere una risposta soddisfacente (a meno che [la domanda non sia di quelle per cui Google basta e avanza](https://www.google.com/search?q=come+si+chiama+l'energia+associata+a+una+molla%253F)…)
+
+# 2: Come valutare la risposta
+
+# Come valutare la risposta
 
 La regola d’oro è **fare domande la cui risposta sia verificabile**!
 
 -   Se possibile, formulate domande in modo che vi venga fornita una risposta facile da verificare (esempio: la sequenza dei numeri sul quaderno).
--   Se fate domande su argomenti di cui non sapete nulla, riservatevi di approfondire!
+-   Non fate domande su argomenti di cui non sapete nulla… Se proprio siete costretti, mettete in conto di dover spendere un po’ di tempo per approfondire le risposte di ChatGPT, cercando ulteriore materiale!
 -   Considerate ChatGPT come un Google “potenziato”, ma con lo svantaggio che non vi fa vedere le sue fonti: come fate quindi a fidarvi?
 
 # Parzialità di ChatGPT
 
 -   ChatGPT tende a difendere l’idea che suggerite (ricordate la diatriba panettone/pandoro?)
 -   Se siete in dubbio tra due alternative, cercate di porre una domanda neutra
--   Oppure (più interessante!) fate la domanda due volte, parteggiando prima per un’alternativa e poi per l’altra, poi sintetizzate, proprio come ho fatto io per il panettone ed il pandoro
+-   Oppure (più interessante!) fate la domanda due volte, parteggiando prima per un’alternativa e poi per l’altra. Ovviamente poi dovete fare una sintesi delle due risposte, proprio come ho fatto io per il panettone ed il pandoro
+-   Tutto questo richiede lavoro, ma… “[non esistono pasti gratis](https://en.wikipedia.org/wiki/No_such_thing_as_a_free_lunch)”!
 
 # Conclusioni
 
 # Cosa sapere per l’esame
 
 - Perché misuriamo
-- Sistema Internazionale (SI)
+- Sistema Internazionale (SI) — Il Sistema Imperiale **non** è richiesto!
 - Multipli decimali
 - Vantaggi del SI
-- Studiate bene!
+- Studiate bene, cercando collegamenti e usando carte Anki per le cose che dovete mandare a memoria
+- Se dovete usare ChatGPT, fatelo con giudizio e grande attenzione!
 
 ---
 title: Fisica -- Lezione 1

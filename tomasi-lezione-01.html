@@ -50,6 +50,31 @@ href="mailto:maurizio.tomasi@unimi.it"><code>maurizio.tomasi@unimi.it</code></a>
 <script src="js/trajectories.js" charset="utf-8"></script>
 <script src="js/plotly-3.1.0.min.js" charset="utf-8"></script>
 </section>
+<section id="linsegnamento-fisica-e-statistica" class="slide level1">
+<h1>L’insegnamento “Fisica e statistica”</h1>
+<ul>
+<li>Tre moduli:
+<ol>
+<li>Fisica applicata (prof. Tomasi)</li>
+<li>Misure elettriche ed elettroniche (dott. Bianchi)</li>
+<li>Statistica medica</li>
+</ol></li>
+<li>Un esame di 60 minuti per ogni modulo, nella stessa giornata</li>
+<li>Obbligatoria la presenza al 70% di lezioni <strong>per ogni
+modulo</strong> (giustificazioni solo con certificato medico)</li>
+</ul>
+</section>
+<section id="fisica-applicata" class="slide level1">
+<h1>Fisica applicata</h1>
+<ul>
+<li>Sistemi di misura</li>
+<li>Meccanica: cinematica e dinamica, l’energia</li>
+<li>Oscillazioni</li>
+<li>Smorzamento e filtraggio</li>
+<li>Sovrapposizioni e interferenza, effetto Doppler</li>
+<li>Suoni complessi e scomposizione in frequenze</li>
+</ul>
+</section>
 <section id="queste-slides" class="slide level1">
 <h1>Queste slides</h1>
 <ul>
@@ -77,12 +102,14 @@ class="uri">https://ziotom78.github.io/tecniche-audio/</a></p>
 <section id="modalità-desame" class="slide level1">
 <h1>Modalità d’esame</h1>
 <ul>
+<li>Questo vale solo per il modulo di fisica applicata (questo); i dott.
+Bianchi e Turati vi daranno informazioni per i loro esami</li>
 <li>Esame scritto della durata di 60 minuti</li>
 <li>Articolato in:
 <ul>
-<li>5 domande a risposta multipla</li>
-<li>2 domande a risposta aperta breve</li>
-<li>Analisi di un caso pratico</li>
+<li>Alcune domande a risposta multipla</li>
+<li>Alcune domande a risposta aperta breve</li>
+<li>Analisi di un caso pratico (già visto a lezione)</li>
 </ul></li>
 </ul>
 </section>
@@ -106,18 +133,10 @@ onorario</strong> 🎓: all’inizio di ogni lezione conferirò questo titolo
 ad alcuni di voi, che dovranno fare <strong>almeno una domanda</strong>
 durante la lezione (è permesso farne più di una!) Questo non vieta agli
 altri di fare domande se non hanno capito qualcosa, ovviamente!</p></li>
-<li><p>Non è come le interrogazioni delle superiori. Al contrario: qui
-<strong>l’interrogato sono io</strong>!</p></li>
+<li><p>Non è un’interrogazione. Al contrario: qui <strong>l’interrogato
+sono io</strong>!</p></li>
 <li><p>Vorrei che per la fine di questo ciclo di 10 lezioni tutti
 abbiano rivestito almeno una volta questo ruolo.</p></li>
-</ul>
-</section>
-<section id="introduzione-allargomento-di-oggi" class="slide level1">
-<h1>Introduzione all’argomento di oggi</h1>
-<ul>
-<li><p>Oggi parleremo di <em>misure</em>!</p></li>
-<li><p>E iniziamo con una domanda: quando misuriamo? Perché è importante
-saper misurare?</p></li>
 </ul>
 </section>
 <section id="cosa-significa-misurare" class="slide level1">
@@ -127,10 +146,14 @@ saper misurare?</p></li>
 <h1>Esempio della (mia) vita reale</h1>
 <p>Malattia di Kawasaki!</p>
 </section>
-<section id="uova-sode" class="slide level1">
-<h1>Uova sode</h1>
+<section id="ricette" class="slide level1">
+<h1>Ricette</h1>
 <p><img data-src="media/giallozafferano-misurare-tempo.png"
 height="600" /></p>
+<aside class="notes">
+<p>Sottolinea che la misurazione di qualcosa è un’attività della vita
+quotidiana, e non è limitata solo ai fisici!</p>
+</aside>
 </section>
 <section id="come-si-misura" class="slide level1">
 <h1>Come si misura</h1>
@@ -141,11 +164,10 @@ height="600" /></p>
 <li><p>In Italia si usa il Sistema Metrico Decimale, dove le misure sono
 espresse in metri, secondi, kilogrammi, etc.</p></li>
 <li><p>Non è l’unico sistema! Avete mai sentito parlare di piedi,
-pollici, once, galloni, acri…? Questo è il cosiddetto “sistema imperiale
-britannico”, usato nel Regno Unito; gli USA ne impiegano uno molto
-simile.</p></li>
-<li><p>Avete in mente casi dove avete usato le unità di misura
-britanniche?</p></li>
+pollici, once, galloni, acri…? Questo è il cosiddetto <strong>Sistema
+Imperiale Britannico</strong>, usato nel Regno Unito</p></li>
+<li><p>È ormai abbandonato quasi ovunque, tranne che negli USA, dov’è
+ancora abbastanza usato.</p></li>
 </ul>
 </section>
 <section class="slide level1">
@@ -159,12 +181,12 @@ britanniche?</p></li>
 dall’Impero Romano!</p></li>
 <li><p>Ha suddivisioni apparentemente illogiche. Per esempio, queste
 sono le misure delle lunghezze:</p>
-<ol>
+<ul>
 <li>1 miglio = 8 furlong (“stadi”)</li>
 <li>1 furlong = 10 catene</li>
 <li>1 catena = 66 piedi</li>
 <li>1 piede = 30 pollici</li>
-</ol></li>
+</ul></li>
 <li><p>Secondo voi, perché si usano divisioni così strane?</p></li>
 </ul>
 </section>
@@ -223,12 +245,12 @@ anziché decimale come il nostro.</p></li>
 <li><p>Un miglio è lungo 5280 piedi. Il numero 5280 ha ben
 <strong>quarantotto</strong> divisori: 2, 3, 4, 5, 6, 8, 10, 11, 12, 15,
 16, 20…</p></li>
-<li><p>Al contrario, un numero “tondo” come 1000 ha appena sedici
-divisori: 2, 4, 5, 8, 10, 20… Questo significa che quando si divide 1000
-per qualcosa, è più probabile dover gestire numeri con la
-virgola.</p></li>
-<li><p>Ecco perché gli antichi romani preferivano multipli diversi dal
-10: all’epoca i numeri con la virgola erano sconosciuti, e si contava
+<li><p>Al contrario, un numero “tondo” come 5000 ha appena
+<strong>venti</strong> divisori: 1, 2, 4, 5, 8, 10, 20…… Questo
+significa che quando si divide 5000 per qualcosa, è più probabile dover
+gestire numeri con la virgola.</p></li>
+<li><p>Ecco perché gli antichi preferivano multipli diversi dal 10:
+nell’antichità i numeri con la virgola erano sconosciuti, e si contava
 solo con gli interi!</p></li>
 </ul>
 </section>
@@ -269,10 +291,11 @@ fosse stata 150 g…</p></li>
 <h1>Altri esempi</h1>
 <ul>
 <li><p>Per misurare il peso (meglio: la massa! lo vedremo nella prossima
-lezione), si usa la libbra, che equivale a 16 once</p></li>
+lezione), nel Sistema Imperiale si usa la libbra, che equivale a 16
+once</p></li>
 <li><p>Però l’uso di dividere una libbra in 16 once è stato introdotto
-nel 1300 per uniformarsi al sistema francese; prima una libbra era
-divisa in 12 once! (Questa era la divisione usata nell’Impero
+in Inghilterra nel 1300 per uniformarsi al sistema francese; prima una
+libbra era divisa in 12 once! (Questa era la divisione usata nell’Impero
 Romano)</p></li>
 <li><p>Anche nella suddivisione di sterline in penny il Regno Unito
 seguiva (fino al 1971) lo stesso principio: una sterlina (“£”) valeva 20
@@ -304,18 +327,6 @@ peso)</li>
 <section id="perché-proprio-queste-unità-1" class="slide level1">
 <h1>Perché proprio queste unità?</h1>
 <ul>
-<li><p>La “pertica” è definita come 5½ yarde. Questa strana conversione
-fu stabilita nel Medioevo: una pertica corrispondeva a 15 “piedi
-Sassoni”</p></li>
-<li><p>I Sassoni dominarono l’Inghilterra tra il IV secolo e il 1066
-(battaglia di Hastings); tutti i registri dei terreni di quel periodo
-erano misurati in piedi sassoni, così l’uso delle pertiche facilitava la
-conversione.</p></li>
-</ul>
-</section>
-<section id="perché-proprio-queste-unità-2" class="slide level1">
-<h1>Perché proprio queste unità?</h1>
-<ul>
 <li>Il “braccio” (<em>fathom</em>) corrisponde a 1,82 m, ossia a 2
 yarde</li>
 <li>Corrisponde più o meno alla distanza tra le punte dei medi delle due
@@ -323,10 +334,6 @@ braccia spalancate (nell’<em>old english</em>, il termine <em>fœðm</em>
 significava “braccia spalancate”)</li>
 <li>Era un’unità usata per misurare la profondità del mare mediante una
 corda attaccata a un peso</li>
-<li>Sopravvive oggi nell’espressione inglese “to deep six”, che
-significa “distruggere senza lasciare traccia”: per seppellire un
-cadavere in mare, le leggi navali del passato richiedevano che la
-profondità fosse almeno di sei braccia.</li>
 </ul>
 </section>
 <section id="limiti-del-sistema-imperiale" class="slide level1">
@@ -462,8 +469,6 @@ secondi</li>
 Ad es., 300 cm = 30 dm = 3 m = 0,3 dam. (Molto utile in medicina, dove
 un medico deve ad esempio adattare il dosaggio di un farmaco al peso di
 un paziente!)</li>
-<li>Tutti i macchinari diagnostici in medicina usano le unità del
-SI</li>
 </ul>
 </section>
 <section id="svantaggi-del-si" class="slide level1">
@@ -502,6 +507,22 @@ superiori, pur efficace in quel contesto, vada rivisto</li>
 non solo a quest’esame</li>
 </ul>
 </section>
+<section id="seguire-le-lezioni" class="slide level1">
+<h1>Seguire le lezioni</h1>
+<ul>
+<li>Se il docente scrive tutto alla lavagna, cercate di scrivere tutto
+sul vostro quaderno…</li>
+<li>…ma se mette a disposizione il materiale (<strong>è il mio
+caso!</strong>), cercate soprattutto di capire, limitandovi ad appuntare
+solo le cose più importanti della lezione</li>
+<li>A casa rivedete gli appunti e scriveteli in bella (o sul computer):
+in questo modo ripassate e vi rendete conto di cosa non avete
+capito</li>
+<li><strong>Non fate una trascrizione parola per parola</strong>, ma
+cercate di scrivere in bella usando le vostre parole: è così che capite
+meglio</li>
+</ul>
+</section>
 <section id="fare-collegamenti" class="slide level1">
 <h1>Fare collegamenti</h1>
 <ul>
@@ -522,22 +543,35 @@ alfabetico!</p>
 <section id="note-facili-da-trovare" class="slide level1">
 <h1>Note facili da trovare!</h1>
 <ul>
+<li>Consiglio la lettura del testo <a
+href="https://www.amazon.it/How-Take-Smart-Notes-Nonfiction/dp/1542866502">How
+to take smart notes</a> (S. Ahrens). I consigli di questa slide vengono
+da lì</li>
 <li>È bene annotare tutti i concetti importanti in modo da poterli
 trovare facilmente</li>
 <li>Potrebbero esserci connessioni utili tra argomenti di esami
 diversi</li>
 <li>Preoccupatevi di annotare tutto quanto è importante per il vostro
-studio in una forma che sia facilmente <strong>ricercabile</strong></li>
-<li><a href="https://obsidian.md/">Obsidian</a> è uno strumento gratuito
-che consente di creare note con eventuali immagini, e stabilire
-collegamenti tra esse. (Io uso un sistema più antiquato, ma
-funzionalmente equivalente). Vedete l’articolo <a
+studio in una forma che sia facilmente <strong>ricercabile</strong> (le
+<u>sottolineature</u> ed <mark>evidenziazioni</mark> non sono
+efficaci…)</li>
+<li>A chi preferisce strumenti informatici consiglio <a
+href="https://obsidian.md/">Obsidian</a>: consente di creare note con
+eventuali immagini, e stabilire collegamenti tra esse. Vedete l’articolo
+<a
 href="https://www.reddit.com/r/ObsidianMD/comments/1n5d059/obsidian_helped_me_get_my_masters_degree/">Obsidian
-helped me get my master’s degree</a>.</li>
-<li>Consiglio la lettura del testo <a
-href="https://www.amazon.it/How-Take-Smart-Notes-Nonfiction/dp/1542866502">How
-to take smart notes</a> (S. Ahrens)</li>
+helped me get my master’s degree</a> per alcuni spunti.</li>
 </ul>
+</section>
+<section class="slide level1">
+
+<p><img data-src="media/obsidian-example.png" /></p>
+<p><small> <a href="https://xavd.id/blog/post/how-i-obsidian/">How I
+Obsidian</a> </small></p>
+</section>
+<section class="slide level1">
+
+<p><img data-src="media/obsidian-graph.jpg" /></p>
 </section>
 <section id="studio-a-memoria" class="slide level1">
 <h1>Studio a memoria</h1>
@@ -557,6 +591,13 @@ href="https://apps.ankiweb.net/">Anki</a></li>
 </section>
 <section class="slide level1">
 
+<p><img data-src="media/spaced-repetitions.png" height="480" /></p>
+<p><small> <a href="https://www.heylama.com/blog/spaced-repetition">What
+is Spaced Repetition? A Step-by-Step Guide for Effective Language
+Learning</a> </small></p>
+</section>
+<section class="slide level1">
+
 <p><img data-src="media/anki-01.png" /></p>
 </section>
 <section class="slide level1">
@@ -566,6 +607,10 @@ href="https://apps.ankiweb.net/">Anki</a></li>
 <section class="slide level1">
 
 <p><img data-src="media/anki-00.png" /></p>
+</section>
+<section class="slide level1">
+
+<p><img data-src="media/anki-03.png" height="640" /></p>
 </section>
 <section id="i-large-language-model-llm" class="slide level1">
 <h1>I Large Language Model (LLM)</h1>
@@ -605,10 +650,10 @@ probabilistico.</li>
 <section id="come-funziona-un-llm" class="slide level1">
 <h1>Come funziona un LLM?</h1>
 <ul>
-<li>Prima di usare un LLM, si deve addestrare (questo compito è svolto
-da chi mette a disposizione il LLM: OpenAI, Google, Microsoft…)</li>
-<li>Le si fa leggere milioni di pagine internet (Wikipedia, forum, siti
-di informazione, ebook…)</li>
+<li>Prima di usare un LLM lo si deve addestrare, facendogli leggere
+milioni di pagine internet (Wikipedia, forum, siti di informazione,
+ebook…). Questo compito è svolto da chi mette a disposizione il LLM:
+OpenAI, Google, Microsoft…</li>
 <li>Attraverso un algoritmo matematico, si cercano i numeri “giusti” per
 i neuroni e per le dimensioni dei tubi</li>
 <li>Un nodo rappresenta un concetto (“zenzero”, “Sergio Mattarella”,
@@ -622,9 +667,11 @@ molto largo…</li>
 <ul>
 <li>Non è possibile stabilire con certezza quale concetto sia codificato
 da ciascun neurone</li>
-<li>I LLM funzionano come “scatole nere”: quello che succede al loro
-interno è molto difficile da comprendere! (Ma non impossibile, anche se
-richiede un mare di lavoro)</li>
+<li>I LLM funzionano come “scatole nere”: è impossibile sapere
+<em>esattamente</em> quello che succede al loro interno!</li>
+<li>Questo non è tanto un problema di conoscenza della matematica (gli
+LLM usano le quattro operazioni e poco più), quanto il fatto che i
+parametri in gioco sono migliaia di miliardi!</li>
 </ul>
 </section>
 <section id="come-funziona-un-llm-2" class="slide level1">
@@ -670,10 +717,10 @@ c’è più 🙁) </small></p>
 </section>
 <section class="slide level1">
 
-<p><img data-src="media/another-llm-rant.png" height="600" /></p>
-<p><small> <a
-href="https://overengineer.dev/txt/2025-08-09-another-llm-rant/">Another
-LLM rant</a> </small></p>
+<p><img data-src="media/2025-08-10-ChatGPT5-nomi-note-sbagliate.png"
+height="540" /></p>
+<p>(Immagine generata da ChatGPT-5 per spiegare a mio figlio i nomi
+delle note)</p>
 </section>
 <section class="slide level1">
 
@@ -718,32 +765,66 @@ lunga lavorazione</li>
 glassata / La stella ad 8 punte del pandoro è molto elegante</li>
 </ul>
 </section>
+<section id="chatgpt-ha-una-coscienza" class="slide level1">
+<h1>ChatGPT ha una coscienza?</h1>
+<ul>
+<li>Un bell’articolo di un gruppo dell’Università di Santa Cruz
+(California) ha evidenziato che ChatGPT non sa spiegare come produce le
+proprie risposte</li>
+<li>Anzi, fornisce spiegazioni… che però sono completamente
+sbagliate!</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<p><img data-src="media/huang-figure.svg" height="440" /></p>
+<p><small> <a href="https://arxiv.org/abs/2310.11207">Can Large Language
+Models Explain Themselves? A Study of LLM-Generated Self-Explanations
+(Huang et al., 2023)</a> </small></p>
+</section>
 <section id="ma-come-si-usa-allora-chatgpt" class="slide level1">
 <h1>Ma come si usa allora ChatGPT?!?</h1>
 </section>
-<section id="metodo-di-lavoro" class="slide level1">
-<h1>Metodo di lavoro</h1>
+<section id="quando-usare-chatgpt-e-quando-no" class="slide level1">
+<h1>Quando usare ChatGPT e quando no</h1>
+<ul>
+<li>Preferite contattare direttamente il docente per domande su un
+esame</li>
+<li>Potete affidarvi a ChatGPT per certi tipi di domande, ma state
+attenti a formularle bene (vedi slide seguenti)</li>
+<li>Una volta ottenute le risposte, il lavoro non è finito: dovete
+<strong>verificarle</strong>!</li>
+<li>Con un po’ di esperienza capirete quando ha senso chiedere qualcosa
+a ChatGPT e quando non ne vale la pena.</li>
+<li>Non aspettatevi che ChatGPT sia “più veloce” da consultare di un
+professore: scrivere bene una domanda e verificarne la risposta richiede
+tempo e lavoro!</li>
+</ul>
+</section>
+<section id="come-fare-domande" class="slide level1">
+<h1>1: Come fare domande</h1>
+</section>
+<section id="come-fare-domande-1" class="slide level1">
+<h1>Come fare domande</h1>
 <ol>
 <li>Chiarire il contesto</li>
 <li>Stabilire il ruolo di ChatGPT</li>
 <li>Fornire istruzioni</li>
 <li>Mettere dei paletti</li>
 <li>Instillargli dubbi</li>
-<li>Stabilire come si valuterà la risposta</li>
 </ol>
 </section>
 <section id="chiarire-il-contesto" class="slide level1">
 <h1>Chiarire il contesto</h1>
-<p>Bisogna spiegare perché state facendo la domanda:</p>
+<p>Bisogna che ChatGPT sappia quali competenze dell’utente può dare per
+scontate e quali no:</p>
 <ul>
 <li>“Sono uno studente universitario al primo anno alla facoltà di
-Medicina, e sto preparando un esame…”</li>
-<li>“Sono una ragazza ventenne che è appena andata a vivere da sola, e
-ho necessità di…”</li>
+Medicina, e ho già dato questi esami…”</li>
+<li>“Sono una ragazza ventenne che è appena andata a vivere da
+sola…”</li>
 <li>“Ho posseduto per anni cellulari Huawei, usandoli soprattutto per
-telefonate e messaggi, ma ora…”</li>
-<li>“Devo scrivere una email ad un professore della mia università per
-chiedergli…”</li>
+telefonate e messaggi WhatsApp…”</li>
 </ul>
 </section>
 <section id="stabilire-il-proprio-ruolo" class="slide level1">
@@ -752,7 +833,8 @@ chiedergli…”</li>
 <ul>
 <li>“Tu sei un esperto professore di fisica…”</li>
 <li>“Sei un rivenditore professionista di cellulari Samsung…”</li>
-<li>“Hai una vasta esperienza nel campo dei motori di automobili…”</li>
+<li>“Hai una vasta esperienza come meccanico specializzato nel campo dei
+motori di automobili a benzina…”</li>
 </ul>
 </section>
 <section id="fornire-istruzioni" class="slide level1">
@@ -760,13 +842,15 @@ chiedergli…”</li>
 <p>Cercate di non fare domande generiche, ma che vadano direttamente al
 punto:</p>
 <ul>
+<li>“Forniscimi un elenco, in forma di lista a punti, degli scambi
+energetici che avvengono in questo fenomeno fisico”</li>
 <li>“Ti fornisco una versione dell’email che voglio inviare al mio
 professore. Rivedi il tono in modo che sia appropriato, togliendo le
-ripetizioni”</li>
-<li>“Traduci questo testo dall’italiano all’inglese, usando la forma
-della lingua tipica degli USA”</li>
+ripetizioni e correggendo gli errori di grammatica e di sintassi. Motiva
+ogni cambiamento che fai”</li>
 <li>“Forniscimi un elenco di almeno cinque fattori importanti nella
-scelta del modello di telefono più adatto alle mie esigenze”</li>
+scelta del modello di telefono più adatto alle mie esigenze. Per ogni
+voce dell’elenco, fornisci una breve spiegazione”</li>
 </ul>
 </section>
 <section id="mettere-dei-paletti" class="slide level1">
@@ -774,6 +858,8 @@ scelta del modello di telefono più adatto alle mie esigenze”</li>
 <p>ChatGPT spesso tende ad andare oltre quanto gli si chiede, quindi è
 bene limitarlo:</p>
 <ul>
+<li>“Non includere nella spiegazione l’eventualità che ci sia attrito,
+perché sto considerando un caso fisico ideale”</li>
 <li>“Nel sistemare il testo dell’email, limitati a fornire il testo,
 senza aggiungere alcun commento né prima né dopo”</li>
 <li>“Non considerare nella tua risposta la possibilità che il mio amico
@@ -792,17 +878,35 @@ assunzioni”</li>
 svantaggi dell’approccio che mi fornirai”</li>
 </ul>
 </section>
-<section id="stabilire-come-si-valuterà-la-risposta"
-class="slide level1">
-<h1>Stabilire come si valuterà la risposta</h1>
+<section id="non-limitarsi-alla-domanda" class="slide level1">
+<h1>Non limitarsi alla domanda</h1>
+<ul>
+<li>Una volta che ChatGPT ha fornito la propria risposta, si può
+continuare nella conversazione</li>
+<li>Raramente la risposta di ChatGPT è soddisfacente al primo colpo,
+soprattutto per domande complesse</li>
+<li>Incalzate ChatGPT con domande di chiarimento, correzioni e richieste
+di approfondimenti</li>
+<li>Nella mia esperienza, ci vogliono spesso almeno quattro o cinque
+iterazioni prima di avere una risposta soddisfacente (a meno che <a
+href="https://www.google.com/search?q=come+si+chiama+l&#39;energia+associata+a+una+molla%253F">la
+domanda non sia di quelle per cui Google basta e avanza</a>…)</li>
+</ul>
+</section>
+<section id="come-valutare-la-risposta" class="slide level1">
+<h1>2: Come valutare la risposta</h1>
+</section>
+<section id="come-valutare-la-risposta-1" class="slide level1">
+<h1>Come valutare la risposta</h1>
 <p>La regola d’oro è <strong>fare domande la cui risposta sia
 verificabile</strong>!</p>
 <ul>
 <li>Se possibile, formulate domande in modo che vi venga fornita una
 risposta facile da verificare (esempio: la sequenza dei numeri sul
 quaderno).</li>
-<li>Se fate domande su argomenti di cui non sapete nulla, riservatevi di
-approfondire!</li>
+<li>Non fate domande su argomenti di cui non sapete nulla… Se proprio
+siete costretti, mettete in conto di dover spendere un po’ di tempo per
+approfondire le risposte di ChatGPT, cercando ulteriore materiale!</li>
 <li>Considerate ChatGPT come un Google “potenziato”, ma con lo
 svantaggio che non vi fa vedere le sue fonti: come fate quindi a
 fidarvi?</li>
@@ -816,8 +920,12 @@ diatriba panettone/pandoro?)</li>
 <li>Se siete in dubbio tra due alternative, cercate di porre una domanda
 neutra</li>
 <li>Oppure (più interessante!) fate la domanda due volte, parteggiando
-prima per un’alternativa e poi per l’altra, poi sintetizzate, proprio
-come ho fatto io per il panettone ed il pandoro</li>
+prima per un’alternativa e poi per l’altra. Ovviamente poi dovete fare
+una sintesi delle due risposte, proprio come ho fatto io per il
+panettone ed il pandoro</li>
+<li>Tutto questo richiede lavoro, ma… “<a
+href="https://en.wikipedia.org/wiki/No_such_thing_as_a_free_lunch">non
+esistono pasti gratis</a>”!</li>
 </ul>
 </section>
 <section id="conclusioni" class="slide level1">
@@ -827,10 +935,14 @@ come ho fatto io per il panettone ed il pandoro</li>
 <h1>Cosa sapere per l’esame</h1>
 <ul>
 <li>Perché misuriamo</li>
-<li>Sistema Internazionale (SI)</li>
+<li>Sistema Internazionale (SI) — Il Sistema Imperiale
+<strong>non</strong> è richiesto!</li>
 <li>Multipli decimali</li>
 <li>Vantaggi del SI</li>
-<li>Studiate bene!</li>
+<li>Studiate bene, cercando collegamenti e usando carte Anki per le cose
+che dovete mandare a memoria</li>
+<li>Se dovete usare ChatGPT, fatelo con giudizio e grande
+attenzione!</li>
 </ul>
 </section>
     </div>
