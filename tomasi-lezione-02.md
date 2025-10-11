@@ -9,7 +9,7 @@
 
 # Il tempo
 
-# Misurare il tempo
+# Misurare il tempo {#time-units}
 
 -   La settimana scorsa abbiamo visto che il SI (sistema decimale) è molto comodo per fare calcoli, perché non usa suddivisioni strane.
 
@@ -47,8 +47,7 @@
 -   …ma appena un anno dopo si tolse l’obbligo, con queste motivazioni:
     - Usare gli stessi termini “ora” e “minuto” confondeva, ma introdurne di nuovi sarebbe stato complicato per la gente del popolo
     - Cambiare tutti gli orologi della nazione sarebbe costato troppo
--   È sopravvissuto in astronomia, dove oggi si usa regolarmente il [Giorno giuliano](https://it.wikipedia.org/wiki/Giorno_giuliano).
--   Come potete notare, la storia della scienza non è troppo lineare…
+-   È sopravvissuto in astronomia, dove oggi si usa regolarmente il [Giorno giuliano](https://it.wikipedia.org/wiki/Giorno_giuliano): questa lezione è iniziata al tempo 2.460.961,875JD (circa)
 
 # Come si misura il tempo
 
@@ -77,11 +76,13 @@ Ora dovrebbero tutti suggerire di usare lo smartphone, un orologio da polso o un
 # Come si misura il tempo
 
 -   Aggiungiamo adesso un’altra complicazione
--   In un momento in cui eravamo un po’ alticci, avevamo scommesso che avremmo determinato chi sia il più veloce senza usare cellulari od orologi!
+-   In un momento in cui eravamo un po’ alticci, avevamo scommesso che non avremmo usato strumenti convenzionali come orologi o cronometri
+-   Dobbiamo inventare il nostro “cronometro”: possiamo usare qualsiasi oggetto d’uso comune per stabilire un’unità di tempo con cui misurare il tempo impiegato dai due corridori
+-   Ovviamente questo nostro “cronometro” deve garantire una misura ripetibile (Luca è sul campo già oggi, ma Serena arriverà solo la settimana prossima!)
 
 ::: notes
 
-Si potrebbe immaginare di usare un metronomo, o di far oscillare un pendolo, o di bucare un secchio e misurare quanta acqua esce… Ci sono infinite risposte!
+Si potrebbe immaginare di usare un metronomo, o di far oscillare un pendolo, o di bucare un secchio e misurare quanta acqua esce, o di accendere una candela e misurare quanto si è consumata, o di far rotolare un cilindro da un piano leggermente inclinato… Ci sono infinite risposte!
 
 :::
 
@@ -140,8 +141,9 @@ Si potrebbe immaginare di usare un metronomo, o di far oscillare un pendolo, o d
 # Calcoli con unità di misura
 
 -   Quando diciamo che un’auto va a 90 km/h, stiamo usando due tipi di misure: una di *spazio* e una di *tempo*.
--   Ma km/h non è un’unità di misura del SI, e rende complicati i calcoli. È meglio convertire in m/s
--   Vediamo quindi ora come si possono convertire unità di misura che contengono il tempo
+-   La velocità misurata in km/h non usa le unità del SI, che dovrebbero essere m/s
+-   Convertire unità di misura basate sul tempo è complicato, perché [abbiamo visto](#time-units) che le sue unità sono complicate!
+-   Vediamo ora alcune tecniche con cui convertire facilmente unità di misura
 
 # Calcoli con unità di misura
 
