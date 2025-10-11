@@ -2,13 +2,15 @@
 
 # Inquisitori accademici onorari
 
+# L’effetto Doppler
+
 # Conclusioni
 
-# Materiale per l’esame
+# Cosa sapere per l’esame
 
 ---
 title: Fisica -- Lezione 8
-subtitle: Interferenza e onde stazionarie
+subtitle: L’effetto Doppler
 author: Maurizio Tomasi ([`maurizio.tomasi@unimi.it`](mailto:maurizio.tomasi@unimi.it))
 date: Martedì 25 novembre 2025
 ...

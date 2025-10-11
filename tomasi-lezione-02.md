@@ -1,4 +1,4 @@
-# Introduzione all’argomento di oggi
+# Argomenti di oggi
 
 -   Come si può misurare il tempo?
 -   Come convertire le unità di misura?
@@ -28,7 +28,7 @@
 
 -   Ad esempio, a quanti metri al secondo corrispondono 70 km/h?
 
--   Oppure, se voglio praticare 10 esercizi durante due ore in palestra, quanti minuti dura un esercizio?
+-   E due ore e mezza, a quanti minuti corrispondono?
 
 
 # Il sistema rivoluzionario francese
@@ -45,8 +45,7 @@
 
 -   Quando venne introdotto nel 1794, ne fu reso obbligatorio l’uso…
 -   …ma appena un anno dopo si tolse l’obbligo, con queste motivazioni:
-    - Troppo complicato da usare
-    - Usare gli stessi termini “ora” e “minuto” confondeva troppo, ma introdurne di nuovi era complicato per la gente del popolo
+    - Usare gli stessi termini “ora” e “minuto” confondeva, ma introdurne di nuovi sarebbe stato complicato per la gente del popolo
     - Cambiare tutti gli orologi della nazione sarebbe costato troppo
 -   È sopravvissuto in astronomia, dove oggi si usa regolarmente il [Giorno giuliano](https://it.wikipedia.org/wiki/Giorno_giuliano).
 -   Come potete notare, la storia della scienza non è troppo lineare…
@@ -134,9 +133,15 @@ Si potrebbe immaginare di usare un metronomo, o di far oscillare un pendolo, o d
 -   Queste sono le cose in comune:
     1.  C’è qualcosa che si muove (sabbia, braccio del metronomo, denti del diapason)
     2.  Gli strumenti più comodi da usare hanno un movimento che si ripete, in linea di principio per sempre
--   Vedremo meglio nelle prossime lezioni le implicazioni di questi concetti. Parliamo ora di come convertire unità di misura
+-   Il movimento è fondamentale: è solo tramite esso che ci si rende conto del passare del tempo!
 
 # Calcoli con unità di misura
+
+# Calcoli con unità di misura
+
+-   Quando diciamo che un’auto va a 90 km/h, stiamo usando due tipi di misure: una di *spazio* e una di *tempo*.
+-   Ma km/h non è un’unità di misura del SI, e rende complicati i calcoli. È meglio convertire in m/s
+-   Vediamo quindi ora come si possono convertire unità di misura che contengono il tempo
 
 # Calcoli con unità di misura
 
@@ -310,6 +315,13 @@ Riassumendo, abbiamo individuato queste proprietà, che ci serviranno tra un mom
     660\,\text{s} = 660\,\text{s} \times 1 = 660\,\text{s} \times \frac{60\,\text{s}}{1\,\text{min}} = 660 \times 60\,\frac{\text{s}^2}{\text{min}} = \ldots
     \]
 
+# Caso generale
+
+-   Abbiamo visto il “trucco” di moltiplicare per 1 nel caso in cui ci siano misure di tempo, perché queste sono complicate
+
+-   Ma in realtà il trucco ha una validità generale, e funziona anche con altre misure
+
+-   Potete provare ad applicarlo per convertire tonnellate (1000 kg) in grammi, o chilometri quadrati in metri quadrati
 
 # La velocità
 
@@ -344,20 +356,6 @@ Riassumendo, abbiamo individuato queste proprietà, che ci serviranno tra un mom
 Prendere un po’ di tempo per far ragionare gli studenti, e sentire quali sono le loro idee.
 
 In ogni caso, è imprescindibile sottolineare che non è possibile sommare distanza e tempo, perché si possono sommare solo quantità omogenee!
-
-:::
-
-# Esperimento pratico
-
--   Facciamo un esperimento in classe
-
--   Alcuni volontari tra voi dovrebbero percorrere una distanza prestabilita, ciascuno con la velocità che gli aggrada di più
-
-::: notes
-
-Anch’io dovrei partecipare, e nel camminare dovrei fermarmi a un tratto e poi riprendere.
-
-Stimare la distanza che si è scelta, poi registrare alla lavagna il tempo speso da ciascuno, e infine fare alcune considerazioni.
 
 :::
 
@@ -552,7 +550,6 @@ In quest’immagine ([*Little miss Sunshine*](https://www.imdb.com/title/tt04490
 
 -   Se il vostro mezzo si ferma in mezzo alla strada e dovete spingerlo fuori dalla carreggiata, è meglio che sia una Fiat 500 o un tir a pieno carico?
 
-
 # Massa inerziale
 
 -   La “massa” (si misura in chilogrammi, kg) è una quantità intrinseca dei corpi che dice quanto è difficile metterli in moto (o fermarli)
@@ -570,8 +567,8 @@ In quest’immagine ([*Little miss Sunshine*](https://www.imdb.com/title/tt04490
 a = \frac{F}{m}
 \]
 
--   Se la forza $F$ è molto grande, ma la massa del corpo è colossale, l’accelerazione sarà piccola. Esempio: una Ferrari lanciata a tutta velocità contro un grattacielo
--   Se la forza $F$ è piccola, ma la massa del corpo è piccolissima, l’accelerazione sarà grande. Esempio: soffiare su dei granelli di polvere.
+-   Se la forza $F$ è molto grande, ma la massa del corpo è colossale, l’accelerazione sarà piccola. Esempio: una Ferrari lanciata a tutta velocità contro un grattacielo ha una grande forza, ma il grattacielo ha una massa enorme e quindi l’urto lo fa accelerare pochissimo
+-   Se la forza $F$ è piccola, ma la massa del corpo è piccolissima, l’accelerazione sarà grande. Esempio: soffiare su dei granelli di polvere imprime una forza piccola (nessuno viene ferito da un soffio!), ma la polvere ha massa piccolissima, e l’accelerazione è quindi grande.
 
 # Massa e peso
 
@@ -604,7 +601,7 @@ a = \frac{F}{m}
 
 # Conclusioni
 
-# Materiale per l’esame
+# Cosa sapere per l’esame
 
 - Tempo e sue unità di misura
 - Calcoli con unità di misura

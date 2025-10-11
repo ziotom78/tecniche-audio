@@ -31,6 +31,24 @@
   </style>
   <link rel="stylesheet" href="reveal.js-5.2.1/dist/theme/white.css" id="theme">
   <link rel="stylesheet" href="css/custom-revealjs.css"/>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
 </head>
 <body>
   <div class="reveal">
@@ -46,98 +64,616 @@ href="mailto:maurizio.tomasi@unimi.it"><code>maurizio.tomasi@unimi.it</code></a>
 
 <section id="introduzione-allargomento-di-oggi" class="slide level1">
 <h1>Introduzione all’argomento di oggi</h1>
+<ul>
+<li>Oggi introdurremo il concetto di “oscillazione” e “risonanza”</li>
+<li>Sono i fondamenti che ci consentiranno di studiare come si
+comportano le onde sonore</li>
+<li>Vedremo come spiegare le oscillazioni in termini di leggi di
+Newton</li>
+</ul>
 </section>
 <section id="inquisitori-accademici-onorari" class="slide level1">
 <h1>Inquisitori accademici onorari</h1>
 </section>
+<section id="perché-parliamo-di-oscillazioni" class="slide level1">
+<h1>Perché parliamo di oscillazioni?</h1>
+<ul>
+<li>Un’oscillazione è un movimento periodico di un corpo che si sposta
+tra due posizioni estreme</li>
+<li>Semplificando, è un moto “avanti e indietro” che si ripete</li>
+<li>Alcuni esempi:
+<ul>
+<li>Altalena</li>
+<li>Pendolo di un orologio</li>
+<li>Corda di una chitarra</li>
+</ul></li>
+</ul>
+</section>
+<section id="oscillazioni-e-newton" class="slide level1">
+<h1>Oscillazioni e Newton</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Evidentemente le oscillazioni sono possibili solo se è in gioco
+qualche forza!</p></li>
+<li><p>Perché un corpo torni indietro, è infatti necessario che una
+forza lo faccia decelerare fino a fermarlo, per poi farlo tornare
+indietro</p></li>
+<li><p>Le forze adatte allo scopo sono molte:</p>
+<ul>
+<li>Elastiche (molla)</li>
+<li>Gravitazionale (altalena, pendolo)</li>
+<li>Etc.</li>
+</ul></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/harmonic-motion.gif" /></p>
+</div>
+</div>
+</section>
+<section id="forze-elastiche" class="slide level1">
+<h1>Forze elastiche</h1>
+<ul>
+<li>Le forze elastiche sono ovviamente quelle associate all’energia
+elastica <span class="math inline">E_e</span> che avevamo visto <a
+href="tomasi-lezione-03.html#energia-elastica">nella scorsa
+lezione</a></li>
+<li>Una forza elastica agisce quando un corpo viene deformato da una
+forza esterna, cercando di riportare il corpo alla forma originaria</li>
+<li>Esempi:
+<ul>
+<li>Elastici da cucina</li>
+<li>Molle degli orologi</li>
+<li>Strumenti musicali a corda (violino, chitarra, arpa,
+pianoforte…)</li>
+</ul></li>
+</ul>
+</section>
+<section id="forze-elastiche-1" class="slide level1">
+<h1>Forze elastiche</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Una forza elastica:
+<ul>
+<li>Richiama verso <strong>sinistra</strong> quando il corpo è deformato
+verso destra</li>
+<li>Richiama verso <strong>destra</strong> quando il corpo è deformato
+verso sinistra</li>
+</ul></li>
+<li>Ovviamente potete sostituire a destra/sinistra anche alto/basso,
+avanti/indietro… Il concetto resta sempre lo stesso</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/oscillating-spring.gif" /></p>
+</div>
+</div>
+</section>
+<section id="energia-elastica" class="slide level1">
+<h1>Energia elastica</h1>
+<ul>
+<li>In termini di energia:
+<ul>
+<li>Quando si allunga/comprime una molla, si accumula energia
+elastica</li>
+<li>Rilasciandola, l’energia elastica si converte in energia
+cinetica</li>
+<li>Nel caso ideale, l’energia elastica e cinetica continuano a
+convertirsi tra loro, mantenendo la somma uguale</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<iframe src="iframes/ideal-oscillator.html" width="100%" height="700" style="border:1px solid #ccc; border-radius: 8px;">
+</iframe>
+</section>
+<section id="il-pendolo" class="slide level1">
+<h1>Il pendolo</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Un pendolo agisce grazie alla forza di gravità…</li>
+<li>…ma l’asta del pendolo impedisce alla gravità di far cadere a terra
+la sua massa terminale</li>
+<li>La combinazione dell’azione di gravità ed asta porta ad una forza
+complessiva che è qualitativamente uguale ad una forza elastica</li>
+<li>Certi testi parlano proprio di “energia elastica”, ma è energia
+potenziale gravitazionale</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/orologio-a-pendolo.jpg" height="480" /></p>
+</div>
+</div>
+</section>
+<section id="periodo-e-frequenza" class="slide level1">
+<h1>Periodo e frequenza</h1>
+<ul>
+<li><p>Il tempo necessario perché un pendolo faccia un’oscillazione
+completa è detto <strong>periodo</strong>, e di solito si indica con
+<span class="math inline">T</span></p></li>
+<li><p>Viene molto usata anche la quantità inversa, la
+<strong>frequenza</strong> <span class="math inline">\nu</span>:</p>
+<p><span class="math display">
+\nu = \frac1{T} \quad \Rightarrow \quad T = \frac1\nu.
+</span></p></li>
+<li><p>Nel SI, il periodo si misura in secondi e la frequenza in s⁻¹.
+L’unità s⁻¹ viene indicata anche con il simbolo Hz (“Hertz”)</p></li>
+<li><p><strong>Trucco pratico</strong>: Un numero in Hertz dice quante
+oscillazioni si compiono in un secondo.</p></li>
+</ul>
+</section>
+<section id="esempi-di-periodi-e-frequenze" class="slide level1">
+<h1>Esempi di periodi e frequenze</h1>
+</section>
+<section id="diapason" class="slide level1">
+<h1>Il diapason</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Il diapason è uno strumento che si usa per accordare gli
+strumenti musicali</p></li>
+<li><p>È fatto da una forcella metallica, dimensionata in modo da
+oscillare 440 volte al secondo</p></li>
+<li><p>La frequenza di oscillazione è quindi 440 Hz, e il periodo è</p>
+<p><span class="math display">
+T = \frac1{\nu} = \frac1{440\,\text{Hz}} \approx 0{,}0023\,\text{s} =
+2{,}3\,\text{ms}.
+</span></p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/diapason.webp" /></p>
+</div>
+</div>
+</section>
+<section id="il-metronomo" class="slide level1">
+<h1>Il metronomo</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>A differenza del diapason, il metronomo ha una frequenza
+impostabile agendo sul peso montato sulla barra oscillante</p></li>
+<li><p>Se siete curiosi, <a
+href="https://www.youtube.com/watch?v=M8wBNKHN9Cs">questo video</a>
+spiega il suo funzionamento</p></li>
+<li><p>I numeri del metronomo non indicano gli Hertz, ma i “battiti al
+minuto”</p></li>
+<li><p>Per un <em>Allegro vivace</em> potreste scegliere 120 battiti al
+minuto, che corrisponde a <span class="math inline">T =
+0{,}5\,\text{s}</span> e <span class="math inline">\nu =
+2\,\text{Hz}</span>.</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/metronome-animation.gif" /></p>
+</div>
+</div>
+</section>
+<section id="il-pianoforte" class="slide level1">
+<h1>Il pianoforte</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Il pianoforte copre circa sette ottave: il suono più grave (La₀)
+ha una frequenza <span class="math inline">\nu</span> di circa 27 Hz,
+quello più acuto (Do₈) di circa 4190 Hz!</p></li>
+<li><p>Ad ogni ottava la frequenza raddoppia:</p>
+<table>
+<thead>
+<tr>
+<th>Nota</th>
+<th style="text-align: right;">Frequenza (Hz)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>La₀</td>
+<td style="text-align: right;">27,5</td>
+</tr>
+<tr>
+<td>La₁</td>
+<td style="text-align: right;">55,0</td>
+</tr>
+<tr>
+<td>La₂</td>
+<td style="text-align: right;">110,0</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/Kisting-Pianoforte.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="il-cuore-umano" class="slide level1">
+<h1>Il cuore umano</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Il battito cardiaco a riposo è di circa 60 pulsazioni al
+minuto</p></li>
+<li><p>Il periodo è quindi <span class="math inline">T =
+1\,\text{s}</span>, e la frequenza è <span class="math inline">\nu =
+1\,\text{Hz}</span></p></li>
+<li><p>Per curiosità, il battito a riposo di un colibrì è di 600
+pulsazioni al minuto, quindi <span class="math inline">T =
+0{,}1\,\text{s}</span> e <span class="math inline">\nu =
+10\,\text{Hz}</span>.</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/heart-beat.gif" /></p>
+</div>
+</div>
+</section>
+<section id="terremoti" class="slide level1">
+<h1>Terremoti</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Il periodo di oscillazione di un’onda sismica è molto
+variabile</p></li>
+<li><p>Nell’immagine a fianco (<a
+href="https://it.wikipedia.org/wiki/Terremoto_di_Christchurch_del_2011">terremoti
+del 2010–2011 a Christcurch, in Nuova Zelanda</a>) si può stimare che il
+periodo dell’onda fosse inferiore al secondo, quindi <span
+class="math inline">1\,\text{Hz} &lt; \nu &lt;
+10\,\text{Hz}</span>.</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/earthquake-christcurch.gif" /></p>
+</div>
+</div>
+</section>
+<section id="maree" class="slide level1">
+<h1>Maree</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Causate dall’attrazione gravitazionale della Luna</li>
+<li>Due rigonfiamenti contemporanei (sotto la Luna e all’altra
+estremità)</li>
+<li>I rigonfiamenti sono sempre allineati con la Luna, ma la Terra
+ruota</li>
+<li><span class="math inline">T = 12\,\text{h} = 43,2\,\text{ks}</span>,
+<span class="math inline">\nu = 23{,}1\,\mathrm{\mu Hz}</span></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/low-high-tide.gif" /></p>
+<p><img data-src="media/maree-diagramma.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="giornonotte" class="slide level1">
+<h1>Giorno/notte</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>La <strong>rotazione</strong> della Terra attorno al suo asse
+determina l’alternanza notte/dì</p></li>
+<li><p>Il periodo è ovviamente di 24 ore, ossia <span
+class="math inline">T = 86{,}4\,\text{ks}</span>, e <span
+class="math inline">\nu = 11{,}6\,\mathrm{\mu Hz}</span></p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/spinning-earth.gif" /></p>
+</div>
+</div>
+</section>
+<section id="anno-solare" class="slide level1">
+<h1>Anno solare</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Il moto della Terra attorno al sole è detto
+<strong>rivoluzione</strong>, e richiede circa 365 giorni</p></li>
+<li><p>(In realtà ci vogliono un po’ più di 365 giorni: ecco perché
+esistono gli anni bisestili!)</p></li>
+<li><p><span class="math inline">T = 365\,\text{d} =
+31{,}5\,\text{Ms}</span>, <span class="math inline">\nu =
+31{,}7\,\text{nHz}</span></p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/stagioni.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="giostra" class="slide level1">
+<h1>Giostra</h1>
+<p>Provate a stimare il periodo e la frequenza di questa giostra:</p>
+<video width="960" height="540" controls>
+<source src="media/giostra.mp4" type="video/mp4">
+<p>Your browser does not support the video tag. </video></p>
+<p>Originale su <a
+href="https://youtu.be/zTyqUf3E2xk?si=OAZtpeEWosCZvc_k">YouTube</a></p>
+</section>
+<section id="tipi-di-moti-oscillatori" class="slide level1">
+<h1>Tipi di moti oscillatori</h1>
+</section>
+<section id="oscillazioni-libere" class="slide level1">
+<h1>Oscillazioni libere</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Le “oscillazioni libere” sono tutte quelle oscillazioni originate da
+una forza che, dopo aver dato un impulso iniziale, cessa di operare</li>
+<li>In seguito a quell’impulso, l’oscillazione continua grazie alla sola
+forza elastica</li>
+<li>Il moto di un pendolo o di una molla è solo in prima approssimazione
+libero</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/oscillating-spring.gif" /></p>
+</div>
+</div>
+</section>
+<section id="oscillazioni-smorzate" class="slide level1">
+<h1>Oscillazioni smorzate</h1>
+<ul>
+<li><p>Nella realtà, ci sono sempre altre forze in gioco che fermano le
+oscillazioni: un’altalena, se non spinta periodicamente, si
+ferma!</p></li>
+<li><p>È quindi impossibile avere un’oscillazione libera
+<strong>perpetua</strong></p></li>
+<li><p>Quali sono queste forze aggiuntive che impediscono alle
+oscillazioni di continuare?</p></li>
+</ul>
+</section>
+<section id="arresto-di-unaltalena" class="slide level1">
+<h1>Arresto di un’altalena</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Le forze che arrestano un’altalena sono le seguenti:</p>
+<ul>
+<li><p>L’attrito dell’aria in cui è immersa l’altalena</p></li>
+<li><p>Il non perfetto scorrimento delle sospensioni (catene o corde)
+intorno ai perni</p></li>
+</ul></li>
+<li><p>Queste forze convertono l’energia cinetica e potenziale
+dell’oscillazione in <strong>calore</strong>, che si disperde sia
+nell’aria che nelle sospensioni</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/altalena.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="forze-viscose" class="slide level1">
+<h1>Forze viscose</h1>
+<ul>
+<li><p>L’attrito dell’aria è una cosiddetta <strong>forza
+viscosa</strong></p></li>
+<li><p>Le forze viscose intervengono quando un corpo si muove, mentre
+sono nulle se il corpo è fermo</p></li>
+<li><p>In altre parole, più velocemente un corpo si muove, più intense
+sono le forze viscose, secondo la formula</p>
+<p><span class="math display">
+F = - c v,
+</span></p>
+<p>dove il segno meno indica che la forza si oppone sempre alla
+velocità, e <span class="math inline">c</span> è un coefficiente che
+dipende sia dalla viscosità del fluido che dalle dimensioni del
+corpo.</p></li>
+</ul>
+</section>
+<section id="forze-viscose-1" class="slide level1">
+<h1>Forze viscose</h1>
+<ul>
+<li><p>Il coefficiente <span class="math inline">c</span> ha queste
+unità di misura:</p>
+<p><span class="math display">
+c = \frac{F}{v} \quad \Rightarrow \quad \left[c\right] = \mathrm{kg/s}.
+</span></p></li>
+<li><p>Più è grande <span class="math inline">c</span>, più resistenza
+oppone il fluido in cui si muove il corpo: il miele offre più resistenza
+dell’acqua!</p></li>
+</ul>
+</section>
+<section id="corpi-in-caduta-nellaria" class="slide level1">
+<h1>Corpi in caduta nell’aria</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Un corpo in caduta aumenta la sua velocità di 10 m/s ogni secondo
+che passa. Ma la forza viscosa dell’aria arresta dopo un certo tempo
+l’accelerazione, e la velocità diventa costante</p></li>
+<li><p>Grazie all’aria, la velocità delle gocce di pioggia non supera
+gli 8 m/s: senza di essa sarebbero come una palla da bowling lasciata
+cadere da un’altezza di 1 m!</p></li>
+<li><p>I paracadute hanno un grande coefficiente <span
+class="math inline">c</span>, che permette di tenere bassa la velocità
+di discesa</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/paracadute.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="smorzamento-critico" class="slide level1">
+<h1>Smorzamento critico</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Se le forze che si oppongono all’oscillazione sono intense, il
+corpo potrebbe non oscillare proprio!</p></li>
+<li><p>Quello che succede è che la molla torna alla posizione di riposo,
+e non la oltrepassa: si ferma e da lì non si muove più</p></li>
+<li><p>Questo è desiderabile in certi casi: ad esempio, gli
+ammortizzatori delle auto realizzano uno smorzamento critico per evitare
+che le sospensioni dell’auto oscillino troppo dopo una buca</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/automobile-buca.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="smorzamento-critico-1" class="slide level1">
+<h1>Smorzamento critico</h1>
+<ul>
+<li><p>Si può calcolare (ma è complicato!) quanto deve valere <span
+class="math inline">c</span> per avere uno smorzamento critico; il
+risultato è</p>
+<p><span class="math display">
+c_\text{crit} = 2\sqrt{k m},
+</span></p>
+<p>dove <span class="math inline">k</span> è la costante della molla e
+<span class="math inline">m</span> è la massa del corpo attaccato alla
+molla.</p></li>
+<li><p>Se <span class="math inline">c</span> è maggiore di questo valore
+critico, non si hanno oscillazioni</p></li>
+<li><p>Siccome <span class="math inline">c</span> dipende dalle
+dimensioni e dalla forma del corpo, può essere che alcuni corpi
+oscillino ed altri no</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<iframe src="iframes/damped-oscillator.html" width="100%" height="700" style="border:1px solid #ccc; border-radius: 8px;">
+</iframe>
+</section>
+<section id="risonanza" class="slide level1">
+<h1>Risonanza</h1>
+</section>
+<section id="risonanza-1" class="slide level1">
+<h1>Risonanza</h1>
+<ul>
+<li><p>Di solito, se si mette in moto un sistema oscillante, si desidera
+che l’oscillazione continui! (Non è il caso delle sospensioni delle
+auto…)</p></li>
+<li><p>Senza un meccanismo che impedisca lo smorzamento
+dell’oscillazione, un orologio o un metronomo sarebbero ben poco
+utili!</p></li>
+<li><p>Per poter vincere le forze viscose e di attrito (che “degradano”
+l’energia), è necessario fornire periodicamente energia:</p>
+<ul>
+<li><p>Tramite una molla (metronomo, orologio a molla)</p></li>
+<li><p>Tramite una batteria (orologio al quarzo)</p></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<iframe src="iframes/resonant-system.html" width="100%" height="700" style="border:1px solid #ccc; border-radius: 8px;">
+</iframe>
+</section>
+<section id="ampiezza-infinita" class="slide level1">
+<h1>Ampiezza infinita?</h1>
+<ul>
+<li><p>Il programma precedente potrebbe dare l’illusione che in una
+risonanza l’ampiezza tenda sempre all’infinito</p></li>
+<li><p>Nella realtà i fenomeni viscosi spesso pongono un limite massimo
+all’ampiezza raggiungibile</p></li>
+<li><p>Per capire come si comporta un oscillatore in risonanza, bisogna
+tenere conto di questi fattori:</p>
+<ul>
+<li><p>L’intensità della forzante, che tende a far aumentare
+l’ampiezza</p></li>
+<li><p>L’intensità delle forze viscose, che tende a limitare le
+oscillazioni</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="esempi-di-risonanza" class="slide level1">
+<h1>Esempi di risonanza</h1>
+</section>
+<section id="spinta-di-unaltalena" class="slide level1">
+<h1>Spinta di un’altalena</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Per compensare l’attrito dell’aria e le catene non ideali,
+bisogna continuare a spingere un bambino sull’altalena</p></li>
+<li><p>Il fatto che venga naturale spingere ad ogni oscillazione
+completa corrisponde a quanto abbiamo visto: la forza deve essere
+sincrona col periodo di oscillazione!</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/altalena.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="casse-armoniche" class="slide level1">
+<h1>Casse armoniche</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Una cassa armonica inizia ad oscillare quando la corda ad essa
+collegata oscilla</p></li>
+<li><p>Questo è un fenomeno di risonanza, perché la cassa armonica vibra
+alla stessa frequenza della corda</p></li>
+<li><p>Vedremo meglio nelle prossime lezioni il comportamento degli
+strumenti musicali</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/cassa-armonica-violino.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="edifici-antisismici" class="slide level1">
+<h1>Edifici antisismici</h1>
+<ul>
+<li><p>Nessun edificio è perfettamente rigido: tutti, se sollecitati,
+vibrano</p></li>
+<li><p>Un po’ come un diapason, ogni edificio ha la sua frequenza
+caratteristica (più l’edificio è alto, minore è la sua frequenza
+caratteristica)</p></li>
+<li><p>Questo significa che se un terremoto fa vibrare l’edificio alla
+frequenza “sbagliata”, potrebbe generarsi una risonanza… con conseguenze
+mortali!</p></li>
+<li><p>È questo il motivo per cui anche edifici particolarmente robusti
+possono essere distrutti da un’onda sismica</p></li>
+</ul>
+</section>
+<section id="edifici-antisismici-1" class="slide level1">
+<h1>Edifici antisismici</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>In un edificio antisismico, si inseriscono degli <em>isolatori
+sismici</em></p></li>
+<li><p>Si tratta di elementi inseriti nelle fondamenta, che
+<strong>aumentano</strong> il periodo di oscillazione in modo che sia
+maggiore delle frequenze tipiche delle onde sismiche</p></li>
+<li><p>Il risultato è che non è possibile instaurare una risonanza,
+perché durante un terremoto il suolo vibra troppo rapidamente perché
+l’edificio lo avverta</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/isolatori-sismici.webp" /></p>
+</div>
+</div>
+</section>
 <section id="conclusioni" class="slide level1">
 <h1>Conclusioni</h1>
 </section>
-<section id="materiale-per-lesame" class="slide level1">
-<h1>Materiale per l’esame</h1>
-<p>Proposta di ChatGPT:</p>
-<p>Struttura della lezione (90 min) 1. Oscillazioni quotidiane (≈ 15
-min)</p>
-<p>Stimolo iniziale: “Quali cose nella vita reale conoscete che vanno
-avanti e indietro sempre nello stesso modo?” (altalena, pendolo
-dell’orologio, metronomo, molla, diapason, il battito cardiaco, il
-respiro, le stagioni…).</p>
-<p>Mostra immagini / brevi video di ciascun esempio.</p>
-<p>Interazione: chiedi agli studenti di mimare un’oscillazione col corpo
-(es. muovere il braccio avanti e indietro, oscillare sulla sedia).</p>
-<p>Simulazione interattiva: animazione di una pallina su una molla che
-va avanti e indietro. Parametri regolabili: ampiezza, velocità del
-ritorno.</p>
-<ol start="2" type="1">
-<li>Periodicità e ritmo (≈ 15 min)</li>
-</ol>
-<p>Collegamento con musica: il battito di mani a tempo, il tamburo, il
-metronomo.</p>
-<p>Mostra che periodicità = regolarità nel tempo.</p>
-<p>Interazione: fai battere le mani a tempo con un metronomo sullo
-schermo. Poi accelera e rallenta per far percepire la differenza.</p>
-<p>Confronto: battito cardiaco regolare vs irregolare (spiega perché la
-periodicità è importante).</p>
-<p>Simulazione: generatore di impulsi grafici (barra che lampeggia a
-intervalli regolari). Regolare vs irregolare.</p>
-<ol start="3" type="1">
-<li>Frequenza (≈ 15–20 min)</li>
-</ol>
-<p>Introduci il concetto intuitivo: “Quante volte al secondo succede un
-evento che si ripete?”</p>
-<p>Esempi:</p>
-<p>frequenza del battito cardiaco (bpm → battiti al minuto),</p>
-<p>frequenza della lampadina che lampeggia,</p>
-<p>frequenza della giostra che fa un giro.</p>
-<p>Interazione:</p>
-<p>Mostra due metronomi con velocità diverse → chiedi “Quale ha
-frequenza maggiore?”</p>
-<p>Fai contare quanti battiti di mani riescono a fare in 10 secondi.</p>
-<p>Simulazione: due oscillazioni affiancate con frequenze diverse (es.
-una lenta e una veloce), contatore di cicli.</p>
-<ol start="4" type="1">
-<li>Oscillazione vs propagazione (≈ 15–20 min)</li>
-</ol>
-<p>Esempio visivo: muovere una corda tenuta ferma a un’estremità.</p>
-<p>Oscillazione = mano che si muove avanti e indietro.</p>
-<p>Propagazione = l’onda che corre lungo la corda.</p>
-<p>Altri esempi:</p>
-<p>sassi lanciati nell’acqua: la superficie oscilla su e giù, ma
-l’increspatura si propaga.</p>
-<p>persone che fanno la “ola” allo stadio.</p>
-<p>Interazione: mostra un’animazione di particelle che oscillano su e
-giù, mentre l’onda si muove lateralmente. Chiedi: “Il singolo puntino si
-sposta insieme all’onda?”</p>
-<p>Simulazione: array di puntini verticali che oscillano mentre l’onda
-viaggia da sinistra a destra (tipica animazione di onde
-trasversali).</p>
-<ol start="5" type="1">
-<li>Onde come “movimento che si trasmette” (≈ 20 min)</li>
-</ol>
-<p>Esempi concreti:</p>
-<p>onde in acqua (visuali e tattili),</p>
-<p>onde sonore (colpi di mani o voce che si propagano),</p>
-<p>onde luminose (spettacolo dei fuochi d’artificio, arcobaleno).</p>
-<p>Chiarisci che l’onda trasmette energia, non materia (il tappo che
-galleggia in acqua oscilla, non viaggia con l’onda).</p>
-<p>Interazione in aula:</p>
-<p>Far battere le mani uno dopo l’altro come un’onda sonora che si
-propaga.</p>
-<p>Piccolo “esperimento della corda”: uno tiene una fune, l’altro la
-muove per mostrare un’onda.</p>
-<p>Collegamento finale: il suono è un’onda che si propaga nell’aria →
-ponte per la prossima lezione.</p>
-<p>Simulazione:</p>
-<p>Onda sonora rappresentata come compressioni/rarefazioni (pallini più
-o meno densi che si muovono da sinistra a destra).</p>
-<p>Possibilità di cambiare la frequenza e vedere l’effetto (più
-compressioni in un dato intervallo).</p>
-<p>Sintesi finale (5 min)</p>
-<p>Ripasso collettivo: “Oggi abbiamo visto… oscillazioni → periodicità →
-frequenza → propagazione → onde”.</p>
-<p>Domanda aperta per stimolare curiosità: “Cosa cambia se un’onda è
-molto veloce o molto lenta? Forte o debole?” (anticipa il tema del
-suono).</p>
+<section id="cosa-sapere-per-lesame" class="slide level1">
+<h1>Cosa sapere per l’esame</h1>
+<ul>
+<li>Forze elastiche e oscillatori semplici</li>
+<li>Periodo e frequenza, valori tipici delle oscillazioni viste in
+classe</li>
+<li>Oscillazioni libere e smorzate</li>
+<li>Risonanza</li>
+<li>Esempi in musica, natura e tecnologia</li>
+</ul>
 </section>
     </div>
   </div>

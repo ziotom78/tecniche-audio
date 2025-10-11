@@ -1,7 +1,8 @@
-# Introduzione all’argomento di oggi
+# Argomenti di oggi
 
--   Perché un’altalena parte da sola dopo una spinta e poi torna indietro? Cosa la fa oscillare?
--   Perché un metronomo o un orologo a pendolo, a differenza di un’altalena, continuano ad oscillare così a lungo?
+-   Periodicità in natura
+-   Lavoro ed energia
+-   Conservazione dell’energia
 
 # Inquisitori accademici onorari
 
@@ -12,6 +13,83 @@
 -   Prima legge: inerzia
 -   Seconda legge: somma di forze ed accelerazione risultante
 -   Terza legge: azione e reazione
+
+
+# Applicazione alla gravità
+
+---
+
+[Low Earth Orbit Visualization](https://platform.leolabs.space/visualizations/leo)
+
+::: notes
+Presentare il caso come se il moto fosse rettilineo uniforme, e sottolineare che i satelliti non usano carburante per tenersi in orbita (altrimenti dopo una giornata sarebbero a secco!).
+
+Zoomare all’esterno per mostrare che in realtà il moto non è rettilineo uniforme, ma circolare!
+:::
+
+---
+
+<iframe
+    src="https://mgvez.github.io/jsorrery/"
+    width="100%"
+    height="640px"
+    style="border:none;">
+</iframe>
+
+[jsOrrery — Javascript Solar System Simulator](https://mgvez.github.io/jsorrery/)
+
+::: notes
+
+Fai notare che tutti i pianeti orbitano su orbite circolari, e che l’inerzia viene bilanciata dalla gravità: se non ci fosse gravità, il moto sarebbe rettilineo verso lo spazio infinito, e se il pianeta non avesse inerzia (velocità nulla), il moto sarebbe rettilineo verso il sole.
+
+:::
+
+# Bilanciamento di forze
+
+-   I pianeti viaggiano su orbite circolari anziché precipitare sul Sole perché posseggono **inerzia**, ossia la tendenza a viaggiare in linea retta
+-   Tutti i corpi posseggono inerzia, che è legata alla loro massa: più ne hanno, più è difficile deviarli
+-   Quando il Sistema Solare si è formato, i pianeti avevano una certa velocità iniziale: per questo non sono precipitati verso il Sole (e non precipiteranno!)
+
+# Orbite periodiche
+
+-   Il Sistema Solare si è formato cinque miliardi di anni fa (“cinque giga-anni”!), e i pianeti hanno (quasi) sempre orbitato nelle orbite che osserviamo oggi
+
+-   Questa stabilità è espressione di una quantità che viene conservata: l'**energia**:
+
+    #. Un corpo in moto possiede una certa quantità di **energia cinetica** $E_c$, che misura la sua inerzia
+    #. Un pianeta “sente” l’attrazione gravitazionale del Sole, che è quantificata dall'**energia potenziale gravitazionale** $E_g$
+
+-   I pianeti orbitano per miliardi di anni perché nessuna delle due energie prevale sull’altra
+
+::: notes
+
+Puoi usare come analogia i soldi: l’energia cinetica è lo stipendio che uno guadagna in un mese, mentre l’energia gravitazionale sono le spese mensili (affitto, cibo, etc.).
+
+I pianeti stanno in equilibrio, nel senso che non spendono mai né più né meno di quanto guadagnano.
+
+Nomina anche il fatto che la Natura preferisce la periodicità, e questo sarà importante anche nel caso delle onde sonore: se per i pianeti misuriamo la periodicità con il tempo di un’orbita (l’anno), per le onde sonore useremo la frequenza.
+:::
+
+# Periodicità in natura
+
+::: side-by-side
+
+::: contents
+
+-   Un caso molto simile a quello dei pianeti è il moto di un’altalena: senza l’attrito dell’aria e della catena, il moto continuerebbe all’infinito
+
+-   Anche nel caso di un’altalena **ideale** c’è un bilancio tra energia cinetica e potenziale, un po’ come un conto in banca che non muta mai il saldo di fine mese.
+
+-   La Natura preferisce la periodicità: questo sarà importante quando affronteremo le onde sonore
+
+:::
+
+::: media
+![](media/altalena.jpg){height=450px}
+:::
+:::
+
+# Dalle forze all’energia
 
 # Dalle forze all’energia
 
@@ -76,7 +154,7 @@ L = F \times \Delta x
 
     1.  La *caloria* (cal): 1 cal = 4,184 J
 
-    2.  Il chilowattora (kWh): 1 kWh = 3.600.000 J (più di tre milioni di Joule)
+    2.  Il chilowattora (kWh): 1 kWh = 3.600.000 J = 3.6 MJ
 
 ---
 
@@ -115,11 +193,14 @@ L = F \times \Delta x
 ::: side-by-side
 ::: content
 
--   È l’energia che ha un corpo per il fatto stesso di muoversi
+-   È l’energia che ha un corpo per il fatto stesso di muoversi:
+    \[
+    E_c = \frac12 m v^2.
+    \]
 
 -   Se un corpo in movimento ne urta uno fermo, quest’ultimo si muove: è stato compiuto lavoro.
 
--   **Attenzione**: un corpo che si muove di moto rettilineo uniforme non compie però lavoro! (Se viaggia a velocità costante, la forza è nulla per il primo principio)
+-   **Attenzione**: un corpo che si muove di moto rettilineo uniforme non compie lavoro!
 
 :::
 
@@ -128,6 +209,19 @@ L = F \times \Delta x
 :::
 :::
 
+# Esempio
+
+-   Un uomo di massa 80 kg parte da fermo e si muove a 1 m/s
+-   La sua energia cinetica iniziale è
+    \[
+    E_c^{(i)} = 0\,\text{J}
+    \]
+-   Quella finale è
+    \[
+    E_c^{(f)} = \frac12 \times 80\,\text{kg}\times (1\,\text{m/s})^2 = 40\,\text{J}
+    \]
+-   Di conseguenza, ha compiuto un lavoro uguale a 40 J.
+
 # Energia potenziale gravitazionale
 
 ::: side-by-side
@@ -135,9 +229,10 @@ L = F \times \Delta x
 
 -   La forza di gravità sposta i corpi verso il basso
 
--   Se un corpo sta in alto, ha quindi **energia potenziale gravitazionale**, perché può cadere
-
--   Durante la caduta, la forza di gravità compie lavoro
+-   Se un corpo sta in alto, ha quindi **energia potenziale gravitazionale**, che durante la caduta si converte in cinetica:
+    \[
+    E_g = m g h
+    \]
 
 :::
 
@@ -146,13 +241,31 @@ L = F \times \Delta x
 :::
 :::
 
-# Energia elastica
+# Esempio
+
+-   Un corpo di 1 kg cade da un’altezza di 10 m
+-   La sua energia cinetica iniziale è zero, e quella potenziale è
+    \[
+    E_g^{(i)} = 1\,\text{kg}\times 10\,\mathrm{m/s^2}\times 10\,\text{m} = 100\,\text{J}
+    \]
+-   Quando arriva a terra, tutta l’energia potenziale è diventata cinetica:
+    \[
+    E_c^{(f)} = E_g^{(i)} = 100\,\text{J}
+    \]
+-   Questo avviene perché ha acquisito velocità
+
+# Energia elastica {#energia-elastica}
 
 ::: side-by-side
 ::: content
 
--   Una molla compressa ha la capacità di espandersi
--   La molla ha quindi la capacità di compiere lavoro
+-   Una molla compressa o allungata ha la capacità di tornare alla sua posizione originaria:
+    \[
+    E_e = \frac12 k (\Delta x)^2,
+    \]
+    dove $k$ è una costante che dice quanto è “dura” una molla
+
+-   La molla ha quindi la capacità di compiere lavoro: basta immaginare di attaccare alla sua estremità un corpo
 
 :::
 
@@ -161,18 +274,30 @@ L = F \times \Delta x
 :::
 :::
 
-# Calore
+# Esempio
+
+-   Una molla con $k = 10\,\mathrm{N/m}$ viene compressa di 1 cm.
+-   Nel momento in cui viene rilasciata, l’energia cinetica è nulla, e quella elastica è
+    \[
+    E_e^{(i)} = \frac12\times 10\,\mathrm{N/m}\times 0.01\,\text{m} = 0.05\,\text{J}.
+    \]
+-   L’energia cinetica della sua estremità, quando torna alla posizione di riposo, è
+    \[
+    E_c^{(f)} = E_e^{(i)} = 0.05\,\text{J}.
+    \]
+-   Avendo energia cinetica, ha velocità non nulla e quindi inerzia: anziché fermarsi alla posizione di riposo, prosegue dando moto ad un fenomeno oscillatorio
+
+
+# Energia termica (calore)
 
 ::: side-by-side
 ::: content
 
--   Tutti i corpi sono formati da atomi che vibrano continuamente
-
--   Più un corpo è caldo, maggiormente gli atomi vibrano
+-   Tutti i corpi sono formati da atomi che vibrano continuamente, maggiormente nei corpi caldi
 
 -   Le vibrazioni sono causate da forze atomiche, e producono quindi lavoro
 
--   Ad un corpo è associata quindi una certa **energia calorica**: ecco perché l’energia si misura anche in **calorie**!
+-   Ad un corpo è associata quindi una certa **energia calorica**, che è una forma di energia cinetica
 
 :::
 
@@ -180,6 +305,7 @@ L = F \times \Delta x
 ![](media/metl_heat.gif)
 :::
 :::
+
 
 # Energia chimica
 
@@ -207,7 +333,7 @@ L = F \times \Delta x
 
 -   Le cariche elettriche si attraggono e si respingono tra loro
 -   Il loro moto fa compiere lavoro alle forze elettromagnetiche
--   È una forma di energia molto conveniente!
+-   È una forma di energia molto conveniente, perché **è estremamente semplice convertirla in altre forme di energia**
 
 :::
 
@@ -216,36 +342,79 @@ L = F \times \Delta x
 :::
 :::
 
+# Energia sonora
 
-# Analogia
+::: side-by-side
+
+::: content
+-   È l’energia che ci interessa di più!
+
+-   In un altoparlante, l’energia elettrica fa vibrare una membrana che mette in moto l’aria
+
+-   Possiamo considerarla come una forma di energia cinetica (molecole d’aria che si muovono)
+:::
+
+::: media
+
+![](media/casse-amplificatore.webp)
+
+:::
+:::
+
+# Esempi
+
+# La lavatrice
 
 ::: side-by-side
 
 ::: content
 
--   Si può pensare all’energia come al denaro; però non si può creare né distruggere, e non si svaluta mai
+-   La lavatrice consuma energia elettrica
 
--   Come il denaro può essere convertito in varie forme (contanti, somma in banca, lingotti d’oro…), così anche l’energia si può convertire
+-   Converte l’energia elettrica in:
 
--   Il “bilancio” dell’energia **è sempre perfetto**: se scompaiono $x$ Joule di energia da una parte, devono sempre comparirne esattamente $x$ da un’altra.
+    Energia termica
+    :   Riscalda l’acqua
+
+    Energia cinetica
+    :   Fa girare il cestello
+
+    Energia sonora
+    :   È il suono che fa quando il programma è terminato
 
 :::
 
 ::: media
-![](media/soldi-oro.jpg)
+
+![](media/lavatrice.jpg){height=400px}
+
 :::
 :::
 
+# Piatto che si rompe
 
-# Esempi
+::: side-by-side
+
+::: content
+
+-   Il piatto nella credenza ha energia potenziale gravitazionale $E_g$
+-   Durante la caduta converte l’energia potenziale in energia cinetica $E_c$
+-   Al momento dell’urto, parte dell’energia diventa termica, parte sonora, e parte resta cinetica (nei frammenti)
+
+:::
+
+::: media
+
+![](media/titanic-sinking-plates-falling-and-breaking.gif)
+
+:::
+:::
 
 # Ciclista in collina
 
 ::: side-by-side
 
 ::: content
-
-Consideriamo questi elementi:
 
 -   Muscoli
 -   Rotazione dei pedali
@@ -268,41 +437,15 @@ Consideriamo questi elementi:
 
 ::: content
 
-Consideriamo questi elementi:
-
--   Energia del gas
--   Calore nell’acqua
--   Vapore che spinge l’acqua
--   Calore del caffè
--   Calore nello stomaco
--   Energia chimica del caffè
+-   L’energia calorica del gas si trasmette all’acqua
+-   L’energia cinetica delle molecole d’acqua le fa evaporare, rompendo i legami del fluido
+-   Gli urti del vapore contro la superficie d’acqua la fanno risalire verso il filtro
+-   Quando l’acqua scende sotto il livello inferiore del tubo, sale il vapore che produce il gorgoglìo (energia sonora)
 
 :::
 
 ::: media
-![](media/moka.webp){height=450px}
-:::
-:::
-
-
-# Ascoltare musica
-
-::: side-by-side
-
-::: content
-
-Consideriamo questi elementi:
-
--   Energia elettrica
--   Vibrazione delle membrane degli altoparlanti
--   Onde sonore nell’aria
--   Vibrazione del timpano nell’orecchio
--   Impulsi nervosi
-
-:::
-
-::: media
-![](media/casse-amplificatore.webp)
+![](media/moka.jpg){height=450px}
 :::
 :::
 
@@ -313,13 +456,10 @@ Consideriamo questi elementi:
 
 ::: content
 
-Consideriamo questi elementi:
-
--   Energia cinetica dell’auto
--   Azione del piede sul pedale
--   Ganasce dei freni
--   Calore nei freni e nell’aria
--   Presenza di una dinamo (freni rigenerativi)
+-   L’automobile ha una certa energia cinetica
+-   Il piede muove il pedale (energia cinetica), che stringe le ganasce dei freni
+-   Le ganasce producono attrito, ossia calore che scalda i freni e l’aria, e rumore (energia sonora)
+-   Se i freni sono rigenerativi, una dinamo converte parte dell’energia cinetica dell’automobile in elettricità, che viene convertita dalla batteria in energia chimica
 :::
 
 ::: media
@@ -333,11 +473,9 @@ Consideriamo questi elementi:
 
 ::: content
 
-Consideriamo questi elementi:
-
--   Caduta dell’acqua
--   Rotazione della turbina
--   Produzione di energia elettrica
+-   Come nel caso dei piatti, l’acqua converte energia potenziale gravitazionale $E_g$ in energia cinetica
+-   Questa si trasmette ad una turbina, facendola ruotare
+-   Una dinamo converte l’energia cinetica (rotatoria) della turbina in energia elettrica
 :::
 
 ::: media
@@ -352,13 +490,9 @@ Consideriamo questi elementi:
 
 ::: content
 
-Consideriamo questi elementi:
+-   La luce solare è energia elettromagnetica
+-   Questa viene convertita in elettricità dai pannelli
 
--   Luce solare
--   Elettricità
--   Moto del cestello della lavatrice
--   Calore nel forno
--   Luce delle lampadine
 :::
 
 ::: media
@@ -366,11 +500,98 @@ Consideriamo questi elementi:
 :::
 :::
 
+# Analogia col denaro
+
+::: side-by-side
+
+::: content
+
+-   Dagli esempi fatti, si capisce che l’energia può essere paragonata a un tipo di denaro che non si può creare né distruggere, e non si svaluta mai
+
+-   Come il denaro può essere convertito in varie forme (contanti, somma in banca, lingotti d’oro…), così anche l’energia si può convertire
+
+-   Il “bilancio” dell’energia **è sempre perfetto**: se scompaiono $x$ Joule di energia da una parte, devono comparirne $x$ da un’altra.
+
+:::
+
+::: media
+![](media/soldi-oro.jpg)
+:::
+:::
+
+# “Produzione” di energia
+
+# Energia nelle case
+
+-   L’energia nelle case arriva principalmente sotto forma di:
+
+    -   Elettricità
+
+    -   Gas
+
+    -   Biomassa (legna, pellet…)
+
+-   In ambito domestico, il gas e la biomassa vengono tipicamente usate solo per produrre calore (fornelli, termosifoni, stufe). Non è però così a livello di produzione nazionale
+
+-   L’elettricità è estremamente versatile perché è facile trasportarla (su **brevi** distanze) e convertirla in altre forme
+
+# L’energia in Italia
+
+-   Nel 2024, in Italia si sono consumati 312 TWh di energia
+
+-   Convertiti in Joule, si tratta di un **miliardo di miliardi di Joule**, ossia **un milione di TJ**
+
+-   Come produciamo questa energia?
+
+# Fonti di energia
+
+-   Poco più del 40% viene da fonti fossili: principalmente gas, ma anche carbone
+
+    -   Il gas viene bruciato (producendo CO₂ 🙁) per scaldare acqua
+    -   L’acqua evapora, e il vapore fa girare turbine
+    -   Alle turbine è collegata una dinamo, che produce energia elettrica
+
+-   Un altro 40% proviene da fonti rinnovabili: principalmente dighe, ma anche pannelli fotovoltaici, pale eoliche, biomasse… (in ordine di importanza)
+
+-   Il restante 20% viene acquistato direttamente dall’estero: Francia, Svizzera, Slovenia ed Austria (gli stati confinanti)
+
+-   Oltre all’energia importata, importiamo anche molto gas: il 95% di quanto consumiamo!
+
+# Consumo nel tempo
+
+-   L’evoluzione del consumo di energia nel tempo mostra alcune tendenze:
+
+    -   La tecnologia migliora sempre, permettendo di “sprecare” sempre meno energia (ossia, di convertirne sempre meno in forme inutili)
+    -   Le esigenze energetiche aumentano con l’aumentare del benessere della popolazione mondiale
+    -   Si tende ad usare sempre di più l’energia elettrica, più pulita e facile da trattare (vedi i veicoli elettrici)
+    -   L’esplosione dell’intelligenza artificiale (AI) richiede moltissima energia
+
+-   Il risultato è che il consumo globale di energia aumenta, ma diminuisce il ricorso ad energie inquinanti (gas, carbone…) a vantaggio dell’energia elettrica
+
+# Il caso dell’Italia
+
+::: side-by-side
+
+::: content
+-   L’ Italia è una paese avanzato, che può accedere a tecnologie di ultima generazione.
+-   La popolazione è stabile, ma i consumi aumentano (digitale, AI, …)
+-   Si prevede che nei prossimi anni ci sarà un **incremento** nella domanda di energia, ma non marcato…
+-   …però il consumo di energia **elettrica** aumenterà moltissimo, a discapito di altre forme di energia (petrolio, gas, carbone…)
+:::
+
+::: media
+
+![](media/italia-bandiera.png)
+
+:::
+:::
+
+
 # Energia e potenza
 
 # Il concetto di “potenza”
 
--   L’energia è fondamentale per quasi tutti i processi fisici e biologici
+-   Abbiamo visto che l’energia è fondamentale per tutti i processi fisici e biologici
 
 -   È però anche importante la **velocità** con cui l’energia viene consumata
 
@@ -401,6 +622,18 @@ Consideriamo questi elementi:
 :::
 :::
 
+# Analogia
+
+-   Potete pensare all’energia usata per un processo come alla “distanza” percorsa per compiere quel processo
+
+-   La **potenza** è la velocità con cui percorrete quella distanza
+
+-   Esempio: un ciclo di lavaggio di 1 ora in lavatrice consuma circa 2,5 MJ (0,7–0,8 kWh). Questi 2,5 MJ sono la “distanza”, e la potenza quantifica la velocità con cui sono stati usati dalla lavatrice.
+
+---
+
+![](media/washing-machine-power-consumption.png){height=640px}
+
 # Il Kilowattora
 
 ::: side-by-side
@@ -411,7 +644,8 @@ Consideriamo questi elementi:
 -   Esso è l’energia che si può estrarre da una potenza di 1 kW (un chilowatt) in un’ora di tempo:
 
     \[
-    1\,\mathrm{kW} = 1\,\mathrm{kW} \times 3,600\,\mathrm{s} = 3,600,000\,\mathrm{W}
+    1\,\mathrm{kWh} = 1\,\mathrm{kW} \times 3.600\,\mathrm{s} = 3,6\,\mathrm{MW}
+    \]
 
 -   I fornitori di energia come ENI, Enel, Sorgenia, etc., riportano l’energia consumata in bolletta usando i kWh.
 :::
@@ -423,8 +657,9 @@ Consideriamo questi elementi:
 
 # Conclusioni
 
-# Materiale per l’esame
+# Cosa sapere per l’esame
 
+- Moto periodico dei pianeti
 - Lavoro ed energia
 - Potenza
 - Unità di misura del lavoro e dell’energia

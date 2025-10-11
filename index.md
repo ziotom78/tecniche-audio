@@ -4,8 +4,8 @@
 | Data              | Lezione                                                           |
 |-------------------|-------------------------------------------------------------------|
 | 6 ottobre 2025    | [01. Cosa significa misurare?](tomasi-lezione-01.html)            |
-<!--
 | 13 ottobre 2025   | [02. Conversioni, tempo, movimento](tomasi-lezione-02.html)       |
+<!--
 | 20 ottobre 2025   | [03. Lavoro ed energia](tomasi-lezione-03.html)                   |
 | 27 ottobre 2025   | [04. Oscillazioni ed onde](tomasi-lezione-04.html)                |
 | 3 novembre 2025   | [05. Percezione delle onde sonore](tomasi-lezione-05.html)        |

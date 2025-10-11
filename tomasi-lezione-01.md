@@ -83,7 +83,7 @@ Sottolinea che la misurazione di qualcosa è un’attività della vita quotidian
 
 # Due sistemi a confronto
 
-- In Italia si usa il Sistema Metrico Decimale, dove le misure sono espresse in metri, secondi, kilogrammi, etc.
+- In Europa si usa il **Sistema Internazionale**, dove le misure sono espresse in metri, secondi, kilogrammi, etc.
 
 - Non è l’unico sistema! Avete mai sentito parlare di piedi, pollici, once, galloni, acri…? Questo è il cosiddetto **Sistema Imperiale Britannico**, usato nel Regno Unito
 
@@ -208,7 +208,7 @@ Sottolinea che la misurazione di qualcosa è un’attività della vita quotidian
     #. Occorre ricordarsi moltissime unità di misura!
     #. Conoscere bene come fare i calcoli con le unità di lunghezza (miglia, stadi, piedi, pollici…) non aiuta molto nel fare i calcoli con i soldi (sterline, scellini…) o con i volumi (once, tazze…)
 
--   Per questo motivo si è inventato il Sistema Internazionale (SI) di misura, che trae ispirazioni dal sistema decimale inventato durante la Rivoluzione Francese.
+-   Per questo motivo si è inventato il Sistema Internazionale (SI) di misura, che trae ispirazioni dal Sistema Metrico Decimale inventato durante la Rivoluzione Francese.
 
 # Il Sistema Internazionale (SI)
 
@@ -295,7 +295,7 @@ Esempio: si può ricordare la collocazione dei paesi baltici sotto la Finlandia 
 
 ---
 
-![](media/obsidian-example.png)
+![](media/obsidian-example.png){height=640px}
 
 <small>
 [How I Obsidian](https://xavd.id/blog/post/how-i-obsidian/)
@@ -303,7 +303,7 @@ Esempio: si può ricordare la collocazione dei paesi baltici sotto la Finlandia 
 
 ---
 
-![](media/obsidian-graph.jpg)
+![](media/obsidian-graph.jpg){height=640px}
 
 # Studio a memoria
 
@@ -389,7 +389,7 @@ Esempio: si può ricordare la collocazione dei paesi baltici sotto la Finlandia 
 ![](media/perplexity-studiare-fisica.png){height=640px}
 
 <small>
-**Attenzione!** Non do alcuna “benedizione” riguardo a quanto c’è scritto qui sopra! 😀
+**Attenzione!** Non do alcuna “benedizione” riguardo a quanto c’è scritto qui sopra! 😉
 </small>
 
 ---
