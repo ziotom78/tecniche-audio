@@ -439,14 +439,27 @@ Far camminare alcuni studenti avanti ed indietro con due velocità, e commentare
 
 -  Sappiamo già tutto sul primo; vediamo ora brevemente gli altri due
 
-# Moto r. uniformemente accelerato
+# Moto uniformemente accelerato
+
+::: side-by-side
+
+::: content
 
 -   È il tipo di moto che segue un oggetto che cade verticalmente
 -   La velocità aumenta, secondo dopo secondo, di 10 m/s (ossia 36 km/h):
     #.   Se si parte da fermi, dopo 1 s si cade a 10 m/s
     #.   Dopo un altro secondo, a 20 m/s
     #.   Dopo un altro secondo, a 30 m/s…
--   Il valore 10 m/s vale sulla Terra; per gli altri pianeti/satelliti è diverso (ad esempio, sulla Luna è 1,6 m/s, su Marte è 3,7 m/s).
+-   Il valore 10 m/s vale **solo sulla Terra**!
+
+:::
+
+::: media
+
+![](media/free-fall.gif){height=400px}
+
+:::
+:::
 
 # L’accelerazione
 
@@ -552,7 +565,7 @@ Far camminare alcuni studenti avanti ed indietro con due velocità, e commentare
 -   La macchina si ferma (= cambia la sua velocità) perché il muro esercita una forza contro di essa
 -   Anche il muro si muove, perché si deforma
 
-# Principio di azione/reazione
+# Terzo principio
 
 -   Il terzo principio di Newton è detto anche “di azione e reazione”:
 
@@ -568,13 +581,89 @@ Far camminare alcuni studenti avanti ed indietro con due velocità, e commentare
 
 -   Perché una piuma cade più lentamente di una palla da bowling? (Una volta data una risposta, guardate [questo video](https://www.youtube.com/watch?v=frZ9dN_ATew))
 
+# Somma di forze
+
+::: side-by-side
+
+::: content
+
+-   Il secondo principio dice che se più forze agiscono su uno stesso corpo, queste si **sommano**
+
+-   Se quindi due forze agiscono in senso opposto e si bilanciano, l’accelerazione complessiva sarà nulla e il corpo non si sposta!
+
+:::
+
+::: media
+
+![](media/bilanciamento-forze.jpg)
+
+:::
+:::
+
+# Caduta di una molla ([#1](https://www.youtube.com/shorts/k5s1cMNTmGs))
+
+::: side-by-side
+
+::: content
+
+-   Lasciando penzolare una molla e facendola cadere, avviene un fenomeno interessante
+
+-   La cima della molla cade verso terra con un’accelerazione **maggiore** di $g = 10\,\mathrm{m/s^2},$ ma il fondo della molla sembra stare sospeso a mezz’aria
+
+-   Perché secondo voi capita questo?
+
+:::
+
+::: media
+
+![](media/caduta-molla.gif)
+
+:::
+:::
+
+
+# Caduta di una molla ([#2](https://www.youtube.com/watch?v=eCMmmEEyOO0))
+
+::: side-by-side
+
+::: content
+
+-   Il centro della molla cade seguendo la legge del moto rettilineo uniformemente accelerato
+
+-   La cima della molla però ha due forze che la spingono in basso: la gravità e la forza elastica della molla
+
+-   Anche il fondo della molla subisce le due forze (gravità ed elastica), ma sono di verso opposto e si bilanciano
+
+:::
+
+::: media
+
+![](media/caduta-molla-spiegazione.gif)
+
+:::
+:::
+
+
+
 # L’inerzia
 
 # Il concetto di “inerzia”
 
+::: side-by-side
+
+::: content
 -   Se vi lanciassero addosso una palla e doveste fermarla con la mano, preferireste che fosse da ping-pong o da bowling?
 
 -   Se il vostro mezzo si ferma in mezzo alla strada e dovete spingerlo fuori dalla carreggiata, è meglio che sia una Fiat 500 o un tir a pieno carico?
+:::
+
+::: media
+
+![](media/scegli-la-palla.png)
+
+:::
+:::
+
 
 # Massa inerziale
 
@@ -589,12 +678,24 @@ Far camminare alcuni studenti avanti ed indietro con due velocità, e commentare
 
 # Massa inerziale
 
+::: side-by-side
+
+::: content
 \[
 a = \frac{F}{m}
 \]
 
--   Se la forza $F$ è molto grande, ma la massa del corpo è colossale, l’accelerazione sarà piccola. Esempio: una Ferrari lanciata a tutta velocità contro un grattacielo ha una grande forza, ma il grattacielo ha una massa enorme e quindi l’urto lo fa accelerare pochissimo
--   Se la forza $F$ è piccola, ma la massa del corpo è piccolissima, l’accelerazione sarà grande. Esempio: soffiare su dei granelli di polvere imprime una forza piccola (nessuno viene ferito da un soffio!), ma la polvere ha massa piccolissima, e l’accelerazione è quindi grande.
+-   Se $F$ è grande ma $m$ è colossale, allora $a$ sarà piccola. Esempio: un rimorchiatore attaccato ad una nave merci a pieno carico.
+-   Se $F$ è piccola ma $m$ è minuscola, allora $a$ sarà grande. Esempio: soffiare su dei granelli di polvere.
+:::
+
+::: media
+
+![](media/rimorchiatore-canale-corinto.jpg){height=600px}
+
+:::
+:::
+
 
 # Massa e peso
 
@@ -606,7 +707,11 @@ a = \frac{F}{m}
 
     -   Il peso invece è la forza che fa accelerare verso il suolo. Esso esiste solo sulla Terra o sui pianeti, e cambia il suo valore (sulla Luna il peso è minore).
 
--   [Il peso ha una sua particolarità: è l’unica forza al mondo che non dipende dalla massa. Ma questo discorso ci porterebbe lontano…]
+# Pesare gli astronauti?
+
+![](media/weight-of-astronauts.jpg){height=480px}
+
+[How do astronauts weigh themselves in space?](https://www.youtube.com/watch?v=oU3pp_4n84U) (Agenzia Spaziale Canadese)
 
 # Unità di misura
 
