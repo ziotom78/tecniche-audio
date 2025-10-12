@@ -2,8 +2,8 @@
 
 -   Come si può misurare il tempo?
 -   Come convertire le unità di misura?
--   Quali unità si usano per misurare la velocità degli oggetti in moto?
--   Perché lanciando una palla per una strada in salita, questa dopo un po’ torna indietro?
+-   Come misurare il moto dei corpi?
+-   Quali sono le cause che fanno muovere i corpi?
 
 # Inquisitori accademici onorari
 
@@ -135,6 +135,88 @@ Si potrebbe immaginare di usare un metronomo, o di far oscillare un pendolo, o d
     1.  C’è qualcosa che si muove (sabbia, braccio del metronomo, denti del diapason)
     2.  Gli strumenti più comodi da usare hanno un movimento che si ripete, in linea di principio per sempre
 -   Il movimento è fondamentale: è solo tramite esso che ci si rende conto del passare del tempo!
+
+
+# La velocità
+
+# Chi è il più veloce?
+
+-   Torniamo al caso della corsa tra Luca e Serena, ed andiamo un po’ oltre
+
+-   Non ci basta vedere chi dei due sia più veloce, vogliamo anche misurare **quanto**
+
+-   Come possiamo “quantificare” la velocità?
+
+# Distanza e tempo
+
+-   La velocità usa un’unità di misura **derivata**, perché è una lunghezza divisa per un tempo:
+
+    \[
+    v = \frac{\Delta x}{\Delta t}.
+    \]
+
+-   L’unità più comune sono i chilometri all’ora (km/h), che vengono misurati dai tachimetri sulle automobili
+
+-   Nel SI però, la velocità si misura in metri al secondo (m/s)
+
+# Definizione della velocità
+
+-   Perché dividere la distanza percorsa per il tempo?
+
+-   Non si potrebbe invece decidere di moltiplicare tra loro distanza e tempo?
+
+-   Oppure sommarli?
+
+-   Oppure…
+
+::: notes
+
+Prendere un po’ di tempo per far ragionare gli studenti, e sentire quali sono le loro idee.
+
+In ogni caso, è imprescindibile sottolineare che non è possibile sommare distanza e tempo, perché si possono sommare solo quantità omogenee!
+
+:::
+
+# Esempio
+
+-   Se percorro 10 metri in 4 secondi (caso A), la mia velocità è
+    \[
+    v_A = \frac{10\,\text{m}}{4\,\text{s}} = 2{,}5\,\text{m/s}.
+    \]
+
+-   Se percorro i medesimi 10 metri in 2 secondi (caso B), la mia velocità è
+    \[
+    v_B = \frac{10\,\text{m}}{2\,\text{s}} = 5{,}0\,\text{m/s}.
+    \]
+
+-   Mantenendo il tempo al **denominatore**, la velocità maggiore è attribuita effettivamente al caso più veloce (B)!
+
+
+# Velocità media e istantanea
+
+-   Ci sono due tipi di velocità: **media** ed **istantanea**
+
+-   Entrambe le velocità si misurano in metri al secondo (o km/h), ma il loro significato è diverso
+
+---
+
+![](media/wikipedia-speedometer.jpg){height=520px}
+
+<https://en.wikipedia.org/wiki/Tachometer>
+
+
+---
+
+![](media/openstreetmap-milan-rome.png){height=520px}
+
+<https://www.openstreetmap.org>
+
+
+::: notes
+
+Far calcolare agli studenti la velocità media, prima in km/h e poi in m/s: è 95,3 km/h, pari a 26,5 m/s
+
+:::
 
 # Calcoli con unità di misura
 
@@ -325,67 +407,7 @@ Riassumendo, abbiamo individuato queste proprietà, che ci serviranno tra un mom
 
 -   Potete provare ad applicarlo per convertire tonnellate (1000 kg) in grammi, o chilometri quadrati in metri quadrati
 
-# La velocità
-
-# Chi è il più veloce?
-
--   Torniamo al caso della corsa tra Luca e Serena, ed andiamo un po’ oltre
-
--   Non ci basta vedere chi dei due sia più veloce, vogliamo anche misurare **quanto**
-
--   Come possiamo “quantificare” la velocità?
-
-# Distanza e tempo
-
--   La velocità usa un’unità di misura **derivata**: è una lunghezza divisa per un tempo
-
--   L’unità più comune sono i chilometri all’ora (km/h), che vengono misurati dai tachimetri sulle automobili
-
--   Nel SI però, la velocità si misura in metri al secondo (m/s)
-
-# Definizione della velocità
-
--   Perché dividere la distanza percorsa per il tempo?
-
--   Non si potrebbe invece decidere di moltiplicare tra loro distanza e tempo?
-
--   Oppure sommarli?
-
--   Oppure…
-
-::: notes
-
-Prendere un po’ di tempo per far ragionare gli studenti, e sentire quali sono le loro idee.
-
-In ogni caso, è imprescindibile sottolineare che non è possibile sommare distanza e tempo, perché si possono sommare solo quantità omogenee!
-
-:::
-
-# Velocità media e istantanea
-
--   Ci sono due tipi di velocità: **media** ed **istantanea**
-
--   Entrambe le velocità si misurano in metri al secondo (o km/h), ma il loro significato è diverso
-
----
-
-![](media/wikipedia-speedometer.jpg){height=520px}
-
-<https://en.wikipedia.org/wiki/Tachometer>
-
-
----
-
-![](media/openstreetmap-milan-rome.png){height=520px}
-
-<https://www.openstreetmap.org>
-
-
-::: notes
-
-Far calcolare agli studenti la velocità media, prima in km/h e poi in m/s: è 95,3 km/h, pari a 26,5 m/s
-
-:::
+# Come usare i grafici
 
 # Come usare i grafici
 
@@ -505,6 +527,8 @@ Far camminare alcuni studenti avanti ed indietro con due velocità, e commentare
 2. Un corpo sottoposto a forze si muove di moto accelerato (o decelerato), e l’accelerazione è proporzionale alla somma delle forze
 3. Se un corpo A esercita una forza sul corpo B, il corpo B esercita una forza uguale e contraria sul corpo A
 
+(Molto importante impararli tutti e tre!)
+
 # Primo principio
 
 ![](media/2001-space-odyssey.jpg){height=420px}
@@ -517,11 +541,9 @@ Far camminare alcuni studenti avanti ed indietro con due velocità, e commentare
 
 ![](media/little-miss-sunshine-pushing-volkswagen.gif){height=320px}
 
-In quest’immagine ([*Little miss Sunshine*](https://www.imdb.com/title/tt0449059/), Dayton & Faris, 2006) agiscono tre forze:
+-   In quest’immagine ([*Little miss Sunshine*](https://www.imdb.com/title/tt0449059/), Dayton & Faris, 2006) il furgoncino si muove perché qualcuno lo spinge
 
--   I personaggi che spingono il furgoncino
--   Lo sfregamento delle ruote contro la strada (**attrito**)
--   La resistenza dell’aria
+-   La forza impressa causa un’accelerazione sul furgoncino, che partiva da fermo ma ha aumentato la sua velocità
 
 # Terzo principio
 
@@ -545,6 +567,8 @@ In quest’immagine ([*Little miss Sunshine*](https://www.imdb.com/title/tt04490
 -   Perché se faccio rotolare una palla a terra, dopo un po’ si ferma?
 
 -   Perché una piuma cade più lentamente di una palla da bowling? (Una volta data una risposta, guardate [questo video](https://www.youtube.com/watch?v=frZ9dN_ATew))
+
+# L’inerzia
 
 # Il concetto di “inerzia”
 
@@ -606,15 +630,15 @@ a = \frac{F}{m}
 # Cosa sapere per l’esame
 
 - Tempo e sue unità di misura
-- Calcoli con unità di misura
-- Conversioni di unità di misura
+- Calcoli e conversioni di unità di misura
 - Cinematica: velocità, velocità media e velocità istantanea
 - Dinamica di Newton; le tre leggi
+- Inerzia
 - Differenza tra massa e peso
 
 ---
 title: Fisica -- Lezione 2
-subtitle: Conversioni, tempo, movimento
+subtitle: Conversioni, tempo, cinematica e dinamica
 author: Maurizio Tomasi ([`maurizio.tomasi@unimi.it`](mailto:maurizio.tomasi@unimi.it))
 date: Lunedì 13 ottobre 2025
 ...
