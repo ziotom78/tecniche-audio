@@ -854,7 +854,7 @@ L = F \times \Delta x
 
 ---
 title: Fisica -- Lezione 3
-subtitle: Lavoro ed energia
+subtitle: Dinamica, lavoro ed energia
 author: Maurizio Tomasi ([`maurizio.tomasi@unimi.it`](mailto:maurizio.tomasi@unimi.it))
 date: Lunedì 20 ottobre 2025
 ...
