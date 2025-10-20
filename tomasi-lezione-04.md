@@ -33,7 +33,7 @@
 
 ::: media
 
-![](media/harmonic-motion.gif)
+![](media/pendulum-no-text.gif)
 
 :::
 :::
@@ -42,10 +42,15 @@
 # Forze elastiche
 
 -   Le forze elastiche sono ovviamente quelle associate all’energia elastica $E_e$ che avevamo visto [nella scorsa lezione](tomasi-lezione-03.html#energia-elastica)
--   Una forza elastica agisce quando un corpo viene deformato da una forza esterna, cercando di riportare il corpo alla forma originaria
+
+-   Quando un corpo elastico viene deformato da una forza esterna, esso cerca di riportarsi alla forma originaria
+
 -   Esempi:
+
     -   Elastici da cucina
+
     -   Molle degli orologi
+
     -   Strumenti musicali a corda (violino, chitarra, arpa, pianoforte…)
 
 # Forze elastiche
@@ -111,6 +116,20 @@
 -   Nel SI, il periodo si misura in secondi e la frequenza in s⁻¹. L’unità s⁻¹ viene indicata anche con il simbolo Hz (“Hertz”)
 
 -   **Trucco pratico**: Un numero in Hertz dice quante oscillazioni si compiono in un secondo.
+
+# Una curiosità
+
+-   Se ricordate, [avevamo detto](tomasi-lezione-04.html#diapason) che un diapason oscilla sempre a 440 Hz: non può oscillare ad un’altra frequenza!
+
+-   Già Galileo Galilei scoprì che questo è vero anche per un pendolo: **a patto di non fargli fare movimenti troppo ampi**, il suo periodo resta sempre lo stesso
+
+-   Galileo stabilì che l’unico mezzo per variare il periodo di un pendolo è accorciare o allungare la corda
+
+-   (No, aumentare o diminuire la massa non cambia il periodo!)
+
+---
+
+<iframe src="iframes/simple-pendulum.html" width="100%" height="700" style="border:1px solid #ccc; border-radius: 8px;"></iframe>
 
 
 # Esempi di periodi e frequenze

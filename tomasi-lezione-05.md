@@ -8,27 +8,94 @@
 
 -   Avevamo preso come esempio un pendolo, ed avevamo definito il **periodo** e la **frequenza** di oscillazione
 
--   Non abbiamo però parlato di come il periodo di oscillazione sia determinato
+-   Oggi ci spostiamo dalle semplici oscillazioni alle onde, che è il cuore di questo corso!
 
--   Data una corda e un pendolo, è possibile farlo oscillare alla frequenza che si vuole?
 
-# Il caso del diapason
+# Le onde
 
--   Se ricordate, [avevamo detto](tomasi-lezione-04.html#diapason) che un diapason oscilla sempre a 440 Hz: non può oscillare ad un’altra frequenza!
+-   Un’onda è una perturbazione che si propaga nello spazio, trasportando energia ma non materia
 
--   Già Galileo Galilei scoprì che questo è vero anche per un pendolo: **a patto di non fargli fare movimenti troppo ampi**, il suo periodo resta sempre lo stesso
+-   La propagazione avviene trasferendo energia lungo una certa direzione
 
--   Galileo stabilì che l’unico mezzo per variare il periodo di un pendolo è accorciare o allungare la corda
+-   Quest’energia può essere di varia natura: termica, elastica, elettromagnetica…
 
--   (No, aumentare o diminuire la massa non cambia il periodo!)
+
+# Esempi
+
+-   Le “onde” del mare sono un tipo di onda (abbastanza complesso!)
+
+-   La luce è un’onda elettromagnetica
+
+-   Il suono è un’onda di pressione
+
+-   I terremoti sono causati da onde sismiche
+
+# Tipi di onde
+
+-   Le onde si suddividono in due tipi:
+
+    #.   Onde trasversali
+
+    #.   Onde longitudinali
+
+-   A noi interessano le onde sonore, che sono **sempre** longitudinali. Ma è bene sapere che esistono anche le onde trasversali!
+
+-   Alcune proprietà delle onde valgono infatti solo per un tipo e non per l’altro, ed è bene non confonderle
 
 ---
 
-<iframe src="iframes/simple-pendulum.html" width="100%" height="700" style="border:1px solid #ccc; border-radius: 8px;"></iframe>
+![](media/transverse-longitudinal-waves.gif)
 
-# Propagazione di oscillazioni
+Notate che in nessuno dei due casi gli anelli della molla si muovono: passata l’onda, restano nella posizione iniziale!
 
-Se l'oscillazione si muove, diventa un'onda. Analogia Chiave: Il pubblico che fa la "Ola" nello stadio. Ogni persona oscilla (si alza e si siede, moto locale), ma il disturbo (l'energia) si propaga (viaggia) attraverso lo stadio. L'onda trasporta energia, non materia. Definizione di Suono: Il suono è l'oscillazione delle molecole d'aria (compressione e dilatazione) che si propaga. È un'onda meccanica.
+---
+
+![](media/deep-water-wave.gif)
+
+Di che tipo sono le onde del mare?
+
+# Onde sismiche
+
+-   Le onde sismiche possono essere di entrambi i tipi, perché la crosta terrestre si comporta in modo simile ad una molla
+
+# Onde sonore
+
+-   Le onde sonore sono solo di tipo **longitudinale**, perché sono onde di pressione
+
+-   Per capire il loro funzionamento, dobbiamo quindi introdurre prima il concetto di “pressione”
+
+# La pressione
+
+-   Nel linguaggio comune, per “pressione” si intende una forza applicata ad una superficie…
+
+-   …e, incredibilmente, in fisica è lo stesso!
+
+-   La pressione di una forza su una superficie è definita come il rapporto
+
+    \[
+    P = \frac{F}{s},
+    \]
+
+    e si misura in N/m² ovviamente. A questa unità è dato il nome di “Pascal”, dal nome del grande [filosofo, matematico, teologo e inventore francese](https://it.wikipedia.org/wiki/Blaise_Pascal).
+
+---
+
+![](media/longitudinal-sound-wave.gif)
+
+# Onde sonore
+
+-   Oggi inizieremo ad affrontare le onde sonore, che sono appunto un tipo di onda: un’**onda longitudinale di pressione** che si propaga nello spazio
+
+-   Per chiarire il significato dell’espressione “onda longitudinale di pressione”, dobbiamo però spiegare alcuni concetti:
+
+    #.  Cos’è una “onda”?
+    #.  Che significa che è “longitudinale”?
+    #.  Cos’è la “pressione”?
+
+
+# Onde trasversali
+
+-   Un’onda trasversale è un tipo di 
 
 # Simulatore
 
@@ -52,7 +119,7 @@ Il timbro: Si spiega il timbro come la "carta d'identità" di un suono, determin
 
 ---
 title: Fisica -- Lezione 5
-subtitle: Rumore, suono, timbro
+subtitle: Pressione, onde sonore, timbro
 author: Maurizio Tomasi ([`maurizio.tomasi@unimi.it`](mailto:maurizio.tomasi@unimi.it))
 date: Martedì 3 novembre 2025
 ...

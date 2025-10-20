@@ -9,7 +9,7 @@
 
 # Principi di Newton
 
-1. Lo stato naturale (imperturbato) dei corpi è il moto rettilineo uniforme
+1. Lo stato naturale (“imperturbato”) dei corpi è il moto rettilineo uniforme (incluso lo stato di quiete!)
 2. Un corpo sottoposto a forze si muove di moto accelerato (o decelerato), e l’accelerazione è proporzionale alla somma delle forze
 3. Se un corpo A esercita una forza sul corpo B, il corpo B esercita una forza uguale e contraria sul corpo A
 
@@ -73,6 +73,16 @@
 :::
 :::
 
+# Statica
+
+-   La “statica” è la parte della fisica che studia i corpi che stanno fermi
+
+-   Per il secondo principio, i corpi che stanno fermi devono essere soggetti a forze che si annullano
+
+-   Il caso di una mano che spinge il muro è un esempio di problema di statica
+
+-   Un ingegnere edile deve essere esperto di statica!
+
 # Caduta di una molla ([#1](https://www.youtube.com/shorts/k5s1cMNTmGs))
 
 ::: side-by-side
@@ -115,7 +125,6 @@
 
 :::
 :::
-
 
 
 # L’inerzia
@@ -257,24 +266,10 @@ I pianeti stanno in equilibrio, nel senso che non spendono mai né più né meno
 Nomina anche il fatto che la Natura preferisce la periodicità, e questo sarà importante anche nel caso delle onde sonore: se per i pianeti misuriamo la periodicità con il tempo di un’orbita (l’anno), per le onde sonore useremo la frequenza.
 :::
 
-# Periodicità in natura
+---
 
-::: side-by-side
+<iframe src="iframes/newton-cannonball.html" width="100%" height="700" style="border:1px solid #ccc; border-radius: 8px;"></iframe>
 
-::: contents
-
--   Un caso molto simile a quello dei pianeti è il moto di un’altalena: senza l’attrito dell’aria e della catena, il moto continuerebbe all’infinito
-
--   Anche nel caso di un’altalena **ideale** c’è un bilancio tra energia cinetica e potenziale, un po’ come un conto in banca che non muta mai il saldo di fine mese.
-
--   La Natura preferisce la periodicità: questo sarà importante quando affronteremo le onde sonore
-
-:::
-
-::: media
-![](media/altalena.jpg){height=450px}
-:::
-:::
 
 # Dalle forze all’energia
 
@@ -283,7 +278,7 @@ Nomina anche il fatto che la Natura preferisce la periodicità, e questo sarà i
 ::: side-by-side
 ::: content
 
--   Introduciamo oggi due concetti molto importanti: il **lavoro** e l'**energia**
+-   Introduciamo ora due concetti molto importanti: il **lavoro** e l'**energia**
 
 -   Il concetto di “lavoro” è diverso da quello del senso comune, ma è molto importante perché conduce al concetto di energia, che è **fondamentale**!
 
@@ -306,15 +301,17 @@ Nomina anche il fatto che la Natura preferisce la periodicità, e questo sarà i
     L = F \times \Delta x
     \]
 
--   Quindi, più forza applico, maggiore è il lavoro, e lo stesso vale se il corpo si sposta per un tragitto più lungo
+    Ma, attenzione! Lo spostamento dev’essere nella stessa direzione della forza!
+
+-   Il lavoro serve per rappresentare quanto è stata “utile” una forza: questo ovviamente nell’ipotesi che lo scopo per cui si usa una forza sia quello di muovere i corpi!
 
 # Lavoro in fisica e nell’uso comune
 
 -   Si potrebbe pensare che il lavoro misuri la “fatica”: se sposto una cassa pesante per 10 metri, fatico più che a spostarla per 5 metri
 
--   Però bisogna fare attenzione: il lavoro tiene conto dello **spostamento effettivo** $\Delta x$ di un corpo!
+-   Però bisogna fare attenzione: il lavoro tiene conto dello **spostamento effettivo** $\Delta x$ di un corpo, e questo spostamento dev’essere nella direzione giusta!
 
--   Se la cassa e pesantissima e, pure spingendola, non si muove, io fatico molto ma **non compio alcun lavoro**: $L = F \times \Delta x = F \times 0 = 0$.
+-   Se la cassa e pesantissima e, pure spingendola, non si muove, io fatico molto ma **non compio alcun lavoro**: $L = F \times \Delta x = F \times 0 = 0$. Ugualmente, se spingo in avanti ma il corpo si muove a destra, il lavoro che compio è comunque nullo. (Se si spostasse indietro, $L$ sarebbe negativo!)
 
 # Definizione di lavoro
 
@@ -323,7 +320,7 @@ L = F \times \Delta x
 \]
 
 -   Il lavoro $L$ è il prodotto della forza $F$ per lo spostamento $\Delta x$
--   Più una forza sposta un corpo, più lavoro ha compiuto
+-   Più una forza sposta un corpo lungo la “propria” direzione, maggiore è $L$
 -   Si può compiere un lavoro $L$ significativo in vari modi:
     1. Applico una forza $F$ grande
     2. Applico la forza $F$ a lungo, in modo che il corpo si sposti molto (grande $\Delta x$)
@@ -357,23 +354,34 @@ L = F \times \Delta x
 -   Ma cosa c’entrano le forze e gli spostamenti con un piatto a base di riso?
 -   O con la corrente che ci arriva in casa con cui teniamo accesa la luce?
 
+
 # Lavoro ed energia
 
 -   È possibile associare ai corpi una quantità chiamata **energia**
 
 -   Essa descrive lo stato in cui si trova un corpo in un certo istante
 
--   Si misura con la stessa unità del lavoro, perché se si calcola l’energia all’inizio e alla fine di uno spostamento, si scopre che **il lavoro compiuto è uguale alla differenza dell’energia**
+-   Si misura con la stessa unità del lavoro, perché se si calcola l’energia all’inizio e alla fine di uno spostamento, si scopre che **il lavoro compiuto da tutte le forze è uguale a una variazione dell’energia associata a quella forza**
 
--   [Attenzione: chi ha studiato fisica alle superiori si ricorderà che le cose sono un po’ più complicate di così. Per il momento ignoriamo queste complicazioni]
+# Esempio: corpo che cade
+
+-   Consideriamo un corpo di 1 kg che cade da un’altezza di 1 m.
+
+-   Esso cade a causa della forza di gravità; il corpo cade lungo la verticale, quindi la forza compie lavoro:
+
+    \[
+    L = F \times \Delta x = m g \times 1\,\text{m} = 1\,\text{kg}\times 10\,\mathrm{m/s^2} \times 1\,\text{m} = 10\,\text{J}.
+    \]
+
+-   Si può dimostrare che alla forza di gravità è associata una “energia gravitazionale”, che diminuisce esattamente della quantità 10 J.
 
 # Lavoro ed energia
 
--   L’energia può essere vista come **la capacità di un corpo di compiere lavoro**
+-   L’energia può essere vista come **la capacità di un corpo di compiere lavoro**: l’energia gravitazionale è ciò che rende possibile lo spostamento di un corpo che cade
 
--   Ci sono vari tipi di energia, e tutti sono associati a qualche tipo di forza
+-   Oltre all’energia gravitazionale ci sono altri tipi, e tutti sono associati a qualche tipo di forza
 
--   Vediamone alcuni
+-   Vediamo i più importanti
 
 # Energia cinetica
 
@@ -428,10 +436,13 @@ L = F \times \Delta x
 :::
 :::
 
+---
+
+<iframe src="iframes/falling-ball.html" width="100%" height="740" style="border:1px solid #ccc; border-radius: 8px;"></iframe>
+
 # Esempio
 
--   Un corpo di 1 kg cade da un’altezza di 10 m
--   La sua energia cinetica iniziale è zero, e quella potenziale è
+-   Un corpo di 1 kg, ad esempio, una bottiglia di latte, cade da un’altezza di 10 m. La sua energia cinetica iniziale è zero, e quella potenziale è
     \[
     E_g^{(i)} = 1\,\text{kg}\times 10\,\mathrm{m/s^2}\times 10\,\text{m} = 100\,\text{J}
     \]
@@ -439,7 +450,10 @@ L = F \times \Delta x
     \[
     E_c^{(f)} = E_g^{(i)} = 100\,\text{J}
     \]
--   Questo avviene perché ha acquisito velocità
+-   Questo avviene perché ha acquisito velocità:
+    \[
+    100\,\text{J} = \frac12 m v^2 \quad \Rightarrow \quad v = 14\,\text{m/s}.
+    \]
 
 # Energia elastica {#energia-elastica}
 
@@ -475,25 +489,6 @@ L = F \times \Delta x
 -   Avendo energia cinetica, ha velocità non nulla e quindi inerzia: anziché fermarsi alla posizione di riposo, prosegue dando moto ad un fenomeno oscillatorio
 
 
-# Energia termica (calore)
-
-::: side-by-side
-::: content
-
--   Tutti i corpi sono formati da atomi che vibrano continuamente, maggiormente nei corpi caldi
-
--   Le vibrazioni sono causate da forze atomiche, e producono quindi lavoro
-
--   Ad un corpo è associata quindi una certa **energia calorica**, che è una forma di energia cinetica
-
-:::
-
-::: media
-![](media/metl_heat.gif)
-:::
-:::
-
-
 # Energia chimica
 
 ::: side-by-side
@@ -511,6 +506,26 @@ L = F \times \Delta x
 ![](media/alberto-sordi-galateo-a-tavola.jpg)
 :::
 :::
+
+
+# Energia termica (calore)
+
+::: side-by-side
+::: content
+
+-   Le molecole dei corpi vibrano continuamente, maggiormente nei corpi caldi
+
+-   Le vibrazioni sono causate da forze molecolari ed atomiche, e producono quindi lavoro
+
+-   Ad un corpo è associata quindi una certa **energia calorica**, che è una forma di energia cinetica “disordinata”
+
+:::
+
+::: media
+![](media/metl_heat.gif)
+:::
+:::
+
 
 # Energia elettrica
 
@@ -597,23 +612,43 @@ L = F \times \Delta x
 :::
 :::
 
-# Ciclista in collina
+# Colpo di tennis
 
 ::: side-by-side
 
 ::: content
 
--   Muscoli
--   Rotazione dei pedali
--   Rotazione delle ruote
--   Spostamento del ciclista
--   Variazioni di quota
--   Attrito con la strada
+-   Una pallina da tennis raggiunge il giocatore con una certa velocità: ha quindi energia cinetica
+
+-   Il moto della racchetta trasferisce l’energia cinetica del braccio alla pallina
+
+-   Parte dell’energia viene usata per creare il rumore e per la deformazione delle corde e della pallina
 
 :::
 
 ::: media
-![](media/bicicletta-in-collina.jpg){height=400px}
+
+![](media/tennis.webp)
+
+:::
+:::
+
+# Urti
+
+::: side-by-side
+
+::: content
+
+-   Quando una palla colpisce un oggetto rigido, la palla si deforma: parte dell’energia cinetica del moto della palla si converte in energia cinetica “interna”
+-   Questo provoca onde sonore (rumore) e un riscaldamento della palla
+-   Anche il muro colpito si scalda un po’ nel punto dell’urto, e la parete vibra
+
+:::
+
+::: media
+
+![](media/golf-ball-bouncing.gif)
+
 :::
 :::
 
@@ -671,22 +706,6 @@ L = F \times \Delta x
 :::
 
 
-# Impianto fotovoltaico
-
-::: side-by-side
-
-::: content
-
--   La luce solare è energia elettromagnetica
--   Questa viene convertita in elettricità dai pannelli
-
-:::
-
-::: media
-![](media/impianto-fotovoltaico-con-accumulo.jpg)
-:::
-:::
-
 # Analogia col denaro
 
 ::: side-by-side
@@ -740,20 +759,20 @@ L = F \times \Delta x
 
 -   Un altro 40% proviene da fonti rinnovabili: principalmente dighe, ma anche pannelli fotovoltaici, pale eoliche, biomasse… (in ordine di importanza)
 
--   Il restante 20% viene acquistato direttamente dall’estero: Francia, Svizzera, Slovenia ed Austria (gli stati confinanti)
+-   Il restante 20% è energia elettrica acquistata dall’estero: Francia, Svizzera, Slovenia ed Austria (gli stati confinanti)
 
--   Oltre all’energia importata, importiamo anche molto gas: il 95% di quanto consumiamo!
+-   Oltre ad acquistare elettricità dall’estero, importiamo anche moltissimo gas: il 95% di quanto consumiamo!
 
 # Consumo nel tempo
 
 -   L’evoluzione del consumo di energia nel tempo mostra alcune tendenze:
 
-    -   La tecnologia migliora sempre, permettendo di “sprecare” sempre meno energia (ossia, di convertirne sempre meno in forme inutili)
+    -   L’evoluzione della tecnologia permette di sfruttare meglio le fonti energetiche
     -   Le esigenze energetiche aumentano con l’aumentare del benessere della popolazione mondiale
-    -   Si tende ad usare sempre di più l’energia elettrica, più pulita e facile da trattare (vedi i veicoli elettrici)
-    -   L’esplosione dell’intelligenza artificiale (AI) richiede moltissima energia
+    -   Si tende ad usare sempre di più l’energia elettrica, più pulita e facile da trattare (es.: automobili)
+    -   La rivoluzione digitale e l’AI hanno fatto aumentare le richieste di energia
 
--   Il risultato è che il consumo globale di energia aumenta, ma diminuisce il ricorso ad energie inquinanti (gas, carbone…) a vantaggio dell’energia elettrica
+-   Il risultato è che il consumo globale di energia aumenta, ma diminuisce il ricorso ad energie inquinanti a vantaggio dell’energia elettrica (nei paesi avanzati)
 
 # Il caso dell’Italia
 
@@ -808,14 +827,6 @@ L = F \times \Delta x
 ![](media/lampadina.jpg)
 :::
 :::
-
-# Analogia
-
--   Potete pensare all’energia usata per un processo come alla “distanza” percorsa per compiere quel processo
-
--   La **potenza** è la velocità con cui percorrete quella distanza
-
--   Esempio: un ciclo di lavaggio di 1 ora in lavatrice consuma circa 2,5 MJ (0,7–0,8 kWh). Questi 2,5 MJ sono la “distanza”, e la potenza quantifica la velocità con cui sono stati usati dalla lavatrice.
 
 ---
 

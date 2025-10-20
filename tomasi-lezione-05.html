@@ -31,6 +31,24 @@
   </style>
   <link rel="stylesheet" href="reveal.js-5.2.1/dist/theme/white.css" id="theme">
   <link rel="stylesheet" href="css/custom-revealjs.css"/>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
 </head>
 <body>
   <div class="reveal">
@@ -38,7 +56,7 @@
 
 <section id="title-slide">
   <h1 class="title">Fisica – Lezione 5</h1>
-  <p class="subtitle">Rumore, suono, timbro</p>
+  <p class="subtitle">Pressione, onde sonore, timbro</p>
   <p class="author">Maurizio Tomasi (<a
 href="mailto:maurizio.tomasi@unimi.it"><code>maurizio.tomasi@unimi.it</code></a>)</p>
   <p class="date">Martedì 3 novembre 2025</p>
@@ -57,40 +75,114 @@ href="mailto:maurizio.tomasi@unimi.it"><code>maurizio.tomasi@unimi.it</code></a>
 <li><p>Avevamo preso come esempio un pendolo, ed avevamo definito il
 <strong>periodo</strong> e la <strong>frequenza</strong> di
 oscillazione</p></li>
-<li><p>Non abbiamo però parlato di come il periodo di oscillazione sia
-determinato</p></li>
-<li><p>Data una corda e un pendolo, è possibile farlo oscillare alla
-frequenza che si vuole?</p></li>
+<li><p>Oggi ci spostiamo dalle semplici oscillazioni alle onde, che è il
+cuore di questo corso!</p></li>
 </ul>
 </section>
-<section id="il-caso-del-diapason" class="slide level1">
-<h1>Il caso del diapason</h1>
+<section id="le-onde" class="slide level1">
+<h1>Le onde</h1>
 <ul>
-<li><p>Se ricordate, <a href="tomasi-lezione-04.html#diapason">avevamo
-detto</a> che un diapason oscilla sempre a 440 Hz: non può oscillare ad
-un’altra frequenza!</p></li>
-<li><p>Già Galileo Galilei scoprì che questo è vero anche per un
-pendolo: <strong>a patto di non fargli fare movimenti troppo
-ampi</strong>, il suo periodo resta sempre lo stesso</p></li>
-<li><p>Galileo stabilì che l’unico mezzo per variare il periodo di un
-pendolo è accorciare o allungare la corda</p></li>
-<li><p>(No, aumentare o diminuire la massa non cambia il
-periodo!)</p></li>
+<li><p>Un’onda è una perturbazione che si propaga nello spazio,
+trasportando energia ma non materia</p></li>
+<li><p>La propagazione avviene trasferendo energia lungo una certa
+direzione</p></li>
+<li><p>Quest’energia può essere di varia natura: termica, elastica,
+elettromagnetica…</p></li>
+</ul>
+</section>
+<section id="esempi" class="slide level1">
+<h1>Esempi</h1>
+<ul>
+<li><p>Le “onde” del mare sono un tipo di onda (abbastanza
+complesso!)</p></li>
+<li><p>La luce è un’onda elettromagnetica</p></li>
+<li><p>Il suono è un’onda di pressione</p></li>
+<li><p>I terremoti sono causati da onde sismiche</p></li>
+</ul>
+</section>
+<section id="tipi-di-onde" class="slide level1">
+<h1>Tipi di onde</h1>
+<ul>
+<li><p>Le onde si suddividono in due tipi:</p>
+<ol>
+<li><p>Onde trasversali</p></li>
+<li><p>Onde longitudinali</p></li>
+</ol></li>
+<li><p>A noi interessano le onde sonore, che sono
+<strong>sempre</strong> longitudinali. Ma è bene sapere che esistono
+anche le onde trasversali!</p></li>
+<li><p>Alcune proprietà delle onde valgono infatti solo per un tipo e
+non per l’altro, ed è bene non confonderle</p></li>
 </ul>
 </section>
 <section class="slide level1">
 
-<iframe src="iframes/simple-pendulum.html" width="100%" height="700" style="border:1px solid #ccc; border-radius: 8px;">
-</iframe>
+<p><img data-src="media/transverse-longitudinal-waves.gif" /></p>
+<p>Notate che in nessuno dei due casi gli anelli della molla si muovono:
+passata l’onda, restano nella posizione iniziale!</p>
 </section>
-<section id="propagazione-di-oscillazioni" class="slide level1">
-<h1>Propagazione di oscillazioni</h1>
-<p>Se l’oscillazione si muove, diventa un’onda. Analogia Chiave: Il
-pubblico che fa la “Ola” nello stadio. Ogni persona oscilla (si alza e
-si siede, moto locale), ma il disturbo (l’energia) si propaga (viaggia)
-attraverso lo stadio. L’onda trasporta energia, non materia. Definizione
-di Suono: Il suono è l’oscillazione delle molecole d’aria (compressione
-e dilatazione) che si propaga. È un’onda meccanica.</p>
+<section class="slide level1">
+
+<p><img data-src="media/deep-water-wave.gif" /></p>
+<p>Di che tipo sono le onde del mare?</p>
+</section>
+<section id="onde-sismiche" class="slide level1">
+<h1>Onde sismiche</h1>
+<ul>
+<li>Le onde sismiche possono essere di entrambi i tipi, perché la crosta
+terrestre si comporta in modo simile ad una molla</li>
+</ul>
+</section>
+<section id="onde-sonore" class="slide level1">
+<h1>Onde sonore</h1>
+<ul>
+<li><p>Le onde sonore sono solo di tipo <strong>longitudinale</strong>,
+perché sono onde di pressione</p></li>
+<li><p>Per capire il loro funzionamento, dobbiamo quindi introdurre
+prima il concetto di “pressione”</p></li>
+</ul>
+</section>
+<section id="la-pressione" class="slide level1">
+<h1>La pressione</h1>
+<ul>
+<li><p>Nel linguaggio comune, per “pressione” si intende una forza
+applicata ad una superficie…</p></li>
+<li><p>…e, incredibilmente, in fisica è lo stesso!</p></li>
+<li><p>La pressione di una forza su una superficie è definita come il
+rapporto</p>
+<p><span class="math display">
+P = \frac{F}{s},
+</span></p>
+<p>e si misura in N/m² ovviamente. A questa unità è dato il nome di
+“Pascal”, dal nome del grande <a
+href="https://it.wikipedia.org/wiki/Blaise_Pascal">filosofo, matematico,
+teologo e inventore francese</a>.</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<p><img data-src="media/longitudinal-sound-wave.gif" /></p>
+</section>
+<section id="onde-sonore-1" class="slide level1">
+<h1>Onde sonore</h1>
+<ul>
+<li><p>Oggi inizieremo ad affrontare le onde sonore, che sono appunto un
+tipo di onda: un’<strong>onda longitudinale di pressione</strong> che si
+propaga nello spazio</p></li>
+<li><p>Per chiarire il significato dell’espressione “onda longitudinale
+di pressione”, dobbiamo però spiegare alcuni concetti:</p>
+<ol>
+<li>Cos’è una “onda”?</li>
+<li>Che significa che è “longitudinale”?</li>
+<li>Cos’è la “pressione”?</li>
+</ol></li>
+</ul>
+</section>
+<section id="onde-trasversali" class="slide level1">
+<h1>Onde trasversali</h1>
+<ul>
+<li>Un’onda trasversale è un tipo di</li>
+</ul>
 </section>
 <section id="simulatore" class="slide level1">
 <h1>Simulatore</h1>

@@ -6,11 +6,11 @@
   <title>Oscillatore a molla – Risonanza interattiva</title>
   <style>
     :root {
-      --bg: #0f172a;        /* slate-900 */
-      --panel: #111827;     /* gray-900 */
-      --card: #1f2937;      /* gray-800 */
-      --muted: #9ca3af;     /* gray-400 */
-      --text: #e5e7eb;      /* gray-200 */
+      --bg: #fffff;        /* slate-900 */
+      --panel: #fffff;     /* gray-900 */
+      --card: #fffff;      /* gray-800 */
+      --muted: #000;     /* gray-400 */
+      --text: #000;      /* gray-200 */
       --accent: #38bdf8;    /* sky-400 */
       --warn: #f59e0b;      /* amber-500 */
       --danger: #f87171;    /* red-400 */
@@ -21,36 +21,32 @@
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
       display: grid; grid-template-rows: auto 1fr; gap: 16px;
     }
-    header { padding: 16px 24px; background: var(--panel); box-shadow: 0 2px 16px rgba(0,0,0,.35); position: sticky; top:0; z-index:10; }
+    header { padding: 16px 24px; background: var(--panel); position: sticky; top:0; z-index:10; }
     header h1 { margin: 0; font-size: 1.2rem; letter-spacing: .3px; }
     main { display: grid; gap: 16px; grid-template-columns: 1fr 360px; align-items: start; padding: 0 16px 24px; }
-    .stage { background: var(--card); border-radius: 16px; padding: 12px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
-    canvas { width: 100%; height: 440px; display:block; background: #0b1220;
+    .stage { background: var(--card); border-radius: 16px; padding: 12px; }
+    canvas { width: 100%; height: 440px; display:block; background: #fff;
              border-radius: 12px; }
-    .controls { background: var(--card); border-radius: 16px; padding: 16px; box-shadow: 0 10px 30px rgba(0,0,0,.25); position: sticky; top: 88px; }
+    .controls { background: var(--card); border-radius: 16px; padding: 16px; position: sticky; top: 88px; }
     .row { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px; margin: 8px 0; }
     .row label { font-size: .9rem; color: var(--muted); }
     .row input[type="range"] { width: 180px; }
-    .row input[type="number"] { width: 110px; padding: 6px 8px; border-radius: 8px; border: 1px solid #374151; background: #0b1220; color: var(--text); }
+    .row input[type="number"] { width: 110px; padding: 6px 8px; border-radius: 8px; border: 1px solid #374151; background: #fff; color: var(--text); }
     .row input[type="checkbox"] { transform: scale(1.1); }
     .btns { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin: 12px 0 4px; }
-    button { padding: 10px 12px; border: none; border-radius: 12px; background: #0b1220; color: var(--text); cursor: pointer;
-             box-shadow: inset 0 0 0 1px #334155; transition: transform .05s ease, background .2s ease, box-shadow .2s ease; font-weight: 600; }
-    button:hover { background:#111827; }
+    button { padding: 10px 12px; border: none; border-radius: 12px; background: #ccc; color: var(--text); cursor: pointer; font-weight: 600; }
+    button:hover { background:#888; }
     button:active { transform: translateY(1px); }
-    .accent { box-shadow: inset 0 0 0 1px #075985; background: #0b1220; }
-    .warn { box-shadow: inset 0 0 0 1px #92400e; background: #0b1220; }
+    .accent { background: #bbf; }
+    .warn { background: #bbf; }
     .muted { color: var(--muted); font-size: .85rem; }
     .grid2 { display:grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-    .pill { display:inline-block; padding: 2px 8px; border-radius: 999px; background:#0b1220; border:1px solid #334155; font-size:.75rem; color:var(--muted); }
+    .pill { display:inline-block; padding: 2px 8px; border-radius: 999px; background:#fbf2f0; border:1px solid #334155; font-size:.75rem; color:var(--muted); }
     .legend { display:flex; gap:8px; align-items:center; font-size:.85rem; color: var(--muted); margin-top:8px; }
     .dot { width:10px; height:10px; border-radius:50%; display:inline-block; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Oscillatore massa–molla • risonanza con impulsi</h1>
-  </header>
   <main>
     <section class="stage">
       <canvas id="sim" width="1024" height="440"></canvas>
@@ -125,7 +121,7 @@
       lastImpulseTime: 0,
       alternating: false,
       maxAbsX: 0, // for envelope
-      envelope: [], // rolling envelope values for display
+      trace: [], // blue trace of the position of the oscillating body
     };
 
     function natOmega() {
@@ -146,7 +142,7 @@
       state.lastImpulseTime = 0;
       state.alternating = false;
       state.maxAbsX = Math.abs(state.x);
-      state.envelope = [];
+      state.trace = [];
       state.lastTick = performance.now();
       draw();
     }
@@ -195,13 +191,6 @@
           applyImpulse(sign);
         }
       }
-
-      // Track envelope (max |x| over sliding window ~ one period)
-      const T0 = natPeriod();
-      state.maxAbsX = Math.max(state.maxAbsX * 0.995, Math.abs(state.x));
-      state.envelope.push({ t: state.t, A: state.maxAbsX });
-      // keep last ~10 seconds
-      while (state.envelope.length && state.t - state.envelope[0].t > 10) state.envelope.shift();
 
       draw();
     }
@@ -262,9 +251,9 @@
       const traceTop = 60;
       const vx = 2.0; // px per frame for scroll speed of graph
       // Keep a static buffer of last N samples mapped to pixels across width
-      if (!draw.trace) draw.trace = [];
-      draw.trace.push({ t: state.t, x: state.x });
-      while (draw.trace.length && state.t - draw.trace[0].t > 10) draw.trace.shift();
+      if (!state.trace) state.trace = [];
+      state.trace.push({ t: state.t, x: state.x });
+      while (state.trace.length && state.t - state.trace[0].t > 10) state.trace.shift();
 
       // Map time to x pixel (right aligned, 10 s window)
       const Tview = 10;
@@ -283,13 +272,12 @@
       function tToX(t){ return W - (state.t - t) * (W / Tview); }
       function xToY(x){ return traceH/2 - x * scale * 0.25; } // 25% of canvas scale
 
-
       // position line
       ctx.strokeStyle = '#38bdf8';
       ctx.lineWidth = 2;
       ctx.beginPath();
       first = true;
-      for (const p of draw.trace) {
+      for (const p of state.trace) {
         const px = tToX(p.t);
         const py = xToY(p.x);
         if (first) { ctx.moveTo(px, py); first=false; } else ctx.lineTo(px, py);

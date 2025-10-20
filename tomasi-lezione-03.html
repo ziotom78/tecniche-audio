@@ -77,8 +77,8 @@ href="mailto:maurizio.tomasi@unimi.it"><code>maurizio.tomasi@unimi.it</code></a>
 <section id="principi-di-newton" class="slide level1">
 <h1>Principi di Newton</h1>
 <ol type="1">
-<li>Lo stato naturale (imperturbato) dei corpi è il moto rettilineo
-uniforme</li>
+<li>Lo stato naturale (“imperturbato”) dei corpi è il moto rettilineo
+uniforme (incluso lo stato di quiete!)</li>
 <li>Un corpo sottoposto a forze si muove di moto accelerato (o
 decelerato), e l’accelerazione è proporzionale alla somma delle
 forze</li>
@@ -158,6 +158,18 @@ sposta!</p></li>
 <p><img data-src="media/bilanciamento-forze.jpg" /></p>
 </div>
 </div>
+</section>
+<section id="statica" class="slide level1">
+<h1>Statica</h1>
+<ul>
+<li><p>La “statica” è la parte della fisica che studia i corpi che
+stanno fermi</p></li>
+<li><p>Per il secondo principio, i corpi che stanno fermi devono essere
+soggetti a forze che si annullano</p></li>
+<li><p>Il caso di una mano che spinge il muro è un esempio di problema
+di statica</p></li>
+<li><p>Un ingegnere edile deve essere esperto di statica!</p></li>
+</ul>
 </section>
 <section id="caduta-di-una-molla-1" class="slide level1">
 <h1>Caduta di una molla (<a
@@ -372,25 +384,10 @@ pianeti misuriamo la periodicità con il tempo di un’orbita (l’anno), per
 le onde sonore useremo la frequenza.</p>
 </aside>
 </section>
-<section id="periodicità-in-natura" class="slide level1">
-<h1>Periodicità in natura</h1>
-<div class="side-by-side">
-<div class="contents">
-<ul>
-<li><p>Un caso molto simile a quello dei pianeti è il moto di
-un’altalena: senza l’attrito dell’aria e della catena, il moto
-continuerebbe all’infinito</p></li>
-<li><p>Anche nel caso di un’altalena <strong>ideale</strong> c’è un
-bilancio tra energia cinetica e potenziale, un po’ come un conto in
-banca che non muta mai il saldo di fine mese.</p></li>
-<li><p>La Natura preferisce la periodicità: questo sarà importante
-quando affronteremo le onde sonore</p></li>
-</ul>
-</div>
-<div class="media">
-<p><img data-src="media/altalena.jpg" height="450" /></p>
-</div>
-</div>
+<section class="slide level1">
+
+<iframe src="iframes/newton-cannonball.html" width="100%" height="700" style="border:1px solid #ccc; border-radius: 8px;">
+</iframe>
 </section>
 <section id="dalle-forze-allenergia" class="slide level1">
 <h1>Dalle forze all’energia</h1>
@@ -400,7 +397,7 @@ quando affronteremo le onde sonore</p></li>
 <div class="side-by-side">
 <div class="content">
 <ul>
-<li><p>Introduciamo oggi due concetti molto importanti: il
+<li><p>Introduciamo ora due concetti molto importanti: il
 <strong>lavoro</strong> e l’<strong>energia</strong></p></li>
 <li><p>Il concetto di “lavoro” è diverso da quello del senso comune, ma
 è molto importante perché conduce al concetto di energia, che è
@@ -426,9 +423,12 @@ class="math inline">F</span> e dello spostamento</strong> <span
 class="math inline">\Delta x</span>:</p>
 <p><span class="math display">
 L = F \times \Delta x
-</span></p></li>
-<li><p>Quindi, più forza applico, maggiore è il lavoro, e lo stesso vale
-se il corpo si sposta per un tragitto più lungo</p></li>
+</span></p>
+<p>Ma, attenzione! Lo spostamento dev’essere nella stessa direzione
+della forza!</p></li>
+<li><p>Il lavoro serve per rappresentare quanto è stata “utile” una
+forza: questo ovviamente nell’ipotesi che lo scopo per cui si usa una
+forza sia quello di muovere i corpi!</p></li>
 </ul>
 </section>
 <section id="lavoro-in-fisica-e-nelluso-comune" class="slide level1">
@@ -439,11 +439,14 @@ una cassa pesante per 10 metri, fatico più che a spostarla per 5
 metri</p></li>
 <li><p>Però bisogna fare attenzione: il lavoro tiene conto dello
 <strong>spostamento effettivo</strong> <span class="math inline">\Delta
-x</span> di un corpo!</p></li>
+x</span> di un corpo, e questo spostamento dev’essere nella direzione
+giusta!</p></li>
 <li><p>Se la cassa e pesantissima e, pure spingendola, non si muove, io
 fatico molto ma <strong>non compio alcun lavoro</strong>: <span
-class="math inline">L = F \times \Delta x = F \times 0 =
-0</span>.</p></li>
+class="math inline">L = F \times \Delta x = F \times 0 = 0</span>.
+Ugualmente, se spingo in avanti ma il corpo si muove a destra, il lavoro
+che compio è comunque nullo. (Se si spostasse indietro, <span
+class="math inline">L</span> sarebbe negativo!)</p></li>
 </ul>
 </section>
 <section id="definizione-di-lavoro" class="slide level1">
@@ -455,7 +458,8 @@ L = F \times \Delta x
 <li>Il lavoro <span class="math inline">L</span> è il prodotto della
 forza <span class="math inline">F</span> per lo spostamento <span
 class="math inline">\Delta x</span></li>
-<li>Più una forza sposta un corpo, più lavoro ha compiuto</li>
+<li>Più una forza sposta un corpo lungo la “propria” direzione, maggiore
+è <span class="math inline">L</span></li>
 <li>Si può compiere un lavoro <span class="math inline">L</span>
 significativo in vari modi:
 <ol type="1">
@@ -511,21 +515,35 @@ luce?</li>
 istante</p></li>
 <li><p>Si misura con la stessa unità del lavoro, perché se si calcola
 l’energia all’inizio e alla fine di uno spostamento, si scopre che
-<strong>il lavoro compiuto è uguale alla differenza
-dell’energia</strong></p></li>
-<li><p>[Attenzione: chi ha studiato fisica alle superiori si ricorderà
-che le cose sono un po’ più complicate di così. Per il momento ignoriamo
-queste complicazioni]</p></li>
+<strong>il lavoro compiuto da tutte le forze è uguale a una variazione
+dell’energia associata a quella forza</strong></p></li>
+</ul>
+</section>
+<section id="esempio-corpo-che-cade" class="slide level1">
+<h1>Esempio: corpo che cade</h1>
+<ul>
+<li><p>Consideriamo un corpo di 1 kg che cade da un’altezza di 1
+m.</p></li>
+<li><p>Esso cade a causa della forza di gravità; il corpo cade lungo la
+verticale, quindi la forza compie lavoro:</p>
+<p><span class="math display">
+L = F \times \Delta x = m g \times 1\,\text{m} = 1\,\text{kg}\times
+10\,\mathrm{m/s^2} \times 1\,\text{m} = 10\,\text{J}.
+</span></p></li>
+<li><p>Si può dimostrare che alla forza di gravità è associata una
+“energia gravitazionale”, che diminuisce esattamente della quantità
+10 J.</p></li>
 </ul>
 </section>
 <section id="lavoro-ed-energia-1" class="slide level1">
 <h1>Lavoro ed energia</h1>
 <ul>
 <li><p>L’energia può essere vista come <strong>la capacità di un corpo
-di compiere lavoro</strong></p></li>
-<li><p>Ci sono vari tipi di energia, e tutti sono associati a qualche
-tipo di forza</p></li>
-<li><p>Vediamone alcuni</p></li>
+di compiere lavoro</strong>: l’energia gravitazionale è ciò che rende
+possibile lo spostamento di un corpo che cade</p></li>
+<li><p>Oltre all’energia gravitazionale ci sono altri tipi, e tutti sono
+associati a qualche tipo di forza</p></li>
+<li><p>Vediamo i più importanti</p></li>
 </ul>
 </section>
 <section id="energia-cinetica" class="slide level1">
@@ -581,12 +599,17 @@ height="400" /></p>
 </div>
 </div>
 </section>
+<section class="slide level1">
+
+<iframe src="iframes/falling-ball.html" width="100%" height="740" style="border:1px solid #ccc; border-radius: 8px;">
+</iframe>
+</section>
 <section id="esempio-1" class="slide level1">
 <h1>Esempio</h1>
 <ul>
-<li>Un corpo di 1 kg cade da un’altezza di 10 m</li>
-<li>La sua energia cinetica iniziale è zero, e quella potenziale è <span
-class="math display">
+<li>Un corpo di 1 kg, ad esempio, una bottiglia di latte, cade da
+un’altezza di 10 m. La sua energia cinetica iniziale è zero, e quella
+potenziale è <span class="math display">
 E_g^{(i)} = 1\,\text{kg}\times 10\,\mathrm{m/s^2}\times 10\,\text{m} =
 100\,\text{J}
 </span></li>
@@ -594,7 +617,11 @@ E_g^{(i)} = 1\,\text{kg}\times 10\,\mathrm{m/s^2}\times 10\,\text{m} =
 cinetica: <span class="math display">
 E_c^{(f)} = E_g^{(i)} = 100\,\text{J}
 </span></li>
-<li>Questo avviene perché ha acquisito velocità</li>
+<li>Questo avviene perché ha acquisito velocità: <span
+class="math display">
+100\,\text{J} = \frac12 m v^2 \quad \Rightarrow \quad v =
+14\,\text{m/s}.
+</span></li>
 </ul>
 </section>
 <section id="energia-elastica" class="slide level1">
@@ -635,24 +662,6 @@ anziché fermarsi alla posizione di riposo, prosegue dando moto ad un
 fenomeno oscillatorio</li>
 </ul>
 </section>
-<section id="energia-termica-calore" class="slide level1">
-<h1>Energia termica (calore)</h1>
-<div class="side-by-side">
-<div class="content">
-<ul>
-<li><p>Tutti i corpi sono formati da atomi che vibrano continuamente,
-maggiormente nei corpi caldi</p></li>
-<li><p>Le vibrazioni sono causate da forze atomiche, e producono quindi
-lavoro</p></li>
-<li><p>Ad un corpo è associata quindi una certa <strong>energia
-calorica</strong>, che è una forma di energia cinetica</p></li>
-</ul>
-</div>
-<div class="media">
-<p><img data-src="media/metl_heat.gif" /></p>
-</div>
-</div>
-</section>
 <section id="energia-chimica" class="slide level1">
 <h1>Energia chimica</h1>
 <div class="side-by-side">
@@ -670,6 +679,25 @@ molle e si fermano</li>
 </div>
 <div class="media">
 <p><img data-src="media/alberto-sordi-galateo-a-tavola.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="energia-termica-calore" class="slide level1">
+<h1>Energia termica (calore)</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Le molecole dei corpi vibrano continuamente, maggiormente nei
+corpi caldi</p></li>
+<li><p>Le vibrazioni sono causate da forze molecolari ed atomiche, e
+producono quindi lavoro</p></li>
+<li><p>Ad un corpo è associata quindi una certa <strong>energia
+calorica</strong>, che è una forma di energia cinetica
+“disordinata”</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/metl_heat.gif" /></p>
 </div>
 </div>
 </section>
@@ -757,21 +785,40 @@ data-src="media/titanic-sinking-plates-falling-and-breaking.gif" /></p>
 </div>
 </div>
 </section>
-<section id="ciclista-in-collina" class="slide level1">
-<h1>Ciclista in collina</h1>
+<section id="colpo-di-tennis" class="slide level1">
+<h1>Colpo di tennis</h1>
 <div class="side-by-side">
 <div class="content">
 <ul>
-<li>Muscoli</li>
-<li>Rotazione dei pedali</li>
-<li>Rotazione delle ruote</li>
-<li>Spostamento del ciclista</li>
-<li>Variazioni di quota</li>
-<li>Attrito con la strada</li>
+<li><p>Una pallina da tennis raggiunge il giocatore con una certa
+velocità: ha quindi energia cinetica</p></li>
+<li><p>Il moto della racchetta trasferisce l’energia cinetica del
+braccio alla pallina</p></li>
+<li><p>Parte dell’energia viene usata per creare il rumore e per la
+deformazione delle corde e della pallina</p></li>
 </ul>
 </div>
 <div class="media">
-<p><img data-src="media/bicicletta-in-collina.jpg" height="400" /></p>
+<p><img data-src="media/tennis.webp" /></p>
+</div>
+</div>
+</section>
+<section id="urti" class="slide level1">
+<h1>Urti</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Quando una palla colpisce un oggetto rigido, la palla si deforma:
+parte dell’energia cinetica del moto della palla si converte in energia
+cinetica “interna”</li>
+<li>Questo provoca onde sonore (rumore) e un riscaldamento della
+palla</li>
+<li>Anche il muro colpito si scalda un po’ nel punto dell’urto, e la
+parete vibra</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/golf-ball-bouncing.gif" /></p>
 </div>
 </div>
 </section>
@@ -829,20 +876,6 @@ energia elettrica</li>
 </div>
 <div class="media">
 <p><img data-src="media/centrale-idroelettrica-orig.webp" /></p>
-</div>
-</div>
-</section>
-<section id="impianto-fotovoltaico" class="slide level1">
-<h1>Impianto fotovoltaico</h1>
-<div class="side-by-side">
-<div class="content">
-<ul>
-<li>La luce solare è energia elettromagnetica</li>
-<li>Questa viene convertita in elettricità dai pannelli</li>
-</ul>
-</div>
-<div class="media">
-<p><img data-src="media/impianto-fotovoltaico-con-accumulo.jpg" /></p>
 </div>
 </div>
 </section>
@@ -911,10 +944,10 @@ elettrica</li>
 <li><p>Un altro 40% proviene da fonti rinnovabili: principalmente dighe,
 ma anche pannelli fotovoltaici, pale eoliche, biomasse… (in ordine di
 importanza)</p></li>
-<li><p>Il restante 20% viene acquistato direttamente dall’estero:
+<li><p>Il restante 20% è energia elettrica acquistata dall’estero:
 Francia, Svizzera, Slovenia ed Austria (gli stati confinanti)</p></li>
-<li><p>Oltre all’energia importata, importiamo anche molto gas: il 95%
-di quanto consumiamo!</p></li>
+<li><p>Oltre ad acquistare elettricità dall’estero, importiamo anche
+moltissimo gas: il 95% di quanto consumiamo!</p></li>
 </ul>
 </section>
 <section id="consumo-nel-tempo" class="slide level1">
@@ -923,18 +956,18 @@ di quanto consumiamo!</p></li>
 <li><p>L’evoluzione del consumo di energia nel tempo mostra alcune
 tendenze:</p>
 <ul>
-<li>La tecnologia migliora sempre, permettendo di “sprecare” sempre meno
-energia (ossia, di convertirne sempre meno in forme inutili)</li>
+<li>L’evoluzione della tecnologia permette di sfruttare meglio le fonti
+energetiche</li>
 <li>Le esigenze energetiche aumentano con l’aumentare del benessere
 della popolazione mondiale</li>
 <li>Si tende ad usare sempre di più l’energia elettrica, più pulita e
-facile da trattare (vedi i veicoli elettrici)</li>
-<li>L’esplosione dell’intelligenza artificiale (AI) richiede moltissima
+facile da trattare (es.: automobili)</li>
+<li>La rivoluzione digitale e l’AI hanno fatto aumentare le richieste di
 energia</li>
 </ul></li>
 <li><p>Il risultato è che il consumo globale di energia aumenta, ma
-diminuisce il ricorso ad energie inquinanti (gas, carbone…) a vantaggio
-dell’energia elettrica</p></li>
+diminuisce il ricorso ad energie inquinanti a vantaggio dell’energia
+elettrica (nei paesi avanzati)</p></li>
 </ul>
 </section>
 <section id="il-caso-dellitalia" class="slide level1">
@@ -996,19 +1029,6 @@ P = \frac{E}{\Delta t}
 <p><img data-src="media/lampadina.jpg" /></p>
 </div>
 </div>
-</section>
-<section id="analogia" class="slide level1">
-<h1>Analogia</h1>
-<ul>
-<li><p>Potete pensare all’energia usata per un processo come alla
-“distanza” percorsa per compiere quel processo</p></li>
-<li><p>La <strong>potenza</strong> è la velocità con cui percorrete
-quella distanza</p></li>
-<li><p>Esempio: un ciclo di lavaggio di 1 ora in lavatrice consuma circa
-2,5 MJ (0,7–0,8 kWh). Questi 2,5 MJ sono la “distanza”, e la potenza
-quantifica la velocità con cui sono stati usati dalla
-lavatrice.</p></li>
-</ul>
 </section>
 <section class="slide level1">
 
