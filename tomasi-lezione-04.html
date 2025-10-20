@@ -65,15 +65,540 @@ href="mailto:maurizio.tomasi@unimi.it"><code>maurizio.tomasi@unimi.it</code></a>
 <section id="introduzione-allargomento-di-oggi" class="slide level1">
 <h1>Introduzione all’argomento di oggi</h1>
 <ul>
-<li>Oggi introdurremo il concetto di “oscillazione” e “risonanza”</li>
-<li>Sono i fondamenti che ci consentiranno di studiare come si
-comportano le onde sonore</li>
+<li>Oggi completeremo la trattazione del lavoro e dell’energia</li>
+<li>Introdurremo poi il concetto di “oscillazione” e “risonanza”, che ci
+consentiranno di comprendere le onde sonore</li>
 <li>Vedremo come spiegare le oscillazioni in termini di leggi di
 Newton</li>
 </ul>
 </section>
 <section id="inquisitori-accademici-onorari" class="slide level1">
 <h1>Inquisitori accademici onorari</h1>
+</section>
+<section id="lavoro-ed-energia" class="slide level1">
+<h1>Lavoro ed energia</h1>
+<ul>
+<li><p>L’energia può essere vista come <strong>la capacità di un corpo
+di compiere lavoro</strong>: l’energia gravitazionale è ciò che rende
+possibile lo spostamento di un corpo che cade</p></li>
+<li><p>Oltre all’energia gravitazionale ci sono altri tipi, e tutti sono
+associati a qualche tipo di forza</p></li>
+<li><p>Vediamo i più importanti</p></li>
+</ul>
+</section>
+<section id="energia-cinetica" class="slide level1">
+<h1>Energia cinetica</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>È l’energia che ha un corpo per il fatto stesso di muoversi:
+<span class="math display">
+E_c = \frac12 m v^2.
+</span></p></li>
+<li><p>Se un corpo in movimento ne urta uno fermo, quest’ultimo si
+muove: è stato compiuto lavoro.</p></li>
+<li><p><strong>Attenzione</strong>: un corpo che si muove di moto
+rettilineo uniforme non compie lavoro!</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/gioco-delle-bocce_O1.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="esempio" class="slide level1">
+<h1>Esempio</h1>
+<ul>
+<li>Un uomo di massa 80 kg parte da fermo e si muove a 1 m/s</li>
+<li>La sua energia cinetica iniziale è <span class="math display">
+E_c^{(i)} = 0\,\text{J}
+</span></li>
+<li>Quella finale è <span class="math display">
+E_c^{(f)} = \frac12 \times 80\,\text{kg}\times (1\,\text{m/s})^2 =
+40\,\text{J}
+</span></li>
+<li>Di conseguenza, ha compiuto un lavoro uguale a 40 J.</li>
+</ul>
+</section>
+<section id="energia-potenziale-gravitazionale" class="slide level1">
+<h1>Energia potenziale gravitazionale</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>La forza di gravità sposta i corpi verso il basso</p></li>
+<li><p>Se un corpo sta in alto, ha quindi <strong>energia potenziale
+gravitazionale</strong>, che durante la caduta si converte in cinetica:
+<span class="math display">
+E_g = m g h
+</span></p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/captain-spacemaker-caribe-bay-jesolo.jpg"
+height="400" /></p>
+</div>
+</div>
+</section>
+<section class="slide level1">
+
+<iframe src="iframes/falling-ball.html" width="100%" height="740" style="border:1px solid #ccc; border-radius: 8px;">
+</iframe>
+</section>
+<section id="esempio-1" class="slide level1">
+<h1>Esempio</h1>
+<ul>
+<li>Un corpo di 1 kg, ad esempio, una bottiglia di latte, cade da
+un’altezza di 10 m. La sua energia cinetica iniziale è zero, e quella
+potenziale è <span class="math display">
+E_g^{(i)} = 1\,\text{kg}\times 10\,\mathrm{m/s^2}\times 10\,\text{m} =
+100\,\text{J}
+</span></li>
+<li>Quando arriva a terra, tutta l’energia potenziale è diventata
+cinetica: <span class="math display">
+E_c^{(f)} = E_g^{(i)} = 100\,\text{J}
+</span></li>
+<li>Questo avviene perché ha acquisito velocità: <span
+class="math display">
+100\,\text{J} = \frac12 m v^2 \quad \Rightarrow \quad v =
+14\,\text{m/s}.
+</span></li>
+</ul>
+</section>
+<section id="energia-elastica" class="slide level1">
+<h1>Energia elastica</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Una molla compressa o allungata ha la capacità di tornare alla
+sua posizione originaria: <span class="math display">
+E_e = \frac12 k (\Delta x)^2,
+</span> dove <span class="math inline">k</span> è una costante che dice
+quanto è “dura” una molla</p></li>
+<li><p>La molla ha quindi la capacità di compiere lavoro: basta
+immaginare di attaccare alla sua estremità un corpo</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/molle.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="esempio-2" class="slide level1">
+<h1>Esempio</h1>
+<ul>
+<li>Una molla con <span class="math inline">k = 10\,\mathrm{N/m}</span>
+viene compressa di 1 cm.</li>
+<li>Nel momento in cui viene rilasciata, l’energia cinetica è nulla, e
+quella elastica è <span class="math display">
+E_e^{(i)} = \frac12\times 10\,\mathrm{N/m}\times 0.01\,\text{m} =
+0.05\,\text{J}.
+</span></li>
+<li>L’energia cinetica della sua estremità, quando torna alla posizione
+di riposo, è <span class="math display">
+E_c^{(f)} = E_e^{(i)} = 0.05\,\text{J}.
+</span></li>
+<li>Avendo energia cinetica, ha velocità non nulla e quindi inerzia:
+anziché fermarsi alla posizione di riposo, prosegue dando moto ad un
+fenomeno oscillatorio</li>
+</ul>
+</section>
+<section id="energia-chimica" class="slide level1">
+<h1>Energia chimica</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Le molecole che formano i corpi sono legate tra loro da forze
+elettromagnetiche</li>
+<li>Queste forze agiscono più o meno come molle: impediscono che le
+molecole si allontanino o si avvicinino troppo</li>
+<li>In una reazione chimica, i legami (le “molle”) si rompono, oppure se
+ne formano di nuovi</li>
+<li>Le molecole sono libere di muoversi, oppure vengono “catturate” da
+molle e si fermano</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/alberto-sordi-galateo-a-tavola.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="energia-termica-calore" class="slide level1">
+<h1>Energia termica (calore)</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Le molecole dei corpi vibrano continuamente, maggiormente nei
+corpi caldi</p></li>
+<li><p>Le vibrazioni sono causate da forze molecolari ed atomiche, e
+producono quindi lavoro</p></li>
+<li><p>Ad un corpo è associata quindi una certa <strong>energia
+calorica</strong>, che è una forma di energia cinetica
+“disordinata”</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/metl_heat.gif" /></p>
+</div>
+</div>
+</section>
+<section id="energia-elettrica" class="slide level1">
+<h1>Energia elettrica</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Le cariche elettriche si attraggono e si respingono tra loro</li>
+<li>Il loro moto fa compiere lavoro alle forze elettromagnetiche</li>
+<li>È una forma di energia molto conveniente, perché <strong>è
+estremamente semplice convertirla in altre forme di
+energia</strong></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/lampadina.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="energia-sonora" class="slide level1">
+<h1>Energia sonora</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>È l’energia che ci interessa di più!</p></li>
+<li><p>In un altoparlante, l’energia elettrica fa vibrare una membrana
+che mette in moto l’aria</p></li>
+<li><p>Possiamo considerarla come una forma di energia cinetica
+(molecole d’aria che si muovono)</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/casse-amplificatore.webp" /></p>
+</div>
+</div>
+</section>
+<section id="esempi" class="slide level1">
+<h1>Esempi</h1>
+</section>
+<section id="la-lavatrice" class="slide level1">
+<h1>La lavatrice</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>La lavatrice consuma energia elettrica</p></li>
+<li><p>Converte l’energia elettrica in:</p>
+<dl>
+<dt>Energia termica</dt>
+<dd>
+Riscalda l’acqua
+</dd>
+<dt>Energia cinetica</dt>
+<dd>
+Fa girare il cestello
+</dd>
+<dt>Energia sonora</dt>
+<dd>
+È il suono che fa quando il programma è terminato
+</dd>
+</dl></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/lavatrice.jpg" height="400" /></p>
+</div>
+</div>
+</section>
+<section id="piatto-che-si-rompe" class="slide level1">
+<h1>Piatto che si rompe</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Il piatto nella credenza ha energia potenziale gravitazionale <span
+class="math inline">E_g</span></li>
+<li>Durante la caduta converte l’energia potenziale in energia cinetica
+<span class="math inline">E_c</span></li>
+<li>Al momento dell’urto, parte dell’energia diventa termica, parte
+sonora, e parte resta cinetica (nei frammenti)</li>
+</ul>
+</div>
+<div class="media">
+<p><img
+data-src="media/titanic-sinking-plates-falling-and-breaking.gif" /></p>
+</div>
+</div>
+</section>
+<section id="colpo-di-tennis" class="slide level1">
+<h1>Colpo di tennis</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Una pallina da tennis raggiunge il giocatore con una certa
+velocità: ha quindi energia cinetica</p></li>
+<li><p>Il moto della racchetta trasferisce l’energia cinetica del
+braccio alla pallina</p></li>
+<li><p>Parte dell’energia viene usata per creare il rumore e per la
+deformazione delle corde e della pallina</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/tennis.webp" /></p>
+</div>
+</div>
+</section>
+<section id="urti" class="slide level1">
+<h1>Urti</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Quando una palla colpisce un oggetto rigido, la palla si deforma:
+parte dell’energia cinetica del moto della palla si converte in energia
+cinetica “interna”</li>
+<li>Questo provoca onde sonore (rumore) e un riscaldamento della
+palla</li>
+<li>Anche il muro colpito si scalda un po’ nel punto dell’urto, e la
+parete vibra</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/golf-ball-bouncing.gif" /></p>
+</div>
+</div>
+</section>
+<section id="preparare-il-caffè" class="slide level1">
+<h1>Preparare il caffè</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>L’energia calorica del gas si trasmette all’acqua</li>
+<li>L’energia cinetica delle molecole d’acqua le fa evaporare, rompendo
+i legami del fluido</li>
+<li>Gli urti del vapore contro la superficie d’acqua la fanno risalire
+verso il filtro</li>
+<li>Quando l’acqua scende sotto il livello inferiore del tubo, sale il
+vapore che produce il gorgoglìo (energia sonora)</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/moka.jpg" height="450" /></p>
+</div>
+</div>
+</section>
+<section id="frenata-di-unauto" class="slide level1">
+<h1>Frenata di un’auto</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>L’automobile ha una certa energia cinetica</li>
+<li>Il piede muove il pedale (energia cinetica), che stringe le ganasce
+dei freni</li>
+<li>Le ganasce producono attrito, ossia calore che scalda i freni e
+l’aria, e rumore (energia sonora)</li>
+<li>Se i freni sono rigenerativi, una dinamo converte parte dell’energia
+cinetica dell’automobile in elettricità, che viene convertita dalla
+batteria in energia chimica</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/automobili-autostrada.webp" height="450" /></p>
+</div>
+</div>
+</section>
+<section id="diga-idroelettrica" class="slide level1">
+<h1>Diga idroelettrica</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Come nel caso dei piatti, l’acqua converte energia potenziale
+gravitazionale <span class="math inline">E_g</span> in energia
+cinetica</li>
+<li>Questa si trasmette ad una turbina, facendola ruotare</li>
+<li>Una dinamo converte l’energia cinetica (rotatoria) della turbina in
+energia elettrica</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/centrale-idroelettrica-orig.webp" /></p>
+</div>
+</div>
+</section>
+<section id="analogia-col-denaro" class="slide level1">
+<h1>Analogia col denaro</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Dagli esempi fatti, si capisce che l’energia può essere
+paragonata a un tipo di denaro che non si può creare né distruggere, e
+non si svaluta mai</p></li>
+<li><p>Come il denaro può essere convertito in varie forme (contanti,
+somma in banca, lingotti d’oro…), così anche l’energia si può
+convertire</p></li>
+<li><p>Il “bilancio” dell’energia <strong>è sempre perfetto</strong>: se
+scompaiono <span class="math inline">x</span> Joule di energia da una
+parte, devono comparirne <span class="math inline">x</span> da
+un’altra.</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/soldi-oro.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="produzione-di-energia" class="slide level1">
+<h1>“Produzione” di energia</h1>
+</section>
+<section id="energia-nelle-case" class="slide level1">
+<h1>Energia nelle case</h1>
+<ul>
+<li><p>L’energia nelle case arriva principalmente sotto forma di:</p>
+<ul>
+<li><p>Elettricità</p></li>
+<li><p>Gas</p></li>
+<li><p>Biomassa (legna, pellet…)</p></li>
+</ul></li>
+<li><p>In ambito domestico, il gas e la biomassa vengono tipicamente
+usate solo per produrre calore (fornelli, termosifoni, stufe). Non è
+però così a livello di produzione nazionale</p></li>
+<li><p>L’elettricità è estremamente versatile perché è facile
+trasportarla (su <strong>brevi</strong> distanze) e convertirla in altre
+forme</p></li>
+</ul>
+</section>
+<section id="lenergia-in-italia" class="slide level1">
+<h1>L’energia in Italia</h1>
+<ul>
+<li><p>Nel 2024, in Italia si sono consumati 312 TWh di energia</p></li>
+<li><p>Convertiti in Joule, si tratta di un <strong>miliardo di miliardi
+di Joule</strong>, ossia <strong>un milione di TJ</strong></p></li>
+<li><p>Come produciamo questa energia?</p></li>
+</ul>
+</section>
+<section id="fonti-di-energia" class="slide level1">
+<h1>Fonti di energia</h1>
+<ul>
+<li><p>Poco più del 40% viene da fonti fossili: principalmente gas, ma
+anche carbone</p>
+<ul>
+<li>Il gas viene bruciato (producendo CO₂ 🙁) per scaldare acqua</li>
+<li>L’acqua evapora, e il vapore fa girare turbine</li>
+<li>Alle turbine è collegata una dinamo, che produce energia
+elettrica</li>
+</ul></li>
+<li><p>Un altro 40% proviene da fonti rinnovabili: principalmente dighe,
+ma anche pannelli fotovoltaici, pale eoliche, biomasse… (in ordine di
+importanza)</p></li>
+<li><p>Il restante 20% è energia elettrica acquistata dall’estero:
+Francia, Svizzera, Slovenia ed Austria (gli stati confinanti)</p></li>
+<li><p>Oltre ad acquistare elettricità dall’estero, importiamo anche
+moltissimo gas: il 95% di quanto consumiamo!</p></li>
+</ul>
+</section>
+<section id="consumo-nel-tempo" class="slide level1">
+<h1>Consumo nel tempo</h1>
+<ul>
+<li><p>L’evoluzione del consumo di energia nel tempo mostra alcune
+tendenze:</p>
+<ul>
+<li>L’evoluzione della tecnologia permette di sfruttare meglio le fonti
+energetiche</li>
+<li>Le esigenze energetiche aumentano con l’aumentare del benessere
+della popolazione mondiale</li>
+<li>Si tende ad usare sempre di più l’energia elettrica, più pulita e
+facile da trattare (es.: automobili)</li>
+<li>La rivoluzione digitale e l’AI hanno fatto aumentare le richieste di
+energia</li>
+</ul></li>
+<li><p>Il risultato è che il consumo globale di energia aumenta, ma
+diminuisce il ricorso ad energie inquinanti a vantaggio dell’energia
+elettrica (nei paesi avanzati)</p></li>
+</ul>
+</section>
+<section id="il-caso-dellitalia" class="slide level1">
+<h1>Il caso dell’Italia</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>L’ Italia è una paese avanzato, che può accedere a tecnologie di
+ultima generazione.</li>
+<li>La popolazione è stabile, ma i consumi aumentano (digitale, AI,
+…)</li>
+<li>Si prevede che nei prossimi anni ci sarà un
+<strong>incremento</strong> nella domanda di energia, ma non
+marcato…</li>
+<li>…però il consumo di energia <strong>elettrica</strong> aumenterà
+moltissimo, a discapito di altre forme di energia (petrolio, gas,
+carbone…)</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/italia-bandiera.png" /></p>
+</div>
+</div>
+</section>
+<section id="energia-e-potenza" class="slide level1">
+<h1>Energia e potenza</h1>
+</section>
+<section id="il-concetto-di-potenza" class="slide level1">
+<h1>Il concetto di “potenza”</h1>
+<ul>
+<li><p>Abbiamo visto che l’energia è fondamentale per tutti i processi
+fisici e biologici</p></li>
+<li><p>È però anche importante la <strong>velocità</strong> con cui
+l’energia viene consumata</p></li>
+<li><p>La <strong>potenza</strong> <span class="math inline">P</span> è
+il rapporto tra una quantità di energia <span
+class="math inline">E</span> e il tempo necessario a produrla (o
+consumarla):</p>
+<p><span class="math display">
+P = \frac{E}{\Delta t}
+</span></p></li>
+</ul>
+</section>
+<section id="unità-di-misura" class="slide level1">
+<h1>Unità di misura</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>La potenza è una energia sul tempo, quindi la sua unità naturale
+è il Joule sul secondo. Questo è il Watt, che si abbrevia con
+<strong>W</strong>:</p>
+<p><span class="math display">
+1\,\mathrm{W} = \frac{1\,\mathrm{J}}{1\,\mathrm{s}}.
+</span></p></li>
+<li><p>Il Watt è un’unità di misura molto comune!</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/lampadina.jpg" /></p>
+</div>
+</div>
+</section>
+<section class="slide level1">
+
+<p><img data-src="media/washing-machine-power-consumption.png"
+height="640" /></p>
+</section>
+<section id="il-kilowattora" class="slide level1">
+<h1>Il Kilowattora</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Dal Watt deriva una curiosa unità di misura dell’energia: il
+<strong>Kilowattora</strong> (kWh)</p></li>
+<li><p>Esso è l’energia che si può estrarre da una potenza di 1 kW (un
+chilowatt) in un’ora di tempo:</p>
+<p><span class="math display">
+1\,\mathrm{kWh} = 1\,\mathrm{kW} \times 3.600\,\mathrm{s} =
+3,6\,\mathrm{MW}
+</span></p></li>
+<li><p>I fornitori di energia come ENI, Enel, Sorgenia, etc., riportano
+l’energia consumata in bolletta usando i kWh.</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/bolletta-elettrica.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="oscillazioni" class="slide level1">
+<h1>Oscillazioni</h1>
 </section>
 <section id="perché-parliamo-di-oscillazioni" class="slide level1">
 <h1>Perché parliamo di oscillazioni?</h1>
@@ -151,7 +676,7 @@ avanti/indietro… Il concetto resta sempre lo stesso</li>
 </div>
 </div>
 </section>
-<section id="energia-elastica" class="slide level1">
+<section id="energia-elastica-1" class="slide level1">
 <h1>Energia elastica</h1>
 <ul>
 <li>In termini di energia:
@@ -687,6 +1212,7 @@ l’edificio lo avverta</p></li>
 <section id="cosa-sapere-per-lesame" class="slide level1">
 <h1>Cosa sapere per l’esame</h1>
 <ul>
+<li>Tutti gli esempi sull’energia visti in classe</li>
 <li>Forze elastiche e oscillatori semplici</li>
 <li>Periodo e frequenza, valori tipici delle oscillazioni viste in
 classe</li>
