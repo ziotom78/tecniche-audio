@@ -1,19 +1,39 @@
 # Prospetto delle lezioni
 
+[html1]: tomasi-lezione-01.html
+[html2]: tomasi-lezione-02.html
+[html3]: tomasi-lezione-03.html
+[html4]: tomasi-lezione-04.html
+[html5]: tomasi-lezione-05.html
+[html6]: tomasi-lezione-06.html
+[html7]: tomasi-lezione-07.html
+[html8]: tomasi-lezione-08.html
+[html9]: tomasi-lezione-09.html
+
+[pdf1]: pdfs/tomasi-fisica-lezione-01.pdf
+[pdf2]: pdfs/tomasi-fisica-lezione-02.pdf
+[pdf3]: pdfs/tomasi-fisica-lezione-03.pdf
+[pdf4]: pdfs/tomasi-fisica-lezione-04.pdf
+[pdf5]: pdfs/tomasi-fisica-lezione-05.pdf
+[pdf6]: pdfs/tomasi-fisica-lezione-06.pdf
+[pdf7]: pdfs/tomasi-fisica-lezione-07.pdf
+[pdf8]: pdfs/tomasi-fisica-lezione-08.pdf
+[pdf9]: pdfs/tomasi-fisica-lezione-09.pdf
+
 <center>
-| Data            | Lezione                                                                 |
-|-----------------|-------------------------------------------------------------------------|
-| 6 ottobre 2025  | [01. Cosa significa misurare?](tomasi-lezione-01.html)                  |
-| 13 ottobre 2025 | [02. Conversioni, tempo, cinematica e dinamica](tomasi-lezione-02.html) |
-| 20 ottobre 2025 | [03. Dinamica, lavoro ed energia](tomasi-lezione-03.html)               |
+| Data             | Lezione                                                  | PDF        |
+|------------------|----------------------------------------------------------|------------|
+| 6 ottobre 2025   | [01. Cosa significa misurare?][html1]                    | [#1][pdf1] |
+| 13 ottobre 2025  | [02. Conversioni, tempo, cinematica e dinamica][html2]   | [#2][pdf2] |
+| 20 ottobre 2025  | [03. Dinamica, lavoro ed energia][html3]                 | [#3][pdf3] |
 <!--
-| 27 ottobre 2025   | [04. Oscillazioni ed onde](tomasi-lezione-04.html)                      |
-| 3 novembre 2025   | [05. Pressione, onde sonore, timbro](tomasi-lezione-05.html)              |
-| 11 novembre 2025  | [06. Sovrapposizione, interferenza, onde stazionarie](tomasi-lezione-06.html)                     |
-| 18 novembre 2025  | [07. Ampiezza del suono](tomasi-lezione-07.html)       |
-| 25 novembre 2025  | [08. L’effetto Doppler](tomasi-lezione-08.html)           |
-| 3 dicembre 2025   | [09. Filtraggio](tomasi-lezione-09.html) |
-| 16 dicembre 2025  | Compitino finale e correzione                                           |
+| 27 ottobre 2025  | [04. Energia (continua), oscillazioni][html4]            | [#4][pdf4] |
+| 3 novembre 2025  | [05. Tipi di oscillazioni, onde][html5]                  | [#5][pdf5] |
+| 11 novembre 2025 | [06. Onde sonore, sovrapposizione e interferenza][html6] | [#6][pdf6] |
+| 18 novembre 2025 | [07. Ampiezza del suono][html7]                          | [#7][pdf7] |
+| 25 novembre 2025 | [08. L’effetto Doppler][html8]                           | [#8][pdf8] |
+| 3 dicembre 2025  | [09. Filtraggio][html9]                                  | [#9][pdf9] |
+| 16 dicembre 2025 | Compitino finale e correzione                            |            |
 -->
 </center>
 

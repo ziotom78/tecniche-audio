@@ -424,7 +424,6 @@ L = F \times \Delta x
 
 -   Leggi di Newton, inerzia, differenza tra massa e peso
 -   Lavoro ed energia
--   Potenza
 -   Unità di misura del lavoro e dell’energia
 
 ---
