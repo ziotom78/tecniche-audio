@@ -1,8 +1,8 @@
 # Introduzione all’argomento di oggi
 
 -   Oggi completeremo la trattazione del lavoro e dell’energia
--   Introdurremo poi il concetto di “oscillazione” e “risonanza”, che ci consentiranno di comprendere le onde sonore
--   Vedremo come spiegare le oscillazioni in termini di leggi di Newton
+-   Introdurremo il concetto di “potenza”
+-   Vedremo come si produce oggi energia per il consumo casalingo ed industriale
 
 # Inquisitori accademici onorari
 
@@ -113,11 +113,11 @@
 -   Una molla con $k = 10\,\mathrm{N/m}$ viene compressa di 1 cm.
 -   Nel momento in cui viene rilasciata, l’energia cinetica è nulla, e quella elastica è
     \[
-    E_e^{(i)} = \frac12\times 10\,\mathrm{N/m}\times 0.01\,\text{m} = 0.05\,\text{J}.
+    E_e^{(i)} = \frac12\times 10\,\mathrm{N/m}\times (0.01\,\text{m})^2 = 0{,}000\,5\,\text{J} = 0{,}5\,\text{mJ}.
     \]
 -   L’energia cinetica della sua estremità, quando torna alla posizione di riposo, è
     \[
-    E_c^{(f)} = E_e^{(i)} = 0.05\,\text{J}.
+    E_c^{(f)} = E_e^{(i)} = 0{,}5\,\text{mJ}.
     \]
 -   Avendo energia cinetica, ha velocità non nulla e quindi inerzia: anziché fermarsi alla posizione di riposo, prosegue dando moto ad un fenomeno oscillatorio
 
@@ -628,7 +628,7 @@ Per avere un sistema di accumulo come quello Californiano ma capace di garantire
 
 ---
 title: Fisica -- Lezione 4
-subtitle: Energia (continua), oscillazioni
+subtitle: Energia (continua)
 author: Maurizio Tomasi ([`maurizio.tomasi@unimi.it`](mailto:maurizio.tomasi@unimi.it))
 date: Lunedì 27 ottobre 2025
 ...
