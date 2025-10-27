@@ -31,6 +31,24 @@
   </style>
   <link rel="stylesheet" href="reveal.js-5.2.1/dist/theme/white.css" id="theme">
   <link rel="stylesheet" href="css/custom-revealjs.css"/>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
 </head>
 <body>
   <div class="reveal">
@@ -38,25 +56,482 @@
 
 <section id="title-slide">
   <h1 class="title">Fisica – Lezione 6</h1>
-  <p class="subtitle">Sovrapposizione e interferenza, onde
+  <p class="subtitle">Pressione, sovrapposizione e interferenza, onde
 stazionarie</p>
   <p class="author">Maurizio Tomasi (<a
 href="mailto:maurizio.tomasi@unimi.it"><code>maurizio.tomasi@unimi.it</code></a>)</p>
   <p class="date">Martedì 11 novembre 2025</p>
 </section>
 
-<section id="introduzione-allargomento-di-oggi" class="slide level1">
-<h1>Introduzione all’argomento di oggi</h1>
-</section>
 <section id="inquisitori-accademici-onorari" class="slide level1">
 <h1>Inquisitori accademici onorari</h1>
 </section>
+<section id="introduzione-allargomento-di-oggi" class="slide level1">
+<h1>Introduzione all’argomento di oggi</h1>
+<ul>
+<li><p>Nella scorsa lezione abbiamo introdotto il concetto di “onda”, e
+abbiamo anticipato che le onde sonore sono onde di pressione. Oggi
+spiegheremo quindi in cosa consiste la pressione</p></li>
+<li><p>Faremo un “gioco” molto semplice, che ci permetterà di introdurre
+alcune proprietà delle onde sonore</p></li>
+<li><p>Introdurremo poi le onde sonore, e spiegheremo il principio di
+sovrapposizione e l’interferenza</p></li>
+</ul>
+</section>
+<section id="la-pressione" class="slide level1">
+<h1>La pressione</h1>
+</section>
+<section id="la-pressione-1" class="slide level1">
+<h1>La pressione</h1>
+<ul>
+<li><p>Nel linguaggio comune, per “pressione” si intende una forza
+applicata ad una superficie…</p></li>
+<li><p>…e, incredibilmente, è proprio il significato dato in
+fisica!</p></li>
+<li><p>La pressione di una forza su una superficie è definita come il
+rapporto</p>
+<p><span class="math display">
+P = \frac{F}{s},
+</span></p>
+<p>e si misura in N/m² ovviamente. A questa unità è dato il nome di
+“Pascal”, dal nome del grande <a
+href="https://it.wikipedia.org/wiki/Blaise_Pascal">filosofo, matematico,
+teologo e inventore francese</a>.</p></li>
+</ul>
+</section>
+<section id="esempi" class="slide level1">
+<h1>Esempi</h1>
+<ul>
+<li><p>Quando sto in piedi in una stanza, esercito una pressione: se
+<span class="math inline">m = 80\,\text{kg}</span> e la superficie dei
+piedi è di <span class="math inline">2 \times 200\,\mathrm{cm^2} =
+0{,}04\,\mathrm{m^2}</span>, si ha <span class="math display">
+P = \frac{m g}{S} = \frac{80\,\text{kg}\times
+10\,\mathrm{m/s^2}}{0{,}02\,\mathrm{m^2} + 0{,}02\,\mathrm{m^2}} =
+20.000\,\text{Pa} = 20\,\text{kPa}
+</span></p></li>
+<li><p>Il mio computer ha una massa di circa 2 kg e una superficie di
+circa <span class="math inline">800\,\mathrm{cm^2} =
+0{,}08\,\mathrm{m^2}</span>. La pressione esercitata sul tavolo è <span
+class="math display">
+P = \frac{m g}{S} = \frac{2\,\text{kg}\times
+10\,\mathrm{m/s^2}}{0{,}08\,\mathrm{m^2}} = 250\,\text{Pa}.
+</span></p></li>
+</ul>
+</section>
+<section id="unità-di-misura" class="slide level1">
+<h1>Unità di misura</h1>
+<ul>
+<li><p>L’unità del SI è il Pascal, che però è un valore molto
+piccolo</p></li>
+<li><p>Un’altra unità di misura molto usata è l’atmosfera, che
+corrisponde a 101.325 Pa, ossia la pressione media dell’aria al livello
+del mare:</p>
+<p><span class="math display">
+1\,\text{atm} = 101.325\,\text{Pa}.
+</span></p></li>
+<li><p>Un’altra unità di misura usata in passato (ma oggi quasi
+abbandonata) sono i “millimetri di mercurio”: essi fanno riferimento al
+famoso <a
+href="https://it.wikipedia.org/wiki/Tubo_di_Torricelli">esperimento di
+Torricelli (1608–1647)</a>, e si indicano con mmHg. Vale che <span
+class="math display">
+760\,\text{mmHg} = 1\,\text{atm} = 101.325\,\text{Pa}.
+</span></p></li>
+</ul>
+</section>
+<section id="significato" class="slide level1">
+<h1>Significato</h1>
+<ul>
+<li><p>Si divide la forza <span class="math inline">F</span> per una
+superficie <span class="math inline">S</span> quando questa forza è
+applicata più o meno uniformemente su <span
+class="math inline">S</span></p></li>
+<li><p>Vedremo negli esempi successivi vari casi di forze che si
+“scaricano” su una superficie estesa anziché in un punto</p></li>
+<li><p>In tali casi, è più corretto usare le pressioni anziché le forze
+per dare una spiegazione fisica del fenomeno</p></li>
+</ul>
+</section>
+<section id="il-letto-di-chiodi" class="slide level1">
+<h1>Il letto di chiodi</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Al <a href="https://www.muse.it/">MuSe</a> di Trento potete fare
+l’esperienza di un letto di chiodi!</p></li>
+<li><p>Non si avverte dolore perché si è sostenuti da circa 1000 chiodi,
+quindi la pressione è <span class="math display">
+P = \frac{m g}{1000 \times S_\text{chiodo}} =
+\frac1{1000}\,\frac{mg}{S_\text{chiodo}} = \frac{mg /
+1000}{S_\text{chiodo}}
+</span></p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/muse-trento-letto-chiodi.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="ciaspole-da-neve" class="slide level1">
+<h1>Ciaspole da neve</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Per camminare sulla neve si usano le ciaspole</p></li>
+<li><p>Queste aumentano la superficie di contatto con la neve,
+diminuendo la pressione</p></li>
+<li><p>Se la superficie di una ciaspola è tre volte quella del piede, è
+come se si pesasse un terzo del proprio peso</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/ciaspole-da-alpinismo.jpg" /></p>
+</div>
+</div>
+</section>
+<section class="slide level1">
+
+<p><a
+href="https://medium.com/@Rememberer0/stock-removal-knife-making-an-overview-f4eeeeacd2e3"><img
+data-src="media/knife-edge-types.jpg" height="720" /></a></p>
+</section>
+<section class="slide level1">
+
+<p><a
+href="https://www.solidrenner.com/i-tacchi-sono-i-peggiori-nemici-del-parquet/"><img
+data-src="media/tacchi-nemici-parquet.jpg" height="720" /></a></p>
+</section>
+<section id="pressione-di-un-gas" class="slide level1">
+<h1>Pressione di un gas</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Si sente spesso parlare di “pressione atmosferica”, che è ciò che
+misurano i barometri casalinghi. Questa dice quanto l’aria “schiaccia”
+gli oggetti che sono immersi in essa</p></li>
+<li><p>Attenzione però: non è un effetto dovuto alla gravità, o meglio,
+non è <strong>solo</strong> dovuto alla gravità</p></li>
+<li><p>L’aria infatti esercita una pressione anche sui muri, e persino
+<em>sotto</em> la cattedra!</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/barometro.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="molecole-daria" class="slide level1">
+<h1>Molecole d’aria</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>L’aria è fatta da molecole che si muovono e si scontrano
+continuamente</p></li>
+<li><p>La velocità media dipende dalla molecola (ossigeno, azoto…) e
+dalla temperatura, ma l’ordine di grandezza è 1000 m/s</p></li>
+<li><p>Essendo molto poco massive, il loro urto non ci fa male, ma
+genera comunque una pressione misurabile, perché sono moltissime (25
+miliardi di miliardi ogni cm³!)</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/air-molecules.gif" /></p>
+</div>
+</div>
+</section>
+<section id="pressione-dellaria" class="slide level1">
+<h1>Pressione dell’aria</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Il moto delle particelle d’aria è causato dalla forza
+gravitazionale, che tenderebbe a far cadere le particelle più in quota
+verso il basso: queste però urtano le particelle sotto di loro,
+trasferendogli energia cinetica</p></li>
+<li><p>La pressione maggiore dell’aria si avverte al livello del mare,
+dove è mediamente</p>
+<p><span class="math display">
+P = 101.325\,\text{Pa} \approx 100\,\text{kPa}
+</span></p></li>
+<li><p>Quindi, salendo di quota la pressione diminuisce</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/pressione-atmosferica.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="la-pressione-su-di-noi" class="slide level1">
+<h1>La pressione su di noi</h1>
+<ul>
+<li><p>Ma quindi la pressione dell’aria ci sta schiacciando anche in
+questo momento?</p></li>
+<li><p><strong>CERTO!</strong> Ma il nostro corpo è adattato all’aria,
+ed esercita dall’interno una pressione verso l’esterno che bilancia
+quella dell’aria</p></li>
+<li><p>Qualcuno ricorda la <a
+href="https://youtu.be/RkCgZ6yMNx8?si=KnQxzXrQ8oo3cXsq">scena finale</a>
+di <a href="https://www.imdb.com/title/tt0100802/">Total Recall</a>
+(Verhoeven, 1990)?</p></li>
+<li><p>Tutti gli organismi viventi hanno meccanismi di regolazione della
+pressione adatti all’ambiente in cui vivono</p></li>
+</ul>
+</section>
+<section id="le-profondità-del-mare" class="slide level1">
+<h1>Le profondità del mare</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Anche l’acqua ed altri fluidi esercitano una pressione, e come
+nel caso dell’aria essa aumenta con la profondità</p></li>
+<li><p>Sul fondo della Fossa delle Marianne (11 km di profondità) la
+pressione è 1.086 atm.</p></li>
+<li><p>Il <a
+href="https://it.wikipedia.org/wiki/Trieste_%28batiscafo%29">batiscafo
+Trieste</a>, progettato da <a
+href="https://it.wikipedia.org/wiki/Auguste_Piccard">A. Piccard</a> e
+pilotato da <a href="https://it.wikipedia.org/wiki/Jacques_Piccard">J.
+Piccard</a> (figlio) e <a
+href="https://it.wikipedia.org/wiki/Don_Walsh">Don Walsh</a>, fu il
+primo a raggiungere il fondo nel 1952</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/batiscafo-trieste.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="vita-a-6.600-m-di-profondità" class="slide level1">
+<h1>Vita a 6.600 m di profondità</h1>
+<iframe width="784" height="441" src="https://www.youtube.com/embed/g9DOHpLS19E?si=u3G73JE5GyB54Djv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+<p>La pressione è circa 660 atm.</p>
+</section>
+<section id="psychrolutes-marcidus" class="slide level1">
+<h1><em>Psychrolutes marcidus</em></h1>
+<p><img data-src="media/psychrolutes-marcidus.jpg" /></p>
+</section>
+<section id="pressione-ed-onde" class="slide level1">
+<h1>Pressione ed onde</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Quando un corpo si muove in un fluido, genera onde di
+pressione</p></li>
+<li><p>Il corpo, spostandosi, urta le particelle di fluido, che vengono
+accelerate</p></li>
+<li><p>Le particelle accelerate urtano le loro vicine, trasferendo a
+loro l’energia cinetica</p></li>
+<li><p>Questo processo si ripete facendo propagare una “onda di
+pressione”</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/longitudinal-sound-wave.gif" /></p>
+</div>
+</div>
+</section>
+<section id="densità-e-pressione" class="slide level1">
+<h1>Densità e pressione</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Si vede nell’animazione a lato che l’onda appare come una specie
+di banda nera che si propaga</p></li>
+<li><p>Il motivo per cui appare la banda è che quando la pressione
+aumenta, aumenta anche la densità (numero di particelle in un dato
+volume)</p></li>
+<li><p>Un’elevata pressione corrisponde a molti urti: ed ovviamente, gli
+urti sono più numerosi dove è più facile trovare particelle!</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/longitudinal-sound-wave.gif" /></p>
+</div>
+</div>
+</section>
+<section id="simulazione" class="slide level1">
+<h1>Simulazione</h1>
+<ul>
+<li><p>Facciamo un gioco! Scegliamo una fila di banchi abbastanza
+popolata, e con le persone sedute una vicina all’altra</p></li>
+<li><p>Chi è ad un’estremità tocchi il braccio della persona vicina, la
+quale farà lo stesso con quella dopo</p></li>
+<li><p>Dopo aver provato una volta, la persona in cima alla fila ora dia
+tocchi regolari. Verifichiamo che la persona all’altro capo riceva
+impulsi con lo stesso periodo (frequenza)</p></li>
+</ul>
+</section>
+<section id="onde-sonore" class="slide level1">
+<h1>Onde sonore</h1>
+</section>
+<section id="analogia-col-suono" class="slide level1">
+<h1>Analogia col suono</h1>
+<p>Il gioco che abbiamo fatto presenta analogie con la propagazione
+sonora:</p>
+<ul>
+<li><p>Gli “impulsi” della prima persona si propagano nella stanza,
+anche se nessuna persona ha cambiato il suo posto.</p></li>
+<li><p>Si tratta di un’onda longitudinale: tutto il movimento avviene
+lungo la fila, senza coinvolgere quella davanti o dietro</p></li>
+<li><p>Ciascun impulso non si propaga istantaneamente, ma richiede
+qualche tempo per raggiungere l’altra estremità della fila</p></li>
+<li><p>Se le persone sedessero più separate tra loro (minore densità),
+ci vorrebbe di più perché un impulso si trasferisca da un capo all’altro
+della fila (ognuno dovrebbe sporgersi, o addirittura alzarsi
+momentaneamente dal suo posto)</p></li>
+</ul>
+</section>
+<section id="suoni-attraverso-i-muri" class="slide level1">
+<h1>Suoni attraverso i muri</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Quando sentiamo i vicini nell’appartamento accanto, avvengono tre
+propagazioni:</p>
+<ol>
+<li>Il suono si propaga nell’aria della stanza accanto fino al muro
+divisorio</li>
+<li>Il muro vibra a causa delle variazioni di pressione dell’aria</li>
+<li>Le vibrazioni del muro mettono in moto l’aria nella nostra
+stanza</li>
+</ol></li>
+<li><p>In questo viaggio, il suono è un’onda di pressione solo mentre
+viaggia nell’aria</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/sentire-attraverso-muri.jpg" width="480" /></p>
+</div>
+</div>
+</section>
+<section id="onde-sonore-1" class="slide level1">
+<h1>Onde sonore</h1>
+<p>Possiamo quindi dare una definizione delle onde sonore:</p>
+<ul>
+<li><p>Un’onda sonora è un’onda meccanica che si propaga in un
+mezzo</p></li>
+<li><p>Quando il suono si propaga in un fluido come l’aria o l’acqua,
+esso è un’onda di pressione</p></li>
+<li><p>Quando il suono si propaga in un solido come il muro, esso è una
+vibrazione causata da forze elastiche</p></li>
+<li><p>In entrambi i casi, si tratta di un’onda longitudinale</p></li>
+</ul>
+</section>
+<section id="proprietà-di-unonda-sonora" class="slide level1">
+<h1>Proprietà di un’onda sonora</h1>
+<ul>
+<li><p>Se il fattore che scatena l’onda è un impulso periodico, il
+periodo si conserva durante la propagazione</p></li>
+<li><p>L’ampiezza dell’onda, ossia la sua intensità, si riduce man mano
+che l’onda si propaga. Vedremo meglio l’intensità in seguito, perché è
+un argomento complesso</p></li>
+<li><p>La velocità con cui l’onda si propaga dipende dal tipo di mezzo:
+in generale, più un corpo è denso e rigido, maggiore è la velocità del
+suono</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<p><img data-src="media/sound-speed-in-media.svg" height="560" /></p>
+</section>
+<section id="eruzione-di-un-vulcano" class="slide level1">
+<h1>Eruzione di un vulcano</h1>
+<iframe width="784" height="441" src="https://www.youtube.com/embed/BUREX8aFbMs?si=b1tpdO6co2sNYG1v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+</section>
+<section id="rumore-e-suono" class="slide level1">
+<h1>Rumore e suono</h1>
+<ul>
+<li><p>Introduciamo ora il concetto di “suono” e “rumore”</p>
+<ul>
+<li><p>Il <strong>suono</strong> è un’onda sonora regolare, che possiede
+una sua periodicità</p></li>
+<li><p>Il <strong>rumore</strong> è l’esatto opposto: è un’onda sonora
+priva di periodicità</p></li>
+</ul></li>
+<li><p>Per rappresentare il suono che raggiunge un punto dello spazio
+(dove ad esempio c’è un microfono), si usa spesso un grafico che mostra
+la variazione temporale della pressione/oscillazione meccanica</p></li>
+</ul>
+</section>
+<section id="esempio-di-suono" class="slide level1">
+<h1>Esempio di suono</h1>
+<ul>
+<li><p>Un’oscillazione regolare ha un andamento “sinusoidale”</p>
+<center>
+<p><img data-src="media/sound-wave-representation.webp"
+height="320" /></p>
+</center></li>
+<li><p>Un suono è caratterizzato dalla frequenza, che è un valore in Hz
+(numero di oscillazioni che avvengono in un secondo), e
+dall’ampiezza</p></li>
+</ul>
+</section>
+<section id="esempio-di-rumore" class="slide level1">
+<h1>Esempio di rumore</h1>
+<ul>
+<li><p>Il rumore invece non mostra alcuna regolarità, come abbiamo già
+detto:</p>
+<center>
+<p><img data-src="media/time-domain-plot-of-noise.png"
+height="320" /></p>
+</center></li>
+<li><p>Anche un rumore può essere caratterizzato numericamente, ma in
+modo più complesso. Il parametro più intuitivo è l’ampiezza</p></li>
+</ul>
+</section>
+<section id="simulazione-di-suoni-e-rumori" class="slide level1">
+<h1>Simulazione di suoni e rumori</h1>
+<iframe src="iframes/sound-example.html" width="100%" height="580px" style="border:1px solid #ccc; border-radius: 8px;">
+</iframe>
+</section>
 <section id="sovrapposizione-e-interferenza" class="slide level1">
 <h1>Sovrapposizione e interferenza</h1>
-<p>Sovrapposizione e interferenza: Si analizza cosa succede quando due o
-più onde sonore si incontrano nello stesso punto, introducendo i
-concetti di interferenza costruttiva (suono più forte) e distruttiva
-(suono più debole o silenzio).</p>
+</section>
+<section id="sovrapposizione-e-interferenza-1" class="slide level1">
+<h1>Sovrapposizione e interferenza</h1>
+<ul>
+<li><p>Abbiamo sempre parlato sinora di <strong>una</strong> onda sonora
+che si propaga. Ma nella realtà siamo sempre circondati da molti
+suoni!</p></li>
+<li><p>Quando due onde si incontrano in un punto dello spazio, vale il
+principio di <strong>sovrapposizione</strong>: se alle onde non è
+associata “troppa energia”, i loro effetti si sommano</p></li>
+<li><p>Questo è il <strong>principio di sovrapposizione</strong>, e vale
+non solo per le onde sonore</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<video controls width="1080">
+<source src="media/veritasium-double-slit-experiment.mp4" type="video/mp4" />
+Your browser does not support the video tag.
+</video>
+<p><small><a href="https://www.youtube.com/watch?v=Iuv6hY6zsd0">The
+original double slit experiment</a></small></p>
+</section>
+<section id="interferenza" class="slide level1">
+<h1>Interferenza</h1>
+<ul>
+<li><p>La sovrapposizione è un <strong>principio</strong>: dice che due
+onde che si incontrano nel medesimo punto producono un’onda risultante
+data dalla somma delle due</p></li>
+<li><p>L’<strong>interferenza</strong> è il risultato della
+sovrapposizione di più onde. Esso dà origine a fenomeni molto
+interessanti, perché a volte l’interferenza causa un <em>rinforzo</em>
+delle onde, ma altre volte può annullare il loro effetto!</p></li>
+<li><p>Per fare un’analogia: suono due tasti del pianoforte e sento un
+accordo consonante o dissonante. Il fatto di suonarli è dato dalla
+sovrapposizione, la consonanza o dissonanza che percepisco è dato
+dall’interferenza.</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<iframe src="iframes/interference.html" width="100%" height="700" style="border:1px solid #ccc; border-radius: 8px;">
+</iframe>
 </section>
 <section id="battimenti" class="slide level1">
 <h1>Battimenti</h1>
@@ -76,6 +551,9 @@ degli strumenti musicali.</p>
 </section>
 <section id="cosa-sapere-per-lesame" class="slide level1">
 <h1>Cosa sapere per l’esame</h1>
+<ul>
+<li>Pressione</li>
+</ul>
 </section>
     </div>
   </div>
