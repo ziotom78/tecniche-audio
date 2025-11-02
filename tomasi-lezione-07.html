@@ -31,6 +31,24 @@
   </style>
   <link rel="stylesheet" href="reveal.js-5.2.1/dist/theme/white.css" id="theme">
   <link rel="stylesheet" href="css/custom-revealjs.css"/>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
 </head>
 <body>
   <div class="reveal">
@@ -44,41 +62,678 @@ href="mailto:maurizio.tomasi@unimi.it"><code>maurizio.tomasi@unimi.it</code></a>
   <p class="date">Martedì 18 novembre 2025</p>
 </section>
 
-<section id="introduzione-allargomento-di-oggi"
-class="title-slide slide level1">
+<section id="introduzione-allargomento-di-oggi" class="slide level1">
 <h1>Introduzione all’argomento di oggi</h1>
-
+<ul>
+<li><p>Oggi continueremo nello studio delle onde sinusoidali, parlando
+della loro ampiezza</p></li>
+<li><p>Introdurremo poi i concetti di sovrapposizione e di
+interferenza</p></li>
+</ul>
 </section>
-
-<section id="inquisitori-accademici-onorari"
-class="title-slide slide level1">
+<section id="inquisitori-accademici-onorari" class="slide level1">
 <h1>Inquisitori accademici onorari</h1>
-
 </section>
-
-<section id="ampiezza-del-suono" class="title-slide slide level1">
+<section id="ampiezza-del-suono" class="slide level1">
 <h1>Ampiezza del suono</h1>
-
+<ul>
+<li><p>Nella scorsa lezione, abbiamo visto che un’onda sinusoidale si
+scrive così:</p>
+<p><span class="math display">
+\text{onda} = A \sin (2\pi\nu t + \phi),
+</span></p></li>
+<li><p>Abbiamo discusso brevemente del significato di <span
+class="math inline">\phi</span> (“sfasamento”) e della frequenza: il
+primo indica in che punto dell’oscillazione iniziamo a misurare la
+pressione, e il secondo il numero di oscillazioni al secondo</p></li>
+<li><p>Ci resta ancora da parlare dell’ampiezza <span
+class="math inline">A</span></p></li>
+</ul>
 </section>
-
-<section id="logaritmi" class="title-slide slide level1">
-<h1>Logaritmi</h1>
-
+<section id="misura-dellampiezza" class="slide level1">
+<h1>Misura dell’ampiezza</h1>
+<ul>
+<li>Come avevamo già accennato, per un’onda acustica in un fluido come
+l’aria o l’acqua, l’ampiezza <span class="math inline">A</span> può
+essere misurata in Pascal (pressione) o in kg/m³ (densità)</li>
+<li>In un mezzo solido come un muro invece l’ampiezza è uno
+<strong>spostamento</strong>, e si misura in metri</li>
+</ul>
 </section>
-
-<section id="i-decibel-db" class="title-slide slide level1">
-<h1>I decibel (dB)</h1>
-
+<section id="variazione-dellampiezza" class="slide level1">
+<h1>Variazione dell’ampiezza</h1>
+<ul>
+<li><p>Immaginate di essere in un prato e di lanciare un urlo</p></li>
+<li><p>Chi è vicino a voi sentirà il vostro grido con grande
+intensità</p></li>
+<li><p>Ma, allontanandosi, il suono sarà sempre più debole</p></li>
+<li><p>Sapete spiegare il perché?</p></li>
+</ul>
 </section>
+<section id="variazione-dellampiezza-1" class="slide level1">
+<h1>Variazione dell’ampiezza</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Il motivo per cui il suono propagandosi si attenua ha a che fare
+con la <strong>conservazione dell’energia</strong></p></li>
+<li><p>L’urlo nasce dalla vostra bocca, che ha una piccola superficie.
+Ma il suono si propaga ovunque nello spazio (anche verso l’alto), e
+l’energia sonora deve necessariamente “diluirsi”</p></li>
+<li><p>Ciò avverrebbe anche <strong>in mancanza di attrito e forze
+viscose</strong>!</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/legge-inverso-quadrato.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="legge-del-quadrato" class="slide level1">
+<h1>Legge del quadrato</h1>
+<ul>
+<li><p>In un caso ideale, l’intensità dell’onda sonora varia come
+<strong>l’inverso del quadrato</strong> della distanza <span
+class="math inline">r</span>. Se quindi due persone misurano un’ampiezza
+di pressione <span class="math inline">P_1</span> e <span
+class="math inline">P_2</span> a due distanze <span
+class="math inline">r_1</span> e <span class="math inline">r_2</span>,
+vale che</p>
+<p><span class="math display">
+P_1\times r_1^2 = P_2\times r_2^2.
+</span></p></li>
+<li><p>La formula è più utile risolvendo per <span
+class="math inline">P_2</span>:</p>
+<p><span class="math display">
+P_2 = P_1\times\frac{r_1^2}{r_2^2}.
+</span></p></li>
+</ul>
+</section>
+<section id="esempio" class="slide level1">
+<h1>Esempio</h1>
+<ul>
+<li>Una persona è seduta in prima fila a 3 m dal professore (<span
+class="math inline">r_1 = 3\,\text{m}</span>)</li>
+<li>Un’altra persona è seduta più dietro, a 9 metri dal professore
+(<span class="math inline">r_2 = 9\,\text{m}</span>)</li>
+<li>Se l’orecchio della prima persona riceve un suono di ampiezza <span
+class="math inline">P_1</span>, la seconda persona riceve un suono di
+ampiezza <span class="math display">
+P_2 = P_1\times\frac{r_1^2}{r_2^2}
+= P_1\times\frac{(3\,\text{m})^2}{(9\,\text{m})^2}
+= P_1\times\frac{9}{81} = \frac{P_1}{9}
+</span></li>
+</ul>
+</section>
+<section id="intensità-percepita" class="slide level1">
+<h1>Intensità percepita</h1>
+<ul>
+<li><p>Possiamo concludere che se la distanza triplica, l’ampiezza si
+riduce di un fattore 9, ossia 3²</p></li>
+<li><p>Questo vuol dire che la seconda persona percepisce la voce del
+professore 9 volte meno intensa?</p></li>
+<li><p>(Potete fare la prova, se volete!)</p></li>
+</ul>
+</section>
+<section id="legge-di-weber-fechner" class="slide level1">
+<h1>Legge di Weber-Fechner</h1>
+<ul>
+<li><p>No! Se così fosse, le aule universitarie dovrebbero essere fatte
+in modo che il professore stia al centro, e tutti gli studenti in
+cerchio attorno a lui</p></li>
+<li><p>L’esperienza ci mostra che se parla un compagno in prima fila,
+non sentiamo la metà di quello che sente chi sta in seconda
+fila</p></li>
+<li><p>Le percezioni sensoriali seguono la cosiddetta “<a
+href="https://it.wikipedia.org/wiki/Legge_di_Weber-Fechner">legge di
+Weber-Fechner</a>”</p></li>
+</ul>
+</section>
+<section id="il-lavoro-di-weber" class="slide level1">
+<h1>Il lavoro di Weber</h1>
+<ul>
+<li><p><a
+href="https://it.wikipedia.org/wiki/Ernst_Heinrich_Weber">Ernst
+Weber</a> (1795-1878) scoprì che la variazione di uno stimolo viene
+percepita in modo differente a seconda dell’intensità iniziale dello
+stimolo</p></li>
+<li><p>Weber verificò che se a una persona che regge un peso si aggiunge
+un ulteriore peso, questa lo percepirà diversamente:</p>
+<ul>
+<li>Aggiungere 100 g ad un carico di 10 kg dà una percezione minima,
+quasi inavvertibile</li>
+<li>Ma aggiungere 100 g ad un carico di 200 g è invece chiaramente
+avvertibile!</li>
+</ul></li>
+</ul>
+</section>
+<section id="la-conclusione-di-fechner" class="slide level1">
+<h1>La conclusione di Fechner</h1>
+<ul>
+<li><p><a
+href="https://it.wikipedia.org/wiki/Gustav_Theodor_Fechner">Gustav
+Fechner</a> (1801-1887) descrisse matematicamente quanto aveva osservato
+Weber, e derivò la formula</p>
+<p><span class="math display">
+p = k \log S + C
+</span></p>
+<p>dove <span class="math inline">p</span> è la “percezione” (ciò che
+avvertono i miei sensi), <span class="math inline">S</span> è lo stimolo
+(il fenomeno fisico che raggiunge i miei sensi), e <span
+class="math inline">k</span> e <span class="math inline">C</span>
+costanti che non ci interessano qui.</p></li>
+<li><p>Anche se la legge di Weber-Fechner si è poi rivelata non del
+tutto esatta, è stata molto importante storicamente per definire il
+“decibel”, e quindi dovremo capire il funzionamento di <span
+class="math inline">\log</span>, la funzione “logaritmo”.</p></li>
+</ul>
+</section>
+<section class="slide level1">
 
-<section id="conclusioni" class="title-slide slide level1">
+<p><img data-src="media/starred-sky.jpg" /></p>
+</section>
+<section id="magnitudini-delle-stelle" class="slide level1">
+<h1>Magnitudini delle stelle</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Come descritto da Tolomeo nel suo Almagesto (150 d.C.),
+nell’antichità si suddividevano le stelle in sei “classi di
+magnitudini”, a seconda della loro intensità</li>
+<li>Le “stelle di prima magnitudine” erano quelle più brillanti, come
+Vega</li>
+<li>Via via nella scala, le stelle apparivano sempre meno brillanti,
+fino alle “stelle di sesta magnitudine”, appena visibili</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/tolomeo-almagesto.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="magnitudini-delle-stelle-1" class="slide level1">
+<h1>Magnitudini delle stelle</h1>
+<ul>
+<li><p>Con l’avvento della fotografia astronomica alla fine
+dell’Ottocento ci fu la possibilità di misurare effettivamente
+l’intensità luminosa delle stelle, e qui ci furono sorprese!</p></li>
+<li><p>Sebbene i sei livelli sembrassero equispaziati all’occhio nudo,
+in realtà le differenze tra le intensità erano molto diverse!</p></li>
+</ul>
+</section>
+<section id="differenze-tra-intensità" class="slide level1">
+<h1>Differenze tra intensità</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Magnitudini</th>
+<th style="text-align: right;">Differenza in intensità</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1 − 2</td>
+<td style="text-align: right;">8415,1</td>
+</tr>
+<tr>
+<td style="text-align: center;">2 − 3</td>
+<td style="text-align: right;">1333,7</td>
+</tr>
+<tr>
+<td style="text-align: center;">3 − 4</td>
+<td style="text-align: right;">211,4</td>
+</tr>
+<tr>
+<td style="text-align: center;">4 − 5</td>
+<td style="text-align: right;">33,5</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 − 6</td>
+<td style="text-align: right;">5,3</td>
+</tr>
+</tbody>
+</table>
+<p>(Le unità della colonna di destra sono arbitrarie)</p>
+<p>Anche se le sei classi appaiono equispaziate, le intensità misurate
+dagli strumenti non lo sono affatto!</p>
+</section>
+<section id="intensità" class="slide level1">
+<h1>Intensità</h1>
+<p>Le intensità di ciascuna classe, in unità di misura arbitrarie, sono
+le seguenti:</p>
+<table>
+<thead>
+<tr>
+<th>Magnitudine</th>
+<th style="text-align: right;">Intensità</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: right;">10000,0</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">1584,9</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">251,2</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">39,8</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align: right;">6,3</td>
+</tr>
+<tr>
+<td>6</td>
+<td style="text-align: right;">1,0</td>
+</tr>
+</tbody>
+</table>
+<p>(Notate che la differenza tra la prima e l’ultima intensità è
+<strong>enorme</strong>!)</p>
+</section>
+<section id="rapporti-tra-magnitudini" class="slide level1">
+<h1>Rapporti tra magnitudini</h1>
+<p>Il mistero viene svelato se calcoliamo i <strong>rapporti</strong>
+tra le magnitudini!</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Magnitudini</th>
+<th style="text-align: right;">Differenza in intensità</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1 / 2</td>
+<td style="text-align: right;">6,3</td>
+</tr>
+<tr>
+<td style="text-align: center;">2 / 3</td>
+<td style="text-align: right;">6,3</td>
+</tr>
+<tr>
+<td style="text-align: center;">3 / 4</td>
+<td style="text-align: right;">6,3</td>
+</tr>
+<tr>
+<td style="text-align: center;">4 / 5</td>
+<td style="text-align: right;">6,3</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 / 6</td>
+<td style="text-align: right;">6,3</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="potenze" class="slide level1">
+<h1>Potenze</h1>
+<ul>
+<li><p>Abbiamo visto che ogni magnitudine ha un’intensità che è più
+grande della successiva di un fattore 6,3. Ad esempio:</p>
+<p><span class="math display">
+I_3 = 6{,}3 \times I_4, \quad I_4 = 6{,}3 \times I_5.
+</span></p></li>
+<li><p>Questo vuol dire che <span class="math display">
+I_3 = 6{,}3^2 \times I_4,
+</span> e che <span class="math display">
+I_1 = 6{,}3^5\times I_6 = 10.000\times I_6.
+</span></p></li>
+</ul>
+</section>
+<section id="potenze-1" class="slide level1">
+<h1>Potenze</h1>
+<ul>
+<li><p>In generale, per “salire” di <span class="math inline">n</span>
+livelli di magnitudine, bisogna moltiplicare le intensità per <span
+class="math display">
+6{,}3^n
+</span></p>
+<p>In altre parole, usando una potenza si può conoscere l’intensità se
+cambia la magnitudine.</p></li>
+<li><p>Questo spiega perché l’intensità della magnitudine 1 è così
+grande rispetto a quella della magnitudine 6: quando si usano le
+potenze, i numeri diventano rapidamente grandissimi!</p></li>
+<li><p>Ma qual è l’operazione contraria? Ossia, se so di quanto cambia
+l’intensità (ad esempio, 1580), di quanto varia la magnitudine?</p></li>
+</ul>
+</section>
+<section id="i-logaritmi" class="slide level1">
+<h1>I logaritmi</h1>
+<ul>
+<li><p>Un logaritmo è l’operazione inversa di un elevamento a
+potenza</p></li>
+<li><p>La domanda: “a quanto devo elevare 6,3 per ottenere 1580?” ha
+come risposta la quantità <span class="math display">
+\log_{6{,}3} 1580
+</span></p>
+<p>che vale circa 4. Infatti <span class="math inline">6{,}3^4 =
+1580</span>.</p></li>
+<li><p>In generale, con <span class="math inline">\log_a b</span> si
+indica quel numero a cui bisogna elevare <span
+class="math inline">a</span> per ottenere <span
+class="math inline">b</span>.</p></li>
+</ul>
+</section>
+<section id="proprietà-dei-logaritmi" class="slide level1">
+<h1>Proprietà dei logaritmi</h1>
+<ul>
+<li><p>Abbiamo visto che con le potenze è facile arrivare a numeri
+grandissimi:</p>
+<p><span class="math display">
+6{,}3^5 = 10.000
+</span></p>
+<p>È facile rendersi conto di ciò se si usano le potenze di 10:</p>
+<p><span class="math display">
+10^{11} = 10\times 10\times \ldots \times 10 = 100.000.000.000
+</span></p></li>
+<li><p>Con i logaritmi è l’opposto: anche se si parte da numeri
+grandissimi, i logaritmi sono di solito molto piccoli:</p>
+<p><span class="math display">
+\log_{10} 100.000.000.000 = 11.
+</span></p></li>
+</ul>
+</section>
+<section id="i-logaritmi-in-base-10" class="slide level1">
+<h1>I logaritmi in base 10</h1>
+<ul>
+<li><p>I logaritmi in base 10 sono particolarmente facili da
+calcolare:</p>
+<p><span class="math display">
+\begin{aligned}
+\log_{10} 10 &amp;= 1,\\
+\log_{10} 100 &amp;= 2,\\
+\log_{10} 1000 &amp;= 3,\\
+\log_{10} 10.000 &amp;= 4,\\
+\log_{10} 100.000 &amp;= 5\ldots\\
+\end{aligned}
+</span></p></li>
+<li><p>In questi casi, il logaritmo è sempre <strong>il numero di cifre
+del numero, meno uno</strong></p></li>
+</ul>
+</section>
+<section id="i-logaritmi-in-base-10-1" class="slide level1">
+<h1>I logaritmi in base 10</h1>
+<ul>
+<li><p>E per i numeri che non sono così semplici come 100 o
+10.000?</p></li>
+<li><p>In questo caso i logaritmi ritornano un numero con la
+virgola:</p>
+<p><span class="math display">
+\log_{10} 32.359 = 4{,}51
+</span></p>
+<p>Questo perché <span class="math inline">10^{4{,}51} = 32.359</span>:
+i matematici ci dicono che è possibile definire le potenze anche quando
+l’esponente ha la virgola</p></li>
+<li><p>Il logaritmo uguale a 4,51 può essere interpretato così: “il
+numero di partenza aveva cinque cifre (4 + 1), ma era un po’ più grande
+di 10.000, che è il più piccolo numero a cinque cifre”.</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<p>TODO</p>
+<p>Vedi “Pendolo: gravità che imita una molla” in fondo per una
+spiegazione di come introdurre l’intensità del suono come pressione², e
+dei decibel.</p>
+</section>
+<section id="sovrapposizione-e-interferenza" class="slide level1">
+<h1>Sovrapposizione e interferenza</h1>
+</section>
+<section id="sovrapposizione-e-interferenza-1" class="slide level1">
+<h1>Sovrapposizione e interferenza</h1>
+<ul>
+<li><p>Abbiamo sempre parlato sinora di <strong>una</strong> onda sonora
+che si propaga. Ma nella realtà siamo sempre circondati da molti
+suoni!</p></li>
+<li><p>Quando due onde si incontrano in un punto dello spazio, vale il
+principio di <strong>sovrapposizione</strong>: se alle onde non è
+associata “troppa energia”, i loro effetti si sommano</p></li>
+<li><p>Questo è il <strong>principio di sovrapposizione</strong>, e vale
+non solo per le onde sonore</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<video controls width="1080">
+<source src="media/veritasium-double-slit-experiment.mp4" type="video/mp4" />
+Your browser does not support the video tag.
+</video>
+<p><small><a href="https://www.youtube.com/watch?v=Iuv6hY6zsd0">The
+original double slit experiment</a></small></p>
+</section>
+<section id="interferenza" class="slide level1">
+<h1>Interferenza</h1>
+<ul>
+<li><p>La sovrapposizione è un <strong>principio</strong>: dice che due
+onde che si incontrano nel medesimo punto producono un’onda risultante
+data dalla somma delle due</p></li>
+<li><p>L’<strong>interferenza</strong> è il risultato della
+sovrapposizione di più onde. Esso dà origine a fenomeni molto
+interessanti, perché a volte l’interferenza causa un <em>rinforzo</em>
+delle onde, ma altre volte può annullare il loro effetto!</p></li>
+<li><p>Per fare un’analogia: suono tre tasti del pianoforte e sento un
+accordo consonante o dissonante. Il fatto che ci arrivi il suono insieme
+è dato dalla sovrapposizione, la consonanza/dissonanza
+dall’interferenza.</p></li>
+</ul>
+</section>
+<section id="tipi-di-interferenza" class="slide level1">
+<h1>Tipi di interferenza</h1>
+<ul>
+<li><p>Ci sono vari modi in cui si manifesta l’interferenza:</p>
+<ul>
+<li><p>Se tutte le volte che un onda causa un massimo di pressione,
+anche la seconda fa lo stesso, si ha <strong>interferenza
+costruttiva</strong>: l’effetto è amplificato</p></li>
+<li><p>Se invece quando la prima onda ha un massimo di pressione, la
+seconda ha un minimo, l’effetto è una <strong>interferenza
+distruttiva</strong>, in cui il suono è attenuato</p></li>
+<li><p>Se le due onde non hanno la stessa frequenza, l’interferenza è
+alternatamente costruttiva e distruttiva, e si hanno i
+<strong>battimenti</strong></p></li>
+</ul></li>
+<li><p>Tutti questi effetti si possono vedere nell’applicazione della
+slide successiva</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<iframe src="iframes/interference.html" width="100%" height="760" style="border:1px solid #ccc; border-radius: 8px;">
+</iframe>
+</section>
+<section id="interferenza-distruttiva" class="slide level1">
+<h1>Interferenza distruttiva</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Le cuffie a cancellazione del rumore hanno un microfono che riceve
+il suono ambientale e lo riproduce indirizzandolo all’orecchio, ma con
+uno sfasamento di mezza lunghezza d’onda</li>
+<li>Nell’orecchio entra quindi il <span style="color: #269342">suono
+ambientale</span>, più <span style="color: #932642">ciò che produce la
+cuffia</span>, ossia la musica e il suono ambientale “sfasato”: <span
+class="math display">
+\begin{aligned}
+\text{Risultato} &amp;= \cancel{\textcolor{#269342}{\text{Ambiente}}} +
+\textcolor{#932642}{\text{Musica}} -
+\cancel{\textcolor{#932642}{\text{Ambiente}}} = \\
+&amp;= \textcolor{#932642}{\text{Musica}}
+\end{aligned}
+</span></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/cuffie-cancellazione-rumore.webp"
+width="320" /></p>
+</div>
+</div>
+</section>
+<section id="battimenti" class="slide level1">
+<h1>Battimenti</h1>
+<p><img data-src="media/battimenti.webp" height="600" /></p>
+</section>
+<section id="battimenti-1" class="slide level1">
+<h1>Battimenti</h1>
+<ul>
+<li><p>I battimenti sono un tipo di interferenza in cui le due onde non
+hanno la stessa frequenza; l’interferenza continua quindi ad alternarsi
+tra costruttiva e distruttiva</p></li>
+<li><p>L’effetto è quello di un’onda la cui intensità cambia da un
+minimo ad un massimo, con una frequenza data da</p>
+<p><span class="math display">
+\nu_\text{battimento} = \left|\nu_1 - \nu_2\right|.
+</span></p></li>
+<li><p>Sono molto utili per accordare tra loro strumenti: se si sentono
+battimenti quando suonano la stessa nota, non sono accordati!</p></li>
+</ul>
+</section>
+<section id="il-timbro" class="slide level1">
+<h1>Il timbro</h1>
+</section>
+<section id="timbro-del-suono" class="slide level1">
+<h1>Timbro del suono</h1>
+<ul>
+<li><p>Abbiamo visto l’interferenza tra due onde sonore, ma ovviamente
+si può sovrapporre qualsiasi numero!</p></li>
+<li><p>Il motivo per cui due strumenti diversi come un violino e un
+flauto suonino “diversi” anche quando la nota è la stessa è dovuta
+proprio a questo</p></li>
+<li><p>Il “colore” di un suono è detto <strong>timbro</strong>, e
+dipende dal fatto che gli strumenti non emettono mai semplici onde
+sinusoidali, ma sovrapposizioni di onde</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<p>TODO: esempio di suono dato dalla sovrapposizione di tre onde</p>
+</section>
+<section id="scomposizione-di-fourier" class="slide level1">
+<h1>Scomposizione di Fourier</h1>
+</section>
+<section id="scomposizione-di-fourier-1" class="slide level1">
+<h1>Scomposizione di Fourier</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Abbiamo visto che la sovrapposizione di un suono fondamentale e
+di armoniche fornisce il “timbro” di quel suono</p></li>
+<li><p>Un matematico francese, <a
+href="https://it.wikipedia.org/wiki/Jean_Baptiste_Joseph_Fourier">Jean-Baptiste
+Joseph Fourier</a> (1768–1830), dimostrò una proprietà fondamentale
+delle onde, non solo sonore: ogni fenomeno periodico può essere
+scomposto nella somma di oscillazioni sinusoidali</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/fourier.jpg" /></p>
+</div>
+</div>
+</section>
+<section class="slide level1">
+
+<p>TODO: esempio di scomposizione di Fourier</p>
+</section>
+<section id="esempi-applicativi" class="slide level1">
+<h1>Esempi applicativi</h1>
+<ul>
+<li><p>Un equalizzatore acustico è in grado di modificare i suoni gravi,
+medi ed acuti decomponendo il suono e agendo sulle ampiezze di alcune
+frequenze e non altre, come vedremo tra poco</p></li>
+<li><p>I file MP3 riescono a registrare musica usando 10 volte meno
+spazio dei vecchi CD, perché usano la decomposizione di Fourier per
+capire quali frequenze registrare (quelle udibili) e quali no</p></li>
+</ul>
+</section>
+<section id="filtraggio" class="slide level1">
+<h1>Filtraggio</h1>
+<p>TODO</p>
+</section>
+<section id="fenomeni-spaziali" class="slide level1">
+<h1>Fenomeni spaziali</h1>
+</section>
+<section id="leco" class="slide level1">
+<h1>L’eco</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Il motivo per cui i pipistrelli “vedono” tramite le onde sonore è
+dovuto a un effetto di <strong>eco</strong></p></li>
+<li><p>Come vedremo meglio quando studieremo le onde stazionarie,
+un’onda di pressione che raggiunge un corpo solido viene
+riflessa</p></li>
+<li><p>Il meccanismo è simile a quello della luce riflessa da uno
+specchio (l’analogia è pertinente, perché anche la luce è
+un’onda)</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/reflection.svg" /></p>
+</div>
+</div>
+</section>
+<section id="esempio-numerico" class="slide level1">
+<h1>Esempio numerico</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Se mi trovo a 1 km di distanza da una parete rocciosa in montagna
+e lancio un urlo verso di essa, il suono verrà riflesso dalla parete e
+tornerà verso di me</p></li>
+<li><p>Il suono percorre 1 km verso la parete e 1 km per tornare, per un
+totale di 2 km. Assumendo una velocità di 340 m/s, si ottiene che l’eco
+mi raggiungerà dopo</p>
+<p><span class="math display">
+\frac{2.000\,\text{m}}{340\,\text{m/s}} = 5{,}9\,\text{s}
+</span></p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/eco.webp" /></p>
+</div>
+</div>
+</section>
+<section id="il-riverbero" class="slide level1">
+<h1>Il riverbero</h1>
+<ul>
+<li>Il “riverbero” è il fenomeno per cui</li>
+</ul>
+</section>
+<section id="lecografia" class="slide level1">
+<h1>L’ecografia</h1>
+</section>
+<section id="onde-stazionarie" class="slide level1">
+<h1>Onde stazionarie</h1>
+</section>
+<section id="onde-stazionarie-1" class="slide level1">
+<h1>Onde stazionarie</h1>
+<video controls loop>
+<source src="media/standing-longitudinal-waves.mp4" type="video/mp4">
+</video>
+<p><small><a
+href="https://www.youtube.com/watch?v=fMJrtheQfZw">Longitudinal wave
+using slinky coil</a></small></p>
+</section>
+<section id="leffetto-doppler" class="slide level1">
+<h1>L’effetto Doppler</h1>
+</section>
+<section id="leffetto-doppler-1" class="slide level1">
+<h1>L’effetto Doppler</h1>
+<p>Ecografia Doppler:
+https://it.wikipedia.org/wiki/Ecografia_Doppler</p>
+</section>
+<section id="conclusioni" class="slide level1">
 <h1>Conclusioni</h1>
-
 </section>
-
-<section id="cosa-sapere-per-lesame" class="title-slide slide level1">
+<section id="cosa-sapere-per-lesame" class="slide level1">
 <h1>Cosa sapere per l’esame</h1>
-
 </section>
     </div>
   </div>

@@ -59,7 +59,7 @@
   <p class="subtitle">Tipi di oscillazioni, onde</p>
   <p class="author">Maurizio Tomasi (<a
 href="mailto:maurizio.tomasi@unimi.it"><code>maurizio.tomasi@unimi.it</code></a>)</p>
-  <p class="date">Martedì 3 novembre 2025</p>
+  <p class="date">Lunedì 3 novembre 2025</p>
 </section>
 
 <section id="introduzione-allargomento-di-oggi" class="slide level1">
@@ -177,26 +177,29 @@ convertirsi tra loro, mantenendo la somma uguale</li>
 <div class="side-by-side">
 <div class="content">
 <ul>
-<li>Un pendolo agisce grazie alla forza di gravità…</li>
-<li>…ma l’asta del pendolo impedisce alla gravità di far cadere a terra
-la sua massa terminale</li>
-<li>La combinazione dell’azione di gravità ed asta porta ad una forza
-complessiva che è qualitativamente uguale ad una forza elastica</li>
-<li>Certi testi parlano proprio di “energia elastica”, ma è energia
-potenziale gravitazionale</li>
+<li>Quando spostiamo la massa di un pendolo, la gravità tenta di tirarla
+verso il basso…</li>
+<li>…ma l’asta la costringe a muoversi lungo un arco</li>
+<li>La combinazione della gravità e dell’asta fa sì che nel punto più
+basso la spinta della gravità si annulla, mentre è massima agli estremi:
+proprio come una molla!</li>
+<li>Attenzione: non c’è energia elastica ma potenziale gravitazionale!
+Però la forma del movimento e il comportamento della forza sono gli
+stessi di una molla</li>
 </ul>
 </div>
 <div class="media">
-<p><img data-src="media/orologio-a-pendolo.jpg" height="480" /></p>
+<p><img data-src="media/orologio-a-pendolo.jpg" height="400" /></p>
 </div>
 </div>
 </section>
 <section id="periodo-e-frequenza" class="slide level1">
 <h1>Periodo e frequenza</h1>
 <ul>
-<li><p>Il tempo necessario perché un pendolo faccia un’oscillazione
+<li><p>Il tempo perché un pendolo o una molla faccia un’oscillazione
 completa è detto <strong>periodo</strong>, e di solito si indica con
-<span class="math inline">T</span></p></li>
+<span class="math inline">T</span> (il <strong>semiperiodo</strong> è
+invece <span class="math inline">T/2</span>).</p></li>
 <li><p>Viene molto usata anche la quantità inversa, la
 <strong>frequenza</strong> <span class="math inline">\nu</span>:</p>
 <p><span class="math display">
@@ -354,62 +357,6 @@ class="math inline">1\,\text{Hz} &lt; \nu &lt;
 </div>
 </div>
 </section>
-<section id="maree" class="slide level1">
-<h1>Maree</h1>
-<div class="side-by-side">
-<div class="content">
-<ul>
-<li>Causate dall’attrazione gravitazionale della Luna</li>
-<li>Due rigonfiamenti contemporanei (sotto la Luna e all’altra
-estremità)</li>
-<li>I rigonfiamenti sono sempre allineati con la Luna, ma la Terra
-ruota</li>
-<li><span class="math inline">T = 12\,\text{h} = 43,2\,\text{ks}</span>,
-<span class="math inline">\nu = 23{,}1\,\mathrm{\mu Hz}</span></li>
-</ul>
-</div>
-<div class="media">
-<p><img data-src="media/low-high-tide.gif" /></p>
-<p><img data-src="media/maree-diagramma.jpg" /></p>
-</div>
-</div>
-</section>
-<section id="giornonotte" class="slide level1">
-<h1>Giorno/notte</h1>
-<div class="side-by-side">
-<div class="content">
-<ul>
-<li><p>La <strong>rotazione</strong> della Terra attorno al suo asse
-determina l’alternanza notte/dì</p></li>
-<li><p>Il periodo è ovviamente di 24 ore, ossia <span
-class="math inline">T = 86{,}4\,\text{ks}</span>, e <span
-class="math inline">\nu = 11{,}6\,\mathrm{\mu Hz}</span></p></li>
-</ul>
-</div>
-<div class="media">
-<p><img data-src="media/spinning-earth.gif" /></p>
-</div>
-</div>
-</section>
-<section id="anno-solare" class="slide level1">
-<h1>Anno solare</h1>
-<div class="side-by-side">
-<div class="content">
-<ul>
-<li><p>Il moto della Terra attorno al sole è detto
-<strong>rivoluzione</strong>, e richiede circa 365 giorni</p></li>
-<li><p>(In realtà ci vogliono un po’ più di 365 giorni: ecco perché
-esistono gli anni bisestili!)</p></li>
-<li><p><span class="math inline">T = 365\,\text{d} =
-31{,}5\,\text{Ms}</span>, <span class="math inline">\nu =
-31{,}7\,\text{nHz}</span></p></li>
-</ul>
-</div>
-<div class="media">
-<p><img data-src="media/stagioni.jpg" /></p>
-</div>
-</div>
-</section>
 <section id="giostra" class="slide level1">
 <h1>Giostra</h1>
 <p>Provate a stimare il periodo e la frequenza di questa giostra:</p>
@@ -498,7 +445,10 @@ sua forma.</p></li>
 unità di misura:</p>
 <p><span class="math display">
 c = \frac{F}{v} \quad \Rightarrow \quad \left[c\right] = \mathrm{kg/s}.
-</span></p></li>
+</span></p>
+<p>Non sforzatevi di ricavarne un senso profondo: è più facile pensare
+che sono semplicemente derivate dalla definizione di <span
+class="math inline">c</span>!</p></li>
 <li><p>Più è grande <span class="math inline">c</span>, più resistenza
 oppone il fluido in cui si muove il corpo: il miele offre più resistenza
 dell’acqua!</p></li>
@@ -510,14 +460,13 @@ dell’acqua!</p></li>
 <div class="content">
 <ul>
 <li><p>Un corpo in caduta aumenta la sua velocità di 10 m/s ogni secondo
-che passa. Ma la forza viscosa dell’aria arresta dopo un certo tempo
-l’accelerazione, e la velocità diventa costante</p></li>
+che passa. Ma dopo un certo tempo la forza viscosa dell’aria arriva a
+bilanciare quella di gravità, rendendo la velocità costante</p></li>
 <li><p>Grazie all’aria, la velocità delle gocce di pioggia non supera
-gli 8 m/s: senza di essa sarebbero come una palla da bowling lasciata
-cadere da un’altezza di 1 m!</p></li>
-<li><p>I paracadute hanno un grande coefficiente <span
-class="math inline">c</span>, che permette di tenere bassa la velocità
-di discesa</p></li>
+gli 8 m/s: senza di essa l’impatto a terra sarebbe come quello di una
+palla da bowling che cade da 1  m!</p></li>
+<li><p>I paracadute funzionano perché <span class="math inline">c</span>
+è grande</p></li>
 </ul>
 </div>
 <div class="media">

@@ -49,7 +49,7 @@ main {
   gap: 18px;
   align-items: start;
   padding: 18px;
-  max-width: 1100px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box
@@ -135,16 +135,12 @@ footer {
 
 .small {
   font-size: .85rem;
-  color: var(--muted)
 }
   </style>
 
 
 </head>
 <body>
-  <header>
-  <h1>Sistema massa-molla con smorzamento</h1>
-</header>
 
 <main>
   <!-- Controls -->
@@ -175,7 +171,7 @@ footer {
     <input id="v0" type="range" min="-3" max="3" value="0" step="0.05" />
 
     <div class="row">
-      <label class="legend">Smorzamento critico c<sub>crit</sub> = 2√(mk): <span id="ccrit">—</span></label></div>
+      <label class="legend">Smorzamento critico c<sub>crit</sub> = <span id="ccrit">—</span></label></div>
 
     <div class="buttons">
       <button id="start">Avvia</button>
@@ -356,7 +352,7 @@ function drawSim() {
   gSim.fillRect(xPix - bw / 2, baseY - bh / 2, bw, bh);
 
   // Indicazioni testo
-  gSim.fillStyle = "#94a3b8";
+  gSim.fillStyle = "#000";
   gSim.font = "12px system-ui";
   gSim.fillText(`x = ${state.x.toFixed(3)} m`, xPix - 28, baseY - bh / 2 - 10);
 

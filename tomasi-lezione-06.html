@@ -56,8 +56,8 @@
 
 <section id="title-slide">
   <h1 class="title">Fisica – Lezione 6</h1>
-  <p class="subtitle">Pressione, sovrapposizione e interferenza, onde
-stazionarie</p>
+  <p class="subtitle">Pressione, onde sonore, sovrapposizione e
+interferenza</p>
   <p class="author">Maurizio Tomasi (<a
 href="mailto:maurizio.tomasi@unimi.it"><code>maurizio.tomasi@unimi.it</code></a>)</p>
   <p class="date">Martedì 11 novembre 2025</p>
@@ -74,8 +74,8 @@ abbiamo anticipato che le onde sonore sono onde di pressione. Oggi
 spiegheremo quindi in cosa consiste la pressione</p></li>
 <li><p>Faremo un “gioco” molto semplice, che ci permetterà di introdurre
 alcune proprietà delle onde sonore</p></li>
-<li><p>Introdurremo poi le onde sonore, e spiegheremo il principio di
-sovrapposizione e l’interferenza</p></li>
+<li><p>Introdurremo poi le onde sonore, e inizieremo a studiare il tipo
+più semplice: l’onda sinusoidale</p></li>
 </ul>
 </section>
 <section id="la-pressione" class="slide level1">
@@ -122,35 +122,26 @@ P = \frac{m g}{S} = \frac{2\,\text{kg}\times
 <section id="unità-di-misura" class="slide level1">
 <h1>Unità di misura</h1>
 <ul>
-<li><p>L’unità del SI è il Pascal, che però è un valore molto
-piccolo</p></li>
-<li><p>Un’altra unità di misura molto usata è l’atmosfera, che
-corrisponde a 101.325 Pa, ossia la pressione media dell’aria al livello
-del mare:</p>
+<li><p>L’unità del SI è il Pascal, che però è un valore molto piccolo
+per misurare la pressione dell’aria</p></li>
+<li><p>Un’altra unità di misura molto usata è l’atmosfera, che è la
+pressione media dell’aria al livello del mare:</p>
 <p><span class="math display">
 1\,\text{atm} = 101.325\,\text{Pa}.
-</span></p></li>
-<li><p>Un’altra unità di misura usata in passato (ma oggi quasi
-abbandonata) sono i “millimetri di mercurio”: essi fanno riferimento al
-famoso <a
-href="https://it.wikipedia.org/wiki/Tubo_di_Torricelli">esperimento di
-Torricelli (1608–1647)</a>, e si indicano con mmHg. Vale che <span
-class="math display">
-760\,\text{mmHg} = 1\,\text{atm} = 101.325\,\text{Pa}.
 </span></p></li>
 </ul>
 </section>
 <section id="significato" class="slide level1">
 <h1>Significato</h1>
 <ul>
-<li><p>Si divide la forza <span class="math inline">F</span> per una
-superficie <span class="math inline">S</span> quando questa forza è
-applicata più o meno uniformemente su <span
-class="math inline">S</span></p></li>
-<li><p>Vedremo negli esempi successivi vari casi di forze che si
-“scaricano” su una superficie estesa anziché in un punto</p></li>
-<li><p>In tali casi, è più corretto usare le pressioni anziché le forze
-per dare una spiegazione fisica del fenomeno</p></li>
+<li><p>La pressione è importante quando si applica una forza su una
+superficie: premendo su un panetto di burro con un coltello di taglio o
+di piatto, a parità di forza l’effetto è molto diverso!</p></li>
+<li><p>La differenza tra il coltello di taglio e di piatto è l’area di
+contatto: usando il coltello di taglio, la superficie è minore e la
+forza è più concentrata, aumentandone l’effetto.</p></li>
+<li><p>Quando si applica una forza a una superficie anziché ad un punto,
+è più utile usare il concetto di “pressione” che di “forza”</p></li>
 </ul>
 </section>
 <section id="il-letto-di-chiodi" class="slide level1">
@@ -160,12 +151,15 @@ per dare una spiegazione fisica del fenomeno</p></li>
 <ul>
 <li><p>Al <a href="https://www.muse.it/">MuSe</a> di Trento potete fare
 l’esperienza di un letto di chiodi!</p></li>
-<li><p>Non si avverte dolore perché si è sostenuti da circa 1000 chiodi,
-quindi la pressione è <span class="math display">
+<li><p>Non si avverte dolore perché il proprio peso (la forza <span
+class="math inline">F</span>) è sostenuto da circa 1000 chiodi. Quindi
+la pressione è <span class="math display">
 P = \frac{m g}{1000 \times S_\text{chiodo}} =
 \frac1{1000}\,\frac{mg}{S_\text{chiodo}} = \frac{mg /
 1000}{S_\text{chiodo}}
-</span></p></li>
+</span></p>
+<p>È come se foste sostenuti da un solo chiodo, ma pesaste 1000 volte
+meno!</p></li>
 </ul>
 </div>
 <div class="media">
@@ -179,8 +173,10 @@ P = \frac{m g}{1000 \times S_\text{chiodo}} =
 <div class="content">
 <ul>
 <li><p>Per camminare sulla neve si usano le ciaspole</p></li>
-<li><p>Queste aumentano la superficie di contatto con la neve,
-diminuendo la pressione</p></li>
+<li><p>Queste distribuiscono il proprio peso (la forza <span
+class="math inline">F</span>) su una superficie di contatto <span
+class="math inline">S</span> più ampia, diminuendo quindi la
+pressione</p></li>
 <li><p>Se la superficie di una ciaspola è tre volte quella del piede, è
 come se si pesasse un terzo del proprio peso</p></li>
 </ul>
@@ -212,8 +208,8 @@ misurano i barometri casalinghi. Questa dice quanto l’aria “schiaccia”
 gli oggetti che sono immersi in essa</p></li>
 <li><p>Attenzione però: non è un effetto dovuto alla gravità, o meglio,
 non è <strong>solo</strong> dovuto alla gravità</p></li>
-<li><p>L’aria infatti esercita una pressione anche sui muri, e persino
-<em>sotto</em> la cattedra!</p></li>
+<li><p>L’aria infatti esercita una pressione anche orizzontalmente (sui
+muri), e persino sui soffitti!</p></li>
 </ul>
 </div>
 <div class="media">
@@ -230,9 +226,10 @@ non è <strong>solo</strong> dovuto alla gravità</p></li>
 continuamente</p></li>
 <li><p>La velocità media dipende dalla molecola (ossigeno, azoto…) e
 dalla temperatura, ma l’ordine di grandezza è 1000 m/s</p></li>
-<li><p>Essendo molto poco massive, il loro urto non ci fa male, ma
-genera comunque una pressione misurabile, perché sono moltissime (25
-miliardi di miliardi ogni cm³!)</p></li>
+<li><p>Essendo molto poco massive, il loro urto non ci fa male. Ma
+proprio perché sono moltissime (25 miliardi di miliardi ogni cm³!), la
+somma di tutti questi minuscoli urti genera una pressione
+misurabile</p></li>
 </ul>
 </div>
 <div class="media">
@@ -245,16 +242,13 @@ miliardi di miliardi ogni cm³!)</p></li>
 <div class="side-by-side">
 <div class="content">
 <ul>
-<li><p>Il moto delle particelle d’aria è causato dalla forza
-gravitazionale, che tenderebbe a far cadere le particelle più in quota
-verso il basso: queste però urtano le particelle sotto di loro,
-trasferendogli energia cinetica</p></li>
-<li><p>La pressione maggiore dell’aria si avverte al livello del mare,
-dove è mediamente</p>
-<p><span class="math display">
-P = 101.325\,\text{Pa} \approx 100\,\text{kPa}
-</span></p></li>
-<li><p>Quindi, salendo di quota la pressione diminuisce</p></li>
+<li><p>La gravità cerca di far cadere le molecole</p></li>
+<li><p>Ma esse non cadono come gocce di pioggia, perché vengono
+bombardate e sostenute dagli urti con le compagne sottostanti. L’aria
+“galleggia” su se stessa grazie a questi urti</p></li>
+<li><p>Questo crea un enorme “materasso” di molecole, che si comprimono
+l’una sull’altra. A livello del mare, siamo sotto il peso dell’intera
+colonna e la pressione è massima (101325 Pa, circa 100 kPa).</p></li>
 </ul>
 </div>
 <div class="media">
@@ -267,9 +261,11 @@ P = 101.325\,\text{Pa} \approx 100\,\text{kPa}
 <ul>
 <li><p>Ma quindi la pressione dell’aria ci sta schiacciando anche in
 questo momento?</p></li>
-<li><p><strong>CERTO!</strong> Ma il nostro corpo è adattato all’aria,
-ed esercita dall’interno una pressione verso l’esterno che bilancia
-quella dell’aria</p></li>
+<li><p><strong>CERTO!</strong> In ogni istante l’aria preme su di noi
+come un peso di 15–20 tonnellate! (Supponete una superficie della pelle
+di 1,5–2 m²)</p></li>
+<li><p>Ma il nostro corpo è adattato all’aria, ed esercita dall’interno
+una pressione verso l’esterno che bilancia quella dell’aria</p></li>
 <li><p>Qualcuno ricorda la <a
 href="https://youtu.be/RkCgZ6yMNx8?si=KnQxzXrQ8oo3cXsq">scena finale</a>
 di <a href="https://www.imdb.com/title/tt0100802/">Total Recall</a>
@@ -317,14 +313,15 @@ primo a raggiungere il fondo nel 1952</p></li>
 <div class="side-by-side">
 <div class="content">
 <ul>
-<li><p>Quando un corpo si muove in un fluido, genera onde di
+<li><p>Quando un corpo si muove in un fluido, genera una perturbazione:
+spostandosi, urta e spinge le particelle, addensandole ed aumentando la
 pressione</p></li>
-<li><p>Il corpo, spostandosi, urta le particelle di fluido, che vengono
-accelerate</p></li>
-<li><p>Le particelle accelerate urtano le loro vicine, trasferendo a
-loro l’energia cinetica</p></li>
-<li><p>Questo processo si ripete facendo propagare una “onda di
-pressione”</p></li>
+<li><p>Le particelle spingono via le vicine trasferendo energia
+cinetica, ma lasciano alle spalle una zona meno fitta, dove la pressione
+è minore</p></li>
+<li><p>Questa compressione/rarefazione si ripete a catena: ogni
+particella urta la vicina, trasferendo l’energia cinetica in
+avanti</p></li>
 </ul>
 </div>
 <div class="media">
@@ -423,13 +420,14 @@ vibrazione causata da forze elastiche</p></li>
 <h1>Proprietà di un’onda sonora</h1>
 <ul>
 <li><p>Se il fattore che scatena l’onda è un impulso periodico, il
-periodo si conserva durante la propagazione</p></li>
-<li><p>L’ampiezza dell’onda, ossia la sua intensità, si riduce man mano
-che l’onda si propaga. Vedremo meglio l’intensità in seguito, perché è
-un argomento complesso</p></li>
-<li><p>La velocità con cui l’onda si propaga dipende dal tipo di mezzo:
-in generale, più un corpo è denso e rigido, maggiore è la velocità del
-suono</p></li>
+<strong>periodo</strong> si conserva durante la propagazione (e quindi
+anche la <strong>frequenza</strong>)</p></li>
+<li><p>L’<strong>ampiezza</strong> dell’onda, ossia la sua intensità, si
+riduce man mano che l’onda si propaga. Vedremo meglio l’intensità in
+seguito, perché è un argomento complesso</p></li>
+<li><p>La <strong>velocità di propagazione</strong> con cui l’onda si
+propaga dipende dal tipo di mezzo: in generale, più un corpo è denso e
+rigido, maggiore è la velocità del suono</p></li>
 </ul>
 </section>
 <section class="slide level1">
@@ -441,110 +439,228 @@ suono</p></li>
 <iframe width="784" height="441" src="https://www.youtube.com/embed/BUREX8aFbMs?si=b1tpdO6co2sNYG1v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 </iframe>
 </section>
+<section id="esempi-1" class="slide level1">
+<h1>Esempi</h1>
+<ul>
+<li><p>Un suono basso a 20 Hz ha una lunghezza d’onda uguale a <span
+class="math display">
+\lambda = \frac{343\,\text{m/s}}{20\,\text{s}^{-1}} \approx 17\,\text{m}
+</span></p></li>
+<li><p>Il suono di un diapason a 440 Hz ha una lunghezza d’onda uguale a
+<span class="math display">
+\lambda = \frac{343\,\text{m/s}}{440\,\text{s}^{-1}} \approx
+78\,\text{cm}
+</span></p></li>
+</ul>
+</section>
+<section id="suono-e-rumore" class="slide level1">
+<h1>Suono e rumore</h1>
+</section>
+<section id="suono-e-rumore-1" class="slide level1">
+<h1>Suono e rumore</h1>
+<ul>
+<li><p>Nella vita quotidiana, usiamo spesso le parole “suono” e “rumore”
+per parlare di fenomeni acustici</p></li>
+<li><p>Ma sappiamo qual è la differenza tra i due? In particolare,
+stiamo parlando di un fenomeno fisico oggettivo, o della
+<strong>sensazione</strong> che un certo fenomeno fisico (quale?) ci
+provoca?</p></li>
+</ul>
+</section>
 <section id="rumore-e-suono" class="slide level1">
 <h1>Rumore e suono</h1>
 <ul>
-<li><p>Introduciamo ora il concetto di “suono” e “rumore”</p>
+<li><p>La differenza tra suono e rumore è la seguente:</p>
 <ul>
-<li><p>Il <strong>suono</strong> è un’onda sonora regolare, che possiede
-una sua periodicità</p></li>
-<li><p>Il <strong>rumore</strong> è l’esatto opposto: è un’onda sonora
-priva di periodicità</p></li>
+<li><p>Il <strong>suono</strong> è la sensazione di un’onda sonora
+regolare, che possiede una sua periodicità</p></li>
+<li><p>Il <strong>rumore</strong> è l’esatto opposto: è la sensazione di
+un’onda sonora priva di periodicità</p></li>
 </ul></li>
 <li><p>Per rappresentare il suono che raggiunge un punto dello spazio
 (dove ad esempio c’è un microfono), si usa spesso un grafico che mostra
 la variazione temporale della pressione/oscillazione meccanica</p></li>
+<li><p>Vediamo subito la differenza con un esempio interattivo, che
+avremo modo di riprendere in seguito</p></li>
 </ul>
 </section>
-<section id="esempio-di-suono" class="slide level1">
-<h1>Esempio di suono</h1>
-<ul>
-<li><p>Un’oscillazione regolare ha un andamento “sinusoidale”</p>
-<center>
-<p><img data-src="media/sound-wave-representation.webp"
-height="320" /></p>
-</center></li>
-<li><p>Un suono è caratterizzato dalla frequenza, che è un valore in Hz
-(numero di oscillazioni che avvengono in un secondo), e
-dall’ampiezza</p></li>
-</ul>
-</section>
-<section id="esempio-di-rumore" class="slide level1">
-<h1>Esempio di rumore</h1>
-<ul>
-<li><p>Il rumore invece non mostra alcuna regolarità, come abbiamo già
-detto:</p>
-<center>
-<p><img data-src="media/time-domain-plot-of-noise.png"
-height="320" /></p>
-</center></li>
-<li><p>Anche un rumore può essere caratterizzato numericamente, ma in
-modo più complesso. Il parametro più intuitivo è l’ampiezza</p></li>
-</ul>
-</section>
-<section id="simulazione-di-suoni-e-rumori" class="slide level1">
-<h1>Simulazione di suoni e rumori</h1>
+<section class="slide level1">
+
 <iframe src="iframes/sound-example.html" width="100%" height="580px" style="border:1px solid #ccc; border-radius: 8px;">
 </iframe>
 </section>
-<section id="sovrapposizione-e-interferenza" class="slide level1">
-<h1>Sovrapposizione e interferenza</h1>
+<section id="sinusoidal-waves" class="slide level1">
+<h1>Onde sinusoidali</h1>
 </section>
-<section id="sovrapposizione-e-interferenza-1" class="slide level1">
-<h1>Sovrapposizione e interferenza</h1>
+<section id="onde-sinusoidali" class="slide level1">
+<h1>Onde sinusoidali</h1>
 <ul>
-<li><p>Abbiamo sempre parlato sinora di <strong>una</strong> onda sonora
-che si propaga. Ma nella realtà siamo sempre circondati da molti
-suoni!</p></li>
-<li><p>Quando due onde si incontrano in un punto dello spazio, vale il
-principio di <strong>sovrapposizione</strong>: se alle onde non è
-associata “troppa energia”, i loro effetti si sommano</p></li>
-<li><p>Questo è il <strong>principio di sovrapposizione</strong>, e vale
-non solo per le onde sonore</p></li>
+<li><p>Il modo più semplice per affrontare lo studio delle onde sonore è
+di partire dal tipo più semplice, ossia un suono. Inizieremo col suono
+più regolare possibile: l’<strong>onda sinusoidale</strong>, che abbiamo
+appena visto nell’esempio interattivo</p></li>
+<li><p>Matematicamente, un’onda sinusoidale si scrive così:</p>
+<p><span class="math display">
+\text{onda} = A \sin (2\pi\nu t + \phi),
+</span></p>
+<p>dove <span class="math inline">t</span> misura il tempo. La scritta
+<span class="math inline">\sin</span> rappresenta la funzione matematica
+“seno”, che è usata in trigonometria per caratterizzare gli
+angoli.</p></li>
+</ul>
+</section>
+<section id="onde-sinusoidali-1" class="slide level1">
+<h1>Onde sinusoidali</h1>
+<ul>
+<li><p>La funzione “seno” è molto interessante ma abbastanza complessa
+da studiare.</p></li>
+<li><p>Dell’equazione</p>
+<p><span class="math display">
+\text{onda} = A \sin (2\pi\nu t + \phi),
+</span></p>
+<p>a noi interesseranno questi parametri:</p>
+<ol>
+<li>La sua ampiezza (quanto la pressione varia), indicata solitamente
+con <span class="math inline">A</span></li>
+<li>La sua frequenza (quanto rapidamente oscilla), indicata con <span
+class="math inline">\nu</span> o con <span
+class="math inline">f</span></li>
+<li>La sua fase (a che istante l’onda raggiunge il suo massimo),
+indicata con <span class="math inline">\phi</span></li>
+</ol></li>
+</ul>
+</section>
+<section id="unità-di-misura-1" class="slide level1">
+<h1>Unità di misura</h1>
+<ul>
+<li>L’ampiezza <span class="math inline">A</span> è misurata in Pascal
+se l’onda rappresenta una pressione, in metri se è un’oscillazione di un
+mezzo (ad es. un muro), o in kg/m³ se è una densità</li>
+<li>La frequenza, come sappiamo, si misura in Hertz (Hz)</li>
+<li>La fase è indicata con un valore in gradi, da 0° (nessuno
+sfasamento) a 360° (un’intera oscillazione), e siccome si comporta come
+un angolo, di solito si rappresenta in gradi</li>
 </ul>
 </section>
 <section class="slide level1">
 
-<video controls width="1080">
-<source src="media/veritasium-double-slit-experiment.mp4" type="video/mp4" />
-Your browser does not support the video tag.
-</video>
-<p><small><a href="https://www.youtube.com/watch?v=Iuv6hY6zsd0">The
-original double slit experiment</a></small></p>
-</section>
-<section id="interferenza" class="slide level1">
-<h1>Interferenza</h1>
-<ul>
-<li><p>La sovrapposizione è un <strong>principio</strong>: dice che due
-onde che si incontrano nel medesimo punto producono un’onda risultante
-data dalla somma delle due</p></li>
-<li><p>L’<strong>interferenza</strong> è il risultato della
-sovrapposizione di più onde. Esso dà origine a fenomeni molto
-interessanti, perché a volte l’interferenza causa un <em>rinforzo</em>
-delle onde, ma altre volte può annullare il loro effetto!</p></li>
-<li><p>Per fare un’analogia: suono due tasti del pianoforte e sento un
-accordo consonante o dissonante. Il fatto di suonarli è dato dalla
-sovrapposizione, la consonanza o dissonanza che percepisco è dato
-dall’interferenza.</p></li>
-</ul>
-</section>
-<section class="slide level1">
-
-<iframe src="iframes/interference.html" width="100%" height="700" style="border:1px solid #ccc; border-radius: 8px;">
+<iframe src="iframes/sinusoid.html" width="100%" height="760" style="border:1px solid #ccc; border-radius: 8px;">
 </iframe>
 </section>
-<section id="battimenti" class="slide level1">
-<h1>Battimenti</h1>
-<p>I battimenti: Si presentano come un esempio udibile di interferenza,
-spiegando come la sovrapposizione di due frequenze vicine crei una
-fluttuazione periodica del volume. Questo è un ottimo punto per fare
-esempi pratici, come l’accordatura di due strumenti musicali.</p>
+<section id="percezione-della-frequenza" class="slide level1">
+<h1>Percezione della frequenza</h1>
 </section>
-<section id="onde-stazionarie" class="slide level1">
-<h1>Onde stazionarie</h1>
-<p>Si mostra un altro caso particolare e fondamentale di interferenza,
-quello delle onde stazionarie, cruciale per capire il funzionamento
-degli strumenti musicali.</p>
+<section id="percezione-della-frequenza-1" class="slide level1">
+<h1>Percezione della frequenza</h1>
+<ul>
+<li><p>Un esempio di suono (ossia, di onda periodica regolare) è la nota
+emessa da uno strumento, ad esempio un violino</p></li>
+<li><p>L’essere umano è in grado di percepire suoni la cui frequenza sta
+nell’intervallo</p>
+<p><span class="math display">
+20\,\text{Hz} &lt; \nu &lt; 20\,\text{kHz},
+</span></p>
+<p>ma i valori cambiano con l’età: invecchiando, la frequenza udibile
+più elevata decresce fino a raggiungere valori intorno a 15, e anche
+meno.</p></li>
+</ul>
+</section>
+<section id="perché-questi-limiti" class="slide level1">
+<h1>Perché questi limiti?</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Ad alte frequenze, il timpano e gli ossicini collegati (martello,
+incudine, staffa) hanno un’inerzia che gli impedisce di oscillare così
+rapidamente.</li>
+<li>Ma anche se potessero oscillare a qualsiasi frequenza, la membrana
+basilare e le cellule ciliate all’interno della coclea non riuscirebbero
+comunque a tradurre il segnale meccanico in un impulso nervoso
+chiaro</li>
+<li>A basse frequenze, il nostro orecchio non ha una struttura
+efficiente per tradurre vibrazioni molto lente in segnali neuronali</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/salvilenni-anatomia-orecchio.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="lunghezza-donda" class="slide level1">
+<h1>Lunghezza d’onda</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>La lunghezza d’onda, che si indica con la lettera λ (“lambda”),
+rappresenta la distanza fisica tra un picco di pressione e il
+successivo</p></li>
+<li><p>Essendo una distanza, λ si misura in metri</p></li>
+<li><p>Si può trovare facilmente λ dalla relazione</p>
+<p><span class="math display">
+v_\text{suono} = \lambda \times \nu \quad\Rightarrow\quad \lambda =
+\frac{v_\text{suono}}{\nu}.
+</span></p></li>
+<li><p>Onde a 20 Hz hanno <span class="math inline">\lambda \approx
+17\,\text{m}</span>: sotto i 20 Hz, diventano troppo grandi per il
+nostro orecchio!</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/longitudinal-sound-wave.gif" /></p>
+</div>
+</div>
+</section>
+<section id="curve-isofoniche" class="slide level1">
+<h1>Curve isofoniche</h1>
+<ul>
+<li><p>Il cervello umano non percepisce tutte le frequenze con la stessa
+sensibilità</p></li>
+<li><p>Le cosiddette <a
+href="https://it.wikipedia.org/wiki/Diagramma_di_uguale_intensit%C3%A0_sonora">curve
+isofoniche</a> rappresentano l’intensità percepita in funzione della
+frequenza e dell’intensità</p></li>
+<li><p>Esse sono state ricavando facendo sentire un suono ad una
+frequenza di riferimento alternato ad un altro suono e aumentando o
+diminuendo il volume del secondo finché non fosse stato intenso quanto
+il primo, e si è registrata l’ampiezza effettiva. Si è poi ripetuto
+variando l’intensità del suono di riferimento</p></li>
+</ul>
+</section>
+<section id="curve-isofoniche-1" class="slide level1">
+<h1>Curve isofoniche</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Asse x: frequenza del suono in Hz.</li>
+<li>Asse y: Ampiezza dell’onda di pressione.</li>
+<li>Le varie curve indicano diverse intensità dell’onda di riferimento,
+dalla soglia di udibilità alla soglia del dolore.</li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/curve-isofoniche.svg" height="620" /></p>
+</div>
+</div>
+</section>
+<section id="ultrasuoni" class="slide level1">
+<h1>Ultrasuoni</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>I suoni con una frequenza superiore a 20 kHz sono detti
+<strong>ultrasuoni</strong>, e non sono udibili dall’uomo.</p></li>
+<li><p>Sono però percepibili da alcuni animali:</p>
+<ul>
+<li>I cani, per cui esistono fischietti agli ultrasuoni</li>
+<li>I pipistrelli, che usano l’eco degli ultrasuoni per orientarsi
+(vedremo meglio l’eco in futuro)</li>
+</ul></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/pipistrelli.jpg" /></p>
+</div>
+</div>
 </section>
 <section id="conclusioni" class="slide level1">
 <h1>Conclusioni</h1>
@@ -552,7 +668,10 @@ degli strumenti musicali.</p>
 <section id="cosa-sapere-per-lesame" class="slide level1">
 <h1>Cosa sapere per l’esame</h1>
 <ul>
-<li>Pressione</li>
+<li>Definizione di pressione</li>
+<li>Pressione dei gas e dei fluidi</li>
+<li>Onde di pressione</li>
+<li>Onde sinusoidali</li>
 </ul>
 </section>
     </div>

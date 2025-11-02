@@ -92,15 +92,15 @@
 ::: side-by-side
 
 ::: content
--   Un pendolo agisce grazie alla forza di gravità…
--   …ma l’asta del pendolo impedisce alla gravità di far cadere a terra la sua massa terminale
--   La combinazione dell’azione di gravità ed asta porta ad una forza complessiva che è qualitativamente uguale ad una forza elastica
--   Certi testi parlano proprio di “energia elastica”, ma è energia potenziale gravitazionale
+-   Quando spostiamo la massa di un pendolo, la gravità tenta di tirarla verso il basso…
+-   …ma l’asta la costringe a muoversi lungo un arco
+-   La combinazione della gravità e dell’asta fa sì che nel punto più basso la spinta della gravità si annulla, mentre è massima agli estremi: proprio come una molla!
+-   Attenzione: non c’è energia elastica ma potenziale gravitazionale! Però la forma del movimento e il comportamento della forza sono gli stessi di una molla
 :::
 
 ::: media
 
-![](media/orologio-a-pendolo.jpg){height=480px}
+![](media/orologio-a-pendolo.jpg){height=400px}
 
 :::
 :::
@@ -108,7 +108,7 @@
 
 # Periodo e frequenza
 
--   Il tempo necessario perché un pendolo faccia un’oscillazione completa è detto **periodo**, e di solito si indica con $T$
+-   Il tempo perché un pendolo o una molla faccia un’oscillazione completa è detto **periodo**, e di solito si indica con $T$ (il **semiperiodo** è invece $T/2$).
 -   Viene molto usata anche la quantità inversa, la **frequenza** $\nu$:
 
     \[
@@ -254,69 +254,6 @@
 :::
 
 
-# Maree
-
-::: side-by-side
-
-::: content
-
--   Causate dall’attrazione gravitazionale della Luna
--   Due rigonfiamenti contemporanei (sotto la Luna e all’altra estremità)
--   I rigonfiamenti sono sempre allineati con la Luna, ma la Terra ruota
--   $T = 12\,\text{h} = 43,2\,\text{ks}$, $\nu = 23{,}1\,\mathrm{\mu Hz}$
-
-:::
-
-::: media
-
-![](media/low-high-tide.gif)
-
-![](media/maree-diagramma.jpg)
-
-:::
-:::
-
-# Giorno/notte
-
-::: side-by-side
-
-::: content
-
--   La **rotazione** della Terra attorno al suo asse determina l’alternanza notte/dì
-
--   Il periodo è ovviamente di 24 ore, ossia $T = 86{,}4\,\text{ks}$, e $\nu = 11{,}6\,\mathrm{\mu Hz}$
-
-:::
-
-::: media
-
-![](media/spinning-earth.gif)
-
-:::
-:::
-
-# Anno solare
-
-::: side-by-side
-
-::: content
-
--   Il moto della Terra attorno al sole è detto **rivoluzione**, e richiede circa 365 giorni
-
--   (In realtà ci vogliono un po’ più di 365 giorni: ecco perché esistono gli anni bisestili!)
-
--   $T = 365\,\text{d} = 31{,}5\,\text{Ms}$, $\nu = 31{,}7\,\text{nHz}$
-
-:::
-
-::: media
-
-![](media/stagioni.jpg)
-
-:::
-:::
-
-
 # Giostra
 
 Provate a stimare il periodo e la frequenza di questa giostra:
@@ -402,6 +339,8 @@ Originale su [YouTube](https://youtu.be/zTyqUf3E2xk?si=OAZtpeEWosCZvc_k)
     c = \frac{F}{v} \quad \Rightarrow \quad \left[c\right] = \mathrm{kg/s}.
     \]
 
+    Non sforzatevi di ricavarne un senso profondo: è più facile pensare che sono semplicemente derivate dalla definizione di $c$!
+
 -   Più è grande $c$, più resistenza oppone il fluido in cui si muove il corpo: il miele offre più resistenza dell’acqua!
 
 # Corpi in caduta nell’aria
@@ -410,11 +349,11 @@ Originale su [YouTube](https://youtu.be/zTyqUf3E2xk?si=OAZtpeEWosCZvc_k)
 
 ::: content
 
--   Un corpo in caduta aumenta la sua velocità di 10 m/s ogni secondo che passa. Ma la forza viscosa dell’aria arresta dopo un certo tempo l’accelerazione, e la velocità diventa costante
+-   Un corpo in caduta aumenta la sua velocità di 10 m/s ogni secondo che passa. Ma dopo un certo tempo la forza viscosa dell’aria arriva a bilanciare quella di gravità, rendendo la velocità costante
 
--   Grazie all’aria, la velocità delle gocce di pioggia non supera gli 8 m/s: senza di essa sarebbero come una palla da bowling lasciata cadere da un’altezza di 1 m!
+-   Grazie all’aria, la velocità delle gocce di pioggia non supera gli 8 m/s: senza di essa l’impatto a terra sarebbe come quello di una palla da bowling che cade da 1  m!
 
--   I paracadute hanno un grande coefficiente $c$, che permette di tenere bassa la velocità di discesa
+-   I paracadute funzionano perché $c$ è grande
 
 :::
 
@@ -649,5 +588,5 @@ Sono sia trasversali che longitudinali, ovviamente!
 title: Fisica -- Lezione 5
 subtitle: Tipi di oscillazioni, onde
 author: Maurizio Tomasi ([`maurizio.tomasi@unimi.it`](mailto:maurizio.tomasi@unimi.it))
-date: Martedì 3 novembre 2025
+date: Lunedì 3 novembre 2025
 ...
