@@ -25,7 +25,7 @@
 
 # Secondo principio
 
-![](media/little-miss-sunshine-pushing-volkswagen.gif){height=320px}
+![](media/little-miss-sunshine-pushing-volkswagen.webp){height=320px}
 
 -   In quest’immagine ([*Little miss Sunshine*](https://www.imdb.com/title/tt0449059/), Dayton & Faris, 2006) il furgoncino si muove perché qualcuno lo spinge
 
@@ -33,7 +33,7 @@
 
 # Terzo principio
 
-![](media/car-crash-test.gif){height=320px}
+![](media/car-crash-test.webp){height=320px}
 
 -   La macchina si ferma (= cambia la sua velocità) perché il muro esercita una forza contro di essa
 -   Anche il muro si muove, perché si deforma
@@ -121,7 +121,7 @@
 
 ::: media
 
-![](media/caduta-molla-spiegazione.gif)
+![](media/caduta-molla-spiegazione.webp)
 
 :::
 :::

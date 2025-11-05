@@ -31,6 +31,24 @@
   </style>
   <link rel="stylesheet" href="reveal.js-5.2.1/dist/theme/white.css" id="theme">
   <link rel="stylesheet" href="css/custom-revealjs.css"/>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
 </head>
 <body>
   <div class="reveal">
@@ -44,31 +62,465 @@ href="mailto:maurizio.tomasi@unimi.it"><code>maurizio.tomasi@unimi.it</code></a>
   <p class="date">Martedì 25 novembre 2025</p>
 </section>
 
-<section id="introduzione-allargomento-di-oggi"
-class="title-slide slide level1">
+<section id="introduzione-allargomento-di-oggi" class="slide level1">
 <h1>Introduzione all’argomento di oggi</h1>
-
+<ul>
+<li><p>Useremo potenze e logaritmi per definire il “decibel”, con cui si
+misura l’intensità del suono</p></li>
+<li><p>Introdurremo i concetti di “sovrapposizione” ed
+“interferenza”</p></li>
+</ul>
 </section>
-
-<section id="inquisitori-accademici-onorari"
-class="title-slide slide level1">
+<section id="inquisitori-accademici-onorari" class="slide level1">
 <h1>Inquisitori accademici onorari</h1>
-
 </section>
+<section id="avete-fatto-gli-esercizi" class="slide level1">
+<h1>Avete fatto gli esercizi?</h1>
+<p><img data-src="media/uncle-sam.webp" height="560" /></p>
+</section>
+<section id="proprietà-delle-potenze" class="slide level1">
+<h1>Proprietà delle potenze</h1>
+<ul>
+<li><p>La settimana scorsa avevamo visto queste due proprietà delle
+potenze:</p>
+<p><span class="math display">
+10^n \times 10^m = 10^{n + m},\qquad \frac{10^n}{10^m} = 10^{n - m},
+</span></p>
+<p>che valgono anche se <span class="math inline">n</span> e <span
+class="math inline">m</span> sono numeri negativi o con la
+virgola</p></li>
+<li><p>Abbiamo anche visto che è sempre possibile scrivere un numero
+positivo <span class="math inline">n</span> come potenza di 10, se si
+usa come esponente il numero</p>
+<p><span class="math display">
+\log_{10} n
+</span></p></li>
+</ul>
+</section>
+<section id="importanza-dei-logaritmi" class="slide level1">
+<h1>Importanza dei logaritmi</h1>
+<ul>
+<li><p>Un logaritmo è l’operazione inversa di un elevamento a
+potenza</p></li>
+<li><p>La domanda: “a quanto devo elevare 6,3 per ottenere 1580?” ha
+come risposta la quantità <span class="math display">
+\log_{6{,}3} 1580
+</span></p>
+<p>che vale circa 4. Infatti <span class="math inline">6{,}3^4 =
+1580</span>.</p></li>
+<li><p>In generale, con <span class="math inline">\log_a b</span> si
+indica quel numero a cui bisogna elevare <span
+class="math inline">a</span> per ottenere <span
+class="math inline">b</span>.</p></li>
+</ul>
+</section>
+<section id="proprietà-dei-logaritmi" class="slide level1">
+<h1>Proprietà dei logaritmi</h1>
+<ul>
+<li><p>Abbiamo visto che con le potenze è facile arrivare a numeri
+grandissimi:</p>
+<p><span class="math display">
+6{,}3^5 = 10.000
+</span></p>
+<p>È facile rendersi conto di ciò se si usano le potenze di 10:</p>
+<p><span class="math display">
+10^{11} = 10\times 10\times \ldots \times 10 = 100.000.000.000
+</span></p></li>
+<li><p>Con i logaritmi è l’opposto: anche se si parte da numeri
+grandissimi, i logaritmi sono di solito molto piccoli:</p>
+<p><span class="math display">
+\log_{10} 100.000.000.000 = 11.
+</span></p></li>
+</ul>
+</section>
+<section id="i-logaritmi-in-base-10" class="slide level1">
+<h1>I logaritmi in base 10</h1>
+<ul>
+<li><p>I logaritmi in base 10 sono particolarmente facili da
+calcolare:</p>
+<p><span class="math display">
+\begin{aligned}
+\log_{10} 10 &amp;= 1,\\
+\log_{10} 100 &amp;= 2,\\
+\log_{10} 1000 &amp;= 3,\\
+\log_{10} 10.000 &amp;= 4,\\
+\log_{10} 100.000 &amp;= 5\ldots\\
+\end{aligned}
+</span></p></li>
+<li><p>In questi casi, il logaritmo è sempre <strong>il numero di cifre
+del numero, meno uno</strong></p></li>
+</ul>
+</section>
+<section id="i-logaritmi-in-base-10-1" class="slide level1">
+<h1>I logaritmi in base 10</h1>
+<ul>
+<li><p>E per i numeri che non sono così semplici come 100 o
+10.000?</p></li>
+<li><p>In questo caso i logaritmi ritornano un numero con la
+virgola:</p>
+<p><span class="math display">
+\log_{10} 32.359 = 4{,}51
+</span></p>
+<p>Questo perché <span class="math inline">10^{4{,}51} = 32.359</span>:
+i matematici ci dicono che è possibile definire le potenze anche quando
+l’esponente ha la virgola</p></li>
+<li><p>Il logaritmo uguale a 4,51 può essere interpretato così: “il
+numero di partenza aveva cinque cifre (4 + 1), ma era un po’ più grande
+di 10.000, che è il più piccolo numero a cinque cifre”.</p></li>
+</ul>
+</section>
+<section class="slide level1">
 
-<section id="leffetto-doppler" class="title-slide slide level1">
+<p>TODO</p>
+<p>Vedi “Pendolo: gravità che imita una molla” in fondo per una
+spiegazione di come introdurre l’intensità del suono come pressione², e
+dei decibel.</p>
+</section>
+<section id="sovrapposizione-e-interferenza" class="slide level1">
+<h1>Sovrapposizione e interferenza</h1>
+</section>
+<section id="sovrapposizione-e-interferenza-1" class="slide level1">
+<h1>Sovrapposizione e interferenza</h1>
+<ul>
+<li><p>Abbiamo sempre parlato sinora di <strong>una</strong> onda sonora
+che si propaga. Ma nella realtà siamo sempre circondati da molti
+suoni!</p></li>
+<li><p>Quando due onde si incontrano in un punto dello spazio, vale il
+principio di <strong>sovrapposizione</strong>: se alle onde non è
+associata “troppa energia”, i loro effetti si sommano</p></li>
+<li><p>Questo è il <strong>principio di sovrapposizione</strong>, e vale
+non solo per le onde sonore</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<video controls width="1080">
+<source src="media/veritasium-double-slit-experiment.mp4" type="video/mp4" />
+Your browser does not support the video tag.
+</video>
+<p><small><a href="https://www.youtube.com/watch?v=Iuv6hY6zsd0">The
+original double slit experiment</a></small></p>
+</section>
+<section id="interferenza" class="slide level1">
+<h1>Interferenza</h1>
+<ul>
+<li><p>La sovrapposizione è un <strong>principio</strong>: dice che due
+onde che si incontrano nel medesimo punto producono un’onda risultante
+data dalla somma delle due</p></li>
+<li><p>L’<strong>interferenza</strong> è il risultato della
+sovrapposizione di più onde. Esso dà origine a fenomeni molto
+interessanti, perché a volte l’interferenza causa un <em>rinforzo</em>
+delle onde, ma altre volte può annullare il loro effetto!</p></li>
+<li><p>Per fare un’analogia: suono tre tasti del pianoforte e sento un
+accordo consonante o dissonante. Il fatto che ci arrivi il suono insieme
+è dato dalla sovrapposizione, la consonanza/dissonanza
+dall’interferenza.</p></li>
+</ul>
+</section>
+<section id="tipi-di-interferenza" class="slide level1">
+<h1>Tipi di interferenza</h1>
+<ul>
+<li><p>Ci sono vari modi in cui si manifesta l’interferenza:</p>
+<ul>
+<li><p>Se tutte le volte che un onda causa un massimo di pressione,
+anche la seconda fa lo stesso, si ha <strong>interferenza
+costruttiva</strong>: l’effetto è amplificato</p></li>
+<li><p>Se invece quando la prima onda ha un massimo di pressione, la
+seconda ha un minimo, l’effetto è una <strong>interferenza
+distruttiva</strong>, in cui il suono è attenuato</p></li>
+<li><p>Se le due onde non hanno la stessa frequenza, l’interferenza è
+alternatamente costruttiva e distruttiva, e si hanno i
+<strong>battimenti</strong></p></li>
+</ul></li>
+<li><p>Tutti questi effetti si possono vedere nell’applicazione della
+slide successiva</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<iframe src="iframes/interference.html" width="100%" height="760" style="border:1px solid #ccc; border-radius: 8px;">
+</iframe>
+</section>
+<section id="interferenza-distruttiva" class="slide level1">
+<h1>Interferenza distruttiva</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Le cuffie a cancellazione del rumore hanno un microfono che riceve
+il suono ambientale e lo riproduce indirizzandolo all’orecchio, ma con
+uno sfasamento di mezza lunghezza d’onda</li>
+<li>Nell’orecchio entra quindi il <span style="color: #269342">suono
+ambientale</span>, più <span style="color: #932642">ciò che produce la
+cuffia</span>, ossia la musica e il suono ambientale “sfasato”: <span
+class="math display">
+\begin{aligned}
+\text{Risultato} &amp;= \cancel{\textcolor{#269342}{\text{Ambiente}}} +
+\textcolor{#932642}{\text{Musica}} -
+\cancel{\textcolor{#932642}{\text{Ambiente}}} = \\
+&amp;= \textcolor{#932642}{\text{Musica}}
+\end{aligned}
+</span></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/cuffie-cancellazione-rumore.webp"
+width="320" /></p>
+</div>
+</div>
+</section>
+<section id="lunghezza-donda" class="slide level1">
+<h1>Lunghezza d’onda</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>La <strong>lunghezza d’onda</strong>, che si indica con la
+lettera λ (“lambda”), rappresenta la distanza fisica tra un picco di
+pressione e il successivo (la “semilunghezza” è la metà della lunghezza
+d’onda)</p></li>
+<li><p>Essendo una distanza, λ si misura in metri</p></li>
+<li><p>Si può trovare λ dalla relazione (intuitiva: provate a
+pensarci!)</p>
+<p><span class="math display">
+v_\text{suono} = \lambda \times \nu \quad\Rightarrow\quad \lambda =
+\frac{v_\text{suono}}{\nu}.
+</span></p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/longitudinal-sound-wave.webp" /></p>
+</div>
+</div>
+</section>
+<section id="esempi" class="slide level1">
+<h1>Esempi</h1>
+<ul>
+<li><p>Un suono basso a 20 Hz ha una lunghezza d’onda uguale a <span
+class="math display">
+\lambda = \frac{343\,\text{m/s}}{20\,\text{s}^{-1}} \approx 17\,\text{m}
+</span></p></li>
+<li><p>Il suono di un diapason a 440 Hz ha una lunghezza d’onda uguale a
+<span class="math display">
+\lambda = \frac{343\,\text{m/s}}{440\,\text{s}^{-1}} \approx
+78\,\text{cm}
+</span></p></li>
+</ul>
+</section>
+<section id="interferenza-e-λ" class="slide level1">
+<h1>Interferenza e λ</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Se riproduco il medesimo suono da due altoparlanti che sono a una
+distanza diversa dal mio orecchio, si avrà interferenza</p></li>
+<li><p>Se la distanza del più lontano è maggiore di un numero intero di
+lunghezze d’onda λ (2λ, 3λ, 4λ, 5λ…), l’interferenza sarà
+costruttiva</p></li>
+<li><p>Ma se è invece maggiore di un numero dispari di semi-lunghezze
+d’onda λ (λ/2, 3λ/2, 5λ/2, 7λ/2…), l’interferenza sarà
+distruttiva</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/interference-wavelength.png" /></p>
+</div>
+</div>
+</section>
+<section id="battimenti" class="slide level1">
+<h1>Battimenti</h1>
+<p><img data-src="media/battimenti.webp" height="600" /></p>
+</section>
+<section id="battimenti-1" class="slide level1">
+<h1>Battimenti</h1>
+<ul>
+<li><p>I battimenti sono un tipo di interferenza in cui le due onde non
+hanno la stessa frequenza; l’interferenza continua quindi ad alternarsi
+tra costruttiva e distruttiva</p></li>
+<li><p>L’effetto è quello di un’onda la cui intensità cambia da un
+minimo ad un massimo, con una frequenza data da</p>
+<p><span class="math display">
+\nu_\text{battimento} = \left|\nu_1 - \nu_2\right|.
+</span></p></li>
+<li><p>Sono molto utili per accordare tra loro strumenti: se si sentono
+battimenti quando suonano la stessa nota, non sono accordati!</p></li>
+</ul>
+</section>
+<section id="il-timbro" class="slide level1">
+<h1>Il timbro</h1>
+</section>
+<section id="timbro-del-suono" class="slide level1">
+<h1>Timbro del suono</h1>
+<ul>
+<li><p>Abbiamo visto l’interferenza tra due onde sonore, ma ovviamente
+si può sovrapporre qualsiasi numero!</p></li>
+<li><p>Il motivo per cui due strumenti diversi come un violino e un
+flauto suonino “diversi” anche quando la nota è la stessa è dovuta
+proprio a questo</p></li>
+<li><p>Il “colore” di un suono è detto <strong>timbro</strong>, e
+dipende dal fatto che gli strumenti non emettono mai semplici onde
+sinusoidali, ma sovrapposizioni di onde</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<p>TODO: esempio di suono dato dalla sovrapposizione di tre onde</p>
+</section>
+<section id="scomposizione-di-fourier" class="slide level1">
+<h1>Scomposizione di Fourier</h1>
+</section>
+<section id="scomposizione-di-fourier-1" class="slide level1">
+<h1>Scomposizione di Fourier</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Abbiamo visto che la sovrapposizione di un suono fondamentale e
+di armoniche fornisce il “timbro” di quel suono</p></li>
+<li><p>Un matematico francese, <a
+href="https://it.wikipedia.org/wiki/Jean_Baptiste_Joseph_Fourier">Jean-Baptiste
+Joseph Fourier</a> (1768–1830), dimostrò una proprietà fondamentale
+delle onde, non solo sonore: ogni fenomeno periodico può essere
+scomposto nella somma di oscillazioni sinusoidali</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/fourier.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="suono-e-rumore" class="slide level1">
+<h1>Suono e rumore</h1>
+</section>
+<section id="suono-e-rumore-1" class="slide level1">
+<h1>Suono e rumore</h1>
+<ul>
+<li><p>Nella vita quotidiana, usiamo spesso le parole “suono” e “rumore”
+per parlare di fenomeni acustici</p></li>
+<li><p>Ma sappiamo qual è la differenza tra i due? In particolare,
+stiamo parlando di un fenomeno fisico oggettivo, o della
+<strong>sensazione</strong> che un certo fenomeno fisico (quale?) ci
+provoca?</p></li>
+</ul>
+</section>
+<section id="rumore-e-suono" class="slide level1">
+<h1>Rumore e suono</h1>
+<ul>
+<li><p>La differenza tra suono e rumore è la seguente:</p>
+<ul>
+<li><p>Il <strong>suono</strong> è la sensazione di un’onda sonora
+regolare, che possiede una sua periodicità</p></li>
+<li><p>Il <strong>rumore</strong> è l’esatto opposto: è la sensazione di
+un’onda sonora priva di periodicità</p></li>
+</ul></li>
+<li><p>Per rappresentare il suono che raggiunge un punto dello spazio
+(dove ad esempio c’è un microfono), si usa spesso un grafico che mostra
+la variazione temporale della pressione/oscillazione meccanica</p></li>
+<li><p>Vediamo subito la differenza con un esempio interattivo, che
+spiegheremo meglio in questa e nelle prossime lezioni</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<iframe src="iframes/sound-example.html" width="100%" height="580px" style="border:1px solid #ccc; border-radius: 8px;">
+</iframe>
+</section>
+<section class="slide level1">
+
+<p>TODO: esempio di scomposizione di Fourier</p>
+</section>
+<section id="esempi-applicativi" class="slide level1">
+<h1>Esempi applicativi</h1>
+<ul>
+<li><p>Un equalizzatore acustico è in grado di modificare i suoni gravi,
+medi ed acuti decomponendo il suono e agendo sulle ampiezze di alcune
+frequenze e non altre, come vedremo tra poco</p></li>
+<li><p>I file MP3 riescono a registrare musica usando 10 volte meno
+spazio dei vecchi CD, perché usano la decomposizione di Fourier per
+capire quali frequenze registrare (quelle udibili) e quali no</p></li>
+</ul>
+</section>
+<section id="filtraggio" class="slide level1">
+<h1>Filtraggio</h1>
+<p>TODO</p>
+</section>
+<section id="fenomeni-spaziali" class="slide level1">
+<h1>Fenomeni spaziali</h1>
+</section>
+<section id="leco" class="slide level1">
+<h1>L’eco</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Il motivo per cui i pipistrelli “vedono” tramite le onde sonore è
+dovuto a un effetto di <strong>eco</strong></p></li>
+<li><p>Come vedremo meglio quando studieremo le onde stazionarie,
+un’onda di pressione che raggiunge un corpo solido viene
+riflessa</p></li>
+<li><p>Il meccanismo è simile a quello della luce riflessa da uno
+specchio (l’analogia è pertinente, perché anche la luce è
+un’onda)</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/reflection.svg" /></p>
+</div>
+</div>
+</section>
+<section id="esempio-numerico" class="slide level1">
+<h1>Esempio numerico</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Se mi trovo a 1 km di distanza da una parete rocciosa in montagna
+e lancio un urlo verso di essa, il suono verrà riflesso dalla parete e
+tornerà verso di me</p></li>
+<li><p>Il suono percorre 1 km verso la parete e 1 km per tornare, per un
+totale di 2 km. Assumendo una velocità di 340 m/s, si ottiene che l’eco
+mi raggiungerà dopo</p>
+<p><span class="math display">
+\frac{2.000\,\text{m}}{340\,\text{m/s}} = 5{,}9\,\text{s}
+</span></p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/eco.webp" /></p>
+</div>
+</div>
+</section>
+<section id="il-riverbero" class="slide level1">
+<h1>Il riverbero</h1>
+<ul>
+<li>Il “riverbero” è il fenomeno per cui l’eco raggiunge il nostro
+orecchio quando il suono che l’ha originato è ancora percepito dal
+nostro orecchio</li>
+</ul>
+</section>
+<section id="lecografia" class="slide level1">
+<h1>L’ecografia</h1>
+</section>
+<section id="onde-stazionarie" class="slide level1">
+<h1>Onde stazionarie</h1>
+</section>
+<section id="onde-stazionarie-1" class="slide level1">
+<h1>Onde stazionarie</h1>
+<video controls loop>
+<source src="media/standing-longitudinal-waves.mp4" type="video/mp4">
+</video>
+<p><small><a
+href="https://www.youtube.com/watch?v=fMJrtheQfZw">Longitudinal wave
+using slinky coil</a></small></p>
+</section>
+<section id="leffetto-doppler" class="slide level1">
 <h1>L’effetto Doppler</h1>
-
 </section>
-
-<section id="conclusioni" class="title-slide slide level1">
+<section id="leffetto-doppler-1" class="slide level1">
+<h1>L’effetto Doppler</h1>
+<p>Ecografia Doppler:
+https://it.wikipedia.org/wiki/Ecografia_Doppler</p>
+</section>
+<section id="conclusioni" class="slide level1">
 <h1>Conclusioni</h1>
-
 </section>
-
-<section id="cosa-sapere-per-lesame" class="title-slide slide level1">
+<section id="cosa-sapere-per-lesame" class="slide level1">
 <h1>Cosa sapere per l’esame</h1>
-
 </section>
     </div>
   </div>

@@ -456,7 +456,7 @@ Far camminare alcuni studenti avanti ed indietro con due velocità, e commentare
 
 ::: media
 
-![](media/free-fall.gif){height=400px}
+![](media/free-fall.webp){height=400px}
 
 :::
 :::
@@ -477,7 +477,7 @@ Far camminare alcuni studenti avanti ed indietro con due velocità, e commentare
 
 # Caduta sulla Luna
 
-![](media/moon-walk.gif)
+![](media/moon-walk.webp)
 
 -   Come già accennato, sulla Luna l’accelerazione di gravità è appena 1,6  m/s².
 
@@ -506,7 +506,7 @@ Far camminare alcuni studenti avanti ed indietro con due velocità, e commentare
 
 -   Molto importante per l’acustica, come vedremo
 
-![](media/metronome-animation.gif){height=420px}
+![](media/metronome-animation.webp){height=420px}
 
 # Dalla cinematica alla dinamica
 

@@ -2,12 +2,11 @@
 
 # Introduzione all’argomento di oggi
 
--   Nella scorsa lezione abbiamo introdotto il concetto di “onda”, e abbiamo anticipato che le onde sonore sono onde di pressione. Oggi spiegheremo quindi in cosa consiste la pressione
+-   Come prima cosa, ultimeremo la trattazione della risonanza studiando alcuni semplici esempi
 
--   Faremo un “gioco” molto semplice, che ci permetterà di introdurre alcune proprietà delle onde sonore
+-   Siccome le onde sonore nell’aria si propagano come onde di **pressione**, dovremo introdurre innanzitutto questo concetto…
 
--   Introdurremo poi le onde sonore, e inizieremo a studiare il tipo più semplice: l’onda sinusoidale
-
+-   …e poi, finalmente, introdurremo il concetto di “onda” e in particolare di “onda sonora”!
 
 # Esempi di risonanza (conclusione della lezione precedente)
 
@@ -103,6 +102,7 @@
 
 -   I terremoti sono causati da onde sismiche
 
+
 # Tipi di onde
 
 -   Le onde si suddividono in due tipi:
@@ -117,9 +117,10 @@
 
 ---
 
-![](media/transverse-longitudinal-waves.gif)
+![](media/transverse-longitudinal-waves.webp)
 
 Notate che in nessuno dei due casi gli anelli della molla si muovono: passata l’onda, restano nella posizione iniziale!
+
 
 # Onde sismiche
 
@@ -127,15 +128,17 @@ Le onde sismiche possono essere sia longitudinali che trasversali, perché la cr
 
 ![](media/terremoti-onde-p-s.jpg){height=480px}
 
+
 # Onde del mare
 
 ![](media/deep-water-wave.gif)
 
-Di che tipo sono?
+Di che tipo sono le onde in superficie?
 
 ::: notes
 Sono sia trasversali che longitudinali, ovviamente!
 :::
+
 
 # Onde sonore
 
@@ -144,6 +147,7 @@ Sono sia trasversali che longitudinali, ovviamente!
 -   Il motivo per cui non possono essere trasversali ha a che fare con la loro natura: sono onde di **pressione**
 
 -   Per capire il loro funzionamento, dobbiamo quindi introdurre prima il concetto di “pressione”
+
 
 # La pressione
 
@@ -161,6 +165,7 @@ Sono sia trasversali che longitudinali, ovviamente!
 
     e si misura in N/m² ovviamente. A questa unità è dato il nome di “Pascal”, dal nome del grande [filosofo, matematico, teologo e inventore francese](https://it.wikipedia.org/wiki/Blaise_Pascal).
 
+
 # Esempi
 
 -   Quando sto in piedi in una stanza, esercito una pressione: se $m = 80\,\text{kg}$ e la superficie dei piedi è di $2 \times 200\,\mathrm{cm^2} = 0{,}04\,\mathrm{m^2}$, si ha
@@ -173,6 +178,7 @@ Sono sia trasversali che longitudinali, ovviamente!
     P = \frac{m g}{S} = \frac{2\,\text{kg}\times 10\,\mathrm{m/s^2}}{0{,}08\,\mathrm{m^2}} = 250\,\text{Pa}.
     \]
 
+
 # Unità di misura
 
 -   L’unità del SI è il Pascal, che però è un valore molto piccolo per misurare la pressione dell’aria
@@ -182,6 +188,7 @@ Sono sia trasversali che longitudinali, ovviamente!
     \[
     1\,\text{atm} = 101.325\,\text{Pa}.
     \]
+
 
 # Significato
 
@@ -244,6 +251,7 @@ Sono sia trasversali che longitudinali, ovviamente!
 
 [![](media/tacchi-nemici-parquet.jpg){height=720px}](https://www.solidrenner.com/i-tacchi-sono-i-peggiori-nemici-del-parquet/)
 
+
 # Pressione di un gas
 
 ::: side-by-side
@@ -265,6 +273,7 @@ Sono sia trasversali che longitudinali, ovviamente!
 :::
 :::
 
+
 # Molecole d’aria
 
 ::: side-by-side
@@ -281,10 +290,11 @@ Sono sia trasversali che longitudinali, ovviamente!
 
 ::: media
 
-![](media/air-molecules.gif)
+![](media/air-molecules.webp)
 
 :::
 :::
+
 
 # Pressione dell’aria
 
@@ -337,7 +347,7 @@ Sono sia trasversali che longitudinali, ovviamente!
 
 ::: media
 
-![](media/batiscafo-trieste.jpg)
+![](media/batiscafo-trieste.webp)
 
 :::
 :::
@@ -368,7 +378,7 @@ La pressione è circa 660 atm.
 
 ::: media
 
-![](media/longitudinal-sound-wave.gif)
+![](media/longitudinal-sound-wave.webp)
 
 :::
 :::
@@ -389,7 +399,7 @@ La pressione è circa 660 atm.
 
 ::: media
 
-![](media/longitudinal-sound-wave.gif)
+![](media/longitudinal-sound-wave.webp)
 
 :::
 :::
@@ -452,210 +462,6 @@ Possiamo quindi dare una definizione delle onde sonore:
 
 -   In entrambi i casi, si tratta di un’onda longitudinale
 
-# Proprietà di un’onda sonora
-
--   Se il fattore che scatena l’onda è un impulso periodico, il **periodo** si conserva durante la propagazione (e quindi anche la **frequenza**)
-
--   L’**ampiezza** dell’onda, ossia la sua intensità, si riduce man mano che l’onda si propaga. Vedremo meglio l’intensità in seguito, perché è un argomento complesso
-
--   La **velocità di propagazione** con cui l’onda si propaga dipende dal tipo di mezzo: in generale, più un corpo è denso e rigido, maggiore è la velocità del suono
-
----
-
-![](media/sound-speed-in-media.svg){height=560px}
-
-# Eruzione di un vulcano
-
-<iframe width="784" height="441" src="https://www.youtube.com/embed/BUREX8aFbMs?si=b1tpdO6co2sNYG1v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-
-# Esempi
-
--   Un suono basso a 20 Hz ha una lunghezza d’onda uguale a
-    \[
-    \lambda = \frac{343\,\text{m/s}}{20\,\text{s}^{-1}} \approx 17\,\text{m}
-    \]
-
--   Il suono di un diapason a 440 Hz ha una lunghezza d’onda uguale a
-    \[
-    \lambda = \frac{343\,\text{m/s}}{440\,\text{s}^{-1}} \approx 78\,\text{cm}
-    \]
-
-# Suono e rumore
-
-# Suono e rumore
-
--   Nella vita quotidiana, usiamo spesso le parole “suono” e “rumore” per parlare di fenomeni acustici
-
--   Ma sappiamo qual è la differenza tra i due? In particolare, stiamo parlando di un fenomeno fisico oggettivo, o della **sensazione** che un certo fenomeno fisico (quale?) ci provoca?
-
-
-# Rumore e suono
-
--   La differenza tra suono e rumore è la seguente:
-
-    -   Il **suono** è la sensazione di un’onda sonora regolare, che possiede una sua periodicità
-
-    -   Il **rumore** è l’esatto opposto: è la sensazione di un’onda sonora priva di periodicità
-
--   Per rappresentare il suono che raggiunge un punto dello spazio (dove ad esempio c’è un microfono), si usa spesso un grafico che mostra la variazione temporale della pressione/oscillazione meccanica
-
--   Vediamo subito la differenza con un esempio interattivo, che avremo modo di riprendere in seguito
-
----
-
-<iframe src="iframes/sound-example.html" width="100%" height="580px" style="border:1px solid #ccc; border-radius: 8px;"></iframe>
-
-
-# Onde sinusoidali {#sinusoidal-waves}
-
-# Onde sinusoidali
-
--   Il modo più semplice per affrontare lo studio delle onde sonore è di partire dal tipo più semplice, ossia un suono. Inizieremo col suono più regolare possibile: l’**onda sinusoidale**, che abbiamo appena visto nell’esempio interattivo
-
--   Matematicamente, un’onda sinusoidale si scrive così:
-
-    \[
-    \text{onda} = A \sin (2\pi\nu t + \phi),
-    \]
-
-    dove $t$ misura il tempo. La scritta $\sin$ rappresenta la funzione matematica “seno”, che è usata in trigonometria per caratterizzare gli angoli.
-
-
-# Onde sinusoidali
-
--   La funzione “seno” è molto interessante ma abbastanza complessa da studiare.
-
--   Dell’equazione
-
-    \[
-    \text{onda} = A \sin (2\pi\nu t + \phi),
-    \]
-
-    a noi interesseranno questi parametri:
-
-    #.   La sua ampiezza (quanto la pressione varia), indicata solitamente con $A$
-    #.   La sua frequenza (quanto rapidamente oscilla), indicata con $\nu$ o con $f$
-    #.   La sua fase (a che istante l’onda raggiunge il suo massimo), indicata con $\phi$
-
-# Unità di misura
-
--   L’ampiezza $A$ è misurata in Pascal se l’onda rappresenta una pressione, in metri se è un’oscillazione di un mezzo (ad es. un muro), o in kg/m³ se è una densità
--   La frequenza, come sappiamo, si misura in Hertz (Hz)
--   La fase è indicata con un valore in gradi, da 0° (nessuno sfasamento) a 360° (un’intera oscillazione), e siccome si comporta come un angolo, di solito si rappresenta in gradi
-
----
-
-<iframe src="iframes/sinusoid.html" width="100%" height="760" style="border:1px solid #ccc; border-radius: 8px;"></iframe>
-
-
-# Percezione della frequenza
-
-# Percezione della frequenza
-
--   Un esempio di suono (ossia, di onda periodica regolare) è la nota emessa da uno strumento, ad esempio un violino
-
--   L’essere umano è in grado di percepire suoni la cui frequenza sta nell’intervallo
-
-    \[
-    20\,\text{Hz} < \nu < 20\,\text{kHz},
-    \]
-
-    ma i valori cambiano con l’età: invecchiando, la frequenza udibile più elevata decresce fino a raggiungere valori intorno a 15\,\text{kHz} e anche meno.
-
-# Perché questi limiti?
-
-::: side-by-side
-
-::: content
-
--   Ad alte frequenze, il timpano e gli ossicini collegati (martello, incudine, staffa) hanno un’inerzia che gli impedisce di oscillare così rapidamente.
--   Ma anche se potessero oscillare a qualsiasi frequenza, la membrana basilare e le cellule ciliate all’interno della coclea non riuscirebbero comunque a tradurre il segnale meccanico in un impulso nervoso chiaro
--   A basse frequenze, il nostro orecchio non ha una struttura efficiente per tradurre vibrazioni molto lente in segnali neuronali
-
-:::
-
-::: media
-
-![](media/salvilenni-anatomia-orecchio.jpg)
-
-:::
-:::
-# Lunghezza d’onda
-
-::: side-by-side
-
-::: content
-
--   La lunghezza d’onda, che si indica con la lettera λ (“lambda”), rappresenta la distanza fisica tra un picco di pressione e il successivo
-
--   Essendo una distanza, λ si misura in metri
-
--   Si può trovare facilmente λ dalla relazione
-
-    \[
-    v_\text{suono} = \lambda \times \nu \quad\Rightarrow\quad \lambda = \frac{v_\text{suono}}{\nu}.
-    \]
-
--   Onde a 20 Hz hanno $\lambda \approx 17\,\text{m}$: sotto i 20 Hz, diventano troppo grandi per il nostro orecchio!
-
-:::
-
-::: media
-
-![](media/longitudinal-sound-wave.gif)
-
-:::
-:::
-
-# Curve isofoniche
-
--   Il cervello umano non percepisce tutte le frequenze con la stessa sensibilità
-
--   Le cosiddette [curve isofoniche](https://it.wikipedia.org/wiki/Diagramma_di_uguale_intensit%C3%A0_sonora) rappresentano l’intensità percepita in funzione della frequenza e dell’intensità
-
--    Esse sono state ricavando facendo sentire un suono ad una frequenza di riferimento alternato ad un altro suono e aumentando o diminuendo il volume del secondo finché non fosse stato intenso quanto il primo, e si è registrata l’ampiezza effettiva. Si è poi ripetuto variando l’intensità del suono di riferimento
-
-# Curve isofoniche
-
-::: side-by-side
-
-::: content
-- Asse x: frequenza del suono in Hz.
-- Asse y: Ampiezza dell’onda di pressione.
-- Le varie curve indicano diverse intensità dell’onda di riferimento, dalla soglia di udibilità alla soglia del dolore.
-
-:::
-
-::: media
-
-![](media/curve-isofoniche.svg){height=620px}
-
-:::
-:::
-
-
-# Ultrasuoni
-
-::: side-by-side
-
-::: content
--   I suoni con una frequenza superiore a 20 kHz sono detti **ultrasuoni**, e non sono udibili dall’uomo.
-
--   Sono però percepibili da alcuni animali:
-
-    -   I cani, per cui esistono fischietti agli ultrasuoni
-    -   I pipistrelli, che usano l’eco degli ultrasuoni per orientarsi (vedremo meglio l’eco in futuro)
-:::
-
-::: media
-
-![](media/pipistrelli.jpg)
-
-:::
-:::
-
 
 # Conclusioni
 
@@ -665,7 +471,6 @@ Possiamo quindi dare una definizione delle onde sonore:
 -   Definizione di pressione
 -   Pressione dei gas e dei fluidi
 -   Onde di pressione
--   Onde sinusoidali
 
 ---
 title: Fisica -- Lezione 6

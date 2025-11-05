@@ -406,7 +406,7 @@ Esempio: si può ricordare la collocazione dei paesi baltici sotto la Finlandia 
 
 ---
 
-![](media/2025-08-10-ChatGPT5-nomi-note-sbagliate.png){height=540px}
+![](media/2025-08-10-ChatGPT5-nomi-note-sbagliate.webp){height=540px}
 
 (Immagine generata da ChatGPT-5 per spiegare a mio figlio i nomi delle note)
 

@@ -246,7 +246,7 @@
 
 ::: media
 
-![](media/titanic-sinking-plates-falling-and-breaking.gif)
+![](media/titanic-sinking-plates-falling-and-breaking.webp)
 
 :::
 :::

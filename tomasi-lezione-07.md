@@ -1,26 +1,198 @@
 # Introduzione all’argomento di oggi
 
-- Oggi continueremo nello studio delle onde sinusoidali, parlando della loro ampiezza
+-   Oggi spiegheremo approfonditamente il tipo più semplice di onda: l’onda sinusoidale
 
-- Introdurremo poi i concetti di sovrapposizione e di interferenza
+-   Descriveremo le tre proprietà delle onde sinusoidali: frequenza, sfasamento ed ampiezza
+
+-   Introdurremo il concetto di “intensità del suono”
+
+-   Parleremo di come si misura l’ampiezza di un’onda, e introdurremo le potenze e i logaritmi
+
 
 # Inquisitori accademici onorari
 
-# Ampiezza del suono
+# Proprietà di un’onda sonora
 
--   Nella scorsa lezione, abbiamo visto che un’onda sinusoidale si scrive così:
+-   Se il fattore che scatena l’onda è un impulso periodico, il **periodo** si conserva durante la propagazione (e quindi anche la **frequenza**)
+
+-   L’**ampiezza** dell’onda, legata alla sua intensità, si riduce man mano che l’onda si propaga. Vedremo meglio l’intensità in seguito, perché è un argomento complesso
+
+-   La **velocità di propagazione** con cui l’onda si propaga dipende dal tipo di mezzo: in generale, più un corpo è denso e rigido, maggiore è la velocità del suono
+
+---
+
+![](media/sound-speed-in-media.svg){height=560px}
+
+# Eruzione di un vulcano
+
+<iframe width="784" height="441" src="https://www.youtube.com/embed/BUREX8aFbMs?si=b1tpdO6co2sNYG1v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+# Onde sinusoidali {#sinusoidal-waves}
+
+# Onde sinusoidali
+
+-   Il modo più semplice per affrontare lo studio delle onde sonore è di partire dal tipo più semplice, ossia un suono. Inizieremo col suono più regolare possibile: l’**onda sinusoidale**, che abbiamo appena visto nell’esempio interattivo
+
+-   Matematicamente, un’onda sinusoidale si scrive così:
 
     \[
-    \text{onda} = A \sin (2\pi\nu t + \phi),
+    \text{onda} = A \sin (2\pi\nu t + \varphi),
     \]
 
--   Abbiamo discusso brevemente del significato di $\phi$ (“sfasamento”) e della frequenza: il primo indica in che punto dell’oscillazione iniziamo a misurare la pressione, e il secondo il numero di oscillazioni al secondo
+    dove $t$ misura il tempo. La scritta $\sin$ rappresenta la funzione matematica “seno”, che è usata in trigonometria per caratterizzare gli angoli.
 
--   Ci resta ancora da parlare dell’ampiezza $A$
 
-# Misura dell’ampiezza
+# Onde sinusoidali
+
+-   La funzione “seno” è molto interessante ma abbastanza complessa da studiare.
+
+-   Dell’equazione
+
+    \[
+    \text{onda} = A \sin (2\pi\nu t + \varphi),
+    \]
+
+    a noi interesseranno questi parametri:
+
+    #.   La sua ampiezza (quanto la pressione varia), indicata solitamente con $A$
+    #.   La sua frequenza (quanto rapidamente oscilla), indicata con $\nu$ o con $f$
+    #.   La sua fase (a che istante l’onda raggiunge il suo massimo), indicata con $\varphi$
+
+# Unità di misura
+
+-   L’ampiezza $A$ è misurata in Pascal se l’onda rappresenta una pressione, in metri se è un’oscillazione di un mezzo (ad es. un muro), o in kg/m³ se è una densità
+-   La frequenza, come sappiamo, si misura in Hertz (Hz)
+-   La fase è indicata con un valore in gradi, da 0° (nessuno sfasamento) a 360° (un’intera oscillazione), e siccome si comporta come un angolo, di solito si rappresenta in gradi
+
+---
+
+<iframe src="iframes/sinusoid.html" width="100%" height="760" style="border:1px solid #ccc; border-radius: 8px;"></iframe>
+
+
+# 1. La frequenza
+
+# Percezione della frequenza
+
+-   Un esempio di suono (ossia, di onda periodica regolare) è la nota emessa da uno strumento, ad esempio un violino
+
+-   L’essere umano è in grado di percepire suoni la cui frequenza sta nell’intervallo
+
+    \[
+    20\,\text{Hz} < \nu < 20\,\text{kHz},
+    \]
+
+    ma i valori cambiano con l’età: invecchiando, la frequenza udibile più elevata decresce fino a raggiungere valori intorno a 15\,\text{kHz} e anche meno.
+
+
+# Perché questi limiti?
+
+::: side-by-side
+
+::: content
+
+-   Ad alte frequenze, il timpano e gli ossicini collegati (martello, incudine, staffa) hanno un’inerzia che gli impedisce di oscillare così rapidamente.
+-   Ma anche se potessero oscillare a qualsiasi frequenza, la membrana basilare e le cellule ciliate all’interno della coclea non riuscirebbero comunque a tradurre il segnale meccanico in un impulso nervoso chiaro
+-   A basse frequenze, il nostro orecchio non ha una struttura efficiente per tradurre vibrazioni molto lente in segnali neuronali
+
+:::
+
+::: media
+
+![](media/salvilenni-anatomia-orecchio.jpg)
+
+:::
+:::
+
+
+# Curve isofoniche
+
+-   Il cervello umano non percepisce tutte le frequenze con la stessa sensibilità
+
+-   Le cosiddette [curve isofoniche](https://it.wikipedia.org/wiki/Diagramma_di_uguale_intensit%C3%A0_sonora) rappresentano l’intensità percepita in funzione della frequenza e dell’intensità
+
+-    Esse sono state ricavando facendo sentire un suono ad una frequenza di riferimento alternato ad un altro suono e aumentando o diminuendo il volume del secondo finché non fosse stato intenso quanto il primo, e si è registrata l’ampiezza effettiva. Si è poi ripetuto variando l’intensità del suono di riferimento
+
+# Curve isofoniche
+
+::: side-by-side
+
+::: content
+- Asse x: frequenza del suono in Hz.
+- Asse y: Ampiezza dell’onda di pressione.
+- Le varie curve indicano diverse intensità dell’onda di riferimento, dalla soglia di udibilità alla soglia del dolore.
+
+:::
+
+::: media
+
+![](media/curve-isofoniche.svg){height=620px}
+
+:::
+:::
+
+
+# Ultrasuoni
+
+::: side-by-side
+
+::: content
+-   I suoni con una frequenza superiore a 20 kHz sono detti **ultrasuoni**, e non sono udibili dall’uomo.
+
+-   Sono però percepibili da alcuni animali:
+
+    -   I cani, per cui esistono fischietti agli ultrasuoni
+    -   I pipistrelli, che usano l’eco degli ultrasuoni per orientarsi (vedremo meglio l’eco in futuro)
+:::
+
+::: media
+
+![](media/pipistrelli.jpg)
+
+:::
+:::
+
+
+# 2. Sfasamento
+
+# Sfasamento di un’onda
+
+-   Dobbiamo ora parlare del termine $\varphi$ nell’equazione dell’onda sinusoidale:
+
+    \[
+    \text{onda} = A \sin (2\pi\nu t + \varphi),
+    \]
+
+-   Abbiamo accennato al fatto che sia un **angolo**, e quindi si misura in gradi
+
+-   Concettualmente esso rappresenta il momento in cui si inizia a misurare l’onda in un certo punto, e dice se ci troviamo al momento del massimo di pressione, del minimo, etc.
+
+---
+
+<iframe src="iframes/sinusoid-phase.html" width="100%" height="640"></iframe>
+
+# Valori di φ
+
+| φ    | Significato                          | %   |
+|-----:|--------------------------------------|----:|
+| 0°   | Pressione di equilibrio, crescente   | 0%  |
+| 90°  | Massima pressione                    | 25% |
+| 180° | Pressione di equilibrio, decrescente | 50% |
+| 270° | Minima pressione                     | 75% |
+
+# 3. Ampiezza
+
+# Ampiezza di un’onda
+
+-   Passiamo ora a discutere il senso dell’ampiezza $A$:
+
+    \[
+    \text{onda} = A \sin (2\pi\nu t + \varphi),
+    \]
 
 -   Come avevamo già accennato, per un’onda acustica in un fluido come l’aria o l’acqua, l’ampiezza $A$ può essere misurata in Pascal (pressione) o in kg/m³ (densità)
+
 -   In un mezzo solido come un muro invece l’ampiezza è uno **spostamento**, e si misura in metri
 
 # Variazione dell’ampiezza
@@ -33,15 +205,29 @@
 
 -   Sapete spiegare il perché?
 
+# Ampiezza, potenza, intensità
+
+-   Un’onda, come già sappiamo, trasmette energia
+
+-   La “potenza” di un’onda è legata all’energia trasmessa nell’unità di tempo, e si misura in Watt
+
+-   Però un’onda non è una particella ma qualcosa di esteso, e quindi è più appropriato parlare di una potenza $W$ distribuita su una superficie $S$. Questa è l’**intensità sonora** $I$:
+
+    \[
+    I = \frac{W}{S}
+    \]
+
+    che si misura in W/m² (Watt per metro quadro).
+
 # Variazione dell’ampiezza
 
 ::: side-by-side
 
 ::: content
 
--   Il motivo per cui il suono propagandosi si attenua ha a che fare con la **conservazione dell’energia**
+-   Il motivo per cui il suono propagandosi si attenua ha a che fare principalmente con la **conservazione dell’energia**
 
--   L’urlo nasce dalla vostra bocca, che ha una piccola superficie. Ma il suono si propaga ovunque nello spazio (anche verso l’alto), e l’energia sonora deve necessariamente “diluirsi”
+-   L’urlo nasce dalla vostra bocca, che ha una piccola superficie. Ma il suono si propaga ovunque nello spazio (anche verso l’alto), e l’energia sonora deve necessariamente “diluirsi” sulla superficie $4\pi r^2$ di una sfera sempre più grande.
 
 -   Ciò avverrebbe anche **in mancanza di attrito e forze viscose**!
 
@@ -56,32 +242,32 @@
 
 # Legge del quadrato
 
--   In un caso ideale, l’intensità dell’onda sonora varia come **l’inverso del quadrato** della distanza $r$. Se quindi due persone misurano un’ampiezza di pressione $P_1$ e $P_2$ a due distanze $r_1$ e $r_2$, vale che
+-   In un caso ideale, l’intensità dell’onda sonora varia come **l’inverso del quadrato** della distanza $r$. Se quindi due persone misurano un’intensità  $I_1$ e $I_2$ a due distanze $r_1$ e $r_2$, vale che
 
     \[
-    P_1\times r_1^2 = P_2\times r_2^2.
+    I_1\times 4\pi r_1^2 = I_2\times 4\pi r_2^2.
     \]
 
--   La formula è più utile risolvendo per $P_2$:
+-   La formula è più utile semplificando $4\pi$ e risolvendo per $I_2$:
 
     \[
-    P_2 = P_1\times\frac{r_1^2}{r_2^2}.
+    I_2 = I_1\times\frac{r_1^2}{r_2^2}.
     \]
 
 # Esempio
 
 -   Una persona è seduta in prima fila a 3 m dal professore ($r_1 = 3\,\text{m}$)
 -   Un’altra persona è seduta più dietro, a 9 metri dal professore ($r_2 = 9\,\text{m}$)
--   Se l’orecchio della prima persona riceve un suono di ampiezza $P_1$, la seconda persona riceve un suono di ampiezza
+-   Se l’orecchio della prima persona riceve un suono di intensità $I_1$, la seconda persona riceve un suono di ampiezza
     \[
-    P_2 = P_1\times\frac{r_1^2}{r_2^2}
-    = P_1\times\frac{(3\,\text{m})^2}{(9\,\text{m})^2}
-    = P_1\times\frac{9}{81} = \frac{P_1}{9}
+    I_2 = I_1\times\frac{r_1^2}{r_2^2}
+    = I_1\times\frac{(3\,\text{m})^2}{(9\,\text{m})^2}
+    = I_1\times\frac{9}{81} = \frac{I_1}{9}
     \]
 
 # Intensità percepita
 
--   Possiamo concludere che se la distanza triplica, l’ampiezza si riduce di un fattore 9, ossia 3²
+-   Possiamo concludere che se la distanza triplica, l’intensità si riduce di un fattore 9, ossia 3²
 
 -   Questo vuol dire che la seconda persona percepisce la voce del professore 9 volte meno intensa?
 
@@ -89,11 +275,11 @@
 
 # Legge di Weber-Fechner
 
--   No! Se così fosse, le aule universitarie dovrebbero essere fatte in modo che il professore stia al centro, e tutti gli studenti in cerchio attorno a lui
+-   Il calcolo non è sbagliato: l’intensità diminuisce davvero di un fattore 9
 
--   L’esperienza ci mostra che se parla un compagno in prima fila, non sentiamo la metà di quello che sente chi sta in seconda fila
+-   Ma l’intensità non è ciò che misura il nostro orecchio. (Se così fosse, le aule universitarie dovrebbero essere fatte in modo che il professore stia al centro, e tutti gli studenti in cerchio attorno a lui!)
 
--   Le percezioni sensoriali seguono la cosiddetta “[legge di Weber-Fechner](https://it.wikipedia.org/wiki/Legge_di_Weber-Fechner)”
+-   In prima approssimazione, le percezioni sensoriali seguono la cosiddetta “[legge di Weber-Fechner](https://it.wikipedia.org/wiki/Legge_di_Weber-Fechner)”
 
 # Il lavoro di Weber
 
@@ -109,393 +295,230 @@
 -   [Gustav Fechner](https://it.wikipedia.org/wiki/Gustav_Theodor_Fechner) (1801-1887) descrisse matematicamente quanto aveva osservato Weber, e derivò la formula
 
     \[
-    p = k \log S + C
+    p = k \log_{10} S + C
     \]
 
     dove $p$ è la “percezione” (ciò che avvertono i miei sensi), $S$ è lo stimolo (il fenomeno fisico che raggiunge i miei sensi), e $k$ e $C$ costanti che non ci interessano qui.
 
--   Anche se la legge di Weber-Fechner si è poi rivelata non del tutto esatta, è stata molto importante storicamente per definire il “decibel”, e quindi dovremo capire il funzionamento di $\log$, la funzione “logaritmo”.
+-   Anche se la legge di Weber-Fechner è un’approssimazione, è stata importante storicamente per definire il “decibel”. Dovremo quindi capire il funzionamento di $\log_{10}$, che è l’inverso di una potenza.
 
----
-
-![](media/starred-sky.jpg)
-
-# Magnitudini delle stelle
-
-::: side-by-side
-
-::: content
-
--   Come descritto da Tolomeo nel suo Almagesto (150 d.C.), nell’antichità si suddividevano le stelle in sei “classi di magnitudini”, a seconda della loro intensità
--   Le “stelle di prima magnitudine” erano quelle più brillanti, come Vega
--   Via via nella scala, le stelle apparivano sempre meno brillanti, fino alle “stelle di sesta magnitudine”, appena visibili
-
-:::
-
-::: media
-
-![](media/tolomeo-almagesto.jpg)
-
-:::
-:::
-
-# Magnitudini delle stelle
-
--   Con l’avvento della fotografia astronomica alla fine dell’Ottocento ci fu la possibilità di misurare effettivamente l’intensità luminosa delle stelle, e qui ci furono sorprese!
-
--   Sebbene i sei livelli sembrassero equispaziati all’occhio nudo, in realtà le differenze tra le intensità erano molto diverse!
-
-
-# Differenze tra intensità
-
-| Magnitudini | Differenza in intensità |
-|:-----------:|------------------------:|
-| 1 − 2       | 8415,1                  |
-| 2 − 3       | 1333,7                  |
-| 3 − 4       | 211,4                   |
-| 4 − 5       | 33,5                    |
-| 5 − 6       | 5,3                     |
-
-(Le unità della colonna di destra sono arbitrarie)
-
-Anche se le sei classi appaiono equispaziate, le intensità misurate dagli strumenti non lo sono affatto!
-
-# Intensità
-
-Le intensità di ciascuna classe, in unità di misura arbitrarie, sono le seguenti:
-
-| Magnitudine | Intensità |
-|-------------|----------:|
-| 1           |   10000,0 |
-| 2           |    1584,9 |
-| 3           |     251,2 |
-| 4           |      39,8 |
-| 5           |       6,3 |
-| 6           |       1,0 |
-
-(Notate che la differenza tra la prima e l’ultima intensità è **enorme**!)
-
-# Rapporti tra magnitudini
-
-Il mistero viene svelato se calcoliamo i **rapporti** tra le magnitudini!
-
-| Magnitudini | Differenza in intensità |
-|:-----------:|------------------------:|
-| 1 / 2       |                     6,3 |
-| 2 / 3       |                     6,3 |
-| 3 / 4       |                     6,3 |
-| 4 / 5       |                     6,3 |
-| 5 / 6       |                     6,3 |
 
 # Potenze
 
--   Abbiamo visto che ogni magnitudine ha un’intensità che è più grande della successiva di un fattore 6,3. Ad esempio:
+-   Per capire i decibel è sufficiente considerare solo le potenze in base 10. Quasi tutto quanto diremo però si applica anche ad altre basi
+
+-   La potenza $n$ di 10 è definita come
 
     \[
-    I_3 = 6{,}3 \times I_4, \quad I_4 = 6{,}3 \times I_5.
+    10^n = \underbrace{10 \times 10 \times \ldots \times 10}_\text{$n$ volte}
     \]
 
--   Questo vuol dire che
+-   Esempio: $10^4 = 10 \times 10 \times 10 \times 10 = 10.000$
+
+-   Trucco: il numero $n$ dice il numero di zeri che seguono 1.
+
+# Prodotti di potenze
+
+-   Quando moltiplichiamo tra loro due potenze di 10, il risultato è una potenza di 10 il cui esponente è la **somma** dei due:
+
     \[
-    I_3 = 6{,}3^2 \times I_4,
+    10^n \times 10^m = 10^{n + m}
     \]
-    e che
+
+-   Questo è banale da dimostrare:
+
     \[
-    I_1 = 6{,}3^5\times I_6 = 10.000\times I_6.
+    \textcolor{#08a}{10^n} \times \textcolor{#a08}{10^m} =
+    \textcolor{#08a}{\underbrace{10 \times \ldots \times 10}_\text{$n$ volte}} \times
+    \textcolor{#a08}{\underbrace{10 \times \ldots \times 10}_\text{$m$ volte}} = \underbrace{10 \times \ldots \times 10}_\text{$n+m$ volte}
     \]
 
-# Potenze
+# Rapporti tra potenze
 
--   In generale, per “salire” di $n$ livelli di magnitudine, bisogna moltiplicare le intensità per
+-   Quando si dividono due potenze di dieci, il risultato è una potenza di dieci con esponente la **differenza** dei due esponenti:
+
     \[
-    6{,}3^n
+    \frac{10^n}{10^m} = 10^{n - m}
     \]
 
-    In altre parole, usando una potenza si può conoscere l’intensità se cambia la magnitudine.
+-   Anche in questo caso la dimostrazione è banale:
 
--   Questo spiega perché l’intensità della magnitudine 1 è così grande rispetto a quella della magnitudine 6: quando si usano le potenze, i numeri diventano rapidamente grandissimi!
+    \[
+    \frac{10^n}{10^m} = \frac{\overbrace{\cancel{10}\times\cancel{10}\times\ldots\cancel{10}}^\text{$m$ cancellazioni}\times 10\times 10\times \ldots \times 10}{\underbrace{\cancel{10}\times\cancel{10}\times\ldots\cancel{10}}_\text{$m$ volte}} = 10^{n - m}
+    \]
 
--   Ma qual è l’operazione contraria? Ossia, se so di quanto cambia l’intensità (ad esempio, 1580), di quanto varia la magnitudine?
+# Altre proprietà
+
+-   Usando un po’ di logica, si possono estendere queste operazioni anche in altri casi.
+
+-   Ad esempio, possiamo definire le potenze **negative** tramite rapporti di potenze. Una potenza come
+
+    \[
+    10^{-4}
+    \]
+
+    può essere vista come
+
+    \[
+    10^{-4} = 10^{1 - 5} = \frac{10^1}{10^5} = \frac{10}{100.000} = 0{,}0001.
+    \]
+
+# Potenza zero-esima
+
+-   Possiamo anche attribuire un significato alla potenza zero:
+
+    \[
+    10^0
+    \]
+
+-   Basta scrivere
+
+    \[
+    10^0 = 10^{1 - 1} = \frac{10^1}{10^1} = \frac{10}{10} = 1
+    \]
+
+-   Quindi, il 10 elevato alla zero è uguale per convenzione a 1. (Questo è coerente con il nostro trucco: “10⁰ è uguale a 1 seguito da zero zeri”!)
+
+# Potenze frazionarie
+
+-   Chiediamoci ora che significato dare alla potenza
+
+    \[
+    10^{0{,}5}
+    \]
+
+-   Perché la nostra definizione sia coerente con quanto detto sinora, dovremmo fare in modo che le vecchie proprietà valgano anche qui. Quindi, in particolare:
+
+    \[
+    10^{0{,}5} \times 10^{0{,}5} = 10^{0{,}5 + 0{,}5} = 10^1 = 10.
+    \]
+
+-   Ma sappiamo già qual è il numero che, moltiplicato per se stesso, è uguale a 10: si tratta della **radice quadrata** di 10, ossia $\sqrt{10} \approx 3{,}162$.
+
+# Potenze frazionarie
+
+-   Lavorando con potenze di 10 intere, abbiamo visto che il risultato è sempre 1 seguito o preceduto da zeri:
+
+    \[
+        10^4 = 10.000,\qquad 10^{-2} = 0{,}01
+    \]
+
+-   Però quando le potenze sono numeri con la virgola non è più così:
+
+    \[
+    10^{0{,}5} \approx 3{,}162,\qquad 10^{-1{,}7} \approx 0{,}01995.
+    \]
+
+-   È possibile scrivere *qualsiasi* numero come una potenza di 10?
 
 # I logaritmi
 
--   Un logaritmo è l’operazione inversa di un elevamento a potenza
+-   La risposta è: “un po’ sì, e un po’ no”
 
--   La domanda: “a quanto devo elevare 6,3 per ottenere 1580?” ha come risposta la quantità
-    \[
-    \log_{6{,}3} 1580
-    \]
+-   Non si può infatti scrivere un numero negativo o lo zero come una potenza di dieci (a meno di non usare strumenti matematici sofisticati, che però non sono rilevanti per questo corso)
 
-    che vale circa 4. Infatti $6{,}3^4 = 1580$.
-
--   In generale, con $\log_a b$ si indica quel numero a cui bisogna elevare $a$ per ottenere $b$.
-
-# Proprietà dei logaritmi
-
--   Abbiamo visto che con le potenze è facile arrivare a numeri grandissimi:
+-   Ma se un numero $n$ è positivo, i matematici hanno mostrato che è **sempre possibile** scriverlo come una potenza di dieci. L’esponente del dieci è detto “logaritmo in base dieci di $n$”, e si scrive $\log_{10} n$
 
     \[
-    6{,}3^5 = 10.000
+    n = 10^{\log_{10} n}.
     \]
 
-    È facile rendersi conto di ciò se si usano le potenze di 10:
+# I logaritmi
+
+-   Riprendendo i nostri due esempi di prima
 
     \[
-    10^{11} = 10\times 10\times \ldots \times 10 = 100.000.000.000
+    10^{0{,}5} \approx 3{,}162,\qquad 10^{-1{,}7} \approx 0{,}01995,
     \]
 
--   Con i logaritmi è l’opposto: anche se si parte da numeri grandissimi, i logaritmi sono di solito molto piccoli:
+    da queste stesse eguaglianze segue che
 
     \[
-    \log_{10} 100.000.000.000 = 11.
+    \log_{10} 3{,}162 \approx 0{,}5,\qquad \log_{10} 0{,}01995 \approx -1{,}7
     \]
 
-# I logaritmi in base 10
+-   Ovviamente, le cose sono molto più semplici (ed esatte!) quando abbiamo potenze intere di 10:
 
--   I logaritmi in base 10 sono particolarmente facili da calcolare:
+    \[
+    \log_{10} 10.000 = 4,\qquad \log_{10} 0{,}00001 = -5.
+    \]
+
+# Significato di log₁₀
+
+-   Se osserviamo alcuni logaritmi in base 10, possiamo notare una particolarità:
+
+    \[
+    \log_{10} 1000 = 3,\quad \log_{10} 51.523{,}4 \approx 4{,}712,\quad \log_{10}7.823.552{,}8 \approx 6{,}893
+    \]
+
+-   Se il numero ha $k$ cifre prima della virgola), il suo logaritmo in base 10 è sempre tale che
+
+    \[
+    k - 1 \leq \log_{10} n < k
+    \]
+
+    In altre parole, il logaritmo in base 10 può essere anche usato per “contare” le cifre!
+
+# Numeri minori di 1
+
+-   Dal momento che $10^0 = 1$, vale allora che
+
+    \[
+    \log_{10} 1 = 0.
+    \]
+
+-   Per i numeri positivi che sono minori di 1, il logaritmo è negativo:
 
     \[
     \begin{aligned}
-    \log_{10} 10 &= 1,\\
-    \log_{10} 100 &= 2,\\
-    \log_{10} 1000 &= 3,\\
-    \log_{10} 10.000 &= 4,\\
-    \log_{10} 100.000 &= 5\ldots\\
+    10^{-2} = 0{,}01\quad&\Rightarrow\quad\log_{10} 0{,}01 = -2,\\
+    10^{-1{,}7} \approx 0{,}01995\quad&\Rightarrow\quad\log_{10} 0{,}01995 = -1{,}7
     \end{aligned}
     \]
 
--   In questi casi, il logaritmo è sempre **il numero di cifre del numero, meno uno**
+-   Se un numero è più piccolo di 1, il logaritmo dice più o meno quante cifre ci sono dopo la virgola
 
-# I logaritmi in base 10
+# Approssimazioni
 
--   E per i numeri che non sono così semplici come 100 o 10.000?
+-   Se volete stimare un logaritmo, è possibile arrotondare i numeri: il logaritmo “perdona” facilmente gli arrotondamenti.
 
--   In questo caso i logaritmi ritornano un numero con la virgola:
+-   L’abbiamo visto proprio nell’esempio della slide precedente:
 
-    \[
-    \log_{10} 32.359 = 4{,}51
-    \]
-
-    Questo perché $10^{4{,}51} = 32.359$: i matematici ci dicono che è possibile definire le potenze anche quando l’esponente ha la virgola
-
--   Il logaritmo uguale a 4,51 può essere interpretato così: “il numero di partenza aveva cinque cifre (4 + 1), ma era un po’ più grande di 10.000, che è il più piccolo numero a cinque cifre”.
-
----
-
-TODO
-
-Vedi “Pendolo: gravità che imita una molla” in fondo per una spiegazione di come introdurre l'intensità del suono come pressione², e dei decibel.
-
-# Sovrapposizione e interferenza
-
-# Sovrapposizione e interferenza
-
--   Abbiamo sempre parlato sinora di **una** onda sonora che si propaga. Ma nella realtà siamo sempre circondati da molti suoni!
-
--   Quando due onde si incontrano in un punto dello spazio, vale il principio di **sovrapposizione**: se alle onde non è associata “troppa energia”, i loro effetti si sommano
-
--   Questo è il **principio di sovrapposizione**, e vale non solo per le onde sonore
-
----
-
-<video controls width="1080">
-  <source src="media/veritasium-double-slit-experiment.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
-<small>[The original double slit experiment](https://www.youtube.com/watch?v=Iuv6hY6zsd0)</small>
-
-# Interferenza
-
--   La sovrapposizione è un **principio**: dice che due onde che si incontrano nel medesimo punto producono un’onda risultante data dalla somma delle due
-
--   L’**interferenza** è il risultato della sovrapposizione di più onde. Esso dà origine a fenomeni molto interessanti, perché a volte l’interferenza causa un *rinforzo* delle onde, ma altre volte può annullare il loro effetto!
-
--   Per fare un’analogia: suono tre tasti del pianoforte e sento un accordo consonante o dissonante. Il fatto che ci arrivi il suono insieme è dato dalla sovrapposizione, la consonanza/dissonanza dall’interferenza.
-
-
-# Tipi di interferenza
-
--   Ci sono vari modi in cui si manifesta l’interferenza:
-
-    -   Se tutte le volte che un onda causa un massimo di pressione, anche la seconda fa lo stesso, si ha **interferenza costruttiva**: l’effetto è amplificato
-
-    -   Se invece quando la prima onda ha un massimo di pressione, la seconda ha un minimo, l’effetto è una **interferenza distruttiva**, in cui il suono è attenuato
-
-    -   Se le due onde non hanno la stessa frequenza, l’interferenza è alternatamente costruttiva e distruttiva, e si hanno i **battimenti**
-
--   Tutti questi effetti si possono vedere nell’applicazione della slide successiva
-
----
-
-<iframe src="iframes/interference.html" width="100%" height="760" style="border:1px solid #ccc; border-radius: 8px;"></iframe>
-
-# Interferenza distruttiva
-
-::: side-by-side
-
-::: content
-
--   Le cuffie a cancellazione del rumore hanno un microfono che riceve il suono ambientale e lo riproduce indirizzandolo all’orecchio, ma con uno sfasamento di mezza lunghezza d’onda
--   Nell’orecchio entra quindi il <span style="color: #269342">suono ambientale</span>, più <span style="color: #932642">ciò che produce la cuffia</span>, ossia la musica e il suono ambientale “sfasato”:
     \[
     \begin{aligned}
-    \text{Risultato} &= \cancel{\textcolor{#269342}{\text{Ambiente}}} + \textcolor{#932642}{\text{Musica}} - \cancel{\textcolor{#932642}{\text{Ambiente}}} = \\
-    &= \textcolor{#932642}{\text{Musica}}
+    10^{-1{,}7} \approx 0{,}01995\quad&\Rightarrow\quad\log_{10} 0{,}01995 = -1{,}7,\\
+    10^{-2} = 0{,}01\quad&\Rightarrow\quad\log_{10} 0{,}01 = -2
     \end{aligned}
     \]
 
-:::
-
-::: media
-
-![](media/cuffie-cancellazione-rumore.webp){width=320px}
-
-:::
-:::
-
-
-# Battimenti
-
-![](media/battimenti.webp){height=600px}
-
-# Battimenti
-
--   I battimenti sono un tipo di interferenza in cui le due onde non hanno la stessa frequenza; l’interferenza continua quindi ad alternarsi tra costruttiva e distruttiva
-
--   L’effetto è quello di un’onda la cui intensità cambia da un minimo ad un massimo, con una frequenza data da
-
-    \[
-    \nu_\text{battimento} = \left|\nu_1 - \nu_2\right|.
-    \]
-
--   Sono molto utili per accordare tra loro strumenti: se si sentono battimenti quando suonano la stessa nota, non sono accordati!
-
-# Il timbro
-
-# Timbro del suono
-
--   Abbiamo visto l’interferenza tra due onde sonore, ma ovviamente si può sovrapporre qualsiasi numero!
-
--   Il motivo per cui due strumenti diversi come un violino e un flauto suonino “diversi” anche quando la nota è la stessa è dovuta proprio a questo
-
--   Il “colore” di un suono è detto **timbro**, e dipende dal fatto che gli strumenti non emettono mai semplici onde sinusoidali, ma sovrapposizioni di onde
-
----
-
-TODO: esempio di suono dato dalla sovrapposizione di tre onde
-
-# Scomposizione di Fourier
-
-# Scomposizione di Fourier
-
-::: side-by-side
-
-::: content
-
--   Abbiamo visto che la sovrapposizione di un suono fondamentale e di armoniche fornisce il “timbro” di quel suono
-
--   Un matematico francese, [Jean-Baptiste Joseph Fourier](https://it.wikipedia.org/wiki/Jean_Baptiste_Joseph_Fourier) (1768–1830), dimostrò una proprietà fondamentale delle onde, non solo sonore: ogni fenomeno periodico può essere scomposto nella somma di oscillazioni sinusoidali
-
-:::
-
-::: media
-
-![](media/fourier.jpg)
-
-:::
-:::
-
----
-
-TODO: esempio di scomposizione di Fourier
-
-# Esempi applicativi
-
--   Un equalizzatore acustico è in grado di modificare i suoni gravi, medi ed acuti decomponendo il suono e agendo sulle ampiezze di alcune frequenze e non altre, come vedremo tra poco
-
--   I file MP3 riescono a registrare musica usando 10 volte meno spazio dei vecchi CD, perché usano la decomposizione di Fourier per capire quali frequenze registrare (quelle udibili) e quali no
-
-# Filtraggio
-
-TODO
-
-# Fenomeni spaziali
-
-# L’eco
-
-::: side-by-side
-
-::: content
--   Il motivo per cui i pipistrelli “vedono” tramite le onde sonore è dovuto a un effetto di **eco**
-
--   Come vedremo meglio quando studieremo le onde stazionarie, un’onda di pressione che raggiunge un corpo solido viene riflessa
-
--   Il meccanismo è simile a quello della luce riflessa da uno specchio (l’analogia è pertinente, perché anche la luce è un’onda)
-:::
-
-::: media
-
-![](media/reflection.svg)
-
-:::
-:::
-
-
-# Esempio numerico
-
-::: side-by-side
-
-::: content
-
--   Se mi trovo a 1 km di distanza da una parete rocciosa in montagna e lancio un urlo verso di essa, il suono verrà riflesso dalla parete e tornerà verso di me
-
--   Il suono percorre 1 km verso la parete e 1 km per tornare, per un totale di 2 km. Assumendo una velocità di 340 m/s, si ottiene che l’eco mi raggiungerà dopo
-
-    \[
-    \frac{2.000\,\text{m}}{340\,\text{m/s}} = 5{,}9\,\text{s}
-    \]
-
-:::
-
-::: media
-
-![](media/eco.webp)
-
-:::
-:::
-
-# Il riverbero
-
--   Il “riverbero” è il fenomeno per cui 
-
-
-# L’ecografia
-
-
-# Onde stazionarie
-
-# Onde stazionarie
-
-<video controls loop>
-    <source src="media/standing-longitudinal-waves.mp4" type="video/mp4">
-</video>
-
-<small>[Longitudinal wave using slinky coil](https://www.youtube.com/watch?v=fMJrtheQfZw)</small>
-
-# L’effetto Doppler
-
-# L’effetto Doppler
-
-Ecografia Doppler: https://it.wikipedia.org/wiki/Ecografia_Doppler
+    Arrotondando 0.01995 a 0.1 (**grande** arrotondamento! abbiamo dimezzato il numero!), il risultato −1,7 diventa 2.
+
+# Esercizi
+
+Provate a stimare (ad occhio!) il valore del logaritmo di 10 di questi numeri
+
+\[
+\begin{aligned}
+\log_{10} 16.341\quad &\log_{10} 65.316.732.001,\\
+\log_{10} 5\quad &\log_{10} 1,\\
+\log_{10} 0{,}1\quad &\log_{10} 0{,}01,\\
+\log_{10} 0{,}3\quad &\log_{10} 0{,}089,\\
+\log_{10} 10{,}35\quad &\log_{10} 163{,}1,\\
+\end{aligned}
+\]
 
 # Conclusioni
 
 # Cosa sapere per l’esame
 
+-   Onde sinusoidali
+-   Significato della fase
+-   Ampiezza e intensità sonora
+-   Potenze e logaritmi in base 10
+
 ---
 title: Fisica -- Lezione 7
-subtitle: Ampiezza del suono e scale logaritmiche
+subtitle: Onde sinusoidali, decibel
 author: Maurizio Tomasi ([`maurizio.tomasi@unimi.it`](mailto:maurizio.tomasi@unimi.it))
 date: Martedì 18 novembre 2025
 ...

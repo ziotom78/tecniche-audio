@@ -182,7 +182,7 @@
 
 ::: media
 
-![](media/metronome-animation.gif)
+![](media/metronome-animation.webp)
 
 :::
 :::
@@ -229,7 +229,7 @@
 
 ::: media
 
-![](media/heart-beat.gif)
+![](media/heart-beat.webp)
 
 :::
 :::
@@ -248,7 +248,7 @@
 
 ::: media
 
-![](media/earthquake-christcurch.gif)
+![](media/earthquake-christcurch.webp)
 
 :::
 :::
