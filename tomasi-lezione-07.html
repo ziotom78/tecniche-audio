@@ -145,8 +145,9 @@ indicata con <span class="math inline">\varphi</span></li>
 <h1>Unità di misura</h1>
 <ul>
 <li>L’ampiezza <span class="math inline">A</span> è misurata in Pascal
-se l’onda rappresenta una pressione, in metri se è un’oscillazione di un
-mezzo (ad es. un muro), o in kg/m³ se è una densità</li>
+(pressione) o in kg/m³ (densità) se l’onda si propaga in un fluido, o in
+metri (milionesimi di metro!) se è un’oscillazione di un mezzo rigido
+(ad es. un muro)</li>
 <li>La frequenza, come sappiamo, si misura in Hertz (Hz)</li>
 <li>La fase è indicata con un valore in gradi, da 0° (nessuno
 sfasamento) a 360° (un’intera oscillazione), e siccome si comporta come
@@ -205,12 +206,13 @@ sensibilità</p></li>
 <li><p>Le cosiddette <a
 href="https://it.wikipedia.org/wiki/Diagramma_di_uguale_intensit%C3%A0_sonora">curve
 isofoniche</a> rappresentano l’intensità percepita in funzione della
-frequenza e dell’intensità</p></li>
+frequenza e dell’intensità oggettiva (che definiremo in
+seguito)</p></li>
 <li><p>Esse sono state ricavando facendo sentire un suono ad una
 frequenza di riferimento alternato ad un altro suono e aumentando o
 diminuendo il volume del secondo finché non fosse stato intenso quanto
-il primo, e si è registrata l’ampiezza effettiva. Si è poi ripetuto
-variando l’intensità del suono di riferimento</p></li>
+il primo, registrando a questo punto l’ampiezza effettiva. Si è poi
+ripetuto variando l’intensità del suono di riferimento</p></li>
 </ul>
 </section>
 <section id="curve-isofoniche-1" class="slide level1">
@@ -218,17 +220,16 @@ variando l’intensità del suono di riferimento</p></li>
 <div class="side-by-side">
 <div class="content">
 <ul>
-<li>Asse x: frequenza del suono in Hz.</li>
-<li>Asse y: Ampiezza dell’onda di pressione.</li>
-<li>Le varie curve indicano diverse intensità dell’onda di riferimento,
-dalla soglia di udibilità alla soglia del dolore.</li>
+<li><p>Asse x: frequenza del suono in Hz.</p></li>
+<li><p>Asse y: Ampiezza dell’onda di pressione.</p></li>
+<li><p>Le varie curve indicano diverse intensità dell’onda di
+riferimento, dalla soglia di udibilità alla soglia del dolore.</p>
+<p>:::</p></li>
 </ul>
-</div>
 <div class="media">
 <p><img data-src="media/curve-isofoniche.svg" height="620" /></p>
 </div>
 </div>
-</section>
 <section id="ultrasuoni" class="slide level1">
 <h1>Ultrasuoni</h1>
 <div class="side-by-side">
@@ -267,9 +268,7 @@ quindi si misura in gradi</p></li>
 misurare l’onda in un certo punto, e dice se ci troviamo al momento del
 massimo di pressione, del minimo, etc.</p></li>
 </ul>
-</section>
-<section class="slide level1">
-
+<hr />
 <iframe src="iframes/sinusoid-phase.html" width="100%" height="640">
 </iframe>
 </section>
@@ -306,9 +305,7 @@ massimo di pressione, del minimo, etc.</p></li>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="ampiezza" class="slide level1">
-<h1>3. Ampiezza</h1>
+<pre><code># 3. Ampiezza</code></pre>
 </section>
 <section id="ampiezza-di-unonda" class="slide level1">
 <h1>Ampiezza di un’onda</h1>
@@ -322,7 +319,8 @@ class="math inline">A</span>:</p>
 come l’aria o l’acqua, l’ampiezza <span class="math inline">A</span> può
 essere misurata in Pascal (pressione) o in kg/m³ (densità)</p></li>
 <li><p>In un mezzo solido come un muro invece l’ampiezza è uno
-<strong>spostamento</strong>, e si misura in metri</p></li>
+<strong>spostamento</strong>, e si misura in metri (ma tipicamente lo
+spostamento è minore di un millesimo di mm!)</p></li>
 </ul>
 </section>
 <section id="variazione-dellampiezza" class="slide level1">
@@ -352,6 +350,25 @@ I = \frac{W}{S}
 <p>che si misura in W/m² (Watt per metro quadro).</p></li>
 </ul>
 </section>
+<section id="ampiezza-e-intensità" class="slide level1">
+<h1>Ampiezza e intensità</h1>
+<ul>
+<li><p>L’intensità <strong>non</strong> è l’ampiezza, ma ad essa è
+strettamente legata</p></li>
+<li><p>Esiste infatti una relazione, tra la pressione <span
+class="math inline">P</span> di un’onda e la sua intensità <span
+class="math inline">I</span>:</p>
+<p><span class="math display">
+I = \frac12\frac{P^2}{\rho v_\text{suono}},
+</span></p>
+<p>dove <span class="math inline">\rho</span> è la densità
+dell’aria.</p></li>
+<li><p>Anche se non spiegheremo questa relazione, notate comunque che è
+qualitativamente simile a <span class="math display">
+E_c = \frac12 m v^2
+</span></p></li>
+</ul>
+</section>
 <section id="variazione-dellampiezza-1" class="slide level1">
 <h1>Variazione dell’ampiezza</h1>
 <div class="side-by-side">
@@ -374,8 +391,8 @@ viscose</strong>!</p></li>
 </div>
 </div>
 </section>
-<section id="legge-del-quadrato" class="slide level1">
-<h1>Legge del quadrato</h1>
+<section id="legge-inverso-quadrato" class="slide level1">
+<h1>Legge dell’inverso del quadrato</h1>
 <ul>
 <li><p>In un caso ideale, l’intensità dell’onda sonora varia come
 <strong>l’inverso del quadrato</strong> della distanza <span
@@ -411,7 +428,7 @@ I_2 = I_1\times\frac{r_1^2}{r_2^2}
 </span></li>
 </ul>
 </section>
-<section id="intensità-percepita" class="slide level1">
+<section id="esempio-intensita-percepita" class="slide level1">
 <h1>Intensità percepita</h1>
 <ul>
 <li><p>Possiamo concludere che se la distanza triplica, l’intensità si
@@ -718,6 +735,8 @@ questi numeri</p>
 <li>Ampiezza e intensità sonora</li>
 <li>Potenze e logaritmi in base 10</li>
 </ul>
+</section>
+</div>
 </section>
     </div>
   </div>

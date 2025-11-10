@@ -68,9 +68,9 @@
 
 -   In un edificio antisismico, si inseriscono degli *isolatori sismici*
 
--   Si tratta di elementi inseriti nelle fondamenta, che **aumentano** il periodo di oscillazione in modo che sia maggiore delle frequenze tipiche delle onde sismiche
+-   Si tratta di elementi inseriti nelle fondamenta, che **aumentano** la massa e quindi diminuiscono la frequenza, in modo che sia minore delle frequenze tipiche delle onde sismiche
 
--   Il risultato è che non è possibile instaurare una risonanza, perché durante un terremoto il suolo vibra troppo rapidamente perché l’edificio lo avverta
+-   Il risultato è che non è possibile instaurare una risonanza, perché durante un terremoto il suolo vibra troppo rapidamente perché l’edificio entri in risonanza
 
 :::
 
@@ -80,6 +80,28 @@
 
 :::
 :::
+
+# Satelliti spaziali
+
+::: side-by-side
+
+::: content
+
+-   Durante il lancio, I razzi che portano in orbita satelliti spaziali ricevono moltissime vibrazioni a frequenze ben note
+
+-   La strumentazione viene costruita in modo tale da non entrare in risonanza con le vibrazioni del razzo vettore
+
+-   A differenza degli isolatori sismici, in questo caso si tende a **ridurre la massa** (ottima cosa!) per aumentare la frequenza naturale di vibrazione, fino a valori così alti da impedire la risonanza
+
+:::
+
+::: media
+
+![](media/arian5.webp)
+
+:::
+:::
+
 
 # Le onde
 
@@ -113,7 +135,7 @@
 
 -   A noi interessano le onde sonore, che sono **sempre** longitudinali. Ma è bene sapere che esistono anche le onde trasversali!
 
--   Alcune proprietà delle onde valgono infatti solo per un tipo e non per l’altro, ed è bene non confonderle
+-   Alcune proprietà delle onde valgono infatti solo per un tipo e non per l’altro, ed è bene non confonderle; inoltre la corda risonante è molto importante in acustica
 
 ---
 
@@ -170,7 +192,7 @@ Sono sia trasversali che longitudinali, ovviamente!
 
 -   Quando sto in piedi in una stanza, esercito una pressione: se $m = 80\,\text{kg}$ e la superficie dei piedi è di $2 \times 200\,\mathrm{cm^2} = 0{,}04\,\mathrm{m^2}$, si ha
     \[
-    P = \frac{m g}{S} = \frac{80\,\text{kg}\times 10\,\mathrm{m/s^2}}{0{,}02\,\mathrm{m^2} + 0{,}02\,\mathrm{m^2}} = 20.000\,\text{Pa} = 20\,\text{kPa}
+        P = \frac{m g}{S} = \frac{80\,\text{kg}\times 10\,\mathrm{m/s^2}}{0{,}02\,\mathrm{m^2} + 0{,}02\,\mathrm{m^2}} = 20.000\,\text{Pa} = 20\,\text{kPa}
     \]
 
 -   Il mio computer ha una massa di circa 2 kg e una superficie di circa $800\,\mathrm{cm^2} = 0{,}08\,\mathrm{m^2}$. La pressione esercitata sul tavolo è
@@ -284,7 +306,27 @@ Sono sia trasversali che longitudinali, ovviamente!
 
 -   La velocità media dipende dalla molecola (ossigeno, azoto…) e dalla temperatura, ma l’ordine di grandezza è 1000 m/s
 
--   Essendo molto poco massive, il loro urto non ci fa male. Ma proprio perché sono moltissime (25 miliardi di miliardi ogni cm³!), la somma di tutti questi minuscoli urti genera una pressione misurabile
+-   Sono inoltre moltissime: 25 miliardi di miliardi ogni cm³! Ma, essendo molto poco massive, il loro urto non ci fa male.
+
+:::
+
+::: media
+
+![](media/air-molecules.webp)
+
+:::
+:::
+
+
+# Molecole d’aria
+
+::: side-by-side
+
+::: content
+
+-   Proprio perché sono moltissime, è la somma di tutti questi minuscoli urti che genera una pressione misurabile
+
+-   Anche la gravità gioca un ruolo, ma non è così rilevante: ogni particella viaggia in media meno di un milionesimo di metro (un “micrometro”, µm) prima di urtarne un’altra. È una distanza troppo piccola per notare la caduta della gravità
 
 :::
 
@@ -318,6 +360,16 @@ Sono sia trasversali che longitudinali, ovviamente!
 :::
 
 
+# Pressione e gravità
+
+-   Per riassumere:
+
+    #.   A causa della gravità, il **valore** della pressione diminuisce con la quota…
+
+    #.   …ma comunque, **ad ogni quota**, la pressione agisce sempre in tutte le direzioni! (Solo che, più in alto si va, minore è questa pressione)
+
+-   Una curiosità: a una minore pressione corrisponde sempre una minore densità d’aria (meno particelle nello stesso volume), che è il motivo per cui in cima all’Everest si respira a fatica!
+
 # La pressione su di noi
 
 -   Ma quindi la pressione dell’aria ci sta schiacciando anche in questo momento?
@@ -329,28 +381,6 @@ Sono sia trasversali che longitudinali, ovviamente!
 -   Qualcuno ricorda la [scena finale](https://youtu.be/RkCgZ6yMNx8?si=KnQxzXrQ8oo3cXsq) di [Total Recall](https://www.imdb.com/title/tt0100802/) (Verhoeven, 1990)?
 
 -   Tutti gli organismi viventi hanno meccanismi di regolazione della pressione adatti all’ambiente in cui vivono
-
-
-# Le profondità del mare
-
-::: side-by-side
-
-::: content
-
--   Anche l’acqua ed altri fluidi esercitano una pressione, e come nel caso dell’aria essa aumenta con la profondità
-
--   Sul fondo della Fossa delle Marianne (11 km di profondità) la pressione è 1.086 atm.
-
--   Il [batiscafo Trieste](https://it.wikipedia.org/wiki/Trieste_%28batiscafo%29), progettato da [A. Piccard](https://it.wikipedia.org/wiki/Auguste_Piccard) e pilotato da [J. Piccard](https://it.wikipedia.org/wiki/Jacques_Piccard) (figlio) e [Don Walsh](https://it.wikipedia.org/wiki/Don_Walsh), fu il primo a raggiungere il fondo nel 1952
-
-:::
-
-::: media
-
-![](media/batiscafo-trieste.webp)
-
-:::
-:::
 
 # Vita a 6.600 m di profondità
 
@@ -458,9 +488,9 @@ Possiamo quindi dare una definizione delle onde sonore:
 
 -   Quando il suono si propaga in un fluido come l’aria o l’acqua, esso è un’onda di pressione
 
--   Quando il suono si propaga in un solido come il muro, esso è una vibrazione causata da forze elastiche
+-   Quando il suono si propaga in un solido come il muro, esso è una vibrazione elastica
 
--   In entrambi i casi, si tratta di un’onda longitudinale
+-   Nel caso dei fluidi, è sempre un’onda longitudinale
 
 
 # Conclusioni
@@ -474,7 +504,7 @@ Possiamo quindi dare una definizione delle onde sonore:
 
 ---
 title: Fisica -- Lezione 6
-subtitle: Pressione, onde sonore, sovrapposizione e interferenza
+subtitle: Pressione e onde sonore
 author: Maurizio Tomasi ([`maurizio.tomasi@unimi.it`](mailto:maurizio.tomasi@unimi.it))
 date: Martedì 11 novembre 2025
 ...

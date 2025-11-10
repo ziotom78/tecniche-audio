@@ -21,19 +21,19 @@
 [pdf9]: pdfs/tomasi-fisica-lezione-09.pdf
 
 <center>
-| Data            | Lezione                                                | PDF        |
-|-----------------|--------------------------------------------------------|------------|
-| 6 ottobre 2025  | [01. Cosa significa misurare?][html1]                  | [#1][pdf1] |
-| 13 ottobre 2025 | [02. Conversioni, tempo, cinematica e dinamica][html2] | [#2][pdf2] |
-| 20 ottobre 2025 | [03. Dinamica, lavoro ed energia][html3]               | [#3][pdf3] |
-| 27 ottobre 2025 | [04. Energia (continua)][html4]                        | [#4][pdf4] |
-| 3 novembre 2025 | [05. Oscillazioni][html5]                              | [#5][pdf5] |
+| Data             | Lezione                                                            | PDF        |
+|------------------|--------------------------------------------------------------------|------------|
+| 6 ottobre 2025   | [01. Cosa significa misurare?][html1]                              | [#1][pdf1] |
+| 13 ottobre 2025  | [02. Conversioni, tempo, cinematica e dinamica][html2]             | [#2][pdf2] |
+| 20 ottobre 2025  | [03. Dinamica, lavoro ed energia][html3]                           | [#3][pdf3] |
+| 27 ottobre 2025  | [04. Energia (continua)][html4]                                    | [#4][pdf4] |
+| 3 novembre 2025  | [05. Oscillazioni][html5]                                          | [#5][pdf5] |
+| 11 novembre 2025 | [06. Pressione e onde sonore][html6]                               | [#6][pdf6] |
 <!--
-| 11 novembre 2025 | [06. Pressione, onde sonore, sovrapposizione e interferenza][html6]      | [#6][pdf6] |
-| 18 novembre 2025 | [07. Onde stazionarie, ampiezza del suono][html7]                        | [#7][pdf7] |
-| 25 novembre 2025 | [08. L’effetto Doppler][html8]                                           | [#8][pdf8] |
-| 3 dicembre 2025  | [09. Filtraggio][html9]                                                  | [#9][pdf9] |
-| 16 dicembre 2025 | Compitino finale e correzione                                            |            |
+| 18 novembre 2025 | [07. Onde sinusoidali e intensità del suono][html7]                | [#7][pdf7] |
+| 25 novembre 2025 | [08. Decibel, sovrapposizione e interferenza][html8]               | [#8][pdf8] |
+| 3 dicembre 2025  | [09. Scomposizione di Fourier, filtraggio, effetto Doppler][html9] | [#9][pdf9] |
+| 16 dicembre 2025 | Compitino finale                                                   |            |
 -->
 </center>
 

@@ -305,7 +305,7 @@ Esempio: si può ricordare la collocazione dei paesi baltici sotto la Finlandia 
 
 ![](media/obsidian-graph.jpg){height=640px}
 
-# Studio a memoria
+# Studio a memoria {#flash-cards}
 
 -   Ci sono alcuni concetti che vanno per forza studiati a memoria, perché è molto difficile stabilire connessioni con concetti già noti!
 -   Ad esempio, in che anno è stato proclamato il Regno d’Italia? (1861)

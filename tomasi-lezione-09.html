@@ -31,6 +31,24 @@
   </style>
   <link rel="stylesheet" href="reveal.js-5.2.1/dist/theme/white.css" id="theme">
   <link rel="stylesheet" href="css/custom-revealjs.css"/>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
 </head>
 <body>
   <div class="reveal">
@@ -44,31 +62,492 @@ href="mailto:maurizio.tomasi@unimi.it"><code>maurizio.tomasi@unimi.it</code></a>
   <p class="date">Mercoledì 3 dicembre 2025</p>
 </section>
 
-<section id="introduzione-allargomento-di-oggi"
-class="title-slide slide level1">
+<section id="introduzione-allargomento-di-oggi" class="slide level1">
 <h1>Introduzione all’argomento di oggi</h1>
-
 </section>
-
-<section id="inquisitori-accademici-onorari"
-class="title-slide slide level1">
+<section id="inquisitori-accademici-onorari" class="slide level1">
 <h1>Inquisitori accademici onorari</h1>
-
 </section>
-
-<section id="filtraggio-del-suono" class="title-slide slide level1">
-<h1>Filtraggio del suono</h1>
-
+<section id="il-timbro" class="slide level1">
+<h1>Il timbro</h1>
 </section>
+<section id="timbro-del-suono" class="slide level1">
+<h1>Timbro del suono</h1>
+<ul>
+<li><p>Abbiamo visto l’interferenza tra due onde sonore, ma ovviamente
+si può sovrapporre qualsiasi numero di onde!</p></li>
+<li><p>Il motivo per cui due strumenti diversi come un violino e un
+flauto suonino “diversi” anche quando la nota è la stessa è dovuta
+proprio al diverso modo con cui le tante onde prodotte dallo strumento
+si combinano</p></li>
+<li><p>Il “colore” di un suono è detto <strong>timbro</strong>, e
+dipende dal fatto che gli strumenti non emettono mai semplici onde
+sinusoidali, ma sovrapposizioni di onde</p></li>
+</ul>
+</section>
+<section class="slide level1">
 
-<section id="conclusioni" class="title-slide slide level1">
+<iframe src="iframes/timbre.html" width="720px" height="760px">
+</iframe>
+</section>
+<section id="espressione-matematica" class="slide level1">
+<h1>Espressione matematica</h1>
+<ul>
+<li><p>Dal punto di vista matematico, il suono emesso dall’applicazione
+nella pagina precedente si può scrivere una somma di tre sinusoidi</p>
+<p><span class="math display">
+\begin{aligned}
+P(t) = &amp;A_1 \sin(2\pi\nu_1 t + \varphi_1) +\\
+&amp;A_2 \sin(2\pi\nu_2 t + \varphi_2) +\\
+&amp;A_3 \sin(2\pi\nu_3 t + \varphi_3)
+\end{aligned}
+</span></p></li>
+<li><p>In un generico caso della vita reale, anziché tre sinusoidi se ne
+avranno molte di più, ciascuna caratterizzata dalla sua ampiezza <span
+class="math inline">A</span>, frequenza <span
+class="math inline">\nu</span> e fase <span
+class="math inline">\varphi</span></p></li>
+</ul>
+</section>
+<section id="perché-tante-frequenze" class="slide level1">
+<h1>Perché tante frequenze?</h1>
+<ul>
+<li><p>Il motivo per cui la voce o uno strumento musicale emettono più
+di una frequenza ha a che fare con il processo fisico che emette
+l’onda.</p></li>
+<li><p>L’effettiva frequenza di vibrazione di una corda dipende dalla
+sua tensione (variabile attraverso le chiavi, per gli strumenti a corda)
+e dal suo materiale</p></li>
+<li><p>La lunghezza d’onda λ, come sappiamo, dipende dalla frequenza e
+dalla velocità di propagazione dell’onda attraverso la corda. Anch’essa
+quindi dipende dalla tensione della corda, ma non solo!</p></li>
+<li><p>In un qualsiasi strumento a corda come il violino o il pianoforte
+infatti, la corda non può vibrare con qualsiasi lunghezza d’onda, perché
+gli estremi sono fissi!</p></li>
+</ul>
+</section>
+<section id="suono-di-una-corda" class="slide level1">
+<h1>Suono di una corda</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Quando il musicista sollecita la corda, produce una somma di
+oscillazioni con lunghezze d’onda (e quindi frequenze) disposte nella
+cosiddetta “serie armonica”</p></li>
+<li><p>La serie armonica è definita a partire dalla lunghezza d’onda
+fondamentale, <span class="math inline">\lambda_0 = 2L</span> con <span
+class="math inline">L</span> lunghezza della corda, e via via dividendo
+questa lunghezza fondamentale per un numero intero.</p></li>
+<li><p>Le “armoniche” sono le frequenze corrispondenti alle <span
+class="math inline">\lambda</span>: <span
+class="math inline">\nu</span>, <span class="math inline">2\nu</span>,
+<span class="math inline">3\nu</span>, etc.</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/harmonic-partials-on-string.svg" /></p>
+</div>
+</div>
+</section>
+<section id="serie-armonica" class="slide level1">
+<h1>Serie armonica</h1>
+<ul>
+<li><p>La “serie armonica” è la sequenza di frequenze, partendo da
+quella fondamentale, che si generano quando si sollecita una
+corda.</p></li>
+<li><p>Queste sono le prime, nel caso in cui la nota base sia “Do”:</p>
+<table>
+<thead>
+<tr>
+<th>Lunghezza d’onda</th>
+<th style="text-align: right;">Frequenza</th>
+<th>Altezza del suono</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>λ₀</td>
+<td style="text-align: right;">ν₀</td>
+<td>Do</td>
+</tr>
+<tr>
+<td>λ₀/2</td>
+<td style="text-align: right;">2ν₀</td>
+<td>Do’</td>
+</tr>
+<tr>
+<td>λ₀/3</td>
+<td style="text-align: right;">3ν₀</td>
+<td>Sol’</td>
+</tr>
+<tr>
+<td>λ₀/4</td>
+<td style="text-align: right;">4ν₀</td>
+<td>Do’’</td>
+</tr>
+<tr>
+<td>λ₀/5</td>
+<td style="text-align: right;">5ν₀</td>
+<td>Mi’’</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</section>
+<section id="onde-stazionarie" class="slide level1">
+<h1>Onde stazionarie</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>In tutti quei casi, come nelle corde di una chitarra, in cui un
+sistema oscillante ha dei punti “fissi”, in cui l’oscillazione non può
+avvenire, si parla di <strong>onde stazionarie</strong></p></li>
+<li><p>Sono dette stazionarie perché l’energia non si propaga, ma resta
+“intrappolata” nella lunghezza dell’onda</p></li>
+<li><p>Fisicamente, è un’onda che si propaga in una direzione
+sovrapposta alla sua onda riflessa (da uno dei due estremi della corda),
+che viaggia nell’altra direzione.</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/standing-wave.webp" /></p>
+</div>
+</div>
+</section>
+<section id="nodi-e-ventri" class="slide level1">
+<h1>Nodi e ventri</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li>Data una certa frequenza di oscillazione (o lunghezza d’onda), ci
+sono alcuni punti della corda che non vibrano mai: questi sono detti
+<strong>nodi</strong> (perché i nodi “tengono ferme” le corde!)</li>
+<li>I punti in cui c’è l’oscillazione massima sono detti
+<strong>ventri</strong></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/nodi-e-ventri.webp" /></p>
+</div>
+</div>
+</section>
+<section id="figure-di-chladni" class="slide level1">
+<h1>Figure di Chladni</h1>
+<ul>
+<li><p><a href="https://en.wikipedia.org/wiki/Ernst_Chladni">Ernst
+Chladni</a> (1756–1827) è stato un fisico/musicista, tra i fondatori
+della moderna acustica</p></li>
+<li><p>Egli mostrò che in una superficie elastica fatta vibrare (es., la
+pelle di un tamburo) si osservano delle linee in corrispondenza dei nodi
+di vibrazione: mise della polvere scura sulla pelle tesa che,
+percuotendo il tamburo, tendeva a disporsi lungo i nodi</p></li>
+<li><p>Potete vederne alcuni esempi sul sito <a
+href="https://javalab.org/en/standing_waves_on_a_drum_surface_en/">Javalab</a>.</p></li>
+</ul>
+</section>
+<section id="e-per-gli-strumenti-ad-aria" class="slide level1">
+<h1>E per gli strumenti ad aria?</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Nel caso degli strumenti ad aria, come il flauto o l’organo, la
+presenza di un tubo con due estremità lo rende simile ad una
+corda</p></li>
+<li><p>Il comportamento è però più complesso:</p>
+<ul>
+<li>Un’estremità <strong>chiusa</strong> impedisce (per attrito) alle
+particelle di gas di vibrare, ed è quindi un <strong>nodo</strong></li>
+<li>Presso l’estremità <strong>aperta</strong>, le particelle sono
+libere di entrare ed uscire, e l’oscillazione di pressione è massima: è
+quindi un <strong>ventre</strong></li>
+</ul></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/stationary-wave-types.webp" /></p>
+</div>
+</div>
+</section>
+<section id="strumenti-ad-aria" class="slide level1">
+<h1>Strumenti ad aria</h1>
+<ul>
+<li><p>In uno strumento ad aria con un’estremità chiusa ed una aperta
+(come il clarinetto), le possibili lunghezze d’onda seguono la
+regola</p>
+<p><span class="math display">
+\lambda_n = \frac{4L}{2n + 1},\qquad\text{ossia}\ 4L, \frac{4L}3,
+\frac{4L}5, \frac{4L}7, \ldots
+</span></p></li>
+<li><p>In uno strumento ad aria con le due estremità aperte (come il
+flauto), le possibili lunghezze d’onda seguono invece la regola</p>
+<p><span class="math display">
+\lambda_n = \frac{2L}{n + 1},\qquad\text{ossia}\ 2L, L, \frac{L}2,
+\frac{L}4, \ldots
+</span></p></li>
+</ul>
+</section>
+<section id="esempio-di-caso-chiuso-aperto" class="slide level1">
+<h1>Esempio di caso chiuso-aperto</h1>
+<video controls loop>
+<source src="media/standing-longitudinal-waves.mp4" type="video/mp4">
+</video>
+<p><small><a
+href="https://www.youtube.com/watch?v=fMJrtheQfZw">Longitudinal wave
+using slinky coil</a></small></p>
+</section>
+<section id="strumenti-ad-aria-1" class="slide level1">
+<h1>Strumenti ad aria</h1>
+<ul>
+<li><p>Le onde stazionarie nelle corde e nei tubi sono le uniche
+<strong>stabili</strong> e prolungate nel tempo. Ma, come abbiamo visto,
+si possono produrre solo se la loro <span
+class="math inline">\lambda</span> soddisfa la relazione specifica per
+il loro tipo: questo determina principalmente il timbro dello
+strumento</p></li>
+<li><p>Sono però possibili anche onde che non soddisfano queste
+relazioni: esse però sono <strong>effimere</strong>, nel senso che
+disperdono rapidamente la loro energia scomparendo presto</p></li>
+<li><p>Anche queste onde effimere però contribuiscono a conferire al
+suono dello strumento il suo “timbro” caratteristico (flauto,
+clarinetto, oboe, …)</p></li>
+</ul>
+</section>
+<section id="scomposizione-di-fourier" class="slide level1">
+<h1>Scomposizione di Fourier</h1>
+</section>
+<section id="scomposizione-di-fourier-1" class="slide level1">
+<h1>Scomposizione di Fourier</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Abbiamo visto che la sovrapposizione di un suono fondamentale e
+di armoniche fornisce il “timbro” di quel suono</p></li>
+<li><p>Un matematico francese, <a
+href="https://it.wikipedia.org/wiki/Jean_Baptiste_Joseph_Fourier">Jean-Baptiste
+Joseph Fourier</a> (1768–1830), dimostrò una proprietà fondamentale
+delle onde, non solo sonore: ogni fenomeno periodico può essere
+scomposto nella somma di oscillazioni sinusoidali</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/fourier.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="trasformata-di-fourier" class="slide level1">
+<h1>Trasformata di Fourier</h1>
+<ul>
+<li><p>La “trasformata di Fourier” è un’operazione matematica che
+consente, data la misurazione dell’intensità (nel SI) di un’onda sonora,
+di decomporre quest’onda in una somma di onde sinusoidali</p></li>
+<li><p>Dal punto di vista pratico, il risultato del calcolo di una
+trasformata di Fourier è la stima dei valori delle ampiezze, frequenze e
+fasi nella formula <span class="math display">
+\begin{aligned}
+P(t) = &amp;\textcolor{#a08}{A_1} \sin(2\pi\textcolor{#a08}{\nu_1} t +
+\textcolor{#a08}{\varphi_1}) +\\
+&amp;\textcolor{#a08}{A_2} \sin(2\pi\textcolor{#a08}{\nu_2} t +
+\textcolor{#a08}{\varphi_2}) +\\
+&amp;\ldots
+\end{aligned}
+</span></p></li>
+</ul>
+</section>
+<section id="trasformate-di-fourier-con-audacity" class="slide level1">
+<h1>Trasformate di Fourier con Audacity</h1>
+<ul>
+<li><p>È possibile calcolare la trasformata di Fourier usando il
+programma <em>open source</em> Audacity, scaricabile dal link <a
+href="https://www.audacityteam.org/">www.audacityteam.org</a></p></li>
+<li><p>Vediamo ora un esempio interattivo</p></li>
+</ul>
+</section>
+<section id="esempio-con-audacity" class="slide level1">
+<h1>Esempio con Audacity</h1>
+<p><img data-src="media/audacity-01.webp" height="560" /></p>
+</section>
+<section id="esempio-con-audacity-1" class="slide level1">
+<h1>Esempio con Audacity</h1>
+<p><img data-src="media/audacity-02.webp" height="560" /></p>
+</section>
+<section id="esempio-con-audacity-2" class="slide level1">
+<h1>Esempio con Audacity</h1>
+<p><img data-src="media/audacity-03.webp" height="560" /></p>
+</section>
+<section id="esempio-con-audacity-3" class="slide level1">
+<h1>Esempio con Audacity</h1>
+<p><img data-src="media/audacity-04.webp" height="560" /></p>
+</section>
+<section id="tuba-mirum" class="slide level1">
+<h1>Tuba Mirum</h1>
+<ul>
+<li><p>Consideriamo come esempio un’esecuzione del <em>Requiem</em> KV
+626 di Mozart</p></li>
+<li><p>In particolare, all’inizio del <em>Tuba mirum</em> c’è un famoso
+assolo di trombone, dove lo strumento suona senza
+accompagnamento</p></li>
+<li><p>Prendiamo due esecuzioni su YouTube di questo brano:</p>
+<ul>
+<li><p>Esecuzione diretta da Karl Bohm (Wiener Symphoniker): <a
+href="https://www.youtube.com/watch?v=0-i5S4uXlNg"
+class="uri">https://www.youtube.com/watch?v=0-i5S4uXlNg</a></p></li>
+<li><p>Esecuzione dei Seraphic fire: <a
+href="https://www.youtube.com/watch?v=_jFMZ4jguwY"
+class="uri">https://www.youtube.com/watch?v=_jFMZ4jguwY</a></p></li>
+</ul></li>
+</ul>
+</section>
+<section id="tuba-mirum-1" class="slide level1">
+<h1>Tuba Mirum</h1>
+<p><img data-src="media/tuba-mirum-spectrum.svg" /></p>
+<p>Rappresentazione spettrale della prima nota (Si♭³) del trombone nelle
+due esecuzioni del <em>Tuba Mirum</em>, calcolata con Audacity.</p>
+</section>
+<section id="applicazioni-della-trasformata" class="slide level1">
+<h1>Applicazioni della trasformata</h1>
+<ul>
+<li><p>Anche l’orecchio umano opera una decomposizione in frequenze: è
+in questo modo che un orecchio allenato distingue le note di un
+accordo</p></li>
+<li><p>Un equalizzatore acustico è in grado di modificare i suoni gravi,
+medi ed acuti decomponendo il suono e agendo sulle ampiezze di alcune
+frequenze e non altre, come vedremo tra poco</p></li>
+<li><p>I file MP3 riescono a registrare musica usando 10 volte meno
+spazio dei vecchi CD, perché usano la decomposizione di Fourier per
+capire quali frequenze registrare (quelle udibili) e quali è inutile
+salvare perché inudibili</p></li>
+</ul>
+</section>
+<section id="suono-e-rumore" class="slide level1">
+<h1>Suono e rumore</h1>
+</section>
+<section id="suono-e-rumore-1" class="slide level1">
+<h1>Suono e rumore</h1>
+<ul>
+<li><p>Nella vita quotidiana, usiamo spesso le parole “suono” e “rumore”
+per parlare di fenomeni acustici</p></li>
+<li><p>Ma sappiamo qual è la differenza tra i due? In particolare,
+stiamo parlando di un fenomeno fisico oggettivo, o della
+<strong>sensazione</strong> che un certo fenomeno fisico (quale?) ci
+provoca?</p></li>
+</ul>
+</section>
+<section id="rumore-e-suono" class="slide level1">
+<h1>Rumore e suono</h1>
+<ul>
+<li><p>La differenza tra suono e rumore è la seguente:</p>
+<ul>
+<li><p>Il <strong>suono</strong> è la sensazione di un’onda sonora
+regolare, che possiede una sua periodicità</p></li>
+<li><p>Il <strong>rumore</strong> è l’esatto opposto: è la sensazione di
+un’onda sonora priva di periodicità</p></li>
+</ul></li>
+<li><p>Vediamo subito la differenza con un esempio interattivo</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<iframe src="iframes/sound-example.html" width="100%" height="580px" style="border:1px solid #ccc; border-radius: 8px;">
+</iframe>
+</section>
+<section id="filtraggio" class="slide level1">
+<h1>Filtraggio</h1>
+</section>
+<section id="filtraggio-1" class="slide level1">
+<h1>Filtraggio</h1>
+<ul>
+<li><p>Una volta calcolata la trasformata di Fourier, è possibile
+modificare l’ampiezza delle sinusoidi per cambiare il timbro del suono,
+e poi “rimettere insieme” le sinusoidi ottenendo un suono filtrato:</p>
+<center>
+<p><img data-src="media/filtering.svg" /></p>
+</center></li>
+<li><p>In questo modo si possono ad esempio amplificare i suoni più
+bassi, o quelli più alti: questo avviene ad esempio in fase di
+<em>editing</em> della registrazione di un concerto</p></li>
+</ul>
+</section>
+<section id="esempio" class="slide level1">
+<h1>Esempio</h1>
+<p><img data-src="media/filtered-spectrum.svg" /></p>
+<p>Ho usato Audacity per applicare un filtro passa-basso al Si♭³ del
+trombone nel <em>Tuba mirum</em> di Mozart: il filtro opera sopra i 1000
+Hz, riducendo 6 dB ogni ottava sopra. (Menu “Effect | EQ and filters |
+Low-pass filter”)</p>
+</section>
+<section id="leffetto-doppler" class="slide level1">
+<h1>L’effetto Doppler</h1>
+</section>
+<section class="slide level1">
+
+<iframe src="iframes/doppler-effect.html" width="100%" height="560">
+</iframe>
+</section>
+<section id="leffetto-doppler-1" class="slide level1">
+<h1>L’effetto Doppler</h1>
+<ul>
+<li><p>Quando un emettitore di suoni si sposta <strong>verso</strong>
+l’ascoltatore (nella slide precedente, l’ascoltatore starebbe a
+<strong>destra</strong>), le onde arrivano separate da una distanza
+inferiore, perché ogni onda successiva parte un po’ più vicina
+all’osservatore della precedente</p></li>
+<li><p>Viceversa, chi vede l’emettitore allontanarsi (nella slide
+precedente, un ascoltatore a <strong>sinistra</strong>) riceve le onde
+come se avessero una lunghezza d’onda maggiore</p></li>
+<li><p>Se cambia la lunghezza d’onda λ, cambia necessariamente anche la
+frequenza: si avverte un suono più acuto (avvicinamento) o più grave
+(allontanamento) del normale</p></li>
+</ul>
+</section>
+<section id="formule" class="slide level1">
+<h1>Formule</h1>
+<ul>
+<li><p>Nel caso di <strong>avvicinamento</strong> con velocità <span
+class="math inline">v</span>, si ha</p>
+<p><span class="math display">
+\lambda = \lambda_0\left(1 - \frac{v}{v_\text{suono}}\right), \qquad
+\nu = \frac{\nu_0}{1 - v/v_\text{suono}}.
+</span></p>
+<p>con <span class="math inline">\lambda_0</span> e <span
+class="math inline">\nu_0</span> riferiti al caso in cui non c’è
+moto.</p></li>
+<li><p>Nel caso di <strong>allontanamento</strong> con velocità <span
+class="math inline">v</span>, si ha</p>
+<p><span class="math display">
+\lambda = \lambda_0\left(1 + \frac{v}{v_\text{suono}}\right), \qquad
+\nu = \frac{\nu_0}{1 + v/v_\text{suono}}.
+</span></p></li>
+</ul>
+</section>
+<section id="esempio-1" class="slide level1">
+<h1>Esempio</h1>
+<ul>
+<li><p>Il clacson di un’auto che viaggia a 50 km/h suona un La a 440
+Hz.</p></li>
+<li><p>Chi è fermo sul bordo della strada e vede l’automobile
+<strong>avvicinarsi</strong>, percepirà una frequenza</p>
+<p><span class="math display">
+\nu = \frac{440\,\text{Hz}}{1 - 13{,}9\,\text{m/s} / 343\,\text{m/s}} =
+458{,}6\,\text{Hz}
+</span></p></li>
+<li><p>Chi vede l’auto allontanarsi invece percepisce</p>
+<p><span class="math display">
+\nu = \frac{440\,\text{Hz}}{1 + 13{,}9\,\text{m/s} / 343\,\text{m/s}} =
+422{,}9\,\text{Hz}
+</span></p></li>
+</ul>
+</section>
+<section id="conclusioni" class="slide level1">
 <h1>Conclusioni</h1>
-
 </section>
-
-<section id="cosa-sapere-per-lesame" class="title-slide slide level1">
+<section id="cosa-sapere-per-lesame" class="slide level1">
 <h1>Cosa sapere per l’esame</h1>
-
+<ul>
+<li>Timbro, scomposizione di Fourier</li>
+<li>Onde stazionarie</li>
+<li>Filtraggio</li>
+<li>Effetto Doppler</li>
+</ul>
 </section>
     </div>
   </div>

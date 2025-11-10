@@ -275,7 +275,7 @@ Originale su [YouTube](https://youtu.be/zTyqUf3E2xk?si=OAZtpeEWosCZvc_k)
 ::: content
 
 -   Le “oscillazioni libere” sono tutte quelle oscillazioni originate da una forza che, dopo aver dato un impulso iniziale, cessa di operare
--   In seguito a quell’impulso, l’oscillazione continua grazie alla sola forza elastica
+-   In seguito a quell’impulso, l’oscillazione continua grazie alla sola forza elastica o gravitazionale
 -   Il moto di un pendolo o di una molla è solo in prima approssimazione libero
 
 :::

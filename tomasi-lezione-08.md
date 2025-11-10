@@ -26,74 +26,328 @@
     \log_{10} n
     \]
 
-# Importanza dei logaritmi
-
--   Un logaritmo è l’operazione inversa di un elevamento a potenza
-
--   La domanda: “a quanto devo elevare 6,3 per ottenere 1580?” ha come risposta la quantità
-    \[
-    \log_{6{,}3} 1580
-    \]
-
-    che vale circa 4. Infatti $6{,}3^4 = 1580$.
-
--   In generale, con $\log_a b$ si indica quel numero a cui bisogna elevare $a$ per ottenere $b$.
-
 # Proprietà dei logaritmi
 
--   Abbiamo visto che con le potenze è facile arrivare a numeri grandissimi:
+-   Dalle proprietà delle potenze discendono le proprietà dei logaritmi:
 
     \[
-    6{,}3^5 = 10.000
+    \log_{10} 10^n \times 10^m = \log_{10} 10^{n + m} = n + m = \log_{10} 10^n + \log_{10} 10^m.
     \]
 
-    È facile rendersi conto di ciò se si usano le potenze di 10:
+-   Lo stesso vale per il logaritmo di una divisione, solo che al posto della somma $n + m$ compare la differenza $n - m$
+
+-   Quindi, **i logaritmi trasformano i prodotti in somme, e le divisioni in differenze**
+
+# Esempi
+
+-   Supponiamo di voler calcolare un prodotto molto complicato:
 
     \[
-    10^{11} = 10\times 10\times \ldots \times 10 = 100.000.000.000
+    3.562.512 \times 7.412.559.919
     \]
 
--   Con i logaritmi è l’opposto: anche se si parte da numeri grandissimi, i logaritmi sono di solito molto piccoli:
+-   Se passiamo ai logaritmi in base dieci, abbiamo che
 
     \[
-    \log_{10} 100.000.000.000 = 11.
+    \log_{10} 3.562.512 \approx 6{,}?,\qquad
+    \log_{10} 7.412.559.919 \approx 9{,}?
     \]
 
-# I logaritmi in base 10
+-   Quindi il logaritmo in base 10 del risultato sarà $6{,}? + 9{,}?$, ossia qualcosa tra 15 e 16: il risultato è quindi un numero a 16–17 cifre. Infatti
 
--   I logaritmi in base 10 sono particolarmente facili da calcolare:
+    \[
+    3.562.512 \times 7.412.559.919 = 26.407.333.662.156.528
+    \]
+
+# Calcoli veloci
+
+-   Prima che inventassero le calcolatrici, per calcolare prodotti tra grandi numeri si usavano i logaritmi
+
+-   Si mandavano a memoria i logaritmi in base 10 dei numeri da 1 a 9, e poi si scrivevano i numeri in modo “furbo” per calcolarne più rapidamente i logaritmi. Ad esempio:
 
     \[
     \begin{aligned}
-    \log_{10} 10 &= 1,\\
-    \log_{10} 100 &= 2,\\
-    \log_{10} 1000 &= 3,\\
-    \log_{10} 10.000 &= 4,\\
-    \log_{10} 100.000 &= 5\ldots\\
+    \log_{10} 351.912 &\approx \log_{10} 350.000 = \log_{10} 3{,}5\times 10^5 = \log_{10} 3{,}5 + \log_{10} 10^5 =\\
+    &= \log_{10} 3{,}5 + 5 = 0{,}54 + 5 = 5{,}54
     \end{aligned}
     \]
 
--   In questi casi, il logaritmo è sempre **il numero di cifre del numero, meno uno**
-
-# I logaritmi in base 10
-
--   E per i numeri che non sono così semplici come 100 o 10.000?
-
--   In questo caso i logaritmi ritornano un numero con la virgola:
-
-    \[
-    \log_{10} 32.359 = 4{,}51
-    \]
-
-    Questo perché $10^{4{,}51} = 32.359$: i matematici ci dicono che è possibile definire le potenze anche quando l’esponente ha la virgola
-
--   Il logaritmo uguale a 4,51 può essere interpretato così: “il numero di partenza aveva cinque cifre (4 + 1), ma era un po’ più grande di 10.000, che è il più piccolo numero a cinque cifre”.
+-   Una volta calcolati i logaritmi, si sommavano tra loro per ottenere il logaritmo in base 10 del risultato. Con trucchi e regoli calcolatori, dal logaritmo si risaliva al risultato.
 
 ---
 
-TODO
+![](media/righello-logaritmico.webp){height=560px}
 
-Vedi “Pendolo: gravità che imita una molla” in fondo per una spiegazione di come introdurre l'intensità del suono come pressione², e dei decibel.
+# Legge di Weber-Fechner
+
+-   Siamo finalmente pronti per tornare alla legge di Weber-Fechner, che avevamo visto nella scorsa lezione:
+
+    \[
+    p = k \log_{10} S + C
+    \]
+
+    dove $p$ è la “percezione” che avvertono i miei sensi ed $S$ misura ciò che stimola i miei sensi, ossia nel caso del suono la sua intensità $I$
+
+-   La legge suggerisce che anche in presenza di numeri molto grandi per $S$, il valore di $P$ non cresce molto: questo proprio per le proprietà del logaritmo che abbiamo visto!
+
+# Esempio di Weber
+
+-   L’esempio della legge di Weber che avevamo visto era il seguente:
+
+    -   Aggiungere 100 g ad un carico di 10 kg dà una percezione minima, quasi inavvertibile
+    -   Ma aggiungere 100 g ad un carico di 200 g è invece chiaramente avvertibile!
+
+-   Vediamo come questo si traduce nella formula di Weber-Fechner
+
+# Primo caso
+
+-   A un carico di 10 kg sommo 100 g. I due stimoli sono
+
+    \[
+    \begin{aligned}
+    S_1 &= 10\,\text{kg},\\
+    S_2 &= 10\,\text{kg} + 0{,}1\,\text{kg} = 10{,}1\,\text{kg}.
+    \end{aligned}
+    \]
+
+-   Le mie due percezioni, supponendo che $k = 1$ e $C = 0$, sono
+    \[
+    \begin{aligned}
+    p_1 &= \log_{10} 10 = 1,\\
+    p_2 &= \log_{10} 10{,}1 \approx 1{,}004.
+    \end{aligned}
+    \]
+
+    Le due percezioni differiscono dello 0,4%.
+
+# Secondo caso
+
+-   Adesso devo invece sommare 100 g a un carico di 100 g. Gli stimoli sono
+
+    \[
+    \begin{aligned}
+    S_1 &= 0{,}1\,\text{kg},\\
+    S_2 &= 0{,}1\,\text{kg} + 0{,}1\,\text{kg} = 0{,}2\,\text{kg}.
+    \end{aligned}
+    \]
+
+-   Le percezioni sono
+    \[
+    \begin{aligned}
+    p_1 &= \log_{10} 0{,}1 = -1,\\
+    p_2 &= \log_{10} 0{,}2 \approx -0{,}70.
+    \end{aligned}
+    \]
+
+-   In questo caso, le percezioni differiscono del 30%!
+
+# I decibel
+
+-   Per misurare gli stimoli, si usa il “decibel”, indicato con “dB”. Questa è un’unità **logaritmica**: per convertire dalle unità del SI non si deve moltiplicare o dividere per un fattore, ma **applicare un logaritmo in base 10**
+
+-   Nel caso di un’onda sonora, se la sua intensità espressa in W/m² è $I$, il suo valore $L$ in decibel è
+
+    \[
+    L = 10\log_{10} \frac{I}{I_0},
+    \]
+
+    dove $I_0$ è un valore di riferimento. (Per le onde sonore, di solito si usa la soglia dell’udibilità, ossia la minima intensità percepibile).
+
+# I decibel
+
+-   Il motivo per cui i decibel richiedono di applicare un logaritmo è che in questo modo l’unità di misura dà immediatamente una misura della **sensazione**, nell’ipotesi in cui sia valida la legge di Weber-Fechner
+
+-   In altre parole, un suono di 30 dB risulta doppiamente intenso rispetto allo stesso suono con intensità di 15 dB.
+
+-   (Ricordate invece che misurando l’intensità in W/m² eravamo arrivati a [strane conclusioni](tomasi-lezione-07.html#esempio-intensita-percepita), vero?)
+
+# Soglia di udibilità
+
+-   Nella definizione di decibel compare il rapporto tra $I$ ed un’intensità di riferimento:
+
+    \[
+    L = 10\log_{10} \frac{I}{I_0},
+    \]
+
+    dove $I_0$ è l’intensità associata alla soglia di udibilità (il più debole rumore che si possa percepire).
+
+-   La soglia di udibilità è convenzionalmente fissata a
+
+    \[
+    I_0 = 10^{-12}\,\mathrm{W/m^2},
+    \]
+
+    anche se il valore effettivo varia da persona a persona, e anche dalla frequenza del suono (vedi le slide sulle [curve isofoniche](tomasi-lezione-07.html#curve-isofoniche)).
+
+# Significato di $I_0$
+
+-   L’uso di $I_0$ nella formula dei decibel serve a “normalizzare” la misura: il valore in decibel della soglia di udibilità è
+
+    \[
+    L_0 = 10\log_{10}\frac{I_0}{I_0} = 10\log_{10}1 = 0\,\text{dB}.
+    \]
+
+-   Siccome qualsiasi altro suono avrà un’intensità maggiore di $I_0$, ciò vuol dire che l’intensità in decibel sarà **sempre positiva**
+
+# Soglia del dolore
+
+-   All’opposto della soglia di udibilità c’è la soglia del dolore, che è anch’esso un valore convenzionale, fissato a
+
+    \[
+    I_\text{pain} = 1\,\mathrm{W/m^2}.
+    \]
+
+-   Il valore in decibel corrispondente è
+
+    \[
+    \begin{aligned}
+    L_\text{pain} &= 10\log_{10}\frac{I_\text{pain}}{I_0} = 10\log_{10}\frac{1\,\mathrm{W/m^2}}{10^{-12}\,\mathrm{W/m^2}} = 10\log_{10}10^{12} =\\
+    &= 120\,\text{dB}.
+    \end{aligned}
+    \]
+
+
+# Il fattore 10
+
+-   L’unità di misura non si chiama “bel” ma “*deci*bel” perché davanti al logaritmo compare il fattore 10
+
+-   Questo significa che i decibel non “misurano il numero di cifre” come un semplice logaritmo! Se un’intensità è 1000 volte maggiore della soglia di udibilità $I_0$, allora
+
+    \[
+    L = 10\log_{10}\frac{1000 I_0}{I_0} = 10\log_{10} 1000 = 10 \times 3 = 30\,\text{dB}.
+    \]
+
+-   30 dB indicano un’intensità in W/m² che è 1000 volte maggiore, 40 dB un’intensità 10.000 volte maggiore, 50 dB 100.000 volte maggiore, etc.
+
+
+# Variabilità dei decibel
+
+-   I valori della soglia dell’udibilità ($10^{-12}\,\mathrm{W/m^2}$) e del dolore ($1\,\mathrm{W/m^2}$) dovrebbero farvi apprezzare i decibel
+
+-   Se infatti non esistessero i decibel, potreste imbattervi in misure di intensità dove un numero misurato potrebbe essere ad esempio
+
+    \[
+    0{,}000\,000\,000\,165\,12\,\mathrm{W/m^2}.
+    \]
+
+-   Ma il numero, espresso in decibel, è (fate la prova con una calcolatrice)
+
+    \[
+    22{,}2\,\text{dB}
+    \]
+
+    Le intensità in decibel non superano mai il centinaio o poco più
+
+# Numeri da ricordare
+
+In questa slide e nella seguente elenco una serie di numeri da ricordare. [Se usate Anki](tomasi-lezione-01.html#flash-cards), vi suggerisco di creare delle flash cards.
+
+| Impulso sonoro                  | Intensità |
+|---------------------------------|----------:|
+| Soglia dell’udibilità           |      0 dB |
+| Sussurro                        |     30 dB |
+| Voce normale                    |     60 dB |
+| Cabina di aereo durante il volo |     80 dB |
+| Soglia del dolore               |    120 dB |
+
+# Numeri da ricordare
+
+Questi numeri invece sono relativi a **differenze** tra due intensità $L_1$ e $L_2$ espresse in dB, e sono ugualmente da ricordare:
+
+| Differenza $L_1 - L_2$ in dB | Rapporto tra potenze $I_1/I_2$ (W/m²) |
+|-----------------------------:|--------------------------------------:|
+|                         3 dB |                                    ×2 |
+|                        10 dB |                                   ×10 |
+|                        20 dB |                                  ×100 |
+|                        30 dB |                                 ×1000 |
+
+
+# Legge dell’inverso del quadrato
+
+# Inverso del quadrato
+
+-   Ricordate la legge dell’[inverso del quadrato](tomasi-lezione-07.html#legge-inverso-quadrato)? Essa dice che ad una distanza $r_2$, il suono ha un’intensità rispetto a $r_1$ uguale a
+
+    \[
+    I_2 = I_1\times\frac{r_1^2}{r_2^2}.
+    \]
+
+-   La formula vale se si usano le unità del SI per le intensità e le distanze, ma riscritta in decibel diventa più semplice:
+
+    \[
+    L_2 = 10\log_{10}\frac{I_2}{I_0} = 10\log_{10}\left(\frac{I_1}{I_0}\times\frac{r_1^2}{r_2^2}\right).
+    \]
+
+# Inverso del quadrato
+
+-   La quantità
+
+    \[
+    10\log_{10}\left(\frac{I_1}{I_0}\times\frac{r_1^2}{r_2^2}\right)
+    \]
+
+    può essere semplificata usando le proprietà dei logaritmi:
+
+    \[
+    10\log_{10}\left(\frac{I_1}{I_0}\times\frac{r_1^2}{r_2^2}\right) =
+    10\log_{10}\frac{I_1}{I_0} + 10\log_{10}\frac{r_1^2}{r_2^2} =
+    L_1 + 10\log_{10}\frac{r_1^2}{r_2^2}
+    \]
+
+-   Notiamo che è comparso il valore in decibel $L_1$ dell’intensità $I_1$
+
+# Inverso del quadrato
+
+La divisione di due quadrati è il quadrato della divisione, e il logaritmo di un quadrato si semplifica:
+
+\[
+\begin{aligned}
+\log_{10}\frac{r_1^2}{r_2^2} &= \log_{10}\left(\frac{r_1}{r_2}\right)^2 =
+\log_{10}\left[\left(\frac{r_1}{r_2}\right)\times\left(\frac{r_1}{r_2}\right)\right] =\\
+&= \log_{10}\frac{r_1}{r_2} + \log_{10}\frac{r_1}{r_2} =
+2\log_{10}\frac{r_1}{r_2}
+\end{aligned}
+\]
+
+# Inverso del quadrato
+
+-   Abbiamo dunque ottenuto il risultato
+
+    \[
+    L_2 = L_1 + 20\log_{10}\frac{r_1}{r_2}
+    \]
+
+-   Questo è notevolmente più semplice della formula espressa nel SI:
+    \[
+    I_2 = I_1\times\frac{r_1^2}{r_2^2}.
+    \]
+
+    perché ha trasformato il prodotto di quantità con molte cifre in una somma di due quantità piccole, e ha fatto sparire il calcolo di due quadrati.
+
+# Esempio
+
+-   Ricordate l’[esempio del professore che parla in classe](tomasi-lezione-07.html#esempio-intensita-percepita)? Avevamo visto che triplicando la distanza, l’intensità si riduceva di un fattore 9
+
+-   Vediamo ora che se $L_1$ è l’intensità in decibel che raggiunge chi è seduto più vicino, allora chi è seduto a una distanza tre volte maggiore percepisce un’intensità pari a
+
+    \[
+    L_2 = L_1 + 20\log_{10}\frac{r_1}{r_2} = L_1 + 20\log_{10}\frac13 = L_1 + (-9{,}5\,\text{dB})
+    \]
+
+-   Triplicando la distanza, si “perdono” circa 10 dB di intensità.
+
+# Numeri da ricordare
+
+-   Abbiamo visto che se si aumenta la distanza di un fattore 3, l’intensità diminuisce di quasi 10 dB (i W/m² sono 9 volte minori)
+
+-   Se la distanza **raddoppia**, l’intensità diminuisce di **6 dB**
+
+-   Se la distanza **decuplica**, l’intensità diminuisce di **20 dB** (i W/m² sono 100 volte minori)
+
+-   Se la distanza **centuplica**, l’intensità diminuisce di **40 dB** (i W/m² sono 10.000 volte minori)
+
+-   I tre numeri in grassetto sono da imparare a memoria: come prima, vi suggerisco di creare delle flash cards.
+
 
 # Sovrapposizione e interferenza
 
@@ -103,7 +357,7 @@ Vedi “Pendolo: gravità che imita una molla” in fondo per una spiegazione di
 
 -   Quando due onde si incontrano in un punto dello spazio, vale il principio di **sovrapposizione**: se alle onde non è associata “troppa energia”, i loro effetti si sommano
 
--   Questo è il **principio di sovrapposizione**, e vale non solo per le onde sonore
+-   Questo è il **principio di sovrapposizione**, e non vale solo per le onde sonore!
 
 ---
 
@@ -128,17 +382,17 @@ Vedi “Pendolo: gravità che imita una molla” in fondo per una spiegazione di
 
 -   Ci sono vari modi in cui si manifesta l’interferenza:
 
-    -   Se tutte le volte che un onda causa un massimo di pressione, anche la seconda fa lo stesso, si ha **interferenza costruttiva**: l’effetto è amplificato
+    -   Se i massimi ed i minimi di pressione avvengono sempre nello stesso momento (“onde in fase”), si ha **interferenza costruttiva**: l’effetto è amplificato e il suono è rinforzato
 
-    -   Se invece quando la prima onda ha un massimo di pressione, la seconda ha un minimo, l’effetto è una **interferenza distruttiva**, in cui il suono è attenuato
+    -   Se invece i massimi di pressione dell’una avvengono in coincidenza con i minimi dell’altra e viceversa, l’effetto è una **interferenza distruttiva**, in cui il suono è attenuato
 
-    -   Se le due onde non hanno la stessa frequenza, l’interferenza è alternatamente costruttiva e distruttiva, e si hanno i **battimenti**
+    -   Se le due onde non hanno la stessa frequenza, l’interferenza è alternatamente costruttiva e distruttiva, e si hanno i **battimenti**: l’intensità “pulsa”
 
 -   Tutti questi effetti si possono vedere nell’applicazione della slide successiva
 
 ---
 
-<iframe src="iframes/interference.html" width="100%" height="760" style="border:1px solid #ccc; border-radius: 8px;"></iframe>
+<iframe src="iframes/interference.html" width="100%" height="760"></iframe>
 
 # Interferenza distruttiva
 
@@ -240,156 +494,22 @@ Vedi “Pendolo: gravità che imita una molla” in fondo per una spiegazione di
 
 -   Sono molto utili per accordare tra loro strumenti: se si sentono battimenti quando suonano la stessa nota, non sono accordati!
 
-# Il timbro
-
-# Timbro del suono
-
--   Abbiamo visto l’interferenza tra due onde sonore, ma ovviamente si può sovrapporre qualsiasi numero!
-
--   Il motivo per cui due strumenti diversi come un violino e un flauto suonino “diversi” anche quando la nota è la stessa è dovuta proprio a questo
-
--   Il “colore” di un suono è detto **timbro**, e dipende dal fatto che gli strumenti non emettono mai semplici onde sinusoidali, ma sovrapposizioni di onde
-
----
-
-TODO: esempio di suono dato dalla sovrapposizione di tre onde
-
-# Scomposizione di Fourier
-
-# Scomposizione di Fourier
-
-::: side-by-side
-
-::: content
-
--   Abbiamo visto che la sovrapposizione di un suono fondamentale e di armoniche fornisce il “timbro” di quel suono
-
--   Un matematico francese, [Jean-Baptiste Joseph Fourier](https://it.wikipedia.org/wiki/Jean_Baptiste_Joseph_Fourier) (1768–1830), dimostrò una proprietà fondamentale delle onde, non solo sonore: ogni fenomeno periodico può essere scomposto nella somma di oscillazioni sinusoidali
-
-:::
-
-::: media
-
-![](media/fourier.jpg)
-
-:::
-:::
-
-# Suono e rumore
-
-# Suono e rumore
-
--   Nella vita quotidiana, usiamo spesso le parole “suono” e “rumore” per parlare di fenomeni acustici
-
--   Ma sappiamo qual è la differenza tra i due? In particolare, stiamo parlando di un fenomeno fisico oggettivo, o della **sensazione** che un certo fenomeno fisico (quale?) ci provoca?
-
-
-# Rumore e suono
-
--   La differenza tra suono e rumore è la seguente:
-
-    -   Il **suono** è la sensazione di un’onda sonora regolare, che possiede una sua periodicità
-
-    -   Il **rumore** è l’esatto opposto: è la sensazione di un’onda sonora priva di periodicità
-
--   Per rappresentare il suono che raggiunge un punto dello spazio (dove ad esempio c’è un microfono), si usa spesso un grafico che mostra la variazione temporale della pressione/oscillazione meccanica
-
--   Vediamo subito la differenza con un esempio interattivo, che spiegheremo meglio in questa e nelle prossime lezioni
-
----
-
-<iframe src="iframes/sound-example.html" width="100%" height="580px" style="border:1px solid #ccc; border-radius: 8px;"></iframe>
-
----
-
-TODO: esempio di scomposizione di Fourier
-
-# Esempi applicativi
-
--   Un equalizzatore acustico è in grado di modificare i suoni gravi, medi ed acuti decomponendo il suono e agendo sulle ampiezze di alcune frequenze e non altre, come vedremo tra poco
-
--   I file MP3 riescono a registrare musica usando 10 volte meno spazio dei vecchi CD, perché usano la decomposizione di Fourier per capire quali frequenze registrare (quelle udibili) e quali no
-
-# Filtraggio
-
-TODO
-
-# Fenomeni spaziali
-
-# L’eco
-
-::: side-by-side
-
-::: content
--   Il motivo per cui i pipistrelli “vedono” tramite le onde sonore è dovuto a un effetto di **eco**
-
--   Come vedremo meglio quando studieremo le onde stazionarie, un’onda di pressione che raggiunge un corpo solido viene riflessa
-
--   Il meccanismo è simile a quello della luce riflessa da uno specchio (l’analogia è pertinente, perché anche la luce è un’onda)
-:::
-
-::: media
-
-![](media/reflection.svg)
-
-:::
-:::
-
-
-# Esempio numerico
-
-::: side-by-side
-
-::: content
-
--   Se mi trovo a 1 km di distanza da una parete rocciosa in montagna e lancio un urlo verso di essa, il suono verrà riflesso dalla parete e tornerà verso di me
-
--   Il suono percorre 1 km verso la parete e 1 km per tornare, per un totale di 2 km. Assumendo una velocità di 340 m/s, si ottiene che l’eco mi raggiungerà dopo
-
-    \[
-    \frac{2.000\,\text{m}}{340\,\text{m/s}} = 5{,}9\,\text{s}
-    \]
-
-:::
-
-::: media
-
-![](media/eco.webp)
-
-:::
-:::
-
-# Il riverbero
-
--   Il “riverbero” è il fenomeno per cui l’eco raggiunge il nostro orecchio quando il suono che l’ha originato è ancora percepito dal nostro orecchio
-
-
-# L’ecografia
-
-
-# Onde stazionarie
-
-# Onde stazionarie
-
-<video controls loop>
-    <source src="media/standing-longitudinal-waves.mp4" type="video/mp4">
-</video>
-
-<small>[Longitudinal wave using slinky coil](https://www.youtube.com/watch?v=fMJrtheQfZw)</small>
-
-# L’effetto Doppler
-
-# L’effetto Doppler
-
-Ecografia Doppler: https://it.wikipedia.org/wiki/Ecografia_Doppler
 
 # Conclusioni
 
 # Cosa sapere per l’esame
 
+-   Proprietà delle potenze e dei logaritmi
+
+-   Definizione di decibel
+
+-   Legge dell’inverso del quadrato espressa in decibel (senza dimostrazione)
+
+-   Sovrapposizione e interferenza, lunghezza d’onda, battimenti
+
 ---
 title: Fisica -- Lezione 8
-subtitle: L’effetto Doppler
+subtitle: Decibel, sovrapposizione e interferenza
 author: Maurizio Tomasi ([`maurizio.tomasi@unimi.it`](mailto:maurizio.tomasi@unimi.it))
 date: Martedì 25 novembre 2025
 ...

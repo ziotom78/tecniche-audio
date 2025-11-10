@@ -62,7 +62,7 @@
 
 # Unità di misura
 
--   L’ampiezza $A$ è misurata in Pascal se l’onda rappresenta una pressione, in metri se è un’oscillazione di un mezzo (ad es. un muro), o in kg/m³ se è una densità
+-   L’ampiezza $A$ è misurata in Pascal (pressione) o in kg/m³ (densità) se l’onda si propaga in un fluido, o in metri (milionesimi di metro!) se è un’oscillazione di un mezzo rigido (ad es. un muro)
 -   La frequenza, come sappiamo, si misura in Hertz (Hz)
 -   La fase è indicata con un valore in gradi, da 0° (nessuno sfasamento) a 360° (un’intera oscillazione), e siccome si comporta come un angolo, di solito si rappresenta in gradi
 
@@ -106,13 +106,13 @@
 :::
 
 
-# Curve isofoniche
+# Curve isofoniche {#curve-isofoniche}
 
 -   Il cervello umano non percepisce tutte le frequenze con la stessa sensibilità
 
--   Le cosiddette [curve isofoniche](https://it.wikipedia.org/wiki/Diagramma_di_uguale_intensit%C3%A0_sonora) rappresentano l’intensità percepita in funzione della frequenza e dell’intensità
+-   Le cosiddette [curve isofoniche](https://it.wikipedia.org/wiki/Diagramma_di_uguale_intensit%C3%A0_sonora) rappresentano l’intensità percepita in funzione della frequenza e dell’intensità oggettiva (che definiremo in seguito)
 
--    Esse sono state ricavando facendo sentire un suono ad una frequenza di riferimento alternato ad un altro suono e aumentando o diminuendo il volume del secondo finché non fosse stato intenso quanto il primo, e si è registrata l’ampiezza effettiva. Si è poi ripetuto variando l’intensità del suono di riferimento
+-    Esse sono state ricavando facendo sentire un suono ad una frequenza di riferimento alternato ad un altro suono e aumentando o diminuendo il volume del secondo finché non fosse stato intenso quanto il primo, registrando a questo punto l’ampiezza effettiva. Si è poi ripetuto variando l’intensità del suono di riferimento
 
 # Curve isofoniche
 
@@ -123,7 +123,7 @@
 - Asse y: Ampiezza dell’onda di pressione.
 - Le varie curve indicano diverse intensità dell’onda di riferimento, dalla soglia di udibilità alla soglia del dolore.
 
-:::
+    :::
 
 ::: media
 
@@ -181,7 +181,8 @@
 | 180° | Pressione di equilibrio, decrescente | 50% |
 | 270° | Minima pressione                     | 75% |
 
-# 3. Ampiezza
+
+    # 3. Ampiezza
 
 # Ampiezza di un’onda
 
@@ -193,7 +194,7 @@
 
 -   Come avevamo già accennato, per un’onda acustica in un fluido come l’aria o l’acqua, l’ampiezza $A$ può essere misurata in Pascal (pressione) o in kg/m³ (densità)
 
--   In un mezzo solido come un muro invece l’ampiezza è uno **spostamento**, e si misura in metri
+-   In un mezzo solido come un muro invece l’ampiezza è uno **spostamento**, e si misura in metri (ma tipicamente lo spostamento è minore di un millesimo di mm!)
 
 # Variazione dell’ampiezza
 
@@ -219,6 +220,23 @@
 
     che si misura in W/m² (Watt per metro quadro).
 
+# Ampiezza e intensità
+
+-   L’intensità **non** è l’ampiezza, ma ad essa è strettamente legata
+
+-   Esiste infatti una relazione, tra la pressione $P$ di un’onda e la sua intensità $I$:
+
+    \[
+    I = \frac12\frac{P^2}{\rho v_\text{suono}},
+    \]
+
+    dove $\rho$ è la densità dell’aria.
+
+-   Anche se non spiegheremo questa relazione, notate comunque che è qualitativamente simile a
+    \[
+    E_c = \frac12 m v^2
+    \]
+
 # Variazione dell’ampiezza
 
 ::: side-by-side
@@ -240,7 +258,7 @@
 :::
 :::
 
-# Legge del quadrato
+# Legge dell’inverso del quadrato {#legge-inverso-quadrato}
 
 -   In un caso ideale, l’intensità dell’onda sonora varia come **l’inverso del quadrato** della distanza $r$. Se quindi due persone misurano un’intensità  $I_1$ e $I_2$ a due distanze $r_1$ e $r_2$, vale che
 
@@ -265,7 +283,7 @@
     = I_1\times\frac{9}{81} = \frac{I_1}{9}
     \]
 
-# Intensità percepita
+# Intensità percepita {#esempio-intensita-percepita}
 
 -   Possiamo concludere che se la distanza triplica, l’intensità si riduce di un fattore 9, ossia 3²
 
