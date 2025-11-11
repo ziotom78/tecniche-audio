@@ -26,57 +26,6 @@
     \log_{10} n
     \]
 
-# Proprietà dei logaritmi
-
--   Dalle proprietà delle potenze discendono le proprietà dei logaritmi:
-
-    \[
-    \log_{10} 10^n \times 10^m = \log_{10} 10^{n + m} = n + m = \log_{10} 10^n + \log_{10} 10^m.
-    \]
-
--   Lo stesso vale per il logaritmo di una divisione, solo che al posto della somma $n + m$ compare la differenza $n - m$
-
--   Quindi, **i logaritmi trasformano i prodotti in somme, e le divisioni in differenze**
-
-# Esempi
-
--   Supponiamo di voler calcolare un prodotto molto complicato:
-
-    \[
-    3.562.512 \times 7.412.559.919
-    \]
-
--   Se passiamo ai logaritmi in base dieci, abbiamo che
-
-    \[
-    \log_{10} 3.562.512 \approx 6{,}?,\qquad
-    \log_{10} 7.412.559.919 \approx 9{,}?
-    \]
-
--   Quindi il logaritmo in base 10 del risultato sarà $6{,}? + 9{,}?$, ossia qualcosa tra 15 e 16: il risultato è quindi un numero a 16–17 cifre. Infatti
-
-    \[
-    3.562.512 \times 7.412.559.919 = 26.407.333.662.156.528
-    \]
-
-# Calcoli veloci
-
--   Prima che inventassero le calcolatrici, per calcolare prodotti tra grandi numeri si usavano i logaritmi
-
--   Si mandavano a memoria i logaritmi in base 10 dei numeri da 1 a 9, e poi si scrivevano i numeri in modo “furbo” per calcolarne più rapidamente i logaritmi. Ad esempio:
-
-    \[
-    \begin{aligned}
-    \log_{10} 351.912 &\approx \log_{10} 350.000 = \log_{10} 3{,}5\times 10^5 = \log_{10} 3{,}5 + \log_{10} 10^5 =\\
-    &= \log_{10} 3{,}5 + 5 = 0{,}54 + 5 = 5{,}54
-    \end{aligned}
-    \]
-
--   Una volta calcolati i logaritmi, si sommavano tra loro per ottenere il logaritmo in base 10 del risultato. Con trucchi e regoli calcolatori, dal logaritmo si risaliva al risultato.
-
----
-
-![](media/righello-logaritmico.webp){height=560px}
 
 # Legge di Weber-Fechner
 
@@ -499,7 +448,7 @@ La divisione di due quadrati è il quadrato della divisione, e il logaritmo di u
 
 # Cosa sapere per l’esame
 
--   Proprietà delle potenze e dei logaritmi
+-   Legge di Weber-Fechner
 
 -   Definizione di decibel
 

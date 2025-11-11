@@ -11,47 +11,14 @@
 
 # Inquisitori accademici onorari
 
-# Proprietà di un’onda sonora
-
--   Se il fattore che scatena l’onda è un impulso periodico, il **periodo** si conserva durante la propagazione (e quindi anche la **frequenza**)
-
--   L’**ampiezza** dell’onda, legata alla sua intensità, si riduce man mano che l’onda si propaga. Vedremo meglio l’intensità in seguito, perché è un argomento complesso
-
--   La **velocità di propagazione** con cui l’onda si propaga dipende dal tipo di mezzo: in generale, più un corpo è denso e rigido, maggiore è la velocità del suono
-
----
-
-![](media/sound-speed-in-media.svg){height=560px}
-
-# Eruzione di un vulcano
-
-<iframe width="784" height="441" src="https://www.youtube.com/embed/BUREX8aFbMs?si=b1tpdO6co2sNYG1v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-
-# Onde sinusoidali {#sinusoidal-waves}
-
 # Onde sinusoidali
 
--   Il modo più semplice per affrontare lo studio delle onde sonore è di partire dal tipo più semplice, ossia un suono. Inizieremo col suono più regolare possibile: l’**onda sinusoidale**, che abbiamo appena visto nell’esempio interattivo
-
--   Matematicamente, un’onda sinusoidale si scrive così:
-
-    \[
-    \text{onda} = A \sin (2\pi\nu t + \varphi),
-    \]
-
-    dove $t$ misura il tempo. La scritta $\sin$ rappresenta la funzione matematica “seno”, che è usata in trigonometria per caratterizzare gli angoli.
-
-
-# Onde sinusoidali
-
--   La funzione “seno” è molto interessante ma abbastanza complessa da studiare.
+-   La settimana scorsa abbiamo introdotto il concetto di “onda sinusoidale”
 
 -   Dell’equazione
 
     \[
-    \text{onda} = A \sin (2\pi\nu t + \varphi),
+    \text{oscillazione} = A \sin (2\pi\nu t + \varphi),
     \]
 
     a noi interesseranno questi parametri:
@@ -59,17 +26,6 @@
     #.   La sua ampiezza (quanto la pressione varia), indicata solitamente con $A$
     #.   La sua frequenza (quanto rapidamente oscilla), indicata con $\nu$ o con $f$
     #.   La sua fase (a che istante l’onda raggiunge il suo massimo), indicata con $\varphi$
-
-# Unità di misura
-
--   L’ampiezza $A$ è misurata in Pascal (pressione) o in kg/m³ (densità) se l’onda si propaga in un fluido, o in metri (milionesimi di metro!) se è un’oscillazione di un mezzo rigido (ad es. un muro)
--   La frequenza, come sappiamo, si misura in Hertz (Hz)
--   La fase è indicata con un valore in gradi, da 0° (nessuno sfasamento) a 360° (un’intera oscillazione), e siccome si comporta come un angolo, di solito si rappresenta in gradi
-
----
-
-<iframe src="iframes/sinusoid.html" width="100%" height="760" style="border:1px solid #ccc; border-radius: 8px;"></iframe>
-
 
 # 1. La frequenza
 
@@ -113,6 +69,7 @@
 -   Le cosiddette [curve isofoniche](https://it.wikipedia.org/wiki/Diagramma_di_uguale_intensit%C3%A0_sonora) rappresentano l’intensità percepita in funzione della frequenza e dell’intensità oggettiva (che definiremo in seguito)
 
 -    Esse sono state ricavando facendo sentire un suono ad una frequenza di riferimento alternato ad un altro suono e aumentando o diminuendo il volume del secondo finché non fosse stato intenso quanto il primo, registrando a questo punto l’ampiezza effettiva. Si è poi ripetuto variando l’intensità del suono di riferimento
+
 
 # Curve isofoniche
 
@@ -524,6 +481,59 @@ Provate a stimare (ad occhio!) il valore del logaritmo di 10 di questi numeri
 \log_{10} 10{,}35\quad &\log_{10} 163{,}1,\\
 \end{aligned}
 \]
+
+# Proprietà dei logaritmi
+
+-   Dalle proprietà delle potenze discendono le proprietà dei logaritmi:
+
+    \[
+    \log_{10} 10^n \times 10^m = \log_{10} 10^{n + m} = n + m = \log_{10} 10^n + \log_{10} 10^m.
+    \]
+
+-   Lo stesso vale per il logaritmo di una divisione, solo che al posto della somma $n + m$ compare la differenza $n - m$
+
+-   Quindi, **i logaritmi trasformano i prodotti in somme, e le divisioni in differenze**
+
+# Esempi
+
+-   Supponiamo di voler calcolare un prodotto molto complicato:
+
+    \[
+    3.562.512 \times 7.412.559.919
+    \]
+
+-   Se passiamo ai logaritmi in base dieci, abbiamo che
+
+    \[
+    \log_{10} 3.562.512 \approx 6{,}?,\qquad
+    \log_{10} 7.412.559.919 \approx 9{,}?
+    \]
+
+-   Quindi il logaritmo in base 10 del risultato sarà $6{,}? + 9{,}?$, ossia qualcosa tra 15 e 16: il risultato è quindi un numero a 16–17 cifre. Infatti
+
+    \[
+    3.562.512 \times 7.412.559.919 = 26.407.333.662.156.528
+    \]
+
+# Calcoli veloci
+
+-   Prima che inventassero le calcolatrici, per calcolare prodotti tra grandi numeri si usavano i logaritmi
+
+-   Si mandavano a memoria i logaritmi in base 10 dei numeri da 1 a 9, e poi si scrivevano i numeri in modo “furbo” per calcolarne più rapidamente i logaritmi. Ad esempio:
+
+    \[
+    \begin{aligned}
+    \log_{10} 351.912 &\approx \log_{10} 350.000 = \log_{10} 3{,}5\times 10^5 = \log_{10} 3{,}5 + \log_{10} 10^5 =\\
+    &= \log_{10} 3{,}5 + 5 = 0{,}54 + 5 = 5{,}54
+    \end{aligned}
+    \]
+
+-   Una volta calcolati i logaritmi, si sommavano tra loro per ottenere il logaritmo in base 10 del risultato. Con trucchi e regoli calcolatori, dal logaritmo si risaliva al risultato.
+
+---
+
+![](media/righello-logaritmico.webp){height=560px}
+
 
 # Conclusioni
 
