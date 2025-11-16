@@ -76,11 +76,12 @@
 ::: side-by-side
 
 ::: content
+
 - Asse x: frequenza del suono in Hz.
 - Asse y: Ampiezza dell’onda di pressione.
 - Le varie curve indicano diverse intensità dell’onda di riferimento, dalla soglia di udibilità alla soglia del dolore.
 
-    :::
+:::
 
 ::: media
 
