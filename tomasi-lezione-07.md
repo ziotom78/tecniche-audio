@@ -48,9 +48,9 @@
 
 ::: content
 
--   Ad alte frequenze, il timpano e gli ossicini collegati (martello, incudine, staffa) hanno un’inerzia che gli impedisce di oscillare così rapidamente.
+-   Per alti $\nu$, il timpano e gli ossicini collegati (martello, incudine, staffa) hanno un’inerzia che gli impedisce di oscillare rapidamente.
 -   Ma anche se potessero oscillare a qualsiasi frequenza, la membrana basilare e le cellule ciliate all’interno della coclea non riuscirebbero comunque a tradurre il segnale meccanico in un impulso nervoso chiaro
--   A basse frequenze, il nostro orecchio non ha una struttura efficiente per tradurre vibrazioni molto lente in segnali neuronali
+-   A basse $\nu$, il nostro orecchio non ha una struttura efficiente per tradurre le vibrazioni in segnali neuronali
 
 :::
 
@@ -119,7 +119,7 @@
 -   Dobbiamo ora parlare del termine $\varphi$ nell’equazione dell’onda sinusoidale:
 
     \[
-    \text{onda} = A \sin (2\pi\nu t + \varphi),
+    \text{oscillazione} = A \sin (2\pi\nu t + \varphi),
     \]
 
 -   Abbiamo accennato al fatto che sia un **angolo**, e quindi si misura in gradi
@@ -140,14 +140,14 @@
 | 270° | Minima pressione                     | 75% |
 
 
-    # 3. Ampiezza
+# 3. Ampiezza
 
 # Ampiezza di un’onda
 
 -   Passiamo ora a discutere il senso dell’ampiezza $A$:
 
     \[
-    \text{onda} = A \sin (2\pi\nu t + \varphi),
+    \text{oscillazione} = A \sin (2\pi\nu t + \varphi),
     \]
 
 -   Come avevamo già accennato, per un’onda acustica in un fluido come l’aria o l’acqua, l’ampiezza $A$ può essere misurata in Pascal (pressione) o in kg/m³ (densità)
@@ -180,6 +180,19 @@
 
 # Ampiezza e intensità
 
+-   Ricordate la definizione di pressione? L’avevamo dovuta introdurre per quei casi in cui una forza $F$ non è applicata su un solo punto, ma viene “diluita” perché applicata su tanti punti (= una superficie $S$).
+
+-   Il concetto dell'intensità è lo stesso: l'energia di un’onda si propaga investendo una superficie, e l’intensità misura la “diluzione” della potenza associata.
+
+-   È precisamente a causa di questa diluizione che il Sole scalda la Terra di più in estate e di meno in inverno (quando è più inclinato), come mostrato nella slide successiva. (La luce è infatti un’onda elettromagnetica).
+
+---
+
+<iframe src="iframes/intensity.html" width="100%" height="800"></iframe>
+
+
+# Ampiezza e intensità
+
 -   L’intensità **non** è l’ampiezza, ma ad essa è strettamente legata
 
 -   Esiste infatti una relazione, tra la pressione $P$ di un’onda e la sua intensità $I$:
@@ -190,10 +203,7 @@
 
     dove $\rho$ è la densità dell’aria.
 
--   Anche se non spiegheremo questa relazione, notate comunque che è qualitativamente simile a
-    \[
-    E_c = \frac12 m v^2
-    \]
+-   Non spiegheremo questa relazione; notate però che è qualitativamente simile a $E_c = \frac12 m v^2$
 
 # Variazione dell’ampiezza
 
@@ -215,6 +225,36 @@
 
 :::
 :::
+
+# Interludio: formule
+
+-   È bene avere presenti alcune formule geometriche legate al cerchio e alla sfera
+
+-   Supponendo che $r$ sia il raggio (in metri) del cerchio o della sfera, valgono queste proprietà:
+
+    #. Lunghezza della circonferenza: $2\pi r$
+    #. Area del cerchio: $\pi r^2$
+    #. Superficie della sfera: $4\pi r^2$
+    #. Volume della sfera: $\frac43 \pi r^3$
+
+# Trucchi mnemonici
+
+::: side-by-side
+
+::: content
+-   Per ricordare le formule, tenete presente le unità di misura: le **lunghezze** hanno $r$, le **superfici** $r^2$, ed i **volumi** $r^3$!
+
+-   Per distinguere l’area del cerchio ($\pi r^2$) dalla superficie della sfera ($4\pi r^2$), ricordate che la superficie di una mela (sfera) è esattamente quattro volte la superficie interna (cerchio) quando la dividete in due
+
+:::
+
+::: media
+
+![](media/mela-tagliata.webp)
+
+:::
+:::
+
 
 # Legge dell’inverso del quadrato {#legge-inverso-quadrato}
 
@@ -373,6 +413,26 @@
 
 # Potenze frazionarie
 
+-   Usando la stessa logica, è possibile dare un senso a **qualsiasi** esponente:
+    \[
+    \begin{aligned}
+    10^{0{,}25} &= \sqrt[4]{10} \approx 1{,}778,\\
+    10^{1{,}5} &= 10^1 \times 10^{0{,}5} = 10 \times \sqrt{10} = 31{,}623,\\
+    \end{aligned}
+    \]
+
+    (la scrittura $\sqrt[4]{10}$ indica quel numero che elevato alla potenza 4 è uguale a 10).
+
+-   I matematici hanno scoperto che se si definisce questa formula
+
+    \[
+    10^{\frac{n}{m}} = \sqrt[m]{10^n},
+    \]
+
+    le proprietà delle potenze continuano ad essere valide!
+
+# Potenze frazionarie
+
 -   Lavorando con potenze di 10 intere, abbiamo visto che il risultato è sempre 1 seguito o preceduto da zeri:
 
     \[
@@ -391,7 +451,7 @@
 
 -   La risposta è: “un po’ sì, e un po’ no”
 
--   Non si può infatti scrivere un numero negativo o lo zero come una potenza di dieci (a meno di non usare strumenti matematici sofisticati, che però non sono rilevanti per questo corso)
+-   Non si può infatti scrivere un numero negativo o lo zero come una potenza di dieci (a meno di non usare strumenti matematici sofisticati, che però non sono rilevanti per questo corso): **non esiste** un $k$ per cui valga $10^k = -3$!
 
 -   Ma se un numero $n$ è positivo, i matematici hanno mostrato che è **sempre possibile** scriverlo come una potenza di dieci. L’esponente del dieci è detto “logaritmo in base dieci di $n$”, e si scrive $\log_{10} n$
 
@@ -419,7 +479,7 @@
     \log_{10} 10.000 = 4,\qquad \log_{10} 0{,}00001 = -5.
     \]
 
-# Significato di log₁₀
+# Significato di log₁₀ ($n > 1$)
 
 -   Se osserviamo alcuni logaritmi in base 10, possiamo notare una particolarità:
 
@@ -427,13 +487,14 @@
     \log_{10} 1000 = 3,\quad \log_{10} 51.523{,}4 \approx 4{,}712,\quad \log_{10}7.823.552{,}8 \approx 6{,}893
     \]
 
--   Se il numero ha $k$ cifre prima della virgola), il suo logaritmo in base 10 è sempre tale che
+-   Se un numero maggiore di 1 ha $k$ cifre prima della virgola, il suo logaritmo è sempre tale che
 
     \[
     k - 1 \leq \log_{10} n < k
     \]
 
     In altre parole, il logaritmo in base 10 può essere anche usato per “contare” le cifre!
+
 
 # Numeri minori di 1
 
@@ -454,11 +515,29 @@
 
 -   Se un numero è più piccolo di 1, il logaritmo dice più o meno quante cifre ci sono dopo la virgola
 
+# Significato di log₁₀ ($n < 1$)
+
+-   Vediamo alcuni casi pratici con $n < 1$:
+
+
+    \[
+    \log_{10} 0{,}001 = -3,\quad \log_{10} 0{,}054 \approx -1{,}268,\quad \log_{10}0{,}00000852 \approx -5{,}07
+    \]
+
+-   Se un numero minore di 1 ha $k$ zeri dopo la virgola, il suo logaritmo è sempre negativo e tale che
+
+    \[
+    -k - 1 \leq \log_{10} n < -k
+    \]
+
+    Anche qui il logaritmo “conta”, ma nella direzione opposta, e stavolta conta gli zeri!
+
+
 # Approssimazioni
 
 -   Se volete stimare un logaritmo, è possibile arrotondare i numeri: il logaritmo “perdona” facilmente gli arrotondamenti.
 
--   L’abbiamo visto proprio nell’esempio della slide precedente:
+-   L’abbiamo visto proprio negli esempi delle slide precedenti:
 
     \[
     \begin{aligned}
@@ -475,11 +554,11 @@ Provate a stimare (ad occhio!) il valore del logaritmo di 10 di questi numeri
 
 \[
 \begin{aligned}
-\log_{10} 16.341\quad &\log_{10} 65.316.732.001,\\
-\log_{10} 5\quad &\log_{10} 1,\\
-\log_{10} 0{,}1\quad &\log_{10} 0{,}01,\\
-\log_{10} 0{,}3\quad &\log_{10} 0{,}089,\\
-\log_{10} 10{,}35\quad &\log_{10} 163{,}1,\\
+\log_{10} 16.341\qquad &\log_{10} 65.316.732.001\\
+\log_{10} 5\qquad &\log_{10} 1\\
+\log_{10} 0{,}1\qquad &\log_{10} 0{,}01\\
+\log_{10} 0{,}3\qquad &\log_{10} 0{,}089\\
+\log_{10} 10{,}35\qquad &\log_{10} 163{,}1\\
 \end{aligned}
 \]
 
@@ -488,7 +567,7 @@ Provate a stimare (ad occhio!) il valore del logaritmo di 10 di questi numeri
 -   Dalle proprietà delle potenze discendono le proprietà dei logaritmi:
 
     \[
-    \log_{10} 10^n \times 10^m = \log_{10} 10^{n + m} = n + m = \log_{10} 10^n + \log_{10} 10^m.
+    \log_{10} \bigl(10^n \times 10^m\bigr) = \log_{10} 10^{n + m} = n + m = \log_{10} 10^n + \log_{10} 10^m.
     \]
 
 -   Lo stesso vale per il logaritmo di una divisione, solo che al posto della somma $n + m$ compare la differenza $n - m$

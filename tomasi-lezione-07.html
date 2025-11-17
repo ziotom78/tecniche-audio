@@ -121,15 +121,16 @@ meno.</p></li>
 <div class="side-by-side">
 <div class="content">
 <ul>
-<li>Ad alte frequenze, il timpano e gli ossicini collegati (martello,
-incudine, staffa) hanno un’inerzia che gli impedisce di oscillare così
-rapidamente.</li>
+<li>Per alti <span class="math inline">\nu</span>, il timpano e gli
+ossicini collegati (martello, incudine, staffa) hanno un’inerzia che gli
+impedisce di oscillare rapidamente.</li>
 <li>Ma anche se potessero oscillare a qualsiasi frequenza, la membrana
 basilare e le cellule ciliate all’interno della coclea non riuscirebbero
 comunque a tradurre il segnale meccanico in un impulso nervoso
 chiaro</li>
-<li>A basse frequenze, il nostro orecchio non ha una struttura
-efficiente per tradurre vibrazioni molto lente in segnali neuronali</li>
+<li>A basse <span class="math inline">\nu</span>, il nostro orecchio non
+ha una struttura efficiente per tradurre le vibrazioni in segnali
+neuronali</li>
 </ul>
 </div>
 <div class="media">
@@ -200,7 +201,7 @@ dalla soglia di udibilità alla soglia del dolore.</li>
 class="math inline">\varphi</span> nell’equazione dell’onda
 sinusoidale:</p>
 <p><span class="math display">
-\text{onda} = A \sin (2\pi\nu t + \varphi),
+\text{oscillazione} = A \sin (2\pi\nu t + \varphi),
 </span></p></li>
 <li><p>Abbiamo accennato al fatto che sia un <strong>angolo</strong>, e
 quindi si misura in gradi</p></li>
@@ -247,7 +248,9 @@ massimo di pressione, del minimo, etc.</p></li>
 </tr>
 </tbody>
 </table>
-<pre><code># 3. Ampiezza</code></pre>
+</section>
+<section id="ampiezza" class="slide level1">
+<h1>3. Ampiezza</h1>
 </section>
 <section id="ampiezza-di-unonda" class="slide level1">
 <h1>Ampiezza di un’onda</h1>
@@ -255,7 +258,7 @@ massimo di pressione, del minimo, etc.</p></li>
 <li><p>Passiamo ora a discutere il senso dell’ampiezza <span
 class="math inline">A</span>:</p>
 <p><span class="math display">
-\text{onda} = A \sin (2\pi\nu t + \varphi),
+\text{oscillazione} = A \sin (2\pi\nu t + \varphi),
 </span></p></li>
 <li><p>Come avevamo già accennato, per un’onda acustica in un fluido
 come l’aria o l’acqua, l’ampiezza <span class="math inline">A</span> può
@@ -295,6 +298,28 @@ I = \frac{W}{S}
 <section id="ampiezza-e-intensità" class="slide level1">
 <h1>Ampiezza e intensità</h1>
 <ul>
+<li><p>Ricordate la definizione di pressione? L’avevamo dovuta
+introdurre per quei casi in cui una forza <span
+class="math inline">F</span> non è applicata su un solo punto, ma viene
+“diluita” perché applicata su tanti punti (= una superficie <span
+class="math inline">S</span>).</p></li>
+<li><p>Il concetto dell’intensità è lo stesso: l’energia di un’onda si
+propaga investendo una superficie, e l’intensità misura la “diluzione”
+della potenza associata.</p></li>
+<li><p>È precisamente a causa di questa diluizione che il Sole scalda la
+Terra di più in estate e di meno in inverno (quando è più inclinato),
+come mostrato nella slide successiva. (La luce è infatti un’onda
+elettromagnetica).</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<iframe src="iframes/intensity.html" width="100%" height="800">
+</iframe>
+</section>
+<section id="ampiezza-e-intensità-1" class="slide level1">
+<h1>Ampiezza e intensità</h1>
+<ul>
 <li><p>L’intensità <strong>non</strong> è l’ampiezza, ma ad essa è
 strettamente legata</p></li>
 <li><p>Esiste infatti una relazione, tra la pressione <span
@@ -305,10 +330,9 @@ I = \frac12\frac{P^2}{\rho v_\text{suono}},
 </span></p>
 <p>dove <span class="math inline">\rho</span> è la densità
 dell’aria.</p></li>
-<li><p>Anche se non spiegheremo questa relazione, notate comunque che è
-qualitativamente simile a <span class="math display">
-E_c = \frac12 m v^2
-</span></p></li>
+<li><p>Non spiegheremo questa relazione; notate però che è
+qualitativamente simile a <span class="math inline">E_c = \frac12 m
+v^2</span></p></li>
 </ul>
 </section>
 <section id="variazione-dellampiezza-1" class="slide level1">
@@ -330,6 +354,45 @@ viscose</strong>!</p></li>
 </div>
 <div class="media">
 <p><img data-src="media/legge-inverso-quadrato.jpg" /></p>
+</div>
+</div>
+</section>
+<section id="interludio-formule" class="slide level1">
+<h1>Interludio: formule</h1>
+<ul>
+<li><p>È bene avere presenti alcune formule geometriche legate al
+cerchio e alla sfera</p></li>
+<li><p>Supponendo che <span class="math inline">r</span> sia il raggio
+(in metri) del cerchio o della sfera, valgono queste proprietà:</p>
+<ol>
+<li>Lunghezza della circonferenza: <span class="math inline">2\pi
+r</span></li>
+<li>Area del cerchio: <span class="math inline">\pi r^2</span></li>
+<li>Superficie della sfera: <span class="math inline">4\pi
+r^2</span></li>
+<li>Volume della sfera: <span class="math inline">\frac43 \pi
+r^3</span></li>
+</ol></li>
+</ul>
+</section>
+<section id="trucchi-mnemonici" class="slide level1">
+<h1>Trucchi mnemonici</h1>
+<div class="side-by-side">
+<div class="content">
+<ul>
+<li><p>Per ricordare le formule, tenete presente le unità di misura: le
+<strong>lunghezze</strong> hanno <span class="math inline">r</span>, le
+<strong>superfici</strong> <span class="math inline">r^2</span>, ed i
+<strong>volumi</strong> <span class="math inline">r^3</span>!</p></li>
+<li><p>Per distinguere l’area del cerchio (<span class="math inline">\pi
+r^2</span>) dalla superficie della sfera (<span class="math inline">4\pi
+r^2</span>), ricordate che la superficie di una mela (sfera) è
+esattamente quattro volte la superficie interna (cerchio) quando la
+dividete in due</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/mela-tagliata.webp" /></p>
 </div>
 </div>
 </section>
@@ -546,6 +609,27 @@ ossia <span class="math inline">\sqrt{10} \approx
 <section id="potenze-frazionarie-1" class="slide level1">
 <h1>Potenze frazionarie</h1>
 <ul>
+<li><p>Usando la stessa logica, è possibile dare un senso a
+<strong>qualsiasi</strong> esponente: <span class="math display">
+\begin{aligned}
+10^{0{,}25} &amp;= \sqrt[4]{10} \approx 1{,}778,\\
+10^{1{,}5} &amp;= 10^1 \times 10^{0{,}5} = 10 \times \sqrt{10} =
+31{,}623,\\
+\end{aligned}
+</span></p>
+<p>(la scrittura <span class="math inline">\sqrt[4]{10}</span> indica
+quel numero che elevato alla potenza 4 è uguale a 10).</p></li>
+<li><p>I matematici hanno scoperto che se si definisce questa
+formula</p>
+<p><span class="math display">
+10^{\frac{n}{m}} = \sqrt[m]{10^n},
+</span></p>
+<p>le proprietà delle potenze continuano ad essere valide!</p></li>
+</ul>
+</section>
+<section id="potenze-frazionarie-2" class="slide level1">
+<h1>Potenze frazionarie</h1>
+<ul>
 <li><p>Lavorando con potenze di 10 intere, abbiamo visto che il
 risultato è sempre 1 seguito o preceduto da zeri:</p>
 <p><span class="math display">
@@ -566,7 +650,9 @@ di 10?</p></li>
 <li><p>La risposta è: “un po’ sì, e un po’ no”</p></li>
 <li><p>Non si può infatti scrivere un numero negativo o lo zero come una
 potenza di dieci (a meno di non usare strumenti matematici sofisticati,
-che però non sono rilevanti per questo corso)</p></li>
+che però non sono rilevanti per questo corso): <strong>non
+esiste</strong> un <span class="math inline">k</span> per cui valga
+<span class="math inline">10^k = -3</span>!</p></li>
 <li><p>Ma se un numero <span class="math inline">n</span> è positivo, i
 matematici hanno mostrato che è <strong>sempre possibile</strong>
 scriverlo come una potenza di dieci. L’esponente del dieci è detto
@@ -596,8 +682,9 @@ abbiamo potenze intere di 10:</p>
 </span></p></li>
 </ul>
 </section>
-<section id="significato-di-log₁₀" class="slide level1">
-<h1>Significato di log₁₀</h1>
+<section id="significato-di-log₁₀-n-1" class="slide level1">
+<h1>Significato di log₁₀ (<span class="math inline">n &gt;
+1</span>)</h1>
 <ul>
 <li><p>Se osserviamo alcuni logaritmi in base 10, possiamo notare una
 particolarità:</p>
@@ -605,8 +692,8 @@ particolarità:</p>
 \log_{10} 1000 = 3,\quad \log_{10} 51.523{,}4 \approx 4{,}712,\quad
 \log_{10}7.823.552{,}8 \approx 6{,}893
 </span></p></li>
-<li><p>Se il numero ha <span class="math inline">k</span> cifre prima
-della virgola), il suo logaritmo in base 10 è sempre tale che</p>
+<li><p>Se un numero maggiore di 1 ha <span class="math inline">k</span>
+cifre prima della virgola, il suo logaritmo è sempre tale che</p>
 <p><span class="math display">
 k - 1 \leq \log_{10} n &lt; k
 </span></p>
@@ -635,12 +722,31 @@ negativo:</p>
 quante cifre ci sono dopo la virgola</p></li>
 </ul>
 </section>
+<section id="significato-di-log₁₀-n-1-1" class="slide level1">
+<h1>Significato di log₁₀ (<span class="math inline">n &lt;
+1</span>)</h1>
+<ul>
+<li><p>Vediamo alcuni casi pratici con <span class="math inline">n &lt;
+1</span>:</p>
+<p><span class="math display">
+\log_{10} 0{,}001 = -3,\quad \log_{10} 0{,}054 \approx -1{,}268,\quad
+\log_{10}0{,}00000852 \approx -5{,}07
+</span></p></li>
+<li><p>Se un numero minore di 1 ha <span class="math inline">k</span>
+zeri dopo la virgola, il suo logaritmo è sempre negativo e tale che</p>
+<p><span class="math display">
+-k - 1 \leq \log_{10} n &lt; -k
+</span></p>
+<p>Anche qui il logaritmo “conta”, ma nella direzione opposta, e
+stavolta conta gli zeri!</p></li>
+</ul>
+</section>
 <section id="approssimazioni" class="slide level1">
 <h1>Approssimazioni</h1>
 <ul>
 <li><p>Se volete stimare un logaritmo, è possibile arrotondare i numeri:
 il logaritmo “perdona” facilmente gli arrotondamenti.</p></li>
-<li><p>L’abbiamo visto proprio nell’esempio della slide precedente:</p>
+<li><p>L’abbiamo visto proprio negli esempi delle slide precedenti:</p>
 <p><span class="math display">
 \begin{aligned}
 10^{-1{,}7} \approx 0{,}01995\quad&amp;\Rightarrow\quad\log_{10}
@@ -658,11 +764,11 @@ abbiamo dimezzato il numero!), il risultato −1,7 diventa 2.</p></li>
 questi numeri</p>
 <p><span class="math display">
 \begin{aligned}
-\log_{10} 16.341\quad &amp;\log_{10} 65.316.732.001,\\
-\log_{10} 5\quad &amp;\log_{10} 1,\\
-\log_{10} 0{,}1\quad &amp;\log_{10} 0{,}01,\\
-\log_{10} 0{,}3\quad &amp;\log_{10} 0{,}089,\\
-\log_{10} 10{,}35\quad &amp;\log_{10} 163{,}1,\\
+\log_{10} 16.341\qquad &amp;\log_{10} 65.316.732.001\\
+\log_{10} 5\qquad &amp;\log_{10} 1\\
+\log_{10} 0{,}1\qquad &amp;\log_{10} 0{,}01\\
+\log_{10} 0{,}3\qquad &amp;\log_{10} 0{,}089\\
+\log_{10} 10{,}35\qquad &amp;\log_{10} 163{,}1\\
 \end{aligned}
 </span></p>
 </section>
@@ -672,8 +778,8 @@ questi numeri</p>
 <li><p>Dalle proprietà delle potenze discendono le proprietà dei
 logaritmi:</p>
 <p><span class="math display">
-\log_{10} 10^n \times 10^m = \log_{10} 10^{n + m} = n + m = \log_{10}
-10^n + \log_{10} 10^m.
+\log_{10} \bigl(10^n \times 10^m\bigr) = \log_{10} 10^{n + m} = n + m =
+\log_{10} 10^n + \log_{10} 10^m.
 </span></p></li>
 <li><p>Lo stesso vale per il logaritmo di una divisione, solo che al
 posto della somma <span class="math inline">n + m</span> compare la
