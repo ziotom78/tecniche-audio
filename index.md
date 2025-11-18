@@ -29,8 +29,8 @@
 | 27 ottobre 2025  | [04. Energia (continua)][html4]                                    | [#4][pdf4] |
 | 3 novembre 2025  | [05. Oscillazioni][html5]                                          | [#5][pdf5] |
 | 11 novembre 2025 | [06. Pressione e onde sonore][html6]                               | [#6][pdf6] |
-<!--
 | 18 novembre 2025 | [07. Onde sinusoidali e intensità del suono][html7]                | [#7][pdf7] |
+<!--
 | 25 novembre 2025 | [08. Decibel, sovrapposizione e interferenza][html8]               | [#8][pdf8] |
 | 3 dicembre 2025  | [09. Scomposizione di Fourier, filtraggio, effetto Doppler][html9] | [#9][pdf9] |
 | 16 dicembre 2025 | Compitino finale                                                   |            |
