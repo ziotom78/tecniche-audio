@@ -614,6 +614,9 @@ Provate a stimare (ad occhio!) il valore del logaritmo di 10 di questi numeri
 
 ![](media/righello-logaritmico.webp){height=560px}
 
+<small>
+Vedi anche l’articolo [How slide rules work](https://amenzwa.github.io/stem/ComputingHistory/HowSlideRulesWork/).
+</small>
 
 # Conclusioni
 
