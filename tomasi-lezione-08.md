@@ -1,10 +1,12 @@
+# Donazioni di sangue
+
+[Slides](slide_statale_donare_il_sangue.pdf)
+
 # Introduzione all’argomento di oggi
 
 -   Useremo potenze e logaritmi per definire il “decibel”, con cui si misura l’intensità del suono
 
 -   Introdurremo i concetti di “sovrapposizione” ed “interferenza”
-
-# Inquisitori accademici onorari
 
 # Avete fatto gli esercizi?
 
@@ -247,16 +249,18 @@ Questi numeri invece sono relativi a **differenze** tra due intensità $L_1$ e $
 
 # Inverso del quadrato
 
-La divisione di due quadrati è il quadrato della divisione, e il logaritmo di un quadrato si semplifica:
+-   La divisione di due quadrati è il quadrato della divisione, e il logaritmo di un quadrato si semplifica:
 
-\[
-\begin{aligned}
-\log_{10}\frac{r_1^2}{r_2^2} &= \log_{10}\left(\frac{r_1}{r_2}\right)^2 =
-\log_{10}\left[\left(\frac{r_1}{r_2}\right)\times\left(\frac{r_1}{r_2}\right)\right] =\\
-&= \log_{10}\frac{r_1}{r_2} + \log_{10}\frac{r_1}{r_2} =
-2\log_{10}\frac{r_1}{r_2}
-\end{aligned}
-\]
+    \[
+    \begin{aligned}
+    \log_{10}\frac{r_1^2}{r_2^2} &= \log_{10}\left(\frac{r_1}{r_2}\right)^2 =
+    \log_{10}\left[\left(\frac{r_1}{r_2}\right)\times\left(\frac{r_1}{r_2}\right)\right] =\\
+    &= \log_{10}\frac{r_1}{r_2} + \log_{10}\frac{r_1}{r_2} =
+    2\log_{10}\frac{r_1}{r_2}
+    \end{aligned}
+    \]
+
+-   Tra l’altro, abbiamo dimostrato che $\log_{10} n^2 = 2\times \log_{10} n$: il logaritmo trasforma le potenze in prodotti! (Anche frazionarie…)
 
 # Inverso del quadrato
 
@@ -329,13 +333,13 @@ La divisione di due quadrati è il quadrato della divisione, e il logaritmo di u
 
 # Tipi di interferenza
 
--   Ci sono vari modi in cui si manifesta l’interferenza:
+-   Ci sono vari modi in cui si manifesta l’interferenza tra due onde:
 
-    -   Se i massimi ed i minimi di pressione avvengono sempre nello stesso momento (“onde in fase”), si ha **interferenza costruttiva**: l’effetto è amplificato e il suono è rinforzato
+    -   Se i massimi ed i minimi di pressione avvengono sempre contemporaneamente (“onde in fase”), si ha **interferenza costruttiva**: il suono è rinforzato
 
     -   Se invece i massimi di pressione dell’una avvengono in coincidenza con i minimi dell’altra e viceversa, l’effetto è una **interferenza distruttiva**, in cui il suono è attenuato
 
-    -   Se le due onde non hanno la stessa frequenza, l’interferenza è alternatamente costruttiva e distruttiva, e si hanno i **battimenti**: l’intensità “pulsa”
+    -   Se le due onde non hanno la stessa $\nu$, l’interferenza è alternatamente costruttiva e distruttiva, e si hanno i **battimenti**: l’intensità “pulsa”
 
 -   Tutti questi effetti si possono vedere nell’applicazione della slide successiva
 
@@ -442,6 +446,34 @@ La divisione di due quadrati è il quadrato della divisione, e il logaritmo di u
     \]
 
 -   Sono molto utili per accordare tra loro strumenti: se si sentono battimenti quando suonano la stessa nota, non sono accordati!
+
+# Eco e riverbero
+
+# L’eco
+
+-   Un’onda che raggiunge un corpo rigido come un muro può venire riflessa, tornando indietro
+
+-   L’eco è il suono riflesso che torna all’orecchio dell’ascoltatore, con un ritardo sufficiente per essere percepito come un suono separato
+
+-   È come vedere la propria immagine riflessa in uno specchio: il suono è un’onda proprio come la luce, ed entrambe vengono riflesse dalle superfici
+
+# Il riverbero
+
+-   Il riverbero è un fenomeno simile all’eco, ma è causato da molteplici riflessioni che raggiungono l’orecchio rapidamente, sovrapponendosi e fondendosi col suono originale
+
+-   È il fenomeno che fa percepire il suono dell’organo in una cattedrale come ricco e “prolungato”, grazie a innumerevoli riflessioni che si sommano.
+
+---
+
+<iframe width="840" height="472" src="https://www.youtube.com/embed/erXG9vnN-GI?si=Whg0iHD1I22ZhYCO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Toccata e fuga in re minore BWV 565 di J. S. Bach, suonata da Liene Andreta Kalnciema nella cattedrale di Riga (Lituania).
+
+---
+
+![](media/rīgas-doms.webp)
+
+La [cattedrale di Riga](https://en.wikipedia.org/wiki/Riga_Cathedral) occupa circa 8000 m², e l’organo è uno dei più grandi d’Europa, con un’altezza di 25 metri e 6768 canne.
 
 
 # Conclusioni

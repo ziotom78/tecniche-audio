@@ -1,7 +1,5 @@
 # Introduzione all’argomento di oggi
 
-# Inquisitori accademici onorari
-
 # Il timbro
 
 # Timbro del suono
@@ -33,9 +31,24 @@
 
 # Perché tante frequenze?
 
+::: side-by-side
+
+::: content
+
 -   Il motivo per cui la voce o uno strumento musicale emettono più di una frequenza ha a che fare con il processo fisico che emette l’onda.
 
 -   L’effettiva frequenza di vibrazione di una corda dipende dalla sua tensione (variabile attraverso le chiavi, per gli strumenti a corda) e dal suo materiale
+
+:::
+
+::: media
+
+![](media/accordare-violino.webp)
+
+:::
+:::
+
+# Gli strumenti a corda
 
 -   La lunghezza d’onda λ, come sappiamo, dipende dalla frequenza e dalla velocità di propagazione dell’onda attraverso la corda. Anch’essa quindi dipende dalla tensione della corda, ma non solo!
 
@@ -49,7 +62,7 @@
 
 -   Quando il musicista sollecita la corda, produce una somma di oscillazioni con lunghezze d’onda (e quindi frequenze) disposte nella cosiddetta “serie armonica”
 
--   La serie armonica è definita a partire dalla lunghezza d’onda fondamentale, $\lambda_0 = 2L$ con $L$ lunghezza della corda, e via via dividendo questa lunghezza fondamentale per un numero intero.
+-   La “serie armonica” è definita a partire dalla lunghezza d’onda fondamentale, $\lambda_0 = 2L$ con $L$ lunghezza della corda, e via via dividendo $\lambda_0$ per un numero intero.
 
 -   Le “armoniche” sono le frequenze corrispondenti alle $\lambda$: $\nu$, $2\nu$, $3\nu$, etc.
 
@@ -65,16 +78,15 @@
 
 # Serie armonica
 
--   La “serie armonica” è la sequenza di frequenze, partendo da quella fondamentale, che si generano quando si sollecita una corda.
--   Queste sono le prime, nel caso in cui la nota base sia “Do”:
+Ogni nota ha la sua serie armonica. Questa è nel caso di un do:
 
-    | Lunghezza d’onda | Frequenza | Altezza del suono |
-    |------------------|----------:|-------------------|
-    | λ₀               |        ν₀ | Do                |
-    | λ₀/2             |       2ν₀ | Do'               |
-    | λ₀/3             |       3ν₀ | Sol'              |
-    | λ₀/4             |       4ν₀ | Do''              |
-    | λ₀/5             |       5ν₀ | Mi''              |
+| Lunghezza d’onda | Frequenza | Altezza del suono |
+|------------------|----------:|-------------------|
+| λ₀               |        ν₀ | Do                |
+| λ₀/2             |       2ν₀ | Do'               |
+| λ₀/3             |       3ν₀ | Sol'              |
+| λ₀/4             |       4ν₀ | Do''              |
+| λ₀/5             |       5ν₀ | Mi''              |
 
 # Onde stazionarie
 
@@ -82,7 +94,7 @@
 
 ::: content
 
--   In tutti quei casi, come nelle corde di una chitarra, in cui un sistema oscillante ha dei punti “fissi”, in cui l’oscillazione non può avvenire, si parla di **onde stazionarie**
+-   Se la corda ha gli estremi fissi, come una chitarra o un violino, si parla di **onde stazionarie**
 
 -   Sono dette stazionarie perché l’energia non si propaga, ma resta “intrappolata” nella lunghezza dell’onda
 
@@ -147,7 +159,7 @@
 
 # Strumenti ad aria
 
--   In uno strumento ad aria con un’estremità chiusa ed una aperta (come il clarinetto), le possibili lunghezze d’onda seguono la regola
+-   In uno strumento ad aria con un’estremità chiusa ed una aperta (come il clarinetto, che usa un’[ancia](https://it.wikipedia.org/wiki/Ancia)), le possibili lunghezze d’onda seguono la regola
 
     \[
     \lambda_n = \frac{4L}{2n + 1},\qquad\text{ossia}\ 4L, \frac{4L}3, \frac{4L}5, \frac{4L}7, \ldots
@@ -283,6 +295,12 @@ Rappresentazione spettrale della prima nota (Si♭³) del trombone nelle due ese
 ---
 
 <iframe src="iframes/sound-example.html" width="100%" height="580px" style="border:1px solid #ccc; border-radius: 8px;"></iframe>
+
+# Il rumore secondo Fourier
+
+-   Analizzando con la trasformata di Fourier un suono armonioso, come un accordo di do maggiore, si vede che esso combina preferenzialmente sinusoidi della medesima successione armonica (do, mi sol)
+-   Analizzando invece il rumore con la trasformata di Fourier, esso è dato dalla sovrapposizione di molte sinusoidi con frequenze casuali, senza una semplice relazione matematica tra loro
+-   Non esiste una differenza netta tra suono e rumore: aumentando il numero di componenti sinusoidali casuali, è possibile gradualmente mutare un suono in rumore
 
 # Filtraggio
 

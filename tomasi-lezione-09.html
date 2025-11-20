@@ -65,9 +65,6 @@ href="mailto:maurizio.tomasi@unimi.it"><code>maurizio.tomasi@unimi.it</code></a>
 <section id="introduzione-allargomento-di-oggi" class="slide level1">
 <h1>Introduzione all’argomento di oggi</h1>
 </section>
-<section id="inquisitori-accademici-onorari" class="slide level1">
-<h1>Inquisitori accademici onorari</h1>
-</section>
 <section id="il-timbro" class="slide level1">
 <h1>Il timbro</h1>
 </section>
@@ -111,6 +108,8 @@ class="math inline">\varphi</span></p></li>
 </section>
 <section id="perché-tante-frequenze" class="slide level1">
 <h1>Perché tante frequenze?</h1>
+<div class="side-by-side">
+<div class="content">
 <ul>
 <li><p>Il motivo per cui la voce o uno strumento musicale emettono più
 di una frequenza ha a che fare con il processo fisico che emette
@@ -118,6 +117,16 @@ l’onda.</p></li>
 <li><p>L’effettiva frequenza di vibrazione di una corda dipende dalla
 sua tensione (variabile attraverso le chiavi, per gli strumenti a corda)
 e dal suo materiale</p></li>
+</ul>
+</div>
+<div class="media">
+<p><img data-src="media/accordare-violino.webp" /></p>
+</div>
+</div>
+</section>
+<section id="gli-strumenti-a-corda" class="slide level1">
+<h1>Gli strumenti a corda</h1>
+<ul>
 <li><p>La lunghezza d’onda λ, come sappiamo, dipende dalla frequenza e
 dalla velocità di propagazione dell’onda attraverso la corda. Anch’essa
 quindi dipende dalla tensione della corda, ma non solo!</p></li>
@@ -134,10 +143,11 @@ gli estremi sono fissi!</p></li>
 <li><p>Quando il musicista sollecita la corda, produce una somma di
 oscillazioni con lunghezze d’onda (e quindi frequenze) disposte nella
 cosiddetta “serie armonica”</p></li>
-<li><p>La serie armonica è definita a partire dalla lunghezza d’onda
+<li><p>La “serie armonica” è definita a partire dalla lunghezza d’onda
 fondamentale, <span class="math inline">\lambda_0 = 2L</span> con <span
 class="math inline">L</span> lunghezza della corda, e via via dividendo
-questa lunghezza fondamentale per un numero intero.</p></li>
+<span class="math inline">\lambda_0</span> per un numero
+intero.</p></li>
 <li><p>Le “armoniche” sono le frequenze corrispondenti alle <span
 class="math inline">\lambda</span>: <span
 class="math inline">\nu</span>, <span class="math inline">2\nu</span>,
@@ -151,11 +161,7 @@ class="math inline">\nu</span>, <span class="math inline">2\nu</span>,
 </section>
 <section id="serie-armonica" class="slide level1">
 <h1>Serie armonica</h1>
-<ul>
-<li><p>La “serie armonica” è la sequenza di frequenze, partendo da
-quella fondamentale, che si generano quando si sollecita una
-corda.</p></li>
-<li><p>Queste sono le prime, nel caso in cui la nota base sia “Do”:</p>
+<p>Ogni nota ha la sua serie armonica. Questa è nel caso di un do:</p>
 <table>
 <thead>
 <tr>
@@ -191,17 +197,15 @@ corda.</p></li>
 <td>Mi’’</td>
 </tr>
 </tbody>
-</table></li>
-</ul>
+</table>
 </section>
 <section id="onde-stazionarie" class="slide level1">
 <h1>Onde stazionarie</h1>
 <div class="side-by-side">
 <div class="content">
 <ul>
-<li><p>In tutti quei casi, come nelle corde di una chitarra, in cui un
-sistema oscillante ha dei punti “fissi”, in cui l’oscillazione non può
-avvenire, si parla di <strong>onde stazionarie</strong></p></li>
+<li><p>Se la corda ha gli estremi fissi, come una chitarra o un violino,
+si parla di <strong>onde stazionarie</strong></p></li>
 <li><p>Sono dette stazionarie perché l’energia non si propaga, ma resta
 “intrappolata” nella lunghezza dell’onda</p></li>
 <li><p>Fisicamente, è un’onda che si propaga in una direzione
@@ -272,8 +276,9 @@ quindi un <strong>ventre</strong></li>
 <h1>Strumenti ad aria</h1>
 <ul>
 <li><p>In uno strumento ad aria con un’estremità chiusa ed una aperta
-(come il clarinetto), le possibili lunghezze d’onda seguono la
-regola</p>
+(come il clarinetto, che usa un’<a
+href="https://it.wikipedia.org/wiki/Ancia">ancia</a>), le possibili
+lunghezze d’onda seguono la regola</p>
 <p><span class="math display">
 \lambda_n = \frac{4L}{2n + 1},\qquad\text{ossia}\ 4L, \frac{4L}3,
 \frac{4L}5, \frac{4L}7, \ldots
@@ -449,6 +454,20 @@ un’onda sonora priva di periodicità</p></li>
 
 <iframe src="iframes/sound-example.html" width="100%" height="580px" style="border:1px solid #ccc; border-radius: 8px;">
 </iframe>
+</section>
+<section id="il-rumore-secondo-fourier" class="slide level1">
+<h1>Il rumore secondo Fourier</h1>
+<ul>
+<li>Analizzando con la trasformata di Fourier un suono armonioso, come
+un accordo di do maggiore, si vede che esso combina preferenzialmente
+sinusoidi della medesima successione armonica (do, mi sol)</li>
+<li>Analizzando invece il rumore con la trasformata di Fourier, esso è
+dato dalla sovrapposizione di molte sinusoidi con frequenze casuali,
+senza una semplice relazione matematica tra loro</li>
+<li>Non esiste una differenza netta tra suono e rumore: aumentando il
+numero di componenti sinusoidali casuali, è possibile gradualmente
+mutare un suono in rumore</li>
+</ul>
 </section>
 <section id="filtraggio" class="slide level1">
 <h1>Filtraggio</h1>
