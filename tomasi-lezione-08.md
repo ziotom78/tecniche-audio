@@ -106,6 +106,18 @@
 
 # I decibel
 
+-   Per confrontare $I$ con il riferimento $I_0$ si usa il rapporto
+    \[
+    \frac{I}{I_0}.
+    \]
+
+-   È un po’ come quando si calcola uno sconto percentuale sul prezzo di un acquisto: anche lì si deve calcolare un rapporto (sconto/prezzo×100).
+
+-   Se ci pensate, uno sconto è infatti più significativo quando si rapporta al prezzo totale di quando si esprime in euro. Per l’intensità $I$ è lo stesso!
+
+
+# I decibel
+
 -   Il motivo per cui i decibel richiedono di applicare un logaritmo è che in questo modo l’unità di misura dà immediatamente una misura della **sensazione**, nell’ipotesi in cui sia valida la legge di Weber-Fechner
 
 -   In altre parole, un suono di 30 dB risulta doppiamente intenso rispetto allo stesso suono con intensità di 15 dB.
