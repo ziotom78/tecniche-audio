@@ -203,7 +203,7 @@
 
 # Numeri da ricordare
 
-In questa slide e nella seguente elenco una serie di numeri da ricordare. [Se usate Anki](tomasi-lezione-01.html#flash-cards), vi suggerisco di creare delle flash cards.
+In questa slide elenco una serie di numeri da ricordare. [Se usate Anki](tomasi-lezione-01.html#flash-cards), vi suggerisco di creare delle flash cards.
 
 | Impulso sonoro                  | Intensità |
 |---------------------------------|----------:|
@@ -212,6 +212,19 @@ In questa slide e nella seguente elenco una serie di numeri da ricordare. [Se us
 | Voce normale                    |     60 dB |
 | Cabina di aereo durante il volo |     80 dB |
 | Soglia del dolore               |    120 dB |
+
+# Stessi numeri ma in W/m²
+
+Per farvi apprezzare i decibel, vi mostro gli stessi numeri espressi con le unità SI. Chiaramente questi numeri **non** sono da imparare!
+
+| Impulso sonoro                  |              Intensità |
+|---------------------------------|-----------------------:|
+| Soglia dell’udibilità           | 0,000 000 000 001 W/m² |
+| Sussurro                        |     0,000 000 001 W/m² |
+| Voce normale                    |         0,000 001 W/m² |
+| Cabina di aereo durante il volo |           0,000 1 W/m² |
+| Soglia del dolore               |                 1 W/m² |
+
 
 # Numeri da ricordare
 
