@@ -230,12 +230,12 @@ Per farvi apprezzare i decibel, vi mostro gli stessi numeri espressi con le unit
 
 Questi numeri invece sono relativi a **differenze** tra due intensità $L_1$ e $L_2$ espresse in dB, e sono ugualmente da ricordare:
 
-| Differenza $L_1 - L_2$ in dB | Rapporto tra potenze $I_1/I_2$ (W/m²) |
-|-----------------------------:|--------------------------------------:|
-|                         3 dB |                                    ×2 |
-|                        10 dB |                                   ×10 |
-|                        20 dB |                                  ×100 |
-|                        30 dB |                                 ×1000 |
+| Differenza $L_1 - L_2$ in dB | Rapporto tra intensità $I_1/I_2$ (W/m²) |
+|-----------------------------:|----------------------------------------:|
+|                         3 dB |                                      ×2 |
+|                        10 dB |                                     ×10 |
+|                        20 dB |                                    ×100 |
+|                        30 dB |                                   ×1000 |
 
 
 # Legge dell’inverso del quadrato
