@@ -396,7 +396,7 @@ Questi numeri invece sono relativi a **differenze** tra due intensità $L_1$ e $
 :::
 :::
 
-# Lunghezza d’onda
+# Lunghezza d’onda {#wavelength}
 
 ::: side-by-side
 

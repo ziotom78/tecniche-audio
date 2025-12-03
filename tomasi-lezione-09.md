@@ -1,4 +1,11 @@
-# Introduzione all’argomento di oggi
+# Introduzione all’argomento
+
+-   Cosa determina il timbro della voce o di uno strumento?
+
+-   Cos’è l’analisi di Fourier?
+
+-   Come funzionano i filtri?
+
 
 # Il timbro
 
@@ -37,7 +44,7 @@
 
 -   Il motivo per cui la voce o uno strumento musicale emettono più di una frequenza ha a che fare con il processo fisico che emette l’onda.
 
--   L’effettiva frequenza di vibrazione di una corda dipende dalla sua tensione (variabile attraverso le chiavi, per gli strumenti a corda) e dal suo materiale
+-   L’effettiva frequenza di vibrazione di una corda dipende dalla sua tensione (variabile attraverso le chiavi e i piroli, per il violino in foto) e dal materiale di cui è fatta
 
 :::
 
@@ -47,46 +54,6 @@
 
 :::
 :::
-
-# Gli strumenti a corda
-
--   La lunghezza d’onda λ, come sappiamo, dipende dalla frequenza e dalla velocità di propagazione dell’onda attraverso la corda. Anch’essa quindi dipende dalla tensione della corda, ma non solo!
-
--   In un qualsiasi strumento a corda come il violino o il pianoforte infatti, la corda non può vibrare con qualsiasi lunghezza d’onda, perché gli estremi sono fissi!
-
-# Suono di una corda
-
-::: side-by-side
-
-::: content
-
--   Quando il musicista sollecita la corda, produce una somma di oscillazioni con lunghezze d’onda (e quindi frequenze) disposte nella cosiddetta “serie armonica”
-
--   La “serie armonica” è definita a partire dalla lunghezza d’onda fondamentale, $\lambda_0 = 2L$ con $L$ lunghezza della corda, e via via dividendo $\lambda_0$ per un numero intero.
-
--   Le “armoniche” sono le frequenze corrispondenti alle $\lambda$: $\nu$, $2\nu$, $3\nu$, etc.
-
-:::
-
-::: media
-
-![](media/harmonic-partials-on-string.svg)
-
-:::
-:::
-
-
-# Serie armonica
-
-Ogni nota ha la sua serie armonica. Questa è nel caso di un do:
-
-| Lunghezza d’onda | Frequenza | Altezza del suono |
-|------------------|----------:|-------------------|
-| λ₀               |        ν₀ | Do                |
-| λ₀/2             |       2ν₀ | Do'               |
-| λ₀/3             |       3ν₀ | Sol'              |
-| λ₀/4             |       4ν₀ | Do''              |
-| λ₀/5             |       5ν₀ | Mi''              |
 
 # Onde stazionarie
 
@@ -135,18 +102,63 @@ Ogni nota ha la sua serie armonica. Questa è nel caso di un do:
 -   Potete vederne alcuni esempi sul sito [Javalab](https://javalab.org/en/standing_waves_on_a_drum_surface_en/).
 
 
+# Gli strumenti a corda
+
+-   La lunghezza d’onda λ, [come sappiamo](tomasi-lezione-08.html#wavelength), dipende dalla frequenza e dalla velocità di propagazione dell’onda attraverso la corda secondo la formula
+    \[
+    v_\text{onda} = \lambda \times \nu.
+    \]
+
+-   Ma in un qualsiasi strumento a corda come il violino o il pianoforte infatti, la corda non può vibrare con qualsiasi lunghezza d’onda, perché gli estremi sono fissi!
+
+-   La lunghezza $L$ della corda determina quindi la lunghezza d’onda $\lambda$, e la forza di tensione determina la velocità dell’onda $_\text{onda}$ e quindi la frequenza $\nu$ della nota che sentiremo.
+
+# Suono di una corda
+
+::: side-by-side
+
+::: content
+
+-   Quando il musicista sollecita la corda, produce una somma di oscillazioni con $\lambda$ disposte nella cosiddetta **serie armonica**
+
+-   Essa è definita a partire dalla lunghezza d’onda fondamentale, $\lambda_0 = 2L$ con $L$ lunghezza della corda (e quindi della “pancia”), e via via dividendo $\lambda_0$ per un numero intero.
+
+-   Le “armoniche” sono le frequenze corrispondenti alle $\lambda$: $\nu$, $2\nu$, $3\nu$, etc.
+
+:::
+
+::: media
+
+![](media/harmonic-partials-on-string.svg)
+
+:::
+:::
+
+
+# Serie armonica
+
+Ogni nota ha la sua serie armonica. Questa è nel caso di un do:
+
+| Lunghezza d’onda | Frequenza | Altezza del suono |
+|------------------|----------:|-------------------|
+| λ₀               |        ν₀ | Do                |
+| λ₀/2             |       2ν₀ | Do'               |
+| λ₀/3             |       3ν₀ | Sol'              |
+| λ₀/4             |       4ν₀ | Do''              |
+| λ₀/5             |       5ν₀ | Mi''              |
+
+
 # E per gli strumenti ad aria?
 
 ::: side-by-side
 
 ::: content
 
--   Nel caso degli strumenti ad aria, come il flauto o l’organo, la presenza di un tubo con due estremità lo rende simile ad una corda
+-   Nel caso degli strumenti ad aria, come il flauto o l’organo, abbiamo un tubo con due estremità, più complesso di una corda
 
--   Il comportamento è però più complesso:
+-   Un’estremità **chiusa** impedisce (per attrito) alle particelle di gas di vibrare, ed è quindi un **nodo** di spostamento
 
-    -   Un’estremità **chiusa** impedisce (per attrito) alle particelle di gas di vibrare, ed è quindi un **nodo**
-    -   Presso l’estremità **aperta**, le particelle sono libere di entrare ed uscire, e l’oscillazione di pressione è massima: è quindi un **ventre**
+-   Presso l’estremità **aperta**, le particelle sono libere di muoversi al massimo: è un **ventre** di spostamento. Ma, proprio perché sono libere, la compressione è minima: è un nodo di pressione.
 
 :::
 
@@ -159,17 +171,10 @@ Ogni nota ha la sua serie armonica. Questa è nel caso di un do:
 
 # Strumenti ad aria
 
--   In uno strumento ad aria con un’estremità chiusa ed una aperta (come il clarinetto, che usa un’[ancia](https://it.wikipedia.org/wiki/Ancia)), le possibili lunghezze d’onda seguono la regola
+-   Uno strumento ad aria con le due estremità aperte (come il flauto) può produrre tutte le note della serie armonica (1, 2, 3, 4…)
 
-    \[
-    \lambda_n = \frac{4L}{2n + 1},\qquad\text{ossia}\ 4L, \frac{4L}3, \frac{4L}5, \frac{4L}7, \ldots
-    \]
+-   Uno strumento ad aria con un’estremità chiusa ed una aperta (come il clarinetto, che usa un’[ancia](https://it.wikipedia.org/wiki/Ancia)) può produrre solo le armoniche dispari (1, 3, 5...). Questo è ciò che dà al clarinetto quel suono così particolare e “nasale” rispetto al flauto.
 
--   In uno strumento ad aria con le due estremità aperte (come il flauto), le possibili lunghezze d’onda seguono invece la regola
-
-    \[
-    \lambda_n = \frac{2L}{n + 1},\qquad\text{ossia}\ 2L, L, \frac{L}2, \frac{L}4, \ldots
-    \]
 
 # Esempio di caso chiuso-aperto
 
@@ -186,7 +191,7 @@ Ogni nota ha la sua serie armonica. Questa è nel caso di un do:
 
 -   Sono però possibili anche onde che non soddisfano queste relazioni: esse però sono **effimere**, nel senso che disperdono rapidamente la loro energia scomparendo presto
 
--   Anche queste onde effimere però contribuiscono a conferire al suono dello strumento il suo “timbro” caratteristico (flauto, clarinetto, oboe, …)
+-   Queste onde costituiscono il cosiddetto “transitorio d’attacco”, ossia quel breve istante iniziale (il "ta" della tromba o lo sfregamento dell'archetto) che ci permette di riconoscere lo strumento. (Senza di esso, il suono di un violino o di un flauto sarebbe più difficile da distinguere!)
 
 
 # Scomposizione di Fourier
@@ -212,7 +217,7 @@ Ogni nota ha la sua serie armonica. Questa è nel caso di un do:
 
 # Trasformata di Fourier
 
--   La “trasformata di Fourier” è un’operazione matematica che consente, data la misurazione dell’intensità (nel SI) di un’onda sonora, di decomporre quest’onda in una somma di onde sinusoidali
+-   La “trasformata di Fourier” è un’operazione matematica che consente, data la misurazione dell’ampiezza di pressione di un’onda sonora, di decomporre quest’onda in una somma di onde sinusoidali
 
 -   Dal punto di vista pratico, il risultato del calcolo di una trasformata di Fourier è la stima dei valori delle ampiezze, frequenze e fasi nella formula
     \[
@@ -270,25 +275,25 @@ Rappresentazione spettrale della prima nota (Si♭³) del trombone nelle due ese
 
 -   Un equalizzatore acustico è in grado di modificare i suoni gravi, medi ed acuti decomponendo il suono e agendo sulle ampiezze di alcune frequenze e non altre, come vedremo tra poco
 
--   I file MP3 riescono a registrare musica usando 10 volte meno spazio dei vecchi CD, perché usano la decomposizione di Fourier per capire quali frequenze registrare (quelle udibili) e quali è inutile salvare perché inudibili
+-   I file MP3 riescono a registrare musica usando 10 volte meno spazio dei vecchi CD, perché usano la decomposizione di Fourier per registrare solo le frequenze nell’intervallo di frequenze udibili dall’uomo, e cancellare le frequenze troppo deboli (es., quelle di un violino in *pianissimo* sotto le trombe in *fortissimo*)
 
 
 # Suono e rumore
 
 # Suono e rumore
 
--   Nella vita quotidiana, usiamo spesso le parole “suono” e “rumore” per parlare di fenomeni acustici
+-   Nella vita quotidiana, usiamo spesso le parole “suono” e “rumore” in contrapposizione tra esse
 
 -   Ma sappiamo qual è la differenza tra i due? In particolare, stiamo parlando di un fenomeno fisico oggettivo, o della **sensazione** che un certo fenomeno fisico (quale?) ci provoca?
 
 
 # Rumore e suono
 
--   La differenza tra suono e rumore è la seguente:
+-   Quando si parla di “suono” contrapposto a “rumore”, la differenza è la seguente:
 
-    -   Il **suono** è la sensazione di un’onda sonora regolare, che possiede una sua periodicità
+    -   Il **suono** (in senso musicale) è generato da un’onda sonora **periodica**, cioè che ripete la sua forma nel tempo in modo regolare.
 
-    -   Il **rumore** è l’esatto opposto: è la sensazione di un’onda sonora priva di periodicità
+    -   Il **rumore** è generato da un’onda **aperiodica**, che varia in modo casuale e non si ripete mai uguale a se stessa.
 
 -   Vediamo subito la differenza con un esempio interattivo
 
@@ -298,9 +303,11 @@ Rappresentazione spettrale della prima nota (Si♭³) del trombone nelle due ese
 
 # Il rumore secondo Fourier
 
--   Analizzando con la trasformata di Fourier un suono armonioso, come un accordo di do maggiore, si vede che esso combina preferenzialmente sinusoidi della medesima successione armonica (do, mi sol)
--   Analizzando invece il rumore con la trasformata di Fourier, esso è dato dalla sovrapposizione di molte sinusoidi con frequenze casuali, senza una semplice relazione matematica tra loro
--   Non esiste una differenza netta tra suono e rumore: aumentando il numero di componenti sinusoidali casuali, è possibile gradualmente mutare un suono in rumore
+-   Analizzando con la trasformata di Fourier un suono armonioso, come una nota suonata da un violoncello, si vede che l'onda è composta da una frequenza fondamentale precisa sommata alle sue armoniche ordinate.
+
+-   Analizzando invece il rumore (es. il soffio dell'aria o un applauso), esso appare come un 'caos' di frequenze: moltissime sinusoidi di tutte le altezze ammassate insieme senza ordine.
+
+-   Non esiste una differenza netta tra suono e rumore: aumentando il numero di componenti sinusoidali casuali, è possibile gradualmente mutare un suono in rumore. E molti suoni sono una via di mezzo: un colpo di tamburo ha un inizio rumoroso (l'impatto) e una coda più tonale.
 
 # Filtraggio
 
@@ -379,7 +386,7 @@ Ho usato Audacity per applicare un filtro passa-basso al Si♭³ del trombone ne
 
 ---
 title: Fisica -- Lezione 9
-subtitle: Filtraggio del suono
+subtitle: Timbro, analisi di Fourier, filtraggio, effetto Doppler
 author: Maurizio Tomasi ([`maurizio.tomasi@unimi.it`](mailto:maurizio.tomasi@unimi.it))
 date: Mercoledì 3 dicembre 2025
 ...
