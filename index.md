@@ -37,6 +37,8 @@
 -->
 </center>
 
+Domande d’esame per l’anno accademico 2025–2026: [questions-aa2526.pdf](questions-aa2526.pdf).
+
 ---
 title: Lezioni del modulo di Fisica (Tecniche Audiometriche ed Audioprotesiche)
 author: Maurizio Tomasi
